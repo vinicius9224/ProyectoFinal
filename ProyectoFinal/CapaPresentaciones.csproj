@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D837F5A8-267C-489A-B522-715C25D38732}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProyectoFinal</RootNamespace>
+    <AssemblyName>ProyectoFinal</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Formularios\Alumnos\FrmAgregarAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Alumnos\FrmAgregarAlumno.Designer.cs">
+      <DependentUpon>FrmAgregarAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Alumnos\FrmEliminarAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Alumnos\FrmEliminarAlumno.Designer.cs">
+      <DependentUpon>FrmEliminarAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Alumnos\FrmListarAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Alumnos\FrmListarAlumnos.Designer.cs">
+      <DependentUpon>FrmListarAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Alumnos\FrmModificarAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Alumnos\FrmModificarAlumno.Designer.cs">
+      <DependentUpon>FrmModificarAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Facturas\FrmGenerarFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Facturas\FrmGenerarFactura.Designer.cs">
+      <DependentUpon>FrmGenerarFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Facturas\FrmHistorialFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Facturas\FrmHistorialFacturas.Designer.cs">
+      <DependentUpon>FrmHistorialFacturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Facturas\FrmIngresosTotales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Facturas\FrmIngresosTotales.Designer.cs">
+      <DependentUpon>FrmIngresosTotales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmInicio.Designer.cs">
+      <DependentUpon>FrmInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Maestros\FrmAgregarMaestro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Maestros\FrmAgregarMaestro.Designer.cs">
+      <DependentUpon>FrmAgregarMaestro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Maestros\FrmEliminarMaestro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Maestros\FrmEliminarMaestro.Designer.cs">
+      <DependentUpon>FrmEliminarMaestro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Maestros\FrmListarMaestros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Maestros\FrmListarMaestros.Designer.cs">
+      <DependentUpon>FrmListarMaestros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Maestros\FrmModificarMaestro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Maestros\FrmModificarMaestro.Designer.cs">
+      <DependentUpon>FrmModificarMaestro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Nominas\FrmEgresosTotales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Nominas\FrmEgresosTotales.Designer.cs">
+      <DependentUpon>FrmEgresosTotales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Nominas\FrmGenerarNomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Nominas\FrmGenerarNomina.Designer.cs">
+      <DependentUpon>FrmGenerarNomina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Nominas\FrmHistorialNominas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Nominas\FrmHistorialNominas.Designer.cs">
+      <DependentUpon>FrmHistorialNominas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Sesiones\FrmAgregarSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Sesiones\FrmAgregarSesion.Designer.cs">
+      <DependentUpon>FrmAgregarSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Sesiones\FrmModificarSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Sesiones\FrmModificarSesion.Designer.cs">
+      <DependentUpon>FrmModificarSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Alumnos\FrmAgregarAlumno.resx">
+      <DependentUpon>FrmAgregarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Alumnos\FrmEliminarAlumno.resx">
+      <DependentUpon>FrmEliminarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Alumnos\FrmListarAlumnos.resx">
+      <DependentUpon>FrmListarAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Alumnos\FrmModificarAlumno.resx">
+      <DependentUpon>FrmModificarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Facturas\FrmGenerarFactura.resx">
+      <DependentUpon>FrmGenerarFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Facturas\FrmHistorialFacturas.resx">
+      <DependentUpon>FrmHistorialFacturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Facturas\FrmIngresosTotales.resx">
+      <DependentUpon>FrmIngresosTotales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmInicio.resx">
+      <DependentUpon>FrmInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Maestros\FrmAgregarMaestro.resx">
+      <DependentUpon>FrmAgregarMaestro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Maestros\FrmEliminarMaestro.resx">
+      <DependentUpon>FrmEliminarMaestro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Maestros\FrmListarMaestros.resx">
+      <DependentUpon>FrmListarMaestros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Maestros\FrmModificarMaestro.resx">
+      <DependentUpon>FrmModificarMaestro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Nominas\FrmEgresosTotales.resx">
+      <DependentUpon>FrmEgresosTotales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Nominas\FrmGenerarNomina.resx">
+      <DependentUpon>FrmGenerarNomina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Nominas\FrmHistorialNominas.resx">
+      <DependentUpon>FrmHistorialNominas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Sesiones\FrmAgregarSesion.resx">
+      <DependentUpon>FrmAgregarSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Sesiones\FrmModificarSesion.resx">
+      <DependentUpon>FrmModificarSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
+      <Project>{7dc644a5-1405-4bca-b175-858698aee22d}</Project>
+      <Name>CapaNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Botones\BotonLoginFondo.png" />
+    <Content Include="Recursos\Botones\cerrar-sesion.png" />
+    <Content Include="Recursos\Botones\conferencia.png" />
+    <Content Include="Recursos\Botones\cuenta.png" />
+    <Content Include="Recursos\Botones\estudiante.png" />
+    <Content Include="Recursos\Botones\filtrar.png" />
+    <Content Include="Recursos\Botones\flecha-hacia-abajo.png" />
+    <Content Include="Recursos\Botones\instructor.png" />
+    <Content Include="Recursos\Botones\lupa.png" />
+    <Content Include="Recursos\Botones\minimizar %281%29.png" />
+    <Content Include="Recursos\Botones\minimizar-signo.png" />
+    <Content Include="Recursos\Botones\minimizar.png" />
+    <Content Include="Recursos\Botones\nomina-de-sueldos.png" />
+    <Content Include="Recursos\Botones\perfil-del-usuario.png" />
+    <Content Include="Recursos\Fondos\fondo1 %282%29.png" />
+    <Content Include="Recursos\Fondos\Fondo1.jpg" />
+    <Content Include="Recursos\Fondos\Fondo2.png" />
+    <Content Include="Recursos\Fondos\FondoLogin %283%29.png" />
+    <Content Include="Recursos\Fondos\Logo.ico" />
+    <Content Include="Recursos\Fondos\Logo.jpg" />
+    <Content Include="Recursos\Fondos\photo-1557683316-973673baf926.jfif" />
+    <Content Include="Recursos\Fondos\Screenshot_1.png" />
+    <Content Include="Recursos\Fondos\WhatsApp Image 2022-10-25 at 11.41.17 AM.jpeg" />
+    <Content Include="Recursos\Fondos\WhatsApp Image 2022-10-25 at 11.41.19 AM.jpeg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
