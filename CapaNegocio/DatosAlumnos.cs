@@ -33,9 +33,7 @@ namespace CapaNegocio
 
         public void Eliminar_Alumnos(string id)
         {
-
             obj.Eliminar(Convert.ToInt32(id));
-
         }
 
         public DataTable Buscadir(string parametro)

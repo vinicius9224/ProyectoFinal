@@ -1,4 +1,5 @@
 ﻿using ProyectoFinal.Formularios.Alumnos;
+using ProyectoFinal.Formularios.Configuración;
 using ProyectoFinal.Formularios.Facturas;
 using ProyectoFinal.Formularios.Maestros;
 using ProyectoFinal.Formularios.Nominas;
@@ -216,5 +217,13 @@ namespace ProyectoFinal.Formularios
 
         #endregion
 
+        #region Configuración
+
+        #endregion
+
+        private void btnConfig_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FrmEditarUsuario());
+        }
     }
 }

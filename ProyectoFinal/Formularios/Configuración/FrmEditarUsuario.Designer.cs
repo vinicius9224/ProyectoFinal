@@ -1,6 +1,6 @@
-﻿namespace ProyectoFinal.Formularios.Maestros
+﻿namespace ProyectoFinal.Formularios.Configuración
 {
-    partial class FrmEliminarMaestro
+    partial class FrmEditarUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEliminarMaestro));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEditarUsuario));
             this.SuspendLayout();
             // 
-            // FrmEliminarMaestro
+            // FrmEditarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -39,8 +39,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(910, 708);
             this.MinimumSize = new System.Drawing.Size(910, 708);
-            this.Name = "FrmEliminarMaestro";
-            this.Text = "Eliminar Maestro";
+            this.Name = "FrmEditarUsuario";
+            this.Text = "FrmEditarUsuario";
             this.ResumeLayout(false);
 
         }

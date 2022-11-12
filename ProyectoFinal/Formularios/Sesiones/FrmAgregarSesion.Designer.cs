@@ -38,7 +38,6 @@
             this.panelBuscar = new System.Windows.Forms.Panel();
             this.btnSeleccion = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.PictBxLupa = new System.Windows.Forms.PictureBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.cmbBxBuscar = new System.Windows.Forms.ComboBox();
             this.panelDatos = new System.Windows.Forms.Panel();
@@ -52,16 +51,17 @@
             this.lblCodTrab = new System.Windows.Forms.Label();
             this.lblCantHorsSes = new System.Windows.Forms.Label();
             this.lblCodSes = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.PictBxLupa = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             panel1 = new System.Windows.Forms.Panel();
             this.panelContenedor.SuspendLayout();
             this.panelBuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictBxLupa)).BeginInit();
             this.panelDatos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictBxLupa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -70,7 +70,7 @@
             panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             panel1.CausesValidation = false;
             panel1.Enabled = false;
-            panel1.Location = new System.Drawing.Point(401, 85);
+            panel1.Location = new System.Drawing.Point(401, 108);
             panel1.Name = "panel1";
             panel1.Size = new System.Drawing.Size(10, 399);
             panel1.TabIndex = 10;
@@ -98,7 +98,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(346, 539);
+            this.btnCancelar.Location = new System.Drawing.Point(324, 548);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(115, 44);
             this.btnCancelar.TabIndex = 5;
@@ -113,7 +113,7 @@
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(537, 539);
+            this.btnGuardar.Location = new System.Drawing.Point(515, 548);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(115, 44);
             this.btnGuardar.TabIndex = 4;
@@ -127,7 +127,7 @@
             this.lblRegSes.Font = new System.Drawing.Font("Bodoni MT Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegSes.ForeColor = System.Drawing.SystemColors.Control;
             this.lblRegSes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblRegSes.Location = new System.Drawing.Point(361, 34);
+            this.lblRegSes.Location = new System.Drawing.Point(361, 57);
             this.lblRegSes.Name = "lblRegSes";
             this.lblRegSes.Size = new System.Drawing.Size(244, 25);
             this.lblRegSes.TabIndex = 3;
@@ -141,7 +141,7 @@
             this.panelBuscar.Controls.Add(this.PictBxLupa);
             this.panelBuscar.Controls.Add(this.txtBuscar);
             this.panelBuscar.Controls.Add(this.cmbBxBuscar);
-            this.panelBuscar.Location = new System.Drawing.Point(408, 85);
+            this.panelBuscar.Location = new System.Drawing.Point(408, 108);
             this.panelBuscar.Name = "panelBuscar";
             this.panelBuscar.Size = new System.Drawing.Size(518, 399);
             this.panelBuscar.TabIndex = 2;
@@ -153,7 +153,7 @@
             this.btnSeleccion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btnSeleccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccion.Location = new System.Drawing.Point(221, 355);
+            this.btnSeleccion.Location = new System.Drawing.Point(219, 362);
             this.btnSeleccion.Name = "btnSeleccion";
             this.btnSeleccion.Size = new System.Drawing.Size(109, 24);
             this.btnSeleccion.TabIndex = 4;
@@ -172,19 +172,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(506, 299);
             this.dataGridView1.TabIndex = 3;
-            // 
-            // PictBxLupa
-            // 
-            this.PictBxLupa.BackColor = System.Drawing.Color.White;
-            this.PictBxLupa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PictBxLupa.Image = global::ProyectoFinal.Properties.Resources.lupa;
-            this.PictBxLupa.Location = new System.Drawing.Point(426, 3);
-            this.PictBxLupa.Name = "PictBxLupa";
-            this.PictBxLupa.Size = new System.Drawing.Size(48, 37);
-            this.PictBxLupa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictBxLupa.TabIndex = 2;
-            this.PictBxLupa.TabStop = false;
-            this.PictBxLupa.Click += new System.EventHandler(this.PictBxLupa_Click);
             // 
             // txtBuscar
             // 
@@ -223,7 +210,7 @@
             this.panelDatos.Controls.Add(this.lblCodTrab);
             this.panelDatos.Controls.Add(this.lblCantHorsSes);
             this.panelDatos.Controls.Add(this.lblCodSes);
-            this.panelDatos.Location = new System.Drawing.Point(9, 85);
+            this.panelDatos.Location = new System.Drawing.Point(9, 108);
             this.panelDatos.Name = "panelDatos";
             this.panelDatos.Size = new System.Drawing.Size(393, 399);
             this.panelDatos.TabIndex = 1;
@@ -332,6 +319,24 @@
             this.lblCodSes.Text = "Código de la sesión";
             this.lblCodSes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.BlinkRate = 100;
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // PictBxLupa
+            // 
+            this.PictBxLupa.BackColor = System.Drawing.Color.White;
+            this.PictBxLupa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PictBxLupa.Image = global::ProyectoFinal.Properties.Resources.lupa;
+            this.PictBxLupa.Location = new System.Drawing.Point(426, 3);
+            this.PictBxLupa.Name = "PictBxLupa";
+            this.PictBxLupa.Size = new System.Drawing.Size(48, 37);
+            this.PictBxLupa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictBxLupa.TabIndex = 2;
+            this.PictBxLupa.TabStop = false;
+            this.PictBxLupa.Click += new System.EventHandler(this.PictBxLupa_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -342,11 +347,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.BlinkRate = 100;
-            this.errorProvider1.ContainerControl = this;
             // 
             // FrmAgregarSesion
             // 
@@ -366,11 +366,11 @@
             this.panelBuscar.ResumeLayout(false);
             this.panelBuscar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictBxLupa)).EndInit();
             this.panelDatos.ResumeLayout(false);
             this.panelDatos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictBxLupa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

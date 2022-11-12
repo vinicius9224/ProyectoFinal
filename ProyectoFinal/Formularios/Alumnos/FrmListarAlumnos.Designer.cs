@@ -30,20 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmListarAlumnos));
             this.pnlContenedor = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pnlFondoListar = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.txtBus = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
-            this.btnCerrar = new System.Windows.Forms.Button();
+            this.pnlFondoListar = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblListarAlumno = new System.Windows.Forms.Label();
             this.pnlContenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlFondoListar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlContenedor
             // 
+            this.pnlContenedor.Controls.Add(this.lblListarAlumno);
             this.pnlContenedor.Controls.Add(this.btnCerrar);
             this.pnlContenedor.Controls.Add(this.txtBus);
             this.pnlContenedor.Controls.Add(this.lblBuscar);
@@ -52,34 +54,23 @@
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(0, 0);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(894, 643);
+            this.pnlContenedor.Size = new System.Drawing.Size(894, 669);
             this.pnlContenedor.TabIndex = 0;
             // 
-            // pictureBox1
+            // btnCerrar
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.Fondo2;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(894, 643);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pnlFondoListar
-            // 
-            this.pnlFondoListar.Controls.Add(this.dataGridView1);
-            this.pnlFondoListar.Location = new System.Drawing.Point(57, 150);
-            this.pnlFondoListar.Name = "pnlFondoListar";
-            this.pnlFondoListar.Size = new System.Drawing.Size(773, 426);
-            this.pnlFondoListar.TabIndex = 1;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 14);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(737, 386);
-            this.dataGridView1.TabIndex = 0;
+            this.btnCerrar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.Location = new System.Drawing.Point(386, 594);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(75, 23);
+            this.btnCerrar.TabIndex = 6;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // txtBus
             // 
@@ -101,38 +92,62 @@
             this.lblBuscar.TabIndex = 5;
             this.lblBuscar.Text = "Buscar";
             // 
-            // btnCerrar
+            // pnlFondoListar
             // 
-            this.btnCerrar.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(386, 594);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(75, 23);
-            this.btnCerrar.TabIndex = 6;
-            this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.pnlFondoListar.Controls.Add(this.dataGridView1);
+            this.pnlFondoListar.Location = new System.Drawing.Point(57, 150);
+            this.pnlFondoListar.Name = "pnlFondoListar";
+            this.pnlFondoListar.Size = new System.Drawing.Size(773, 426);
+            this.pnlFondoListar.TabIndex = 1;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(17, 14);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(737, 386);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.Fondo2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(894, 669);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblListarAlumno
+            // 
+            this.lblListarAlumno.BackColor = System.Drawing.Color.DimGray;
+            this.lblListarAlumno.Font = new System.Drawing.Font("Bodoni MT Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListarAlumno.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblListarAlumno.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblListarAlumno.Location = new System.Drawing.Point(309, 41);
+            this.lblListarAlumno.Name = "lblListarAlumno";
+            this.lblListarAlumno.Size = new System.Drawing.Size(244, 25);
+            this.lblListarAlumno.TabIndex = 19;
+            this.lblListarAlumno.Text = "Listar Alumno";
+            this.lblListarAlumno.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // FrmListarAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 643);
+            this.ClientSize = new System.Drawing.Size(894, 669);
             this.Controls.Add(this.pnlContenedor);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(910, 682);
-            this.MinimumSize = new System.Drawing.Size(910, 682);
+            this.MaximumSize = new System.Drawing.Size(910, 708);
+            this.MinimumSize = new System.Drawing.Size(910, 708);
             this.Name = "FrmListarAlumnos";
             this.Text = "Listar Alumnos";
             this.Load += new System.EventHandler(this.FrmListarAlumnos_Load_1);
             this.pnlContenedor.ResumeLayout(false);
             this.pnlContenedor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlFondoListar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -146,5 +161,6 @@
         private System.Windows.Forms.TextBox txtBus;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Label lblListarAlumno;
     }
 }

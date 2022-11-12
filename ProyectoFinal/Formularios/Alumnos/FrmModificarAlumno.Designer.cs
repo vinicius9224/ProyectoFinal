@@ -81,7 +81,7 @@
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(0, 0);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(894, 643);
+            this.pnlContenedor.Size = new System.Drawing.Size(894, 669);
             this.pnlContenedor.TabIndex = 3;
             // 
             // pnlFondoAgregarAlumno
@@ -94,7 +94,7 @@
             this.pnlFondoAgregarAlumno.Controls.Add(this.btnCerrar);
             this.pnlFondoAgregarAlumno.Controls.Add(this.pnlAgregarAlumno);
             this.pnlFondoAgregarAlumno.Controls.Add(this.pnlResp);
-            this.pnlFondoAgregarAlumno.Location = new System.Drawing.Point(30, 69);
+            this.pnlFondoAgregarAlumno.Location = new System.Drawing.Point(29, 88);
             this.pnlFondoAgregarAlumno.Name = "pnlFondoAgregarAlumno";
             this.pnlFondoAgregarAlumno.Size = new System.Drawing.Size(838, 538);
             this.pnlFondoAgregarAlumno.TabIndex = 192;
@@ -424,7 +424,7 @@
             this.lblRegAlumno.Font = new System.Drawing.Font("Bodoni MT Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegAlumno.ForeColor = System.Drawing.SystemColors.Control;
             this.lblRegAlumno.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblRegAlumno.Location = new System.Drawing.Point(315, 23);
+            this.lblRegAlumno.Location = new System.Drawing.Point(316, 35);
             this.lblRegAlumno.Name = "lblRegAlumno";
             this.lblRegAlumno.Size = new System.Drawing.Size(244, 25);
             this.lblRegAlumno.TabIndex = 191;
@@ -437,7 +437,7 @@
             this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.Fondo2;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(894, 643);
+            this.pictureBox1.Size = new System.Drawing.Size(894, 669);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -445,9 +445,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 643);
+            this.ClientSize = new System.Drawing.Size(894, 669);
             this.Controls.Add(this.pnlContenedor);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(910, 708);
+            this.MinimumSize = new System.Drawing.Size(910, 708);
             this.Name = "FrmModificarAlumno";
             this.Text = "Modificar Alumno";
             this.Load += new System.EventHandler(this.FrmModificarAlumno_Load_1);

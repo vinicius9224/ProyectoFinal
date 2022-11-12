@@ -30,13 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAgregarAlumno));
             this.pnlContenedor = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblRegAlumno = new System.Windows.Forms.Label();
             this.pnlFondoAgregarAlumno = new System.Windows.Forms.Panel();
-            this.pnlAgregarAlumno = new System.Windows.Forms.Panel();
-            this.lblTituloAlumno = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.pnlAgregarAlumno = new System.Windows.Forms.Panel();
+            this.lblTituloAlumno = new System.Windows.Forms.Label();
             this.txteva = new System.Windows.Forms.TextBox();
             this.txtdom = new System.Windows.Forms.TextBox();
             this.comboBoxMuni = new System.Windows.Forms.ComboBox();
@@ -63,11 +61,13 @@
             this.txtcod = new System.Windows.Forms.TextBox();
             this.lblNomResp = new System.Windows.Forms.Label();
             this.lblTelfResp = new System.Windows.Forms.Label();
+            this.lblRegAlumno = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlContenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlFondoAgregarAlumno.SuspendLayout();
             this.pnlAgregarAlumno.SuspendLayout();
             this.pnlResp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlContenedor
@@ -78,31 +78,8 @@
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(0, 0);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(894, 643);
+            this.pnlContenedor.Size = new System.Drawing.Size(894, 669);
             this.pnlContenedor.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.Fondo2;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(894, 643);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lblRegAlumno
-            // 
-            this.lblRegAlumno.BackColor = System.Drawing.Color.DimGray;
-            this.lblRegAlumno.Font = new System.Drawing.Font("Bodoni MT Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegAlumno.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblRegAlumno.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblRegAlumno.Location = new System.Drawing.Point(312, 64);
-            this.lblRegAlumno.Name = "lblRegAlumno";
-            this.lblRegAlumno.Size = new System.Drawing.Size(244, 25);
-            this.lblRegAlumno.TabIndex = 191;
-            this.lblRegAlumno.Text = "Agregar Alumno";
-            this.lblRegAlumno.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // pnlFondoAgregarAlumno
             // 
@@ -112,10 +89,41 @@
             this.pnlFondoAgregarAlumno.Controls.Add(this.btnCerrar);
             this.pnlFondoAgregarAlumno.Controls.Add(this.pnlAgregarAlumno);
             this.pnlFondoAgregarAlumno.Controls.Add(this.pnlResp);
-            this.pnlFondoAgregarAlumno.Location = new System.Drawing.Point(30, 167);
+            this.pnlFondoAgregarAlumno.Location = new System.Drawing.Point(30, 212);
             this.pnlFondoAgregarAlumno.Name = "pnlFondoAgregarAlumno";
             this.pnlFondoAgregarAlumno.Size = new System.Drawing.Size(838, 319);
             this.pnlFondoAgregarAlumno.TabIndex = 192;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(405, 272);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 12;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Brown;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar.Location = new System.Drawing.Point(310, 272);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(75, 23);
+            this.btnCerrar.TabIndex = 13;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
             // 
             // pnlAgregarAlumno
             // 
@@ -158,37 +166,6 @@
             this.lblTituloAlumno.TabIndex = 136;
             this.lblTituloAlumno.Text = "Alumno";
             this.lblTituloAlumno.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnGuardar.FlatAppearance.BorderSize = 0;
-            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(405, 272);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 12;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Brown;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Location = new System.Drawing.Point(310, 272);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(75, 23);
-            this.btnCerrar.TabIndex = 13;
-            this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
             // 
             // txteva
             // 
@@ -412,25 +389,48 @@
             this.lblTelfResp.TabIndex = 166;
             this.lblTelfResp.Text = "Teléfono Resp.";
             // 
+            // lblRegAlumno
+            // 
+            this.lblRegAlumno.BackColor = System.Drawing.Color.DimGray;
+            this.lblRegAlumno.Font = new System.Drawing.Font("Bodoni MT Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegAlumno.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblRegAlumno.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblRegAlumno.Location = new System.Drawing.Point(311, 122);
+            this.lblRegAlumno.Name = "lblRegAlumno";
+            this.lblRegAlumno.Size = new System.Drawing.Size(244, 25);
+            this.lblRegAlumno.TabIndex = 191;
+            this.lblRegAlumno.Text = "Agregar Alumno";
+            this.lblRegAlumno.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.Fondo2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(894, 669);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmAgregarAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 643);
+            this.ClientSize = new System.Drawing.Size(894, 669);
             this.Controls.Add(this.pnlContenedor);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(910, 682);
-            this.MinimumSize = new System.Drawing.Size(910, 682);
+            this.MaximumSize = new System.Drawing.Size(910, 708);
+            this.MinimumSize = new System.Drawing.Size(910, 708);
             this.Name = "FrmAgregarAlumno";
             this.Text = "Agregar Alumnos";
             this.Load += new System.EventHandler(this.FrmAgregarAlumno_Load);
             this.pnlContenedor.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlFondoAgregarAlumno.ResumeLayout(false);
             this.pnlAgregarAlumno.ResumeLayout(false);
             this.pnlAgregarAlumno.PerformLayout();
             this.pnlResp.ResumeLayout(false);
             this.pnlResp.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

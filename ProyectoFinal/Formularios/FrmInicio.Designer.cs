@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInicio));
             this.pnlControl = new System.Windows.Forms.Panel();
+            this.picMenu = new System.Windows.Forms.PictureBox();
             this.pnlMenuLateral = new System.Windows.Forms.Panel();
             this.pnlSubMenuNominas = new System.Windows.Forms.Panel();
             this.btnEgresosTotales = new System.Windows.Forms.Button();
@@ -57,15 +58,17 @@
             this.btnModAlumnos = new System.Windows.Forms.Button();
             this.btnAgregarAlumnos = new System.Windows.Forms.Button();
             this.btnAlumnos = new System.Windows.Forms.Button();
-            this.picMenu = new System.Windows.Forms.PictureBox();
+            this.pnlConfig = new System.Windows.Forms.Panel();
+            this.btnConfig = new System.Windows.Forms.Button();
             this.pnlControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMenu)).BeginInit();
             this.pnlMenuLateral.SuspendLayout();
             this.pnlSubMenuNominas.SuspendLayout();
             this.pnlSubMenuFacturas.SuspendLayout();
             this.pnlSubMenuSesiones.SuspendLayout();
             this.pnlSubMenuMaestros.SuspendLayout();
             this.pnlSubMenuAlumnos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picMenu)).BeginInit();
+            this.pnlConfig.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlControl
@@ -74,13 +77,25 @@
             this.pnlControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlControl.Location = new System.Drawing.Point(200, 0);
             this.pnlControl.Name = "pnlControl";
-            this.pnlControl.Size = new System.Drawing.Size(910, 682);
+            this.pnlControl.Size = new System.Drawing.Size(910, 708);
             this.pnlControl.TabIndex = 3;
+            // 
+            // picMenu
+            // 
+            this.picMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picMenu.Image = ((System.Drawing.Image)(resources.GetObject("picMenu.Image")));
+            this.picMenu.Location = new System.Drawing.Point(0, 0);
+            this.picMenu.Name = "picMenu";
+            this.picMenu.Size = new System.Drawing.Size(910, 708);
+            this.picMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picMenu.TabIndex = 0;
+            this.picMenu.TabStop = false;
             // 
             // pnlMenuLateral
             // 
             this.pnlMenuLateral.AutoScroll = true;
             this.pnlMenuLateral.BackColor = System.Drawing.Color.White;
+            this.pnlMenuLateral.Controls.Add(this.pnlConfig);
             this.pnlMenuLateral.Controls.Add(this.pnlSubMenuNominas);
             this.pnlMenuLateral.Controls.Add(this.btnNominas);
             this.pnlMenuLateral.Controls.Add(this.pnlSubMenuFacturas);
@@ -94,7 +109,7 @@
             this.pnlMenuLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenuLateral.Location = new System.Drawing.Point(0, 0);
             this.pnlMenuLateral.Name = "pnlMenuLateral";
-            this.pnlMenuLateral.Size = new System.Drawing.Size(200, 682);
+            this.pnlMenuLateral.Size = new System.Drawing.Size(200, 708);
             this.pnlMenuLateral.TabIndex = 2;
             // 
             // pnlSubMenuNominas
@@ -478,39 +493,54 @@
             this.btnAlumnos.UseVisualStyleBackColor = false;
             this.btnAlumnos.Click += new System.EventHandler(this.btnAlumnos_Click);
             // 
-            // picMenu
+            // pnlConfig
             // 
-            this.picMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picMenu.Image = ((System.Drawing.Image)(resources.GetObject("picMenu.Image")));
-            this.picMenu.Location = new System.Drawing.Point(0, 0);
-            this.picMenu.Name = "picMenu";
-            this.picMenu.Size = new System.Drawing.Size(910, 682);
-            this.picMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picMenu.TabIndex = 0;
-            this.picMenu.TabStop = false;
+            this.pnlConfig.Controls.Add(this.btnConfig);
+            this.pnlConfig.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlConfig.Location = new System.Drawing.Point(0, 676);
+            this.pnlConfig.Name = "pnlConfig";
+            this.pnlConfig.Size = new System.Drawing.Size(200, 32);
+            this.pnlConfig.TabIndex = 1;
+            // 
+            // btnConfig
+            // 
+            this.btnConfig.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnConfig.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnConfig.FlatAppearance.BorderSize = 0;
+            this.btnConfig.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfig.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfig.Location = new System.Drawing.Point(0, 0);
+            this.btnConfig.Name = "btnConfig";
+            this.btnConfig.Size = new System.Drawing.Size(200, 33);
+            this.btnConfig.TabIndex = 11;
+            this.btnConfig.Text = "Configuración";
+            this.btnConfig.UseVisualStyleBackColor = false;
+            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
             // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1110, 682);
+            this.ClientSize = new System.Drawing.Size(1110, 708);
             this.Controls.Add(this.pnlControl);
             this.Controls.Add(this.pnlMenuLateral);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1126, 721);
+            this.MaximumSize = new System.Drawing.Size(1126, 747);
             this.MinimumSize = new System.Drawing.Size(1126, 721);
             this.Name = "FrmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmInicio_FormClosed);
             this.pnlControl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picMenu)).EndInit();
             this.pnlMenuLateral.ResumeLayout(false);
             this.pnlSubMenuNominas.ResumeLayout(false);
             this.pnlSubMenuFacturas.ResumeLayout(false);
             this.pnlSubMenuSesiones.ResumeLayout(false);
             this.pnlSubMenuMaestros.ResumeLayout(false);
             this.pnlSubMenuAlumnos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picMenu)).EndInit();
+            this.pnlConfig.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -546,5 +576,7 @@
         private System.Windows.Forms.Button btnGenerarFactura;
         private System.Windows.Forms.Button btnFacturas;
         private System.Windows.Forms.Button btnEgresosTotales;
+        private System.Windows.Forms.Panel pnlConfig;
+        private System.Windows.Forms.Button btnConfig;
     }
 }

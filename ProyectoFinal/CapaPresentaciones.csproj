@@ -71,6 +71,12 @@
     <Compile Include="Formularios\Alumnos\FrmModificarAlumno.Designer.cs">
       <DependentUpon>FrmModificarAlumno.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Configuración\FrmEditarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Configuración\FrmEditarUsuario.Designer.cs">
+      <DependentUpon>FrmEditarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Facturas\FrmGenerarFactura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Alumnos\FrmModificarAlumno.resx">
       <DependentUpon>FrmModificarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Configuración\FrmEditarUsuario.resx">
+      <DependentUpon>FrmEditarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Facturas\FrmGenerarFactura.resx">
       <DependentUpon>FrmGenerarFactura.cs</DependentUpon>
