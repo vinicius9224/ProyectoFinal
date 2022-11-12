@@ -96,7 +96,7 @@
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Brown;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Location = new System.Drawing.Point(324, 548);
             this.btnCancelar.Name = "btnCancelar";
@@ -112,7 +112,7 @@
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Location = new System.Drawing.Point(515, 548);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(115, 44);
@@ -124,7 +124,7 @@
             // lblRegSes
             // 
             this.lblRegSes.BackColor = System.Drawing.Color.DimGray;
-            this.lblRegSes.Font = new System.Drawing.Font("Bodoni MT Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegSes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegSes.ForeColor = System.Drawing.SystemColors.Control;
             this.lblRegSes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblRegSes.Location = new System.Drawing.Point(361, 57);
@@ -262,7 +262,7 @@
             // lblFechSes
             // 
             this.lblFechSes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblFechSes.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechSes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechSes.ForeColor = System.Drawing.SystemColors.Control;
             this.lblFechSes.Location = new System.Drawing.Point(18, 248);
             this.lblFechSes.Name = "lblFechSes";
@@ -274,7 +274,7 @@
             // lblCodFactur
             // 
             this.lblCodFactur.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblCodFactur.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodFactur.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodFactur.ForeColor = System.Drawing.SystemColors.Control;
             this.lblCodFactur.Location = new System.Drawing.Point(173, 151);
             this.lblCodFactur.Name = "lblCodFactur";
@@ -286,7 +286,7 @@
             // lblCodTrab
             // 
             this.lblCodTrab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblCodTrab.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodTrab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodTrab.ForeColor = System.Drawing.SystemColors.Control;
             this.lblCodTrab.Location = new System.Drawing.Point(18, 151);
             this.lblCodTrab.Name = "lblCodTrab";
@@ -298,7 +298,7 @@
             // lblCantHorsSes
             // 
             this.lblCantHorsSes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblCantHorsSes.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantHorsSes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantHorsSes.ForeColor = System.Drawing.SystemColors.Control;
             this.lblCantHorsSes.Location = new System.Drawing.Point(173, 50);
             this.lblCantHorsSes.Name = "lblCantHorsSes";
@@ -310,7 +310,7 @@
             // lblCodSes
             // 
             this.lblCodSes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblCodSes.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodSes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodSes.ForeColor = System.Drawing.SystemColors.Control;
             this.lblCodSes.Location = new System.Drawing.Point(18, 50);
             this.lblCodSes.Name = "lblCodSes";

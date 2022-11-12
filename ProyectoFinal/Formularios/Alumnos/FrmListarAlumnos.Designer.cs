@@ -35,8 +35,8 @@
             this.lblBuscar = new System.Windows.Forms.Label();
             this.pnlFondoListar = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblListarAlumno = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlContenedor.SuspendLayout();
             this.pnlFondoListar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -63,10 +63,10 @@
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.Location = new System.Drawing.Point(386, 594);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(75, 23);
+            this.btnCerrar.Size = new System.Drawing.Size(87, 34);
             this.btnCerrar.TabIndex = 6;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = false;
@@ -84,11 +84,11 @@
             // 
             this.lblBuscar.AutoSize = true;
             this.lblBuscar.BackColor = System.Drawing.Color.Gray;
-            this.lblBuscar.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBuscar.ForeColor = System.Drawing.Color.White;
             this.lblBuscar.Location = new System.Drawing.Point(68, 109);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(63, 22);
+            this.lblBuscar.Size = new System.Drawing.Size(65, 20);
             this.lblBuscar.TabIndex = 5;
             this.lblBuscar.Text = "Buscar";
             // 
@@ -108,6 +108,19 @@
             this.dataGridView1.Size = new System.Drawing.Size(737, 386);
             this.dataGridView1.TabIndex = 0;
             // 
+            // lblListarAlumno
+            // 
+            this.lblListarAlumno.BackColor = System.Drawing.Color.DimGray;
+            this.lblListarAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListarAlumno.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblListarAlumno.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblListarAlumno.Location = new System.Drawing.Point(309, 41);
+            this.lblListarAlumno.Name = "lblListarAlumno";
+            this.lblListarAlumno.Size = new System.Drawing.Size(244, 28);
+            this.lblListarAlumno.TabIndex = 19;
+            this.lblListarAlumno.Text = "Listar Alumno";
+            this.lblListarAlumno.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -117,19 +130,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(894, 669);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // lblListarAlumno
-            // 
-            this.lblListarAlumno.BackColor = System.Drawing.Color.DimGray;
-            this.lblListarAlumno.Font = new System.Drawing.Font("Bodoni MT Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListarAlumno.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblListarAlumno.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblListarAlumno.Location = new System.Drawing.Point(309, 41);
-            this.lblListarAlumno.Name = "lblListarAlumno";
-            this.lblListarAlumno.Size = new System.Drawing.Size(244, 25);
-            this.lblListarAlumno.TabIndex = 19;
-            this.lblListarAlumno.Text = "Listar Alumno";
-            this.lblListarAlumno.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // FrmListarAlumnos
             // 

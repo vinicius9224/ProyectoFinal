@@ -30,8 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInicio));
             this.pnlControl = new System.Windows.Forms.Panel();
-            this.picMenu = new System.Windows.Forms.PictureBox();
             this.pnlMenuLateral = new System.Windows.Forms.Panel();
+            this.pnlConfig = new System.Windows.Forms.Panel();
+            this.btnConfig = new System.Windows.Forms.Button();
             this.pnlSubMenuNominas = new System.Windows.Forms.Panel();
             this.btnEgresosTotales = new System.Windows.Forms.Button();
             this.btnHistorialNominas = new System.Windows.Forms.Button();
@@ -58,17 +59,16 @@
             this.btnModAlumnos = new System.Windows.Forms.Button();
             this.btnAgregarAlumnos = new System.Windows.Forms.Button();
             this.btnAlumnos = new System.Windows.Forms.Button();
-            this.pnlConfig = new System.Windows.Forms.Panel();
-            this.btnConfig = new System.Windows.Forms.Button();
+            this.picMenu = new System.Windows.Forms.PictureBox();
             this.pnlControl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picMenu)).BeginInit();
             this.pnlMenuLateral.SuspendLayout();
+            this.pnlConfig.SuspendLayout();
             this.pnlSubMenuNominas.SuspendLayout();
             this.pnlSubMenuFacturas.SuspendLayout();
             this.pnlSubMenuSesiones.SuspendLayout();
             this.pnlSubMenuMaestros.SuspendLayout();
             this.pnlSubMenuAlumnos.SuspendLayout();
-            this.pnlConfig.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlControl
@@ -79,17 +79,6 @@
             this.pnlControl.Name = "pnlControl";
             this.pnlControl.Size = new System.Drawing.Size(910, 708);
             this.pnlControl.TabIndex = 3;
-            // 
-            // picMenu
-            // 
-            this.picMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picMenu.Image = ((System.Drawing.Image)(resources.GetObject("picMenu.Image")));
-            this.picMenu.Location = new System.Drawing.Point(0, 0);
-            this.picMenu.Name = "picMenu";
-            this.picMenu.Size = new System.Drawing.Size(910, 708);
-            this.picMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picMenu.TabIndex = 0;
-            this.picMenu.TabStop = false;
             // 
             // pnlMenuLateral
             // 
@@ -112,6 +101,31 @@
             this.pnlMenuLateral.Size = new System.Drawing.Size(200, 708);
             this.pnlMenuLateral.TabIndex = 2;
             // 
+            // pnlConfig
+            // 
+            this.pnlConfig.Controls.Add(this.btnConfig);
+            this.pnlConfig.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlConfig.Location = new System.Drawing.Point(0, 676);
+            this.pnlConfig.Name = "pnlConfig";
+            this.pnlConfig.Size = new System.Drawing.Size(200, 32);
+            this.pnlConfig.TabIndex = 6;
+            // 
+            // btnConfig
+            // 
+            this.btnConfig.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnConfig.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnConfig.FlatAppearance.BorderSize = 0;
+            this.btnConfig.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfig.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfig.Location = new System.Drawing.Point(0, 0);
+            this.btnConfig.Name = "btnConfig";
+            this.btnConfig.Size = new System.Drawing.Size(200, 33);
+            this.btnConfig.TabIndex = 6;
+            this.btnConfig.Text = "Configuración";
+            this.btnConfig.UseVisualStyleBackColor = false;
+            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
+            // 
             // pnlSubMenuNominas
             // 
             this.pnlSubMenuNominas.BackColor = System.Drawing.Color.White;
@@ -122,7 +136,7 @@
             this.pnlSubMenuNominas.Location = new System.Drawing.Point(0, 585);
             this.pnlSubMenuNominas.Name = "pnlSubMenuNominas";
             this.pnlSubMenuNominas.Size = new System.Drawing.Size(200, 91);
-            this.pnlSubMenuNominas.TabIndex = 11;
+            this.pnlSubMenuNominas.TabIndex = 5;
             // 
             // btnEgresosTotales
             // 
@@ -134,7 +148,7 @@
             this.btnEgresosTotales.Location = new System.Drawing.Point(0, 52);
             this.btnEgresosTotales.Name = "btnEgresosTotales";
             this.btnEgresosTotales.Size = new System.Drawing.Size(200, 28);
-            this.btnEgresosTotales.TabIndex = 15;
+            this.btnEgresosTotales.TabIndex = 20;
             this.btnEgresosTotales.Text = "Egresos Totales";
             this.btnEgresosTotales.UseVisualStyleBackColor = false;
             this.btnEgresosTotales.Click += new System.EventHandler(this.btnEgresosTotales_Click);
@@ -149,7 +163,7 @@
             this.btnHistorialNominas.Location = new System.Drawing.Point(0, 24);
             this.btnHistorialNominas.Name = "btnHistorialNominas";
             this.btnHistorialNominas.Size = new System.Drawing.Size(200, 28);
-            this.btnHistorialNominas.TabIndex = 13;
+            this.btnHistorialNominas.TabIndex = 19;
             this.btnHistorialNominas.Text = "Historial de Facturas";
             this.btnHistorialNominas.UseVisualStyleBackColor = false;
             this.btnHistorialNominas.Click += new System.EventHandler(this.btnHistorialNominas_Click);
@@ -164,7 +178,7 @@
             this.btnGenerarNomina.Location = new System.Drawing.Point(0, 0);
             this.btnGenerarNomina.Name = "btnGenerarNomina";
             this.btnGenerarNomina.Size = new System.Drawing.Size(200, 24);
-            this.btnGenerarNomina.TabIndex = 12;
+            this.btnGenerarNomina.TabIndex = 18;
             this.btnGenerarNomina.Text = "Generar Nomina";
             this.btnGenerarNomina.UseVisualStyleBackColor = false;
             this.btnGenerarNomina.Click += new System.EventHandler(this.btnGenerarNomina_Click);
@@ -180,7 +194,7 @@
             this.btnNominas.Location = new System.Drawing.Point(0, 552);
             this.btnNominas.Name = "btnNominas";
             this.btnNominas.Size = new System.Drawing.Size(200, 33);
-            this.btnNominas.TabIndex = 10;
+            this.btnNominas.TabIndex = 5;
             this.btnNominas.Text = "Nominas";
             this.btnNominas.UseVisualStyleBackColor = false;
             this.btnNominas.Click += new System.EventHandler(this.btnNominas_Click);
@@ -195,7 +209,7 @@
             this.pnlSubMenuFacturas.Location = new System.Drawing.Point(0, 459);
             this.pnlSubMenuFacturas.Name = "pnlSubMenuFacturas";
             this.pnlSubMenuFacturas.Size = new System.Drawing.Size(200, 93);
-            this.pnlSubMenuFacturas.TabIndex = 9;
+            this.pnlSubMenuFacturas.TabIndex = 4;
             // 
             // btnIngresosTotales
             // 
@@ -207,7 +221,7 @@
             this.btnIngresosTotales.Location = new System.Drawing.Point(0, 52);
             this.btnIngresosTotales.Name = "btnIngresosTotales";
             this.btnIngresosTotales.Size = new System.Drawing.Size(200, 28);
-            this.btnIngresosTotales.TabIndex = 14;
+            this.btnIngresosTotales.TabIndex = 17;
             this.btnIngresosTotales.Text = "Ingresos Totales";
             this.btnIngresosTotales.UseVisualStyleBackColor = false;
             this.btnIngresosTotales.Click += new System.EventHandler(this.btnIngresosTotales_Click);
@@ -222,7 +236,7 @@
             this.btnHistorialFactura.Location = new System.Drawing.Point(0, 24);
             this.btnHistorialFactura.Name = "btnHistorialFactura";
             this.btnHistorialFactura.Size = new System.Drawing.Size(200, 28);
-            this.btnHistorialFactura.TabIndex = 13;
+            this.btnHistorialFactura.TabIndex = 16;
             this.btnHistorialFactura.Text = "Historial de Facturas";
             this.btnHistorialFactura.UseVisualStyleBackColor = false;
             this.btnHistorialFactura.Click += new System.EventHandler(this.btnHistorialFactura_Click);
@@ -237,7 +251,7 @@
             this.btnGenerarFactura.Location = new System.Drawing.Point(0, 0);
             this.btnGenerarFactura.Name = "btnGenerarFactura";
             this.btnGenerarFactura.Size = new System.Drawing.Size(200, 24);
-            this.btnGenerarFactura.TabIndex = 12;
+            this.btnGenerarFactura.TabIndex = 15;
             this.btnGenerarFactura.Text = "Generar Factura";
             this.btnGenerarFactura.UseVisualStyleBackColor = false;
             this.btnGenerarFactura.Click += new System.EventHandler(this.btnGenerarFactura_Click);
@@ -253,7 +267,7 @@
             this.btnFacturas.Location = new System.Drawing.Point(0, 426);
             this.btnFacturas.Name = "btnFacturas";
             this.btnFacturas.Size = new System.Drawing.Size(200, 33);
-            this.btnFacturas.TabIndex = 8;
+            this.btnFacturas.TabIndex = 4;
             this.btnFacturas.Text = "Facturas";
             this.btnFacturas.UseVisualStyleBackColor = false;
             this.btnFacturas.Click += new System.EventHandler(this.btnFacturas_Click);
@@ -267,7 +281,7 @@
             this.pnlSubMenuSesiones.Location = new System.Drawing.Point(0, 360);
             this.pnlSubMenuSesiones.Name = "pnlSubMenuSesiones";
             this.pnlSubMenuSesiones.Size = new System.Drawing.Size(200, 66);
-            this.pnlSubMenuSesiones.TabIndex = 7;
+            this.pnlSubMenuSesiones.TabIndex = 3;
             // 
             // btnListarSesiones
             // 
@@ -310,7 +324,7 @@
             this.btnSesiones.Location = new System.Drawing.Point(0, 327);
             this.btnSesiones.Name = "btnSesiones";
             this.btnSesiones.Size = new System.Drawing.Size(200, 33);
-            this.btnSesiones.TabIndex = 6;
+            this.btnSesiones.TabIndex = 3;
             this.btnSesiones.Text = "Sesiones";
             this.btnSesiones.UseVisualStyleBackColor = false;
             this.btnSesiones.Click += new System.EventHandler(this.btnSesiones_Click);
@@ -326,7 +340,7 @@
             this.pnlSubMenuMaestros.Location = new System.Drawing.Point(0, 211);
             this.pnlSubMenuMaestros.Name = "pnlSubMenuMaestros";
             this.pnlSubMenuMaestros.Size = new System.Drawing.Size(200, 116);
-            this.pnlSubMenuMaestros.TabIndex = 1;
+            this.pnlSubMenuMaestros.TabIndex = 2;
             // 
             // btnListarMaestros
             // 
@@ -338,7 +352,7 @@
             this.btnListarMaestros.Location = new System.Drawing.Point(0, 76);
             this.btnListarMaestros.Name = "btnListarMaestros";
             this.btnListarMaestros.Size = new System.Drawing.Size(200, 27);
-            this.btnListarMaestros.TabIndex = 8;
+            this.btnListarMaestros.TabIndex = 14;
             this.btnListarMaestros.Text = "Listar Maestros";
             this.btnListarMaestros.UseVisualStyleBackColor = false;
             this.btnListarMaestros.Click += new System.EventHandler(this.btnListarMaestros_Click);
@@ -353,7 +367,7 @@
             this.btnEliminarMaestro.Location = new System.Drawing.Point(0, 53);
             this.btnEliminarMaestro.Name = "btnEliminarMaestro";
             this.btnEliminarMaestro.Size = new System.Drawing.Size(200, 23);
-            this.btnEliminarMaestro.TabIndex = 7;
+            this.btnEliminarMaestro.TabIndex = 13;
             this.btnEliminarMaestro.Text = "Eliminar Maestro";
             this.btnEliminarMaestro.UseVisualStyleBackColor = false;
             this.btnEliminarMaestro.Click += new System.EventHandler(this.btnEliminarMaestro_Click);
@@ -368,7 +382,7 @@
             this.btnModificarMaestro.Location = new System.Drawing.Point(0, 31);
             this.btnModificarMaestro.Name = "btnModificarMaestro";
             this.btnModificarMaestro.Size = new System.Drawing.Size(200, 22);
-            this.btnModificarMaestro.TabIndex = 6;
+            this.btnModificarMaestro.TabIndex = 12;
             this.btnModificarMaestro.Text = "Modificar Maestro";
             this.btnModificarMaestro.UseVisualStyleBackColor = false;
             this.btnModificarMaestro.Click += new System.EventHandler(this.btnModificarMaestro_Click);
@@ -383,7 +397,7 @@
             this.btnAgregarMaestro.Location = new System.Drawing.Point(0, 0);
             this.btnAgregarMaestro.Name = "btnAgregarMaestro";
             this.btnAgregarMaestro.Size = new System.Drawing.Size(200, 31);
-            this.btnAgregarMaestro.TabIndex = 5;
+            this.btnAgregarMaestro.TabIndex = 11;
             this.btnAgregarMaestro.Text = "Agregar Maestro";
             this.btnAgregarMaestro.UseVisualStyleBackColor = false;
             this.btnAgregarMaestro.Click += new System.EventHandler(this.btnAgregarMaestro_Click);
@@ -399,7 +413,7 @@
             this.btnMaestros.Location = new System.Drawing.Point(0, 170);
             this.btnMaestros.Name = "btnMaestros";
             this.btnMaestros.Size = new System.Drawing.Size(200, 41);
-            this.btnMaestros.TabIndex = 5;
+            this.btnMaestros.TabIndex = 2;
             this.btnMaestros.Text = "Maestros";
             this.btnMaestros.UseVisualStyleBackColor = false;
             this.btnMaestros.Click += new System.EventHandler(this.btnMaestros_Click);
@@ -427,7 +441,7 @@
             this.btnListarAlumnos.Location = new System.Drawing.Point(0, 91);
             this.btnListarAlumnos.Name = "btnListarAlumnos";
             this.btnListarAlumnos.Size = new System.Drawing.Size(200, 36);
-            this.btnListarAlumnos.TabIndex = 4;
+            this.btnListarAlumnos.TabIndex = 10;
             this.btnListarAlumnos.Text = "Listar Alumnos";
             this.btnListarAlumnos.UseVisualStyleBackColor = false;
             this.btnListarAlumnos.Click += new System.EventHandler(this.btnListarAlumnos_Click);
@@ -442,7 +456,7 @@
             this.btnEliminarAlumnos.Location = new System.Drawing.Point(0, 69);
             this.btnEliminarAlumnos.Name = "btnEliminarAlumnos";
             this.btnEliminarAlumnos.Size = new System.Drawing.Size(200, 22);
-            this.btnEliminarAlumnos.TabIndex = 3;
+            this.btnEliminarAlumnos.TabIndex = 9;
             this.btnEliminarAlumnos.Text = "Eliminar Alumnos";
             this.btnEliminarAlumnos.UseVisualStyleBackColor = false;
             this.btnEliminarAlumnos.Click += new System.EventHandler(this.btnEliminarAlumnos_Click);
@@ -457,7 +471,7 @@
             this.btnModAlumnos.Location = new System.Drawing.Point(0, 33);
             this.btnModAlumnos.Name = "btnModAlumnos";
             this.btnModAlumnos.Size = new System.Drawing.Size(200, 36);
-            this.btnModAlumnos.TabIndex = 2;
+            this.btnModAlumnos.TabIndex = 8;
             this.btnModAlumnos.Text = "Modificar Alumnos";
             this.btnModAlumnos.UseVisualStyleBackColor = false;
             this.btnModAlumnos.Click += new System.EventHandler(this.btnModAlumnos_Click);
@@ -472,7 +486,7 @@
             this.btnAgregarAlumnos.Location = new System.Drawing.Point(0, 0);
             this.btnAgregarAlumnos.Name = "btnAgregarAlumnos";
             this.btnAgregarAlumnos.Size = new System.Drawing.Size(200, 33);
-            this.btnAgregarAlumnos.TabIndex = 1;
+            this.btnAgregarAlumnos.TabIndex = 7;
             this.btnAgregarAlumnos.Text = "Agregar Alumnos";
             this.btnAgregarAlumnos.UseVisualStyleBackColor = false;
             this.btnAgregarAlumnos.Click += new System.EventHandler(this.btnAgregarAlumnos_Click);
@@ -488,35 +502,21 @@
             this.btnAlumnos.Location = new System.Drawing.Point(0, 0);
             this.btnAlumnos.Name = "btnAlumnos";
             this.btnAlumnos.Size = new System.Drawing.Size(200, 34);
-            this.btnAlumnos.TabIndex = 4;
+            this.btnAlumnos.TabIndex = 1;
             this.btnAlumnos.Text = "Alumnos";
             this.btnAlumnos.UseVisualStyleBackColor = false;
             this.btnAlumnos.Click += new System.EventHandler(this.btnAlumnos_Click);
             // 
-            // pnlConfig
+            // picMenu
             // 
-            this.pnlConfig.Controls.Add(this.btnConfig);
-            this.pnlConfig.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlConfig.Location = new System.Drawing.Point(0, 676);
-            this.pnlConfig.Name = "pnlConfig";
-            this.pnlConfig.Size = new System.Drawing.Size(200, 32);
-            this.pnlConfig.TabIndex = 1;
-            // 
-            // btnConfig
-            // 
-            this.btnConfig.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnConfig.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnConfig.FlatAppearance.BorderSize = 0;
-            this.btnConfig.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfig.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfig.Location = new System.Drawing.Point(0, 0);
-            this.btnConfig.Name = "btnConfig";
-            this.btnConfig.Size = new System.Drawing.Size(200, 33);
-            this.btnConfig.TabIndex = 11;
-            this.btnConfig.Text = "Configuración";
-            this.btnConfig.UseVisualStyleBackColor = false;
-            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
+            this.picMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picMenu.Image = ((System.Drawing.Image)(resources.GetObject("picMenu.Image")));
+            this.picMenu.Location = new System.Drawing.Point(0, 0);
+            this.picMenu.Name = "picMenu";
+            this.picMenu.Size = new System.Drawing.Size(910, 708);
+            this.picMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picMenu.TabIndex = 0;
+            this.picMenu.TabStop = false;
             // 
             // FrmInicio
             // 
@@ -533,14 +533,14 @@
             this.Text = "Inicio";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmInicio_FormClosed);
             this.pnlControl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picMenu)).EndInit();
             this.pnlMenuLateral.ResumeLayout(false);
+            this.pnlConfig.ResumeLayout(false);
             this.pnlSubMenuNominas.ResumeLayout(false);
             this.pnlSubMenuFacturas.ResumeLayout(false);
             this.pnlSubMenuSesiones.ResumeLayout(false);
             this.pnlSubMenuMaestros.ResumeLayout(false);
             this.pnlSubMenuAlumnos.ResumeLayout(false);
-            this.pnlConfig.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picMenu)).EndInit();
             this.ResumeLayout(false);
 
         }
