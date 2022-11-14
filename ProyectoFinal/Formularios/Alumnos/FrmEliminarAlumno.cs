@@ -16,7 +16,6 @@ namespace ProyectoFinal.Formularios.Alumnos
         DatosAlumnos objeto = new DatosAlumnos();
 
         private string ID = null;
-        private bool Editacion = false;
 
         public FrmEliminarAlumno()
         {
