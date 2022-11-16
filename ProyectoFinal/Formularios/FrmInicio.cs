@@ -270,8 +270,12 @@ namespace ProyectoFinal.Formularios
 
 
 
+
         #endregion
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
