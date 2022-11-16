@@ -57,7 +57,7 @@
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(0, 0);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(894, 834);
+            this.pnlContenedor.Size = new System.Drawing.Size(894, 934);
             this.pnlContenedor.TabIndex = 0;
             // 
             // panel1
@@ -71,9 +71,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblRegAlumno);
             this.panel1.Controls.Add(this.lblNomUsuario);
-            this.panel1.Location = new System.Drawing.Point(238, 165);
+            this.panel1.Location = new System.Drawing.Point(210, 151);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(393, 488);
+            this.panel1.Size = new System.Drawing.Size(473, 617);
             this.panel1.TabIndex = 1;
             // 
             // btnCerrar
@@ -81,7 +81,7 @@
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Brown;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(150, 425);
+            this.btnCerrar.Location = new System.Drawing.Point(199, 510);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(83, 35);
             this.btnCerrar.TabIndex = 6;
@@ -96,7 +96,7 @@
             this.btnVerificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnVerificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerificar.Location = new System.Drawing.Point(250, 189);
+            this.btnVerificar.Location = new System.Drawing.Point(277, 222);
             this.btnVerificar.Name = "btnVerificar";
             this.btnVerificar.Size = new System.Drawing.Size(100, 23);
             this.btnVerificar.TabIndex = 2;
@@ -107,7 +107,7 @@
             // txtContraActual
             // 
             this.txtContraActual.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtContraActual.Location = new System.Drawing.Point(44, 192);
+            this.txtContraActual.Location = new System.Drawing.Point(71, 225);
             this.txtContraActual.Multiline = true;
             this.txtContraActual.Name = "txtContraActual";
             this.txtContraActual.PasswordChar = '*';
@@ -118,7 +118,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(41, 100);
+            this.label2.Location = new System.Drawing.Point(168, 112);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(142, 16);
             this.label2.TabIndex = 197;
@@ -131,9 +131,9 @@
             this.pnlConfirmar.Controls.Add(this.txtContraNueva);
             this.pnlConfirmar.Controls.Add(this.btnConfirmar);
             this.pnlConfirmar.Controls.Add(this.btnCancelar);
-            this.pnlConfirmar.Location = new System.Drawing.Point(44, 242);
+            this.pnlConfirmar.Location = new System.Drawing.Point(71, 301);
             this.pnlConfirmar.Name = "pnlConfirmar";
-            this.pnlConfirmar.Size = new System.Drawing.Size(306, 145);
+            this.pnlConfirmar.Size = new System.Drawing.Size(322, 145);
             this.pnlConfirmar.TabIndex = 2;
             // 
             // lblContra
@@ -142,7 +142,7 @@
             this.lblContra.BackColor = System.Drawing.Color.White;
             this.lblContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContra.ForeColor = System.Drawing.Color.Black;
-            this.lblContra.Location = new System.Drawing.Point(59, 10);
+            this.lblContra.Location = new System.Drawing.Point(59, 20);
             this.lblContra.Name = "lblContra";
             this.lblContra.Size = new System.Drawing.Size(192, 16);
             this.lblContra.TabIndex = 2;
@@ -152,7 +152,7 @@
             // 
             this.txtContraNueva.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContraNueva.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraNueva.Location = new System.Drawing.Point(48, 40);
+            this.txtContraNueva.Location = new System.Drawing.Point(48, 49);
             this.txtContraNueva.Multiline = true;
             this.txtContraNueva.Name = "txtContraNueva";
             this.txtContraNueva.PasswordChar = '*';
@@ -191,7 +191,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(41, 163);
+            this.label1.Location = new System.Drawing.Point(68, 196);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(192, 16);
             this.label1.TabIndex = 195;
@@ -203,7 +203,7 @@
             this.lblRegAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegAlumno.ForeColor = System.Drawing.SystemColors.Control;
             this.lblRegAlumno.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblRegAlumno.Location = new System.Drawing.Point(44, 38);
+            this.lblRegAlumno.Location = new System.Drawing.Point(87, 45);
             this.lblRegAlumno.Name = "lblRegAlumno";
             this.lblRegAlumno.Size = new System.Drawing.Size(306, 32);
             this.lblRegAlumno.TabIndex = 192;
@@ -215,7 +215,7 @@
             this.lblNomUsuario.AutoSize = true;
             this.lblNomUsuario.BackColor = System.Drawing.Color.White;
             this.lblNomUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomUsuario.Location = new System.Drawing.Point(41, 130);
+            this.lblNomUsuario.Location = new System.Drawing.Point(182, 143);
             this.lblNomUsuario.Name = "lblNomUsuario";
             this.lblNomUsuario.Size = new System.Drawing.Size(0, 16);
             this.lblNomUsuario.TabIndex = 0;
@@ -237,11 +237,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 834);
+            this.ClientSize = new System.Drawing.Size(894, 934);
             this.Controls.Add(this.pnlContenedor);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(910, 873);
-            this.MinimumSize = new System.Drawing.Size(910, 873);
+            this.MaximumSize = new System.Drawing.Size(910, 973);
+            this.MinimumSize = new System.Drawing.Size(910, 973);
             this.Name = "FrmEditarUsuario";
             this.Text = "FrmEditarUsuario";
             this.Load += new System.EventHandler(this.FrmEditarUsuario_Load);
