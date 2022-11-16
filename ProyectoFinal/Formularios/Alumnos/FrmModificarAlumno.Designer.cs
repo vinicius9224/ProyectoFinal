@@ -63,9 +63,9 @@
             this.txtcod = new System.Windows.Forms.TextBox();
             this.lblNomResp = new System.Windows.Forms.Label();
             this.lblTelfResp = new System.Windows.Forms.Label();
-            this.lblRegAlumno = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblModAlumno = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlContenedor.SuspendLayout();
             this.pnlFondoAgregarAlumno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -77,7 +77,7 @@
             // pnlContenedor
             // 
             this.pnlContenedor.Controls.Add(this.pnlFondoAgregarAlumno);
-            this.pnlContenedor.Controls.Add(this.lblRegAlumno);
+            this.pnlContenedor.Controls.Add(this.lblModAlumno);
             this.pnlContenedor.Controls.Add(this.pictureBox1);
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(0, 0);
@@ -432,29 +432,18 @@
             this.lblTelfResp.TabIndex = 166;
             this.lblTelfResp.Text = "Teléfono Resp.";
             // 
-            // lblRegAlumno
+            // lblModAlumno
             // 
-            this.lblRegAlumno.BackColor = System.Drawing.Color.DimGray;
-            this.lblRegAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegAlumno.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblRegAlumno.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblRegAlumno.Location = new System.Drawing.Point(316, 35);
-            this.lblRegAlumno.Name = "lblRegAlumno";
-            this.lblRegAlumno.Size = new System.Drawing.Size(244, 25);
-            this.lblRegAlumno.TabIndex = 191;
-            this.lblRegAlumno.Text = "Agregar Alumno";
-            this.lblRegAlumno.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.Fondo2;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(894, 934);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.lblModAlumno.BackColor = System.Drawing.Color.DimGray;
+            this.lblModAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModAlumno.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblModAlumno.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblModAlumno.Location = new System.Drawing.Point(316, 35);
+            this.lblModAlumno.Name = "lblModAlumno";
+            this.lblModAlumno.Size = new System.Drawing.Size(244, 25);
+            this.lblModAlumno.TabIndex = 191;
+            this.lblModAlumno.Text = "Modificar Alumno";
+            this.lblModAlumno.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label2
             // 
@@ -468,6 +457,17 @@
             this.label2.TabIndex = 188;
             this.label2.Text = "Editar Alumno";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.Fondo2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(894, 934);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmModificarAlumno
             // 
@@ -527,7 +527,7 @@
         private System.Windows.Forms.TextBox txtcod;
         private System.Windows.Forms.Label lblNomResp;
         private System.Windows.Forms.Label lblTelfResp;
-        private System.Windows.Forms.Label lblRegAlumno;
+        private System.Windows.Forms.Label lblModAlumno;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnEditar;

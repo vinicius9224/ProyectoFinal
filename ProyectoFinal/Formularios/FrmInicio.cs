@@ -264,18 +264,9 @@ namespace ProyectoFinal.Formularios
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
-            FrmLogin login = new FrmLogin();
-            login.Show();
         }
-
-
-
 
         #endregion
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
