@@ -42,6 +42,8 @@
             this.lblContra = new System.Windows.Forms.Label();
             this.lblNomUsuario = new System.Windows.Forms.Label();
             this.lblInicioSesion = new System.Windows.Forms.Label();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.pnlCerrar = new System.Windows.Forms.Panel();
             this.picLoginFondo = new System.Windows.Forms.PictureBox();
             this.picFondoNomUsuario = new System.Windows.Forms.PictureBox();
             this.picFondoContra = new System.Windows.Forms.PictureBox();
@@ -49,11 +51,10 @@
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.picFondo = new System.Windows.Forms.PictureBox();
-            this.btnCerrar = new System.Windows.Forms.Button();
-            this.pnlCerrar = new System.Windows.Forms.Panel();
             this.pnlLogo.SuspendLayout();
             this.pnlMenuLogin.SuspendLayout();
             this.pnlBtnLogin.SuspendLayout();
+            this.pnlCerrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLoginFondo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFondoNomUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFondoContra)).BeginInit();
@@ -61,7 +62,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFondo)).BeginInit();
-            this.pnlCerrar.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlLogo
@@ -230,9 +230,36 @@
             this.lblInicioSesion.TabIndex = 12;
             this.lblInicioSesion.Text = "Inicio de Sesión";
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(213)))), ((int)(((byte)(213)))));
+            this.btnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.Color.Black;
+            this.btnCerrar.Location = new System.Drawing.Point(10, 11);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(60, 32);
+            this.btnCerrar.TabIndex = 24;
+            this.btnCerrar.Text = "Salir";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // pnlCerrar
+            // 
+            this.pnlCerrar.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnlCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlCerrar.Controls.Add(this.btnCerrar);
+            this.pnlCerrar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pnlCerrar.Location = new System.Drawing.Point(282, 3);
+            this.pnlCerrar.Name = "pnlCerrar";
+            this.pnlCerrar.Size = new System.Drawing.Size(77, 51);
+            this.pnlCerrar.TabIndex = 25;
+            // 
             // picLoginFondo
             // 
-            this.picLoginFondo.Image = global::ProyectoFinal.Properties.Resources.BotonLoginFondo;
             this.picLoginFondo.Location = new System.Drawing.Point(39, 2);
             this.picLoginFondo.Name = "picLoginFondo";
             this.picLoginFondo.Size = new System.Drawing.Size(126, 55);
@@ -294,41 +321,13 @@
             // 
             // picFondo
             // 
-            this.picFondo.Image = ((System.Drawing.Image)(resources.GetObject("picFondo.Image")));
+            this.picFondo.Image = global::ProyectoFinal.Properties.Resources.Fondo4;
             this.picFondo.Location = new System.Drawing.Point(0, 0);
             this.picFondo.Name = "picFondo";
             this.picFondo.Size = new System.Drawing.Size(712, 491);
             this.picFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picFondo.TabIndex = 23;
             this.picFondo.TabStop = false;
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(213)))), ((int)(((byte)(213)))));
-            this.btnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.ForeColor = System.Drawing.Color.Black;
-            this.btnCerrar.Location = new System.Drawing.Point(10, 11);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(60, 32);
-            this.btnCerrar.TabIndex = 24;
-            this.btnCerrar.Text = "Salir";
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // pnlCerrar
-            // 
-            this.pnlCerrar.BackColor = System.Drawing.Color.Gainsboro;
-            this.pnlCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pnlCerrar.Controls.Add(this.btnCerrar);
-            this.pnlCerrar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pnlCerrar.Location = new System.Drawing.Point(282, 3);
-            this.pnlCerrar.Name = "pnlCerrar";
-            this.pnlCerrar.Size = new System.Drawing.Size(77, 51);
-            this.pnlCerrar.TabIndex = 25;
             // 
             // FrmLogin
             // 
@@ -354,6 +353,7 @@
             this.pnlMenuLogin.ResumeLayout(false);
             this.pnlMenuLogin.PerformLayout();
             this.pnlBtnLogin.ResumeLayout(false);
+            this.pnlCerrar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLoginFondo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFondoNomUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFondoContra)).EndInit();
@@ -361,7 +361,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFondo)).EndInit();
-            this.pnlCerrar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

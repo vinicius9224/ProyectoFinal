@@ -65,6 +65,7 @@
             this.lblTelfResp = new System.Windows.Forms.Label();
             this.lblRegAlumno = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.pnlContenedor.SuspendLayout();
             this.pnlFondoAgregarAlumno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -88,6 +89,7 @@
             // 
             this.pnlFondoAgregarAlumno.BackColor = System.Drawing.Color.Silver;
             this.pnlFondoAgregarAlumno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlFondoAgregarAlumno.Controls.Add(this.label2);
             this.pnlFondoAgregarAlumno.Controls.Add(this.btnEditar);
             this.pnlFondoAgregarAlumno.Controls.Add(this.dataGridView1);
             this.pnlFondoAgregarAlumno.Controls.Add(this.btnGuardar);
@@ -96,7 +98,7 @@
             this.pnlFondoAgregarAlumno.Controls.Add(this.pnlResp);
             this.pnlFondoAgregarAlumno.Location = new System.Drawing.Point(29, 88);
             this.pnlFondoAgregarAlumno.Name = "pnlFondoAgregarAlumno";
-            this.pnlFondoAgregarAlumno.Size = new System.Drawing.Size(838, 538);
+            this.pnlFondoAgregarAlumno.Size = new System.Drawing.Size(838, 778);
             this.pnlFondoAgregarAlumno.TabIndex = 192;
             // 
             // btnEditar
@@ -106,7 +108,7 @@
             this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(722, 263);
+            this.btnEditar.Location = new System.Drawing.Point(722, 453);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 31);
             this.btnEditar.TabIndex = 15;
@@ -118,9 +120,9 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 263);
+            this.dataGridView1.Location = new System.Drawing.Point(25, 423);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(677, 234);
+            this.dataGridView1.Size = new System.Drawing.Size(677, 296);
             this.dataGridView1.TabIndex = 14;
             // 
             // btnGuardar
@@ -130,7 +132,7 @@
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(722, 361);
+            this.btnGuardar.Location = new System.Drawing.Point(722, 551);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 40);
             this.btnGuardar.TabIndex = 12;
@@ -146,7 +148,7 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Location = new System.Drawing.Point(722, 465);
+            this.btnCerrar.Location = new System.Drawing.Point(722, 655);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(75, 32);
             this.btnCerrar.TabIndex = 13;
@@ -180,7 +182,7 @@
             this.pnlAgregarAlumno.Controls.Add(this.lblFechaNac);
             this.pnlAgregarAlumno.Location = new System.Drawing.Point(25, 28);
             this.pnlAgregarAlumno.Name = "pnlAgregarAlumno";
-            this.pnlAgregarAlumno.Size = new System.Drawing.Size(599, 212);
+            this.pnlAgregarAlumno.Size = new System.Drawing.Size(599, 317);
             this.pnlAgregarAlumno.TabIndex = 1;
             // 
             // lblTituloAlumno
@@ -198,7 +200,7 @@
             // 
             // txteva
             // 
-            this.txteva.Location = new System.Drawing.Point(279, 118);
+            this.txteva.Location = new System.Drawing.Point(279, 155);
             this.txteva.Name = "txteva";
             this.txteva.Size = new System.Drawing.Size(100, 20);
             this.txteva.TabIndex = 6;
@@ -208,13 +210,13 @@
             this.txtdom.Location = new System.Drawing.Point(397, 66);
             this.txtdom.Multiline = true;
             this.txtdom.Name = "txtdom";
-            this.txtdom.Size = new System.Drawing.Size(180, 72);
+            this.txtdom.Size = new System.Drawing.Size(180, 109);
             this.txtdom.TabIndex = 3;
             // 
             // comboBoxMuni
             // 
             this.comboBoxMuni.FormattingEnabled = true;
-            this.comboBoxMuni.Location = new System.Drawing.Point(293, 171);
+            this.comboBoxMuni.Location = new System.Drawing.Point(292, 247);
             this.comboBoxMuni.Name = "comboBoxMuni";
             this.comboBoxMuni.Size = new System.Drawing.Size(121, 21);
             this.comboBoxMuni.TabIndex = 9;
@@ -233,7 +235,7 @@
             // 
             this.lblDepartamento.AutoSize = true;
             this.lblDepartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDepartamento.Location = new System.Drawing.Point(166, 151);
+            this.lblDepartamento.Location = new System.Drawing.Point(165, 227);
             this.lblDepartamento.Name = "lblDepartamento";
             this.lblDepartamento.Size = new System.Drawing.Size(93, 16);
             this.lblDepartamento.TabIndex = 184;
@@ -243,7 +245,7 @@
             // 
             this.lblEvaluacion.AutoSize = true;
             this.lblEvaluacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEvaluacion.Location = new System.Drawing.Point(289, 99);
+            this.lblEvaluacion.Location = new System.Drawing.Point(289, 136);
             this.lblEvaluacion.Name = "lblEvaluacion";
             this.lblEvaluacion.Size = new System.Drawing.Size(74, 16);
             this.lblEvaluacion.TabIndex = 173;
@@ -253,7 +255,7 @@
             // 
             this.lblGrado.AutoSize = true;
             this.lblGrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGrado.Location = new System.Drawing.Point(39, 99);
+            this.lblGrado.Location = new System.Drawing.Point(39, 136);
             this.lblGrado.Name = "lblGrado";
             this.lblGrado.Size = new System.Drawing.Size(45, 16);
             this.lblGrado.TabIndex = 179;
@@ -270,7 +272,7 @@
             // 
             this.lblMunicipio.AutoSize = true;
             this.lblMunicipio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMunicipio.Location = new System.Drawing.Point(306, 152);
+            this.lblMunicipio.Location = new System.Drawing.Point(305, 228);
             this.lblMunicipio.Name = "lblMunicipio";
             this.lblMunicipio.Size = new System.Drawing.Size(64, 16);
             this.lblMunicipio.TabIndex = 186;
@@ -278,14 +280,14 @@
             // 
             // txtgra
             // 
-            this.txtgra.Location = new System.Drawing.Point(16, 118);
+            this.txtgra.Location = new System.Drawing.Point(16, 155);
             this.txtgra.Name = "txtgra";
             this.txtgra.Size = new System.Drawing.Size(121, 20);
             this.txtgra.TabIndex = 4;
             // 
             // txtcol
             // 
-            this.txtcol.Location = new System.Drawing.Point(161, 118);
+            this.txtcol.Location = new System.Drawing.Point(161, 155);
             this.txtcol.Name = "txtcol";
             this.txtcol.Size = new System.Drawing.Size(100, 20);
             this.txtcol.TabIndex = 5;
@@ -303,14 +305,14 @@
             // comboBoxDep
             // 
             this.comboBoxDep.FormattingEnabled = true;
-            this.comboBoxDep.Location = new System.Drawing.Point(158, 171);
+            this.comboBoxDep.Location = new System.Drawing.Point(157, 247);
             this.comboBoxDep.Name = "comboBoxDep";
             this.comboBoxDep.Size = new System.Drawing.Size(121, 21);
             this.comboBoxDep.TabIndex = 8;
             // 
             // txtfech
             // 
-            this.txtfech.Location = new System.Drawing.Point(20, 171);
+            this.txtfech.Location = new System.Drawing.Point(19, 247);
             this.txtfech.Name = "txtfech";
             this.txtfech.Size = new System.Drawing.Size(121, 20);
             this.txtfech.TabIndex = 7;
@@ -326,7 +328,7 @@
             // 
             this.lblColegio.AutoSize = true;
             this.lblColegio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblColegio.Location = new System.Drawing.Point(170, 99);
+            this.lblColegio.Location = new System.Drawing.Point(170, 136);
             this.lblColegio.Name = "lblColegio";
             this.lblColegio.Size = new System.Drawing.Size(54, 16);
             this.lblColegio.TabIndex = 187;
@@ -363,7 +365,7 @@
             // 
             this.lblFechaNac.AutoSize = true;
             this.lblFechaNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaNac.Location = new System.Drawing.Point(27, 152);
+            this.lblFechaNac.Location = new System.Drawing.Point(26, 228);
             this.lblFechaNac.Name = "lblFechaNac";
             this.lblFechaNac.Size = new System.Drawing.Size(76, 16);
             this.lblFechaNac.TabIndex = 171;
@@ -379,7 +381,7 @@
             this.pnlResp.Controls.Add(this.lblTelfResp);
             this.pnlResp.Location = new System.Drawing.Point(644, 28);
             this.pnlResp.Name = "pnlResp";
-            this.pnlResp.Size = new System.Drawing.Size(162, 212);
+            this.pnlResp.Size = new System.Drawing.Size(162, 317);
             this.pnlResp.TabIndex = 2;
             // 
             // label1
@@ -397,14 +399,14 @@
             // 
             // txttelRes
             // 
-            this.txttelRes.Location = new System.Drawing.Point(18, 155);
+            this.txttelRes.Location = new System.Drawing.Point(18, 192);
             this.txttelRes.Name = "txttelRes";
             this.txttelRes.Size = new System.Drawing.Size(121, 20);
             this.txttelRes.TabIndex = 11;
             // 
             // txtcod
             // 
-            this.txtcod.Location = new System.Drawing.Point(18, 66);
+            this.txtcod.Location = new System.Drawing.Point(18, 103);
             this.txtcod.Name = "txtcod";
             this.txtcod.Size = new System.Drawing.Size(121, 20);
             this.txtcod.TabIndex = 10;
@@ -414,7 +416,7 @@
             // 
             this.lblNomResp.AutoSize = true;
             this.lblNomResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomResp.Location = new System.Drawing.Point(22, 47);
+            this.lblNomResp.Location = new System.Drawing.Point(22, 84);
             this.lblNomResp.Name = "lblNomResp";
             this.lblNomResp.Size = new System.Drawing.Size(95, 16);
             this.lblNomResp.TabIndex = 162;
@@ -424,7 +426,7 @@
             // 
             this.lblTelfResp.AutoSize = true;
             this.lblTelfResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelfResp.Location = new System.Drawing.Point(22, 136);
+            this.lblTelfResp.Location = new System.Drawing.Point(22, 173);
             this.lblTelfResp.Name = "lblTelfResp";
             this.lblTelfResp.Size = new System.Drawing.Size(100, 16);
             this.lblTelfResp.TabIndex = 166;
@@ -450,8 +452,22 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(894, 934);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.DimGray;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label2.Location = new System.Drawing.Point(223, 374);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(227, 25);
+            this.label2.TabIndex = 188;
+            this.label2.Text = "Editar Alumno";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // FrmModificarAlumno
             // 
@@ -515,5 +531,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -77,7 +77,7 @@
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(386, 594);
+            this.btnCerrar.Location = new System.Drawing.Point(388, 840);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(87, 34);
             this.btnCerrar.TabIndex = 6;
@@ -110,7 +110,7 @@
             this.pnlFondoListar.Controls.Add(this.dataGridView1);
             this.pnlFondoListar.Location = new System.Drawing.Point(57, 150);
             this.pnlFondoListar.Name = "pnlFondoListar";
-            this.pnlFondoListar.Size = new System.Drawing.Size(773, 426);
+            this.pnlFondoListar.Size = new System.Drawing.Size(773, 674);
             this.pnlFondoListar.TabIndex = 1;
             // 
             // dataGridView1
@@ -118,7 +118,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(17, 14);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(737, 386);
+            this.dataGridView1.Size = new System.Drawing.Size(737, 641);
             this.dataGridView1.TabIndex = 0;
             // 
             // pictureBox1
@@ -128,6 +128,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(894, 934);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 

@@ -33,7 +33,6 @@
             this.pnlControl = new System.Windows.Forms.Panel();
             this.pnlMenuLateral = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Tiempo = new System.Windows.Forms.Timer(this.components);
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
@@ -67,20 +66,24 @@
             this.btnCambContra = new System.Windows.Forms.Button();
             this.pnlSubMenuConfig = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlControl.SuspendLayout();
             this.pnlMenuLateral.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlSubMenuAlumnos.SuspendLayout();
             this.pnlSubMenuMaestros.SuspendLayout();
             this.pnlSubMenuSesiones.SuspendLayout();
             this.pnlSubMenuFacturas.SuspendLayout();
             this.pnlSubMenuNominas.SuspendLayout();
             this.pnlSubMenuConfig.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlControl
             // 
+            this.pnlControl.Controls.Add(this.pictureBox2);
             this.pnlControl.Controls.Add(this.lblHora);
             this.pnlControl.Controls.Add(this.lblFecha);
             this.pnlControl.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -122,17 +125,6 @@
             this.panel1.Size = new System.Drawing.Size(251, 115);
             this.panel1.TabIndex = 5;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(251, 115);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // Tiempo
             // 
             this.Tiempo.Enabled = true;
@@ -143,7 +135,7 @@
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblHora.Location = new System.Drawing.Point(417, 308);
+            this.lblHora.Location = new System.Drawing.Point(421, 379);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(126, 46);
             this.lblHora.TabIndex = 4;
@@ -154,7 +146,7 @@
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.SlateGray;
-            this.lblFecha.Location = new System.Drawing.Point(396, 376);
+            this.lblFecha.Location = new System.Drawing.Point(400, 447);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(86, 31);
             this.lblFecha.TabIndex = 1;
@@ -621,6 +613,27 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ProyectoFinal.Properties.Resources.LogoFondo1;
+            this.pictureBox2.Location = new System.Drawing.Point(216, 543);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(499, 284);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(251, 115);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -637,13 +650,14 @@
             this.pnlControl.PerformLayout();
             this.pnlMenuLateral.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlSubMenuAlumnos.ResumeLayout(false);
             this.pnlSubMenuMaestros.ResumeLayout(false);
             this.pnlSubMenuSesiones.ResumeLayout(false);
             this.pnlSubMenuFacturas.ResumeLayout(false);
             this.pnlSubMenuNominas.ResumeLayout(false);
             this.pnlSubMenuConfig.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -687,5 +701,6 @@
         private System.Windows.Forms.Button btnModAlumnos;
         private System.Windows.Forms.Button btnAgregarAlumnos;
         private System.Windows.Forms.Button btnAlumnos;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
