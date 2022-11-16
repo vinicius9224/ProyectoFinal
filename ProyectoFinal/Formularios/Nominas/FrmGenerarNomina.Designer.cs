@@ -55,6 +55,8 @@
             this.alertaError = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnHistorialNominas = new System.Windows.Forms.Button();
+            this.txtGastosMensuales = new System.Windows.Forms.TextBox();
+            this.lblGastosMensuales = new System.Windows.Forms.Label();
             this.pnlContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -97,17 +99,17 @@
             // 
             // txtDescripNomina
             // 
-            this.txtDescripNomina.Location = new System.Drawing.Point(10, 53);
+            this.txtDescripNomina.Location = new System.Drawing.Point(10, 47);
             this.txtDescripNomina.Multiline = true;
             this.txtDescripNomina.Name = "txtDescripNomina";
-            this.txtDescripNomina.Size = new System.Drawing.Size(180, 62);
+            this.txtDescripNomina.Size = new System.Drawing.Size(238, 62);
             this.txtDescripNomina.TabIndex = 0;
             // 
             // lblDescripNomina
             // 
             this.lblDescripNomina.AutoSize = true;
             this.lblDescripNomina.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripNomina.Location = new System.Drawing.Point(7, 19);
+            this.lblDescripNomina.Location = new System.Drawing.Point(27, 13);
             this.lblDescripNomina.Name = "lblDescripNomina";
             this.lblDescripNomina.Size = new System.Drawing.Size(183, 16);
             this.lblDescripNomina.TabIndex = 196;
@@ -235,7 +237,9 @@
             // pnlDetaNomina
             // 
             this.pnlDetaNomina.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.pnlDetaNomina.Controls.Add(this.txtGastosMensuales);
             this.pnlDetaNomina.Controls.Add(this.txtTotalHoras);
+            this.pnlDetaNomina.Controls.Add(this.lblGastosMensuales);
             this.pnlDetaNomina.Controls.Add(this.lblViatico);
             this.pnlDetaNomina.Controls.Add(this.lblTotalHoras);
             this.pnlDetaNomina.Controls.Add(this.txtViatico);
@@ -251,9 +255,9 @@
             this.pnlDetaNomina.Controls.Add(this.txtDescripNomina);
             this.pnlDetaNomina.Controls.Add(this.txtPagoDesde);
             this.pnlDetaNomina.Controls.Add(this.lblDescripNomina);
-            this.pnlDetaNomina.Location = new System.Drawing.Point(116, 153);
+            this.pnlDetaNomina.Location = new System.Drawing.Point(107, 116);
             this.pnlDetaNomina.Name = "pnlDetaNomina";
-            this.pnlDetaNomina.Size = new System.Drawing.Size(415, 315);
+            this.pnlDetaNomina.Size = new System.Drawing.Size(415, 392);
             this.pnlDetaNomina.TabIndex = 211;
             // 
             // lblRegSes
@@ -319,6 +323,23 @@
             this.btnHistorialNominas.UseVisualStyleBackColor = false;
             this.btnHistorialNominas.Click += new System.EventHandler(this.btnHistorialNominas_Click);
             // 
+            // txtGastosMensuales
+            // 
+            this.txtGastosMensuales.Location = new System.Drawing.Point(274, 350);
+            this.txtGastosMensuales.Name = "txtGastosMensuales";
+            this.txtGastosMensuales.Size = new System.Drawing.Size(129, 20);
+            this.txtGastosMensuales.TabIndex = 212;
+            // 
+            // lblGastosMensuales
+            // 
+            this.lblGastosMensuales.AutoSize = true;
+            this.lblGastosMensuales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGastosMensuales.Location = new System.Drawing.Point(271, 322);
+            this.lblGastosMensuales.Name = "lblGastosMensuales";
+            this.lblGastosMensuales.Size = new System.Drawing.Size(135, 16);
+            this.lblGastosMensuales.TabIndex = 211;
+            this.lblGastosMensuales.Text = "Gastos Mensuales";
+            // 
             // FrmGenerarNomina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -367,5 +388,7 @@
         private System.Windows.Forms.ErrorProvider alertaError;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnHistorialNominas;
+        private System.Windows.Forms.TextBox txtGastosMensuales;
+        private System.Windows.Forms.Label lblGastosMensuales;
     }
 }

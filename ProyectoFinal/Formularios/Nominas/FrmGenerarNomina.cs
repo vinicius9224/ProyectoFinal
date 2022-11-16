@@ -61,21 +61,30 @@ namespace ProyectoFinal.Formularios
             }
         }
         // metodo para verificar si hay un textbox vacio(recorre todo los controles , si esto pasa la bandera se vuelve falsa)
-        private bool Validar()
+        private bool Validar() // metodo para verificar si hay un textbox vacio(recorre todo los controles ,con el IsNullOrWhiteSpace nos damos cuenta si es nula o esta vacia , si esto pasa retornamos un false)
         {
-            Boolean Errores = true;
             foreach (Control c in this.pnlContenedor.Controls)
             {
                 if (c is TextBox)
                 {
                     if (string.IsNullOrWhiteSpace(((TextBox)c).Text))
                     {
-                        alertaError.SetError(c, "Campo obligatorio, no puede estar vacio");
-                        Errores = false;
+                        return false;
                     }
                 }
             }
-            return Errores;
+
+            foreach (Control c in this.pnlDetaNomina.Controls)
+            {
+                if (c is TextBox)
+                {
+                    if (string.IsNullOrWhiteSpace(((TextBox)c).Text))
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
         }
         #endregion
 
@@ -87,27 +96,24 @@ namespace ProyectoFinal.Formularios
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            //if (Validar() == true)
-            //{
-            //    try
-            //    {
-            //        if (objeto.GenerarNominas(txtPagoDesde.Text,txtPagoHasta.Text,txtDescripNomina.Text,txtPagoXHora.Text,txtTotalHoras.Text,txtValorPagado.Text,txtViatico.Text))
-            //        {
-            //            MessageBox.Show("Nomina Generada");
-            //            Limpiar_Datos();
-            //        }
-            //    }
-            //    catch (Exception error)
-            //    {
-            //        MessageBox.Show("Ha habido un error: " + error.Message);
-            //        throw;
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Los datos ingresados son incorrectos, intente de nuevo");
-            //    Limpiar_Datos();
-            //}
+            try
+            {
+                //llamamos al metodo validar y si este es igual a false , significa que esta vacia o nula.
+                if (Validar() == false)
+                {
+                    MessageBox.Show("No pueden quedar espacios en blanco.");
+                }
+                else
+                {
+                    objeto.GenerarNominas(dttFechaPago.Value, txtPagoDesde.Text, txtPagoHasta.Text,txtDescripNomina.Text );
+                    MessageBox.Show("Nomina Generada.");
+                    Limpiar_Datos();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se puedo generar por" + ex);
+            }
         }
 
         private void btnHistorialNominas_Click(object sender, EventArgs e)

@@ -24,53 +24,13 @@ namespace ProyectoFinal
 
         public void Login()
         {
-            //try
-            //{
-            //Conexion a la Base de Datos
-            //    string conect = ConfigurationManager.ConnectionStrings["Conexion"].ConnectionString;
-            //    using (SqlConnection conexion = new SqlConnection(conect))
-            //    {
-            //        conexion.Open();
-
-            //        using (SqlCommand cmd = new SqlCommand(
-            //            "SELECT NomUsuario,PassWrd " +
-            //            "FROM Usuario " +
-            //            "Where NomUsuario='" + txtNomUsuario.Text +
-            //            " 'AND PassWrd='" + txtContra.Text + "'", conexion))
-            //        {
-            //            SqlDataReader validar = cmd.ExecuteReader();
-
-            //            if (validar.Read())
-            //            {
-            //                //MessageBox.Show("Login exitoso");
-            //                //Oculta el formulario de Login y abre el formulario de menu/inicio
-            //                this.Hide();
-            //                //Guarda el nombre de usuario
-            //                NomUser = txtNomUsuario.Text;
-            //                txtNomUsuario.Clear(); txtContra.Clear();
-            //                FrmInicio ventanaMenu = new FrmInicio();
-            //                ventanaMenu.Show();
-            //            }
-            //            else
-            //            {
-            //                MessageBox.Show("Datos Incorrectos");
-            //                txtNomUsuario.Clear(); txtContra.Clear();
-            //            }
-            //        }
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //} 
-
             string conect = ConfigurationManager.ConnectionStrings["Conexion"].ConnectionString;
             SqlConnection conexion = new SqlConnection(conect);
             string consulta = "SELECT * FROM [dbo].[Usuario] WHERE NomUsuario=@NomUsuario AND PassWrd=@PassWrd";
             conexion.Open();
             SqlCommand sqlcomm = new SqlCommand(consulta, conexion);
-            sqlcomm.Parameters.AddWithValue("@NomUsuario", txtNomUsuario.Text);
-            sqlcomm.Parameters.AddWithValue("@PassWrd", txtContra.Text);
+            sqlcomm.Parameters.AddWithValue("@NomUsuario", txtNomUsuario.Text.Trim());
+            sqlcomm.Parameters.AddWithValue("@PassWrd", txtContra.Text.Trim());
             SqlDataAdapter sda = new SqlDataAdapter(sqlcomm);
             DataTable Tabla = new DataTable();
             sda.Fill(Tabla);

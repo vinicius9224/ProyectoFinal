@@ -143,7 +143,7 @@ namespace ProyectoFinal.Formularios
             }
             catch (Exception ex)
             {
-                MessageBox.Show("no se puedo agregar por" + ex);
+                MessageBox.Show("No se puedo agregar por" + ex);
             }
         }
         #endregion
