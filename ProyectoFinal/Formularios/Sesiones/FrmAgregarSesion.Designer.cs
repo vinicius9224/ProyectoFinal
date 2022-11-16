@@ -66,7 +66,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = System.Drawing.Color.White;
+            panel1.BackColor = System.Drawing.Color.Gray;
             panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             panel1.CausesValidation = false;
             panel1.Enabled = false;
@@ -136,6 +136,7 @@
             // 
             // panelBuscar
             // 
+            this.panelBuscar.BackColor = System.Drawing.SystemColors.Control;
             this.panelBuscar.Controls.Add(this.btnSeleccion);
             this.panelBuscar.Controls.Add(this.dataGridView1);
             this.panelBuscar.Controls.Add(this.PictBxLupa);
@@ -170,7 +171,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(9, 50);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(506, 423);
+            this.dataGridView1.Size = new System.Drawing.Size(497, 423);
             this.dataGridView1.TabIndex = 3;
             // 
             // PictBxLupa
@@ -200,7 +201,9 @@
             // 
             // cmbBxBuscar
             // 
+            this.cmbBxBuscar.BackColor = System.Drawing.Color.Silver;
             this.cmbBxBuscar.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.cmbBxBuscar.ForeColor = System.Drawing.Color.Black;
             this.cmbBxBuscar.FormattingEnabled = true;
             this.cmbBxBuscar.Items.AddRange(new object[] {
             "Trabajadores",
@@ -213,6 +216,7 @@
             // 
             // panelDatos
             // 
+            this.panelDatos.BackColor = System.Drawing.SystemColors.Control;
             this.panelDatos.Controls.Add(this.txtCodFactur);
             this.panelDatos.Controls.Add(this.txtCodTrab);
             this.panelDatos.Controls.Add(this.txtCantHrsSes);
@@ -256,11 +260,11 @@
             // 
             this.datTimeSes.CustomFormat = "yyyy--MM-dd";
             this.datTimeSes.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.datTimeSes.Location = new System.Drawing.Point(124, 502);
+            this.datTimeSes.Location = new System.Drawing.Point(99, 502);
             this.datTimeSes.MaxDate = new System.DateTime(2050, 1, 1, 0, 0, 0, 0);
             this.datTimeSes.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
             this.datTimeSes.Name = "datTimeSes";
-            this.datTimeSes.Size = new System.Drawing.Size(139, 20);
+            this.datTimeSes.Size = new System.Drawing.Size(165, 20);
             this.datTimeSes.TabIndex = 6;
             this.datTimeSes.Value = new System.DateTime(2022, 11, 6, 0, 0, 0, 0);
             // 
@@ -274,9 +278,10 @@
             // 
             // lblFechSes
             // 
+            this.lblFechSes.BackColor = System.Drawing.Color.Silver;
             this.lblFechSes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblFechSes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechSes.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblFechSes.ForeColor = System.Drawing.Color.Black;
             this.lblFechSes.Location = new System.Drawing.Point(99, 432);
             this.lblFechSes.Name = "lblFechSes";
             this.lblFechSes.Size = new System.Drawing.Size(165, 41);
@@ -286,9 +291,10 @@
             // 
             // lblCodFactur
             // 
+            this.lblCodFactur.BackColor = System.Drawing.Color.Silver;
             this.lblCodFactur.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblCodFactur.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodFactur.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblCodFactur.ForeColor = System.Drawing.Color.Black;
             this.lblCodFactur.Location = new System.Drawing.Point(80, 310);
             this.lblCodFactur.Name = "lblCodFactur";
             this.lblCodFactur.Size = new System.Drawing.Size(242, 39);
@@ -298,9 +304,10 @@
             // 
             // lblCodTrab
             // 
+            this.lblCodTrab.BackColor = System.Drawing.Color.Silver;
             this.lblCodTrab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblCodTrab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodTrab.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblCodTrab.ForeColor = System.Drawing.Color.Black;
             this.lblCodTrab.Location = new System.Drawing.Point(80, 221);
             this.lblCodTrab.Name = "lblCodTrab";
             this.lblCodTrab.Size = new System.Drawing.Size(242, 20);
@@ -310,9 +317,10 @@
             // 
             // lblCantHorsSes
             // 
+            this.lblCantHorsSes.BackColor = System.Drawing.Color.Silver;
             this.lblCantHorsSes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblCantHorsSes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantHorsSes.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblCantHorsSes.ForeColor = System.Drawing.Color.Black;
             this.lblCantHorsSes.Location = new System.Drawing.Point(80, 128);
             this.lblCantHorsSes.Name = "lblCantHorsSes";
             this.lblCantHorsSes.Size = new System.Drawing.Size(242, 23);
@@ -322,9 +330,10 @@
             // 
             // lblCodSes
             // 
+            this.lblCodSes.BackColor = System.Drawing.Color.Silver;
             this.lblCodSes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblCodSes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodSes.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblCodSes.ForeColor = System.Drawing.Color.Black;
             this.lblCodSes.Location = new System.Drawing.Point(80, 50);
             this.lblCodSes.Name = "lblCodSes";
             this.lblCodSes.Size = new System.Drawing.Size(242, 23);

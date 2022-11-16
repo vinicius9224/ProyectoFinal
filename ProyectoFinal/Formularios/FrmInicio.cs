@@ -98,13 +98,6 @@ namespace ProyectoFinal.Formularios
             }
         }
 
-        private void FrmInicio_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            FrmLogin login = new FrmLogin();
-            login.Show();
-
-        }
-
         private void Tiempo_Tick(object sender, EventArgs e)
         {
             lblHora.Text = DateTime.Now.ToString("hh:mm:ss");
@@ -264,6 +257,8 @@ namespace ProyectoFinal.Formularios
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+            FrmLogin login= new FrmLogin();
+            login.Show();
         }
 
         #endregion
