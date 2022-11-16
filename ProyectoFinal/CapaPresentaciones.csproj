@@ -270,6 +270,7 @@
     <Content Include="Recursos\Fondos\FondoLogin %283%29.png" />
     <Content Include="Recursos\Fondos\Logo.ico" />
     <Content Include="Recursos\Fondos\Logo.jpg" />
+    <None Include="Recursos\Fondos\LogoFondo.png" />
     <Content Include="Recursos\Fondos\photo-1557683316-973673baf926.jfif" />
     <Content Include="Recursos\Fondos\Screenshot_1.png" />
     <Content Include="Recursos\Fondos\WhatsApp Image 2022-10-25 at 11.41.17 AM.jpeg" />

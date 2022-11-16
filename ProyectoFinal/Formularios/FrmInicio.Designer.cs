@@ -28,63 +28,74 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInicio));
             this.pnlControl = new System.Windows.Forms.Panel();
             this.pnlMenuLateral = new System.Windows.Forms.Panel();
-            this.pnlConfig = new System.Windows.Forms.Panel();
-            this.btnConfig = new System.Windows.Forms.Button();
-            this.pnlSubMenuNominas = new System.Windows.Forms.Panel();
-            this.btnEgresosTotales = new System.Windows.Forms.Button();
-            this.btnHistorialNominas = new System.Windows.Forms.Button();
-            this.btnGenerarNomina = new System.Windows.Forms.Button();
-            this.btnNominas = new System.Windows.Forms.Button();
-            this.pnlSubMenuFacturas = new System.Windows.Forms.Panel();
-            this.btnIngresosTotales = new System.Windows.Forms.Button();
-            this.btnHistorialFactura = new System.Windows.Forms.Button();
-            this.btnGenerarFactura = new System.Windows.Forms.Button();
-            this.btnFacturas = new System.Windows.Forms.Button();
-            this.pnlSubMenuSesiones = new System.Windows.Forms.Panel();
-            this.btnListarSesiones = new System.Windows.Forms.Button();
-            this.btnRegSesion = new System.Windows.Forms.Button();
-            this.btnSesiones = new System.Windows.Forms.Button();
-            this.pnlSubMenuMaestros = new System.Windows.Forms.Panel();
-            this.btnListarMaestros = new System.Windows.Forms.Button();
-            this.btnEliminarMaestro = new System.Windows.Forms.Button();
-            this.btnModificarMaestro = new System.Windows.Forms.Button();
-            this.btnAgregarMaestro = new System.Windows.Forms.Button();
-            this.btnMaestros = new System.Windows.Forms.Button();
-            this.pnlSubMenuAlumnos = new System.Windows.Forms.Panel();
-            this.btnListarAlumnos = new System.Windows.Forms.Button();
-            this.btnEliminarAlumnos = new System.Windows.Forms.Button();
-            this.btnModAlumnos = new System.Windows.Forms.Button();
-            this.btnAgregarAlumnos = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Tiempo = new System.Windows.Forms.Timer(this.components);
+            this.lblHora = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
             this.btnAlumnos = new System.Windows.Forms.Button();
-            this.picMenu = new System.Windows.Forms.PictureBox();
+            this.btnAgregarAlumnos = new System.Windows.Forms.Button();
+            this.btnModAlumnos = new System.Windows.Forms.Button();
+            this.btnEliminarAlumnos = new System.Windows.Forms.Button();
+            this.btnListarAlumnos = new System.Windows.Forms.Button();
+            this.pnlSubMenuAlumnos = new System.Windows.Forms.Panel();
+            this.btnMaestros = new System.Windows.Forms.Button();
+            this.btnAgregarMaestro = new System.Windows.Forms.Button();
+            this.btnModificarMaestro = new System.Windows.Forms.Button();
+            this.btnEliminarMaestro = new System.Windows.Forms.Button();
+            this.btnListarMaestros = new System.Windows.Forms.Button();
+            this.pnlSubMenuMaestros = new System.Windows.Forms.Panel();
+            this.btnSesiones = new System.Windows.Forms.Button();
+            this.btnRegSesion = new System.Windows.Forms.Button();
+            this.btnListarSesiones = new System.Windows.Forms.Button();
+            this.pnlSubMenuSesiones = new System.Windows.Forms.Panel();
+            this.btnFacturas = new System.Windows.Forms.Button();
+            this.btnGenerarFactura = new System.Windows.Forms.Button();
+            this.btnHistorialFactura = new System.Windows.Forms.Button();
+            this.btnIngresosTotales = new System.Windows.Forms.Button();
+            this.pnlSubMenuFacturas = new System.Windows.Forms.Panel();
+            this.btnNominas = new System.Windows.Forms.Button();
+            this.btnGenerarNomina = new System.Windows.Forms.Button();
+            this.btnHistorialNominas = new System.Windows.Forms.Button();
+            this.btnEgresosTotales = new System.Windows.Forms.Button();
+            this.pnlSubMenuNominas = new System.Windows.Forms.Panel();
+            this.btnConfig = new System.Windows.Forms.Button();
+            this.btnCambContra = new System.Windows.Forms.Button();
+            this.pnlSubMenuConfig = new System.Windows.Forms.Panel();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.pnlControl.SuspendLayout();
             this.pnlMenuLateral.SuspendLayout();
-            this.pnlConfig.SuspendLayout();
-            this.pnlSubMenuNominas.SuspendLayout();
-            this.pnlSubMenuFacturas.SuspendLayout();
-            this.pnlSubMenuSesiones.SuspendLayout();
-            this.pnlSubMenuMaestros.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlSubMenuAlumnos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picMenu)).BeginInit();
+            this.pnlSubMenuMaestros.SuspendLayout();
+            this.pnlSubMenuSesiones.SuspendLayout();
+            this.pnlSubMenuFacturas.SuspendLayout();
+            this.pnlSubMenuNominas.SuspendLayout();
+            this.pnlSubMenuConfig.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlControl
             // 
-            this.pnlControl.Controls.Add(this.picMenu);
+            this.pnlControl.Controls.Add(this.lblHora);
+            this.pnlControl.Controls.Add(this.lblFecha);
             this.pnlControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlControl.Location = new System.Drawing.Point(200, 0);
+            this.pnlControl.Location = new System.Drawing.Point(251, 0);
             this.pnlControl.Name = "pnlControl";
-            this.pnlControl.Size = new System.Drawing.Size(910, 708);
+            this.pnlControl.Size = new System.Drawing.Size(910, 922);
             this.pnlControl.TabIndex = 3;
             // 
             // pnlMenuLateral
             // 
             this.pnlMenuLateral.AutoScroll = true;
             this.pnlMenuLateral.BackColor = System.Drawing.Color.White;
-            this.pnlMenuLateral.Controls.Add(this.pnlConfig);
+            this.pnlMenuLateral.Controls.Add(this.btnSalir);
+            this.pnlMenuLateral.Controls.Add(this.pnlSubMenuConfig);
+            this.pnlMenuLateral.Controls.Add(this.btnConfig);
             this.pnlMenuLateral.Controls.Add(this.pnlSubMenuNominas);
             this.pnlMenuLateral.Controls.Add(this.btnNominas);
             this.pnlMenuLateral.Controls.Add(this.pnlSubMenuFacturas);
@@ -95,386 +106,76 @@
             this.pnlMenuLateral.Controls.Add(this.btnMaestros);
             this.pnlMenuLateral.Controls.Add(this.pnlSubMenuAlumnos);
             this.pnlMenuLateral.Controls.Add(this.btnAlumnos);
+            this.pnlMenuLateral.Controls.Add(this.panel1);
             this.pnlMenuLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenuLateral.Location = new System.Drawing.Point(0, 0);
             this.pnlMenuLateral.Name = "pnlMenuLateral";
-            this.pnlMenuLateral.Size = new System.Drawing.Size(200, 708);
+            this.pnlMenuLateral.Size = new System.Drawing.Size(251, 922);
             this.pnlMenuLateral.TabIndex = 2;
             // 
-            // pnlConfig
+            // panel1
             // 
-            this.pnlConfig.Controls.Add(this.btnConfig);
-            this.pnlConfig.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlConfig.Location = new System.Drawing.Point(0, 676);
-            this.pnlConfig.Name = "pnlConfig";
-            this.pnlConfig.Size = new System.Drawing.Size(200, 32);
-            this.pnlConfig.TabIndex = 6;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(251, 149);
+            this.panel1.TabIndex = 5;
             // 
-            // btnConfig
+            // pictureBox1
             // 
-            this.btnConfig.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnConfig.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnConfig.FlatAppearance.BorderSize = 0;
-            this.btnConfig.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfig.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfig.Location = new System.Drawing.Point(0, 0);
-            this.btnConfig.Name = "btnConfig";
-            this.btnConfig.Size = new System.Drawing.Size(200, 33);
-            this.btnConfig.TabIndex = 6;
-            this.btnConfig.Text = "Configuración";
-            this.btnConfig.UseVisualStyleBackColor = false;
-            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(251, 149);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
-            // pnlSubMenuNominas
+            // Tiempo
             // 
-            this.pnlSubMenuNominas.BackColor = System.Drawing.Color.White;
-            this.pnlSubMenuNominas.Controls.Add(this.btnEgresosTotales);
-            this.pnlSubMenuNominas.Controls.Add(this.btnHistorialNominas);
-            this.pnlSubMenuNominas.Controls.Add(this.btnGenerarNomina);
-            this.pnlSubMenuNominas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuNominas.Location = new System.Drawing.Point(0, 585);
-            this.pnlSubMenuNominas.Name = "pnlSubMenuNominas";
-            this.pnlSubMenuNominas.Size = new System.Drawing.Size(200, 91);
-            this.pnlSubMenuNominas.TabIndex = 5;
+            this.Tiempo.Enabled = true;
+            this.Tiempo.Tick += new System.EventHandler(this.Tiempo_Tick);
             // 
-            // btnEgresosTotales
+            // lblHora
             // 
-            this.btnEgresosTotales.BackColor = System.Drawing.Color.White;
-            this.btnEgresosTotales.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEgresosTotales.FlatAppearance.BorderSize = 0;
-            this.btnEgresosTotales.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
-            this.btnEgresosTotales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEgresosTotales.Location = new System.Drawing.Point(0, 52);
-            this.btnEgresosTotales.Name = "btnEgresosTotales";
-            this.btnEgresosTotales.Size = new System.Drawing.Size(200, 28);
-            this.btnEgresosTotales.TabIndex = 20;
-            this.btnEgresosTotales.Text = "Egresos Totales";
-            this.btnEgresosTotales.UseVisualStyleBackColor = false;
-            this.btnEgresosTotales.Click += new System.EventHandler(this.btnEgresosTotales_Click);
+            this.lblHora.AutoSize = true;
+            this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblHora.Location = new System.Drawing.Point(417, 308);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(126, 46);
+            this.lblHora.TabIndex = 4;
+            this.lblHora.Text = "label1";
             // 
-            // btnHistorialNominas
+            // lblFecha
             // 
-            this.btnHistorialNominas.BackColor = System.Drawing.Color.White;
-            this.btnHistorialNominas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHistorialNominas.FlatAppearance.BorderSize = 0;
-            this.btnHistorialNominas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
-            this.btnHistorialNominas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistorialNominas.Location = new System.Drawing.Point(0, 24);
-            this.btnHistorialNominas.Name = "btnHistorialNominas";
-            this.btnHistorialNominas.Size = new System.Drawing.Size(200, 28);
-            this.btnHistorialNominas.TabIndex = 19;
-            this.btnHistorialNominas.Text = "Historial de Facturas";
-            this.btnHistorialNominas.UseVisualStyleBackColor = false;
-            this.btnHistorialNominas.Click += new System.EventHandler(this.btnHistorialNominas_Click);
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.ForeColor = System.Drawing.Color.SlateGray;
+            this.lblFecha.Location = new System.Drawing.Point(396, 376);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(86, 31);
+            this.lblFecha.TabIndex = 1;
+            this.lblFecha.Text = "label2";
             // 
-            // btnGenerarNomina
+            // btnAlumnos
             // 
-            this.btnGenerarNomina.BackColor = System.Drawing.Color.White;
-            this.btnGenerarNomina.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnGenerarNomina.FlatAppearance.BorderSize = 0;
-            this.btnGenerarNomina.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
-            this.btnGenerarNomina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerarNomina.Location = new System.Drawing.Point(0, 0);
-            this.btnGenerarNomina.Name = "btnGenerarNomina";
-            this.btnGenerarNomina.Size = new System.Drawing.Size(200, 24);
-            this.btnGenerarNomina.TabIndex = 18;
-            this.btnGenerarNomina.Text = "Generar Nomina";
-            this.btnGenerarNomina.UseVisualStyleBackColor = false;
-            this.btnGenerarNomina.Click += new System.EventHandler(this.btnGenerarNomina_Click);
-            // 
-            // btnNominas
-            // 
-            this.btnNominas.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnNominas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNominas.FlatAppearance.BorderSize = 0;
-            this.btnNominas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnNominas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNominas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNominas.Location = new System.Drawing.Point(0, 552);
-            this.btnNominas.Name = "btnNominas";
-            this.btnNominas.Size = new System.Drawing.Size(200, 33);
-            this.btnNominas.TabIndex = 5;
-            this.btnNominas.Text = "Nominas";
-            this.btnNominas.UseVisualStyleBackColor = false;
-            this.btnNominas.Click += new System.EventHandler(this.btnNominas_Click);
-            // 
-            // pnlSubMenuFacturas
-            // 
-            this.pnlSubMenuFacturas.BackColor = System.Drawing.Color.White;
-            this.pnlSubMenuFacturas.Controls.Add(this.btnIngresosTotales);
-            this.pnlSubMenuFacturas.Controls.Add(this.btnHistorialFactura);
-            this.pnlSubMenuFacturas.Controls.Add(this.btnGenerarFactura);
-            this.pnlSubMenuFacturas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuFacturas.Location = new System.Drawing.Point(0, 459);
-            this.pnlSubMenuFacturas.Name = "pnlSubMenuFacturas";
-            this.pnlSubMenuFacturas.Size = new System.Drawing.Size(200, 93);
-            this.pnlSubMenuFacturas.TabIndex = 4;
-            // 
-            // btnIngresosTotales
-            // 
-            this.btnIngresosTotales.BackColor = System.Drawing.Color.White;
-            this.btnIngresosTotales.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnIngresosTotales.FlatAppearance.BorderSize = 0;
-            this.btnIngresosTotales.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
-            this.btnIngresosTotales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIngresosTotales.Location = new System.Drawing.Point(0, 52);
-            this.btnIngresosTotales.Name = "btnIngresosTotales";
-            this.btnIngresosTotales.Size = new System.Drawing.Size(200, 28);
-            this.btnIngresosTotales.TabIndex = 17;
-            this.btnIngresosTotales.Text = "Ingresos Totales";
-            this.btnIngresosTotales.UseVisualStyleBackColor = false;
-            this.btnIngresosTotales.Click += new System.EventHandler(this.btnIngresosTotales_Click);
-            // 
-            // btnHistorialFactura
-            // 
-            this.btnHistorialFactura.BackColor = System.Drawing.Color.White;
-            this.btnHistorialFactura.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHistorialFactura.FlatAppearance.BorderSize = 0;
-            this.btnHistorialFactura.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
-            this.btnHistorialFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistorialFactura.Location = new System.Drawing.Point(0, 24);
-            this.btnHistorialFactura.Name = "btnHistorialFactura";
-            this.btnHistorialFactura.Size = new System.Drawing.Size(200, 28);
-            this.btnHistorialFactura.TabIndex = 16;
-            this.btnHistorialFactura.Text = "Historial de Facturas";
-            this.btnHistorialFactura.UseVisualStyleBackColor = false;
-            this.btnHistorialFactura.Click += new System.EventHandler(this.btnHistorialFactura_Click);
-            // 
-            // btnGenerarFactura
-            // 
-            this.btnGenerarFactura.BackColor = System.Drawing.Color.White;
-            this.btnGenerarFactura.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnGenerarFactura.FlatAppearance.BorderSize = 0;
-            this.btnGenerarFactura.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
-            this.btnGenerarFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerarFactura.Location = new System.Drawing.Point(0, 0);
-            this.btnGenerarFactura.Name = "btnGenerarFactura";
-            this.btnGenerarFactura.Size = new System.Drawing.Size(200, 24);
-            this.btnGenerarFactura.TabIndex = 15;
-            this.btnGenerarFactura.Text = "Generar Factura";
-            this.btnGenerarFactura.UseVisualStyleBackColor = false;
-            this.btnGenerarFactura.Click += new System.EventHandler(this.btnGenerarFactura_Click);
-            // 
-            // btnFacturas
-            // 
-            this.btnFacturas.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnFacturas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFacturas.FlatAppearance.BorderSize = 0;
-            this.btnFacturas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnFacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFacturas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFacturas.Location = new System.Drawing.Point(0, 426);
-            this.btnFacturas.Name = "btnFacturas";
-            this.btnFacturas.Size = new System.Drawing.Size(200, 33);
-            this.btnFacturas.TabIndex = 4;
-            this.btnFacturas.Text = "Facturas";
-            this.btnFacturas.UseVisualStyleBackColor = false;
-            this.btnFacturas.Click += new System.EventHandler(this.btnFacturas_Click);
-            // 
-            // pnlSubMenuSesiones
-            // 
-            this.pnlSubMenuSesiones.BackColor = System.Drawing.Color.White;
-            this.pnlSubMenuSesiones.Controls.Add(this.btnListarSesiones);
-            this.pnlSubMenuSesiones.Controls.Add(this.btnRegSesion);
-            this.pnlSubMenuSesiones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuSesiones.Location = new System.Drawing.Point(0, 360);
-            this.pnlSubMenuSesiones.Name = "pnlSubMenuSesiones";
-            this.pnlSubMenuSesiones.Size = new System.Drawing.Size(200, 66);
-            this.pnlSubMenuSesiones.TabIndex = 3;
-            // 
-            // btnListarSesiones
-            // 
-            this.btnListarSesiones.BackColor = System.Drawing.Color.White;
-            this.btnListarSesiones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnListarSesiones.FlatAppearance.BorderSize = 0;
-            this.btnListarSesiones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
-            this.btnListarSesiones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListarSesiones.Location = new System.Drawing.Point(0, 24);
-            this.btnListarSesiones.Name = "btnListarSesiones";
-            this.btnListarSesiones.Size = new System.Drawing.Size(200, 28);
-            this.btnListarSesiones.TabIndex = 13;
-            this.btnListarSesiones.Text = "Listar Sesiones";
-            this.btnListarSesiones.UseVisualStyleBackColor = false;
-            this.btnListarSesiones.Click += new System.EventHandler(this.btnListarSesiones_Click);
-            // 
-            // btnRegSesion
-            // 
-            this.btnRegSesion.BackColor = System.Drawing.Color.White;
-            this.btnRegSesion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRegSesion.FlatAppearance.BorderSize = 0;
-            this.btnRegSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
-            this.btnRegSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegSesion.Location = new System.Drawing.Point(0, 0);
-            this.btnRegSesion.Name = "btnRegSesion";
-            this.btnRegSesion.Size = new System.Drawing.Size(200, 24);
-            this.btnRegSesion.TabIndex = 12;
-            this.btnRegSesion.Text = "Registrar Sesion";
-            this.btnRegSesion.UseVisualStyleBackColor = false;
-            this.btnRegSesion.Click += new System.EventHandler(this.btnRegSesion_Click);
-            // 
-            // btnSesiones
-            // 
-            this.btnSesiones.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSesiones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSesiones.FlatAppearance.BorderSize = 0;
-            this.btnSesiones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnSesiones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSesiones.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSesiones.Location = new System.Drawing.Point(0, 327);
-            this.btnSesiones.Name = "btnSesiones";
-            this.btnSesiones.Size = new System.Drawing.Size(200, 33);
-            this.btnSesiones.TabIndex = 3;
-            this.btnSesiones.Text = "Sesiones";
-            this.btnSesiones.UseVisualStyleBackColor = false;
-            this.btnSesiones.Click += new System.EventHandler(this.btnSesiones_Click);
-            // 
-            // pnlSubMenuMaestros
-            // 
-            this.pnlSubMenuMaestros.BackColor = System.Drawing.Color.White;
-            this.pnlSubMenuMaestros.Controls.Add(this.btnListarMaestros);
-            this.pnlSubMenuMaestros.Controls.Add(this.btnEliminarMaestro);
-            this.pnlSubMenuMaestros.Controls.Add(this.btnModificarMaestro);
-            this.pnlSubMenuMaestros.Controls.Add(this.btnAgregarMaestro);
-            this.pnlSubMenuMaestros.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuMaestros.Location = new System.Drawing.Point(0, 211);
-            this.pnlSubMenuMaestros.Name = "pnlSubMenuMaestros";
-            this.pnlSubMenuMaestros.Size = new System.Drawing.Size(200, 116);
-            this.pnlSubMenuMaestros.TabIndex = 2;
-            // 
-            // btnListarMaestros
-            // 
-            this.btnListarMaestros.BackColor = System.Drawing.Color.White;
-            this.btnListarMaestros.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnListarMaestros.FlatAppearance.BorderSize = 0;
-            this.btnListarMaestros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
-            this.btnListarMaestros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListarMaestros.Location = new System.Drawing.Point(0, 76);
-            this.btnListarMaestros.Name = "btnListarMaestros";
-            this.btnListarMaestros.Size = new System.Drawing.Size(200, 27);
-            this.btnListarMaestros.TabIndex = 14;
-            this.btnListarMaestros.Text = "Listar Maestros";
-            this.btnListarMaestros.UseVisualStyleBackColor = false;
-            this.btnListarMaestros.Click += new System.EventHandler(this.btnListarMaestros_Click);
-            // 
-            // btnEliminarMaestro
-            // 
-            this.btnEliminarMaestro.BackColor = System.Drawing.Color.White;
-            this.btnEliminarMaestro.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEliminarMaestro.FlatAppearance.BorderSize = 0;
-            this.btnEliminarMaestro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
-            this.btnEliminarMaestro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarMaestro.Location = new System.Drawing.Point(0, 53);
-            this.btnEliminarMaestro.Name = "btnEliminarMaestro";
-            this.btnEliminarMaestro.Size = new System.Drawing.Size(200, 23);
-            this.btnEliminarMaestro.TabIndex = 13;
-            this.btnEliminarMaestro.Text = "Eliminar Maestro";
-            this.btnEliminarMaestro.UseVisualStyleBackColor = false;
-            this.btnEliminarMaestro.Click += new System.EventHandler(this.btnEliminarMaestro_Click);
-            // 
-            // btnModificarMaestro
-            // 
-            this.btnModificarMaestro.BackColor = System.Drawing.Color.White;
-            this.btnModificarMaestro.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnModificarMaestro.FlatAppearance.BorderSize = 0;
-            this.btnModificarMaestro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
-            this.btnModificarMaestro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificarMaestro.Location = new System.Drawing.Point(0, 31);
-            this.btnModificarMaestro.Name = "btnModificarMaestro";
-            this.btnModificarMaestro.Size = new System.Drawing.Size(200, 22);
-            this.btnModificarMaestro.TabIndex = 12;
-            this.btnModificarMaestro.Text = "Modificar Maestro";
-            this.btnModificarMaestro.UseVisualStyleBackColor = false;
-            this.btnModificarMaestro.Click += new System.EventHandler(this.btnModificarMaestro_Click);
-            // 
-            // btnAgregarMaestro
-            // 
-            this.btnAgregarMaestro.BackColor = System.Drawing.Color.White;
-            this.btnAgregarMaestro.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAgregarMaestro.FlatAppearance.BorderSize = 0;
-            this.btnAgregarMaestro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
-            this.btnAgregarMaestro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarMaestro.Location = new System.Drawing.Point(0, 0);
-            this.btnAgregarMaestro.Name = "btnAgregarMaestro";
-            this.btnAgregarMaestro.Size = new System.Drawing.Size(200, 31);
-            this.btnAgregarMaestro.TabIndex = 11;
-            this.btnAgregarMaestro.Text = "Agregar Maestro";
-            this.btnAgregarMaestro.UseVisualStyleBackColor = false;
-            this.btnAgregarMaestro.Click += new System.EventHandler(this.btnAgregarMaestro_Click);
-            // 
-            // btnMaestros
-            // 
-            this.btnMaestros.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnMaestros.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMaestros.FlatAppearance.BorderSize = 0;
-            this.btnMaestros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnMaestros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaestros.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMaestros.Location = new System.Drawing.Point(0, 170);
-            this.btnMaestros.Name = "btnMaestros";
-            this.btnMaestros.Size = new System.Drawing.Size(200, 41);
-            this.btnMaestros.TabIndex = 2;
-            this.btnMaestros.Text = "Maestros";
-            this.btnMaestros.UseVisualStyleBackColor = false;
-            this.btnMaestros.Click += new System.EventHandler(this.btnMaestros_Click);
-            // 
-            // pnlSubMenuAlumnos
-            // 
-            this.pnlSubMenuAlumnos.BackColor = System.Drawing.Color.White;
-            this.pnlSubMenuAlumnos.Controls.Add(this.btnListarAlumnos);
-            this.pnlSubMenuAlumnos.Controls.Add(this.btnEliminarAlumnos);
-            this.pnlSubMenuAlumnos.Controls.Add(this.btnModAlumnos);
-            this.pnlSubMenuAlumnos.Controls.Add(this.btnAgregarAlumnos);
-            this.pnlSubMenuAlumnos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuAlumnos.Location = new System.Drawing.Point(0, 34);
-            this.pnlSubMenuAlumnos.Name = "pnlSubMenuAlumnos";
-            this.pnlSubMenuAlumnos.Size = new System.Drawing.Size(200, 136);
-            this.pnlSubMenuAlumnos.TabIndex = 1;
-            // 
-            // btnListarAlumnos
-            // 
-            this.btnListarAlumnos.BackColor = System.Drawing.Color.White;
-            this.btnListarAlumnos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnListarAlumnos.FlatAppearance.BorderSize = 0;
-            this.btnListarAlumnos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
-            this.btnListarAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListarAlumnos.Location = new System.Drawing.Point(0, 91);
-            this.btnListarAlumnos.Name = "btnListarAlumnos";
-            this.btnListarAlumnos.Size = new System.Drawing.Size(200, 36);
-            this.btnListarAlumnos.TabIndex = 10;
-            this.btnListarAlumnos.Text = "Listar Alumnos";
-            this.btnListarAlumnos.UseVisualStyleBackColor = false;
-            this.btnListarAlumnos.Click += new System.EventHandler(this.btnListarAlumnos_Click);
-            // 
-            // btnEliminarAlumnos
-            // 
-            this.btnEliminarAlumnos.BackColor = System.Drawing.Color.White;
-            this.btnEliminarAlumnos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEliminarAlumnos.FlatAppearance.BorderSize = 0;
-            this.btnEliminarAlumnos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
-            this.btnEliminarAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarAlumnos.Location = new System.Drawing.Point(0, 69);
-            this.btnEliminarAlumnos.Name = "btnEliminarAlumnos";
-            this.btnEliminarAlumnos.Size = new System.Drawing.Size(200, 22);
-            this.btnEliminarAlumnos.TabIndex = 9;
-            this.btnEliminarAlumnos.Text = "Eliminar Alumnos";
-            this.btnEliminarAlumnos.UseVisualStyleBackColor = false;
-            this.btnEliminarAlumnos.Click += new System.EventHandler(this.btnEliminarAlumnos_Click);
-            // 
-            // btnModAlumnos
-            // 
-            this.btnModAlumnos.BackColor = System.Drawing.Color.White;
-            this.btnModAlumnos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnModAlumnos.FlatAppearance.BorderSize = 0;
-            this.btnModAlumnos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
-            this.btnModAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModAlumnos.Location = new System.Drawing.Point(0, 33);
-            this.btnModAlumnos.Name = "btnModAlumnos";
-            this.btnModAlumnos.Size = new System.Drawing.Size(200, 36);
-            this.btnModAlumnos.TabIndex = 8;
-            this.btnModAlumnos.Text = "Modificar Alumnos";
-            this.btnModAlumnos.UseVisualStyleBackColor = false;
-            this.btnModAlumnos.Click += new System.EventHandler(this.btnModAlumnos_Click);
+            this.btnAlumnos.BackColor = System.Drawing.Color.Red;
+            this.btnAlumnos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAlumnos.FlatAppearance.BorderSize = 0;
+            this.btnAlumnos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlumnos.ForeColor = System.Drawing.Color.White;
+            this.btnAlumnos.Location = new System.Drawing.Point(0, 149);
+            this.btnAlumnos.Name = "btnAlumnos";
+            this.btnAlumnos.Size = new System.Drawing.Size(251, 34);
+            this.btnAlumnos.TabIndex = 29;
+            this.btnAlumnos.Text = "Alumnos";
+            this.btnAlumnos.UseVisualStyleBackColor = false;
+            this.btnAlumnos.Click += new System.EventHandler(this.btnAlumnos_Click);
             // 
             // btnAgregarAlumnos
             // 
@@ -485,62 +186,447 @@
             this.btnAgregarAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarAlumnos.Location = new System.Drawing.Point(0, 0);
             this.btnAgregarAlumnos.Name = "btnAgregarAlumnos";
-            this.btnAgregarAlumnos.Size = new System.Drawing.Size(200, 33);
+            this.btnAgregarAlumnos.Size = new System.Drawing.Size(251, 33);
             this.btnAgregarAlumnos.TabIndex = 7;
             this.btnAgregarAlumnos.Text = "Agregar Alumnos";
             this.btnAgregarAlumnos.UseVisualStyleBackColor = false;
             this.btnAgregarAlumnos.Click += new System.EventHandler(this.btnAgregarAlumnos_Click);
             // 
-            // btnAlumnos
+            // btnModAlumnos
             // 
-            this.btnAlumnos.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnAlumnos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAlumnos.FlatAppearance.BorderSize = 0;
-            this.btnAlumnos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlumnos.Location = new System.Drawing.Point(0, 0);
-            this.btnAlumnos.Name = "btnAlumnos";
-            this.btnAlumnos.Size = new System.Drawing.Size(200, 34);
-            this.btnAlumnos.TabIndex = 1;
-            this.btnAlumnos.Text = "Alumnos";
-            this.btnAlumnos.UseVisualStyleBackColor = false;
-            this.btnAlumnos.Click += new System.EventHandler(this.btnAlumnos_Click);
+            this.btnModAlumnos.BackColor = System.Drawing.Color.White;
+            this.btnModAlumnos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnModAlumnos.FlatAppearance.BorderSize = 0;
+            this.btnModAlumnos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
+            this.btnModAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModAlumnos.Location = new System.Drawing.Point(0, 33);
+            this.btnModAlumnos.Name = "btnModAlumnos";
+            this.btnModAlumnos.Size = new System.Drawing.Size(251, 30);
+            this.btnModAlumnos.TabIndex = 8;
+            this.btnModAlumnos.Text = "Modificar Alumnos";
+            this.btnModAlumnos.UseVisualStyleBackColor = false;
+            this.btnModAlumnos.Click += new System.EventHandler(this.btnModAlumnos_Click);
             // 
-            // picMenu
+            // btnEliminarAlumnos
             // 
-            this.picMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picMenu.Image = ((System.Drawing.Image)(resources.GetObject("picMenu.Image")));
-            this.picMenu.Location = new System.Drawing.Point(0, 0);
-            this.picMenu.Name = "picMenu";
-            this.picMenu.Size = new System.Drawing.Size(910, 708);
-            this.picMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picMenu.TabIndex = 0;
-            this.picMenu.TabStop = false;
+            this.btnEliminarAlumnos.BackColor = System.Drawing.Color.White;
+            this.btnEliminarAlumnos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEliminarAlumnos.FlatAppearance.BorderSize = 0;
+            this.btnEliminarAlumnos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
+            this.btnEliminarAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarAlumnos.Location = new System.Drawing.Point(0, 63);
+            this.btnEliminarAlumnos.Name = "btnEliminarAlumnos";
+            this.btnEliminarAlumnos.Size = new System.Drawing.Size(251, 34);
+            this.btnEliminarAlumnos.TabIndex = 9;
+            this.btnEliminarAlumnos.Text = "Eliminar Alumnos";
+            this.btnEliminarAlumnos.UseVisualStyleBackColor = false;
+            this.btnEliminarAlumnos.Click += new System.EventHandler(this.btnEliminarAlumnos_Click);
+            // 
+            // btnListarAlumnos
+            // 
+            this.btnListarAlumnos.BackColor = System.Drawing.Color.White;
+            this.btnListarAlumnos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnListarAlumnos.FlatAppearance.BorderSize = 0;
+            this.btnListarAlumnos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
+            this.btnListarAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListarAlumnos.Location = new System.Drawing.Point(0, 97);
+            this.btnListarAlumnos.Name = "btnListarAlumnos";
+            this.btnListarAlumnos.Size = new System.Drawing.Size(251, 24);
+            this.btnListarAlumnos.TabIndex = 10;
+            this.btnListarAlumnos.Text = "Listar Alumnos";
+            this.btnListarAlumnos.UseVisualStyleBackColor = false;
+            this.btnListarAlumnos.Click += new System.EventHandler(this.btnListarAlumnos_Click);
+            // 
+            // pnlSubMenuAlumnos
+            // 
+            this.pnlSubMenuAlumnos.BackColor = System.Drawing.Color.White;
+            this.pnlSubMenuAlumnos.Controls.Add(this.btnListarAlumnos);
+            this.pnlSubMenuAlumnos.Controls.Add(this.btnEliminarAlumnos);
+            this.pnlSubMenuAlumnos.Controls.Add(this.btnModAlumnos);
+            this.pnlSubMenuAlumnos.Controls.Add(this.btnAgregarAlumnos);
+            this.pnlSubMenuAlumnos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSubMenuAlumnos.Location = new System.Drawing.Point(0, 183);
+            this.pnlSubMenuAlumnos.Name = "pnlSubMenuAlumnos";
+            this.pnlSubMenuAlumnos.Size = new System.Drawing.Size(251, 136);
+            this.pnlSubMenuAlumnos.TabIndex = 28;
+            // 
+            // btnMaestros
+            // 
+            this.btnMaestros.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnMaestros.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMaestros.FlatAppearance.BorderSize = 0;
+            this.btnMaestros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnMaestros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaestros.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaestros.ForeColor = System.Drawing.Color.White;
+            this.btnMaestros.Location = new System.Drawing.Point(0, 319);
+            this.btnMaestros.Name = "btnMaestros";
+            this.btnMaestros.Size = new System.Drawing.Size(251, 41);
+            this.btnMaestros.TabIndex = 31;
+            this.btnMaestros.Text = "Maestros";
+            this.btnMaestros.UseVisualStyleBackColor = false;
+            this.btnMaestros.Click += new System.EventHandler(this.btnMaestros_Click);
+            // 
+            // btnAgregarMaestro
+            // 
+            this.btnAgregarMaestro.BackColor = System.Drawing.Color.White;
+            this.btnAgregarMaestro.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAgregarMaestro.FlatAppearance.BorderSize = 0;
+            this.btnAgregarMaestro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
+            this.btnAgregarMaestro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarMaestro.Location = new System.Drawing.Point(0, 0);
+            this.btnAgregarMaestro.Name = "btnAgregarMaestro";
+            this.btnAgregarMaestro.Size = new System.Drawing.Size(251, 31);
+            this.btnAgregarMaestro.TabIndex = 11;
+            this.btnAgregarMaestro.Text = "Agregar Maestro";
+            this.btnAgregarMaestro.UseVisualStyleBackColor = false;
+            this.btnAgregarMaestro.Click += new System.EventHandler(this.btnAgregarMaestro_Click);
+            // 
+            // btnModificarMaestro
+            // 
+            this.btnModificarMaestro.BackColor = System.Drawing.Color.White;
+            this.btnModificarMaestro.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnModificarMaestro.FlatAppearance.BorderSize = 0;
+            this.btnModificarMaestro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
+            this.btnModificarMaestro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarMaestro.Location = new System.Drawing.Point(0, 31);
+            this.btnModificarMaestro.Name = "btnModificarMaestro";
+            this.btnModificarMaestro.Size = new System.Drawing.Size(251, 22);
+            this.btnModificarMaestro.TabIndex = 12;
+            this.btnModificarMaestro.Text = "Modificar Maestro";
+            this.btnModificarMaestro.UseVisualStyleBackColor = false;
+            this.btnModificarMaestro.Click += new System.EventHandler(this.btnModificarMaestro_Click);
+            // 
+            // btnEliminarMaestro
+            // 
+            this.btnEliminarMaestro.BackColor = System.Drawing.Color.White;
+            this.btnEliminarMaestro.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEliminarMaestro.FlatAppearance.BorderSize = 0;
+            this.btnEliminarMaestro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
+            this.btnEliminarMaestro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarMaestro.Location = new System.Drawing.Point(0, 53);
+            this.btnEliminarMaestro.Name = "btnEliminarMaestro";
+            this.btnEliminarMaestro.Size = new System.Drawing.Size(251, 23);
+            this.btnEliminarMaestro.TabIndex = 13;
+            this.btnEliminarMaestro.Text = "Eliminar Maestro";
+            this.btnEliminarMaestro.UseVisualStyleBackColor = false;
+            this.btnEliminarMaestro.Click += new System.EventHandler(this.btnEliminarMaestro_Click);
+            // 
+            // btnListarMaestros
+            // 
+            this.btnListarMaestros.BackColor = System.Drawing.Color.White;
+            this.btnListarMaestros.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnListarMaestros.FlatAppearance.BorderSize = 0;
+            this.btnListarMaestros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
+            this.btnListarMaestros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListarMaestros.Location = new System.Drawing.Point(0, 76);
+            this.btnListarMaestros.Name = "btnListarMaestros";
+            this.btnListarMaestros.Size = new System.Drawing.Size(251, 27);
+            this.btnListarMaestros.TabIndex = 14;
+            this.btnListarMaestros.Text = "Listar Maestros";
+            this.btnListarMaestros.UseVisualStyleBackColor = false;
+            this.btnListarMaestros.Click += new System.EventHandler(this.btnListarMaestros_Click);
+            // 
+            // pnlSubMenuMaestros
+            // 
+            this.pnlSubMenuMaestros.BackColor = System.Drawing.Color.White;
+            this.pnlSubMenuMaestros.Controls.Add(this.btnListarMaestros);
+            this.pnlSubMenuMaestros.Controls.Add(this.btnEliminarMaestro);
+            this.pnlSubMenuMaestros.Controls.Add(this.btnModificarMaestro);
+            this.pnlSubMenuMaestros.Controls.Add(this.btnAgregarMaestro);
+            this.pnlSubMenuMaestros.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSubMenuMaestros.Location = new System.Drawing.Point(0, 360);
+            this.pnlSubMenuMaestros.Name = "pnlSubMenuMaestros";
+            this.pnlSubMenuMaestros.Size = new System.Drawing.Size(251, 116);
+            this.pnlSubMenuMaestros.TabIndex = 30;
+            // 
+            // btnSesiones
+            // 
+            this.btnSesiones.BackColor = System.Drawing.Color.Gold;
+            this.btnSesiones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSesiones.FlatAppearance.BorderSize = 0;
+            this.btnSesiones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnSesiones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSesiones.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSesiones.ForeColor = System.Drawing.Color.White;
+            this.btnSesiones.Location = new System.Drawing.Point(0, 476);
+            this.btnSesiones.Name = "btnSesiones";
+            this.btnSesiones.Size = new System.Drawing.Size(251, 33);
+            this.btnSesiones.TabIndex = 33;
+            this.btnSesiones.Text = "Sesiones";
+            this.btnSesiones.UseVisualStyleBackColor = false;
+            this.btnSesiones.Click += new System.EventHandler(this.btnSesiones_Click);
+            // 
+            // btnRegSesion
+            // 
+            this.btnRegSesion.BackColor = System.Drawing.Color.White;
+            this.btnRegSesion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRegSesion.FlatAppearance.BorderSize = 0;
+            this.btnRegSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
+            this.btnRegSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegSesion.Location = new System.Drawing.Point(0, 0);
+            this.btnRegSesion.Name = "btnRegSesion";
+            this.btnRegSesion.Size = new System.Drawing.Size(251, 24);
+            this.btnRegSesion.TabIndex = 12;
+            this.btnRegSesion.Text = "Registrar Sesion";
+            this.btnRegSesion.UseVisualStyleBackColor = false;
+            this.btnRegSesion.Click += new System.EventHandler(this.btnRegSesion_Click);
+            // 
+            // btnListarSesiones
+            // 
+            this.btnListarSesiones.BackColor = System.Drawing.Color.White;
+            this.btnListarSesiones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnListarSesiones.FlatAppearance.BorderSize = 0;
+            this.btnListarSesiones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
+            this.btnListarSesiones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListarSesiones.Location = new System.Drawing.Point(0, 24);
+            this.btnListarSesiones.Name = "btnListarSesiones";
+            this.btnListarSesiones.Size = new System.Drawing.Size(251, 28);
+            this.btnListarSesiones.TabIndex = 13;
+            this.btnListarSesiones.Text = "Listar Sesiones";
+            this.btnListarSesiones.UseVisualStyleBackColor = false;
+            this.btnListarSesiones.Click += new System.EventHandler(this.btnListarSesiones_Click);
+            // 
+            // pnlSubMenuSesiones
+            // 
+            this.pnlSubMenuSesiones.BackColor = System.Drawing.Color.White;
+            this.pnlSubMenuSesiones.Controls.Add(this.btnListarSesiones);
+            this.pnlSubMenuSesiones.Controls.Add(this.btnRegSesion);
+            this.pnlSubMenuSesiones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSubMenuSesiones.Location = new System.Drawing.Point(0, 509);
+            this.pnlSubMenuSesiones.Name = "pnlSubMenuSesiones";
+            this.pnlSubMenuSesiones.Size = new System.Drawing.Size(251, 66);
+            this.pnlSubMenuSesiones.TabIndex = 32;
+            // 
+            // btnFacturas
+            // 
+            this.btnFacturas.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnFacturas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFacturas.FlatAppearance.BorderSize = 0;
+            this.btnFacturas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnFacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFacturas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFacturas.ForeColor = System.Drawing.Color.White;
+            this.btnFacturas.Location = new System.Drawing.Point(0, 575);
+            this.btnFacturas.Name = "btnFacturas";
+            this.btnFacturas.Size = new System.Drawing.Size(251, 33);
+            this.btnFacturas.TabIndex = 35;
+            this.btnFacturas.Text = "Facturas";
+            this.btnFacturas.UseVisualStyleBackColor = false;
+            this.btnFacturas.Click += new System.EventHandler(this.btnFacturas_Click);
+            // 
+            // btnGenerarFactura
+            // 
+            this.btnGenerarFactura.BackColor = System.Drawing.Color.White;
+            this.btnGenerarFactura.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGenerarFactura.FlatAppearance.BorderSize = 0;
+            this.btnGenerarFactura.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
+            this.btnGenerarFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerarFactura.Location = new System.Drawing.Point(0, 0);
+            this.btnGenerarFactura.Name = "btnGenerarFactura";
+            this.btnGenerarFactura.Size = new System.Drawing.Size(251, 24);
+            this.btnGenerarFactura.TabIndex = 15;
+            this.btnGenerarFactura.Text = "Generar Factura";
+            this.btnGenerarFactura.UseVisualStyleBackColor = false;
+            this.btnGenerarFactura.Click += new System.EventHandler(this.btnGenerarFactura_Click);
+            // 
+            // btnHistorialFactura
+            // 
+            this.btnHistorialFactura.BackColor = System.Drawing.Color.White;
+            this.btnHistorialFactura.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHistorialFactura.FlatAppearance.BorderSize = 0;
+            this.btnHistorialFactura.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
+            this.btnHistorialFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistorialFactura.Location = new System.Drawing.Point(0, 24);
+            this.btnHistorialFactura.Name = "btnHistorialFactura";
+            this.btnHistorialFactura.Size = new System.Drawing.Size(251, 28);
+            this.btnHistorialFactura.TabIndex = 16;
+            this.btnHistorialFactura.Text = "Historial de Facturas";
+            this.btnHistorialFactura.UseVisualStyleBackColor = false;
+            this.btnHistorialFactura.Click += new System.EventHandler(this.btnHistorialFactura_Click);
+            // 
+            // btnIngresosTotales
+            // 
+            this.btnIngresosTotales.BackColor = System.Drawing.Color.White;
+            this.btnIngresosTotales.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnIngresosTotales.FlatAppearance.BorderSize = 0;
+            this.btnIngresosTotales.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
+            this.btnIngresosTotales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIngresosTotales.Location = new System.Drawing.Point(0, 52);
+            this.btnIngresosTotales.Name = "btnIngresosTotales";
+            this.btnIngresosTotales.Size = new System.Drawing.Size(251, 28);
+            this.btnIngresosTotales.TabIndex = 17;
+            this.btnIngresosTotales.Text = "Ingresos Totales";
+            this.btnIngresosTotales.UseVisualStyleBackColor = false;
+            this.btnIngresosTotales.Click += new System.EventHandler(this.btnIngresosTotales_Click);
+            // 
+            // pnlSubMenuFacturas
+            // 
+            this.pnlSubMenuFacturas.BackColor = System.Drawing.Color.White;
+            this.pnlSubMenuFacturas.Controls.Add(this.btnIngresosTotales);
+            this.pnlSubMenuFacturas.Controls.Add(this.btnHistorialFactura);
+            this.pnlSubMenuFacturas.Controls.Add(this.btnGenerarFactura);
+            this.pnlSubMenuFacturas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSubMenuFacturas.Location = new System.Drawing.Point(0, 608);
+            this.pnlSubMenuFacturas.Name = "pnlSubMenuFacturas";
+            this.pnlSubMenuFacturas.Size = new System.Drawing.Size(251, 93);
+            this.pnlSubMenuFacturas.TabIndex = 34;
+            // 
+            // btnNominas
+            // 
+            this.btnNominas.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnNominas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNominas.FlatAppearance.BorderSize = 0;
+            this.btnNominas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnNominas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNominas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNominas.ForeColor = System.Drawing.Color.White;
+            this.btnNominas.Location = new System.Drawing.Point(0, 701);
+            this.btnNominas.Name = "btnNominas";
+            this.btnNominas.Size = new System.Drawing.Size(251, 33);
+            this.btnNominas.TabIndex = 37;
+            this.btnNominas.Text = "Nominas";
+            this.btnNominas.UseVisualStyleBackColor = false;
+            this.btnNominas.Click += new System.EventHandler(this.btnNominas_Click);
+            // 
+            // btnGenerarNomina
+            // 
+            this.btnGenerarNomina.BackColor = System.Drawing.Color.White;
+            this.btnGenerarNomina.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGenerarNomina.FlatAppearance.BorderSize = 0;
+            this.btnGenerarNomina.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
+            this.btnGenerarNomina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerarNomina.Location = new System.Drawing.Point(0, 0);
+            this.btnGenerarNomina.Name = "btnGenerarNomina";
+            this.btnGenerarNomina.Size = new System.Drawing.Size(251, 24);
+            this.btnGenerarNomina.TabIndex = 18;
+            this.btnGenerarNomina.Text = "Generar Nomina";
+            this.btnGenerarNomina.UseVisualStyleBackColor = false;
+            this.btnGenerarNomina.Click += new System.EventHandler(this.btnGenerarNomina_Click);
+            // 
+            // btnHistorialNominas
+            // 
+            this.btnHistorialNominas.BackColor = System.Drawing.Color.White;
+            this.btnHistorialNominas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHistorialNominas.FlatAppearance.BorderSize = 0;
+            this.btnHistorialNominas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
+            this.btnHistorialNominas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistorialNominas.Location = new System.Drawing.Point(0, 24);
+            this.btnHistorialNominas.Name = "btnHistorialNominas";
+            this.btnHistorialNominas.Size = new System.Drawing.Size(251, 28);
+            this.btnHistorialNominas.TabIndex = 19;
+            this.btnHistorialNominas.Text = "Historial de Facturas";
+            this.btnHistorialNominas.UseVisualStyleBackColor = false;
+            this.btnHistorialNominas.Click += new System.EventHandler(this.btnHistorialNominas_Click);
+            // 
+            // btnEgresosTotales
+            // 
+            this.btnEgresosTotales.BackColor = System.Drawing.Color.White;
+            this.btnEgresosTotales.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEgresosTotales.FlatAppearance.BorderSize = 0;
+            this.btnEgresosTotales.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
+            this.btnEgresosTotales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEgresosTotales.Location = new System.Drawing.Point(0, 52);
+            this.btnEgresosTotales.Name = "btnEgresosTotales";
+            this.btnEgresosTotales.Size = new System.Drawing.Size(251, 28);
+            this.btnEgresosTotales.TabIndex = 20;
+            this.btnEgresosTotales.Text = "Egresos Totales";
+            this.btnEgresosTotales.UseVisualStyleBackColor = false;
+            this.btnEgresosTotales.Click += new System.EventHandler(this.btnEgresosTotales_Click);
+            // 
+            // pnlSubMenuNominas
+            // 
+            this.pnlSubMenuNominas.BackColor = System.Drawing.Color.White;
+            this.pnlSubMenuNominas.Controls.Add(this.btnEgresosTotales);
+            this.pnlSubMenuNominas.Controls.Add(this.btnHistorialNominas);
+            this.pnlSubMenuNominas.Controls.Add(this.btnGenerarNomina);
+            this.pnlSubMenuNominas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSubMenuNominas.Location = new System.Drawing.Point(0, 734);
+            this.pnlSubMenuNominas.Name = "pnlSubMenuNominas";
+            this.pnlSubMenuNominas.Size = new System.Drawing.Size(251, 91);
+            this.pnlSubMenuNominas.TabIndex = 36;
+            // 
+            // btnConfig
+            // 
+            this.btnConfig.BackColor = System.Drawing.Color.Red;
+            this.btnConfig.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnConfig.FlatAppearance.BorderSize = 0;
+            this.btnConfig.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfig.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfig.ForeColor = System.Drawing.Color.White;
+            this.btnConfig.Location = new System.Drawing.Point(0, 825);
+            this.btnConfig.Name = "btnConfig";
+            this.btnConfig.Size = new System.Drawing.Size(251, 33);
+            this.btnConfig.TabIndex = 38;
+            this.btnConfig.Text = "Configuración";
+            this.btnConfig.UseVisualStyleBackColor = false;
+            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
+            // 
+            // btnCambContra
+            // 
+            this.btnCambContra.BackColor = System.Drawing.Color.White;
+            this.btnCambContra.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCambContra.FlatAppearance.BorderSize = 0;
+            this.btnCambContra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
+            this.btnCambContra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCambContra.Location = new System.Drawing.Point(0, 0);
+            this.btnCambContra.Name = "btnCambContra";
+            this.btnCambContra.Size = new System.Drawing.Size(251, 25);
+            this.btnCambContra.TabIndex = 25;
+            this.btnCambContra.Text = "Cambiar Contraseña";
+            this.btnCambContra.UseVisualStyleBackColor = false;
+            this.btnCambContra.Click += new System.EventHandler(this.btnCambContra_Click);
+            // 
+            // pnlSubMenuConfig
+            // 
+            this.pnlSubMenuConfig.Controls.Add(this.btnCambContra);
+            this.pnlSubMenuConfig.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSubMenuConfig.Location = new System.Drawing.Point(0, 858);
+            this.pnlSubMenuConfig.Name = "pnlSubMenuConfig";
+            this.pnlSubMenuConfig.Size = new System.Drawing.Size(251, 31);
+            this.pnlSubMenuConfig.TabIndex = 42;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.MediumBlue;
+            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Location = new System.Drawing.Point(0, 889);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(251, 33);
+            this.btnSalir.TabIndex = 43;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1110, 708);
+            this.ClientSize = new System.Drawing.Size(1161, 922);
             this.Controls.Add(this.pnlControl);
             this.Controls.Add(this.pnlMenuLateral);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1126, 747);
-            this.MinimumSize = new System.Drawing.Size(1126, 721);
             this.Name = "FrmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmInicio_FormClosed);
             this.pnlControl.ResumeLayout(false);
+            this.pnlControl.PerformLayout();
             this.pnlMenuLateral.ResumeLayout(false);
-            this.pnlConfig.ResumeLayout(false);
-            this.pnlSubMenuNominas.ResumeLayout(false);
-            this.pnlSubMenuFacturas.ResumeLayout(false);
-            this.pnlSubMenuSesiones.ResumeLayout(false);
-            this.pnlSubMenuMaestros.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlSubMenuAlumnos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picMenu)).EndInit();
+            this.pnlSubMenuMaestros.ResumeLayout(false);
+            this.pnlSubMenuSesiones.ResumeLayout(false);
+            this.pnlSubMenuFacturas.ResumeLayout(false);
+            this.pnlSubMenuNominas.ResumeLayout(false);
+            this.pnlSubMenuConfig.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -548,8 +634,26 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlControl;
-        private System.Windows.Forms.PictureBox picMenu;
         private System.Windows.Forms.Panel pnlMenuLateral;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblHora;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Timer Tiempo;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Panel pnlSubMenuConfig;
+        private System.Windows.Forms.Button btnCambContra;
+        private System.Windows.Forms.Button btnConfig;
+        private System.Windows.Forms.Panel pnlSubMenuNominas;
+        private System.Windows.Forms.Button btnEgresosTotales;
+        private System.Windows.Forms.Button btnHistorialNominas;
+        private System.Windows.Forms.Button btnGenerarNomina;
+        private System.Windows.Forms.Button btnNominas;
+        private System.Windows.Forms.Panel pnlSubMenuFacturas;
+        private System.Windows.Forms.Button btnIngresosTotales;
+        private System.Windows.Forms.Button btnHistorialFactura;
+        private System.Windows.Forms.Button btnGenerarFactura;
+        private System.Windows.Forms.Button btnFacturas;
         private System.Windows.Forms.Panel pnlSubMenuSesiones;
         private System.Windows.Forms.Button btnListarSesiones;
         private System.Windows.Forms.Button btnRegSesion;
@@ -566,17 +670,5 @@
         private System.Windows.Forms.Button btnModAlumnos;
         private System.Windows.Forms.Button btnAgregarAlumnos;
         private System.Windows.Forms.Button btnAlumnos;
-        private System.Windows.Forms.Panel pnlSubMenuNominas;
-        private System.Windows.Forms.Button btnHistorialNominas;
-        private System.Windows.Forms.Button btnGenerarNomina;
-        private System.Windows.Forms.Button btnNominas;
-        private System.Windows.Forms.Panel pnlSubMenuFacturas;
-        private System.Windows.Forms.Button btnIngresosTotales;
-        private System.Windows.Forms.Button btnHistorialFactura;
-        private System.Windows.Forms.Button btnGenerarFactura;
-        private System.Windows.Forms.Button btnFacturas;
-        private System.Windows.Forms.Button btnEgresosTotales;
-        private System.Windows.Forms.Panel pnlConfig;
-        private System.Windows.Forms.Button btnConfig;
     }
 }

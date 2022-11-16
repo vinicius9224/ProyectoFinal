@@ -35,10 +35,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 669);
+            this.ClientSize = new System.Drawing.Size(894, 883);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(910, 708);
-            this.MinimumSize = new System.Drawing.Size(910, 708);
+            this.MaximumSize = new System.Drawing.Size(910, 922);
+            this.MinimumSize = new System.Drawing.Size(910, 922);
             this.Name = "FrmEliminarMaestro";
             this.Text = "Eliminar Maestro";
             this.ResumeLayout(false);

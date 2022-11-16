@@ -19,8 +19,18 @@ namespace ProyectoFinal.Formularios.Configuración
             InitializeComponent();
             pnlConfirmar.Hide();
         }
+        private void FrmEditarUsuario_Load(object sender, EventArgs e)
+        {
+            lblNomUsuario.Text = FrmLogin.NomUser;
+            this.Text = "Nombre de Usuario" + FrmLogin.NomUser;
+        }
 
         #region Botones Cerrar,Cancelar, Guardar
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             pnlConfirmar.Hide();
@@ -43,20 +53,9 @@ namespace ProyectoFinal.Formularios.Configuración
             //Limpia los textbox
             pnlConfirmar.Hide();txtContraNueva.Clear();txtContraActual.Clear();
         }
-
         #endregion
 
-        private void FrmEditarUsuario_Load(object sender, EventArgs e)
-        {
-            lblNomUsuario.Text = FrmLogin.NomUser;
-            this.Text = "Nombre de Usuario" + FrmLogin.NomUser;
-        }
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
+        #region Validar
         private void btnVerificar_Click(object sender, EventArgs e)
         {
             string conect = ConfigurationManager.ConnectionStrings["Conexion"].ConnectionString;
@@ -80,5 +79,6 @@ namespace ProyectoFinal.Formularios.Configuración
             }
             conexion.Close();
         }
+        #endregion
     }
 }

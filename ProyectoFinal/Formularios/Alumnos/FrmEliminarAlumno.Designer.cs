@@ -58,7 +58,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(894, 669);
+            this.panel1.Size = new System.Drawing.Size(894, 883);
             this.panel1.TabIndex = 0;
             // 
             // lblEliminarAlumno
@@ -183,7 +183,7 @@
             this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.Fondo2;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(894, 669);
+            this.pictureBox1.Size = new System.Drawing.Size(894, 883);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -192,11 +192,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 669);
+            this.ClientSize = new System.Drawing.Size(894, 883);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(910, 708);
-            this.MinimumSize = new System.Drawing.Size(910, 708);
+            this.MaximumSize = new System.Drawing.Size(910, 922);
+            this.MinimumSize = new System.Drawing.Size(910, 922);
             this.Name = "FrmEliminarAlumno";
             this.Text = "Eliminar Alumno";
             this.Load += new System.EventHandler(this.FrmEliminarAlumno_Load_1);

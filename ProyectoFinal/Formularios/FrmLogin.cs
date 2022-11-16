@@ -104,5 +104,14 @@ namespace ProyectoFinal
         {
             Application.Exit();
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Desea salir del programa", "Cerra Programa", MessageBoxButtons.YesNo, MessageBoxIcon.Question)==DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            
+        }
     }
 }
