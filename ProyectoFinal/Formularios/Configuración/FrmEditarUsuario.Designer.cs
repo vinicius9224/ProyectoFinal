@@ -225,10 +225,10 @@
             this.picFondo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picFondo.Image = global::ProyectoFinal.Properties.Resources.Fondo2;
             this.picFondo.Location = new System.Drawing.Point(0, 0);
-            this.picFondo.MaximumSize = new System.Drawing.Size(910, 922);
-            this.picFondo.MinimumSize = new System.Drawing.Size(910, 922);
+            this.picFondo.MaximumSize = new System.Drawing.Size(910, 973);
+            this.picFondo.MinimumSize = new System.Drawing.Size(910, 973);
             this.picFondo.Name = "picFondo";
-            this.picFondo.Size = new System.Drawing.Size(910, 922);
+            this.picFondo.Size = new System.Drawing.Size(910, 973);
             this.picFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picFondo.TabIndex = 0;
             this.picFondo.TabStop = false;

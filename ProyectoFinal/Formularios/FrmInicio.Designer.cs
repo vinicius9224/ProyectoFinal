@@ -86,7 +86,7 @@
             this.pnlControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlControl.Location = new System.Drawing.Point(251, 0);
             this.pnlControl.Name = "pnlControl";
-            this.pnlControl.Size = new System.Drawing.Size(910, 922);
+            this.pnlControl.Size = new System.Drawing.Size(910, 973);
             this.pnlControl.TabIndex = 3;
             // 
             // pnlMenuLateral
@@ -110,7 +110,7 @@
             this.pnlMenuLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenuLateral.Location = new System.Drawing.Point(0, 0);
             this.pnlMenuLateral.Name = "pnlMenuLateral";
-            this.pnlMenuLateral.Size = new System.Drawing.Size(251, 922);
+            this.pnlMenuLateral.Size = new System.Drawing.Size(251, 973);
             this.pnlMenuLateral.TabIndex = 2;
             // 
             // panel1
@@ -119,7 +119,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(251, 149);
+            this.panel1.Size = new System.Drawing.Size(251, 115);
             this.panel1.TabIndex = 5;
             // 
             // pictureBox1
@@ -128,7 +128,7 @@
             this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.Logo;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(251, 149);
+            this.pictureBox1.Size = new System.Drawing.Size(251, 115);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -167,9 +167,9 @@
             this.btnAlumnos.FlatAppearance.BorderSize = 0;
             this.btnAlumnos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlumnos.ForeColor = System.Drawing.Color.White;
-            this.btnAlumnos.Location = new System.Drawing.Point(0, 149);
+            this.btnAlumnos.Location = new System.Drawing.Point(0, 115);
             this.btnAlumnos.Name = "btnAlumnos";
             this.btnAlumnos.Size = new System.Drawing.Size(251, 34);
             this.btnAlumnos.TabIndex = 29;
@@ -184,6 +184,7 @@
             this.btnAgregarAlumnos.FlatAppearance.BorderSize = 0;
             this.btnAgregarAlumnos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
             this.btnAgregarAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarAlumnos.Location = new System.Drawing.Point(0, 0);
             this.btnAgregarAlumnos.Name = "btnAgregarAlumnos";
             this.btnAgregarAlumnos.Size = new System.Drawing.Size(251, 33);
@@ -199,9 +200,10 @@
             this.btnModAlumnos.FlatAppearance.BorderSize = 0;
             this.btnModAlumnos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
             this.btnModAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModAlumnos.Location = new System.Drawing.Point(0, 33);
             this.btnModAlumnos.Name = "btnModAlumnos";
-            this.btnModAlumnos.Size = new System.Drawing.Size(251, 30);
+            this.btnModAlumnos.Size = new System.Drawing.Size(251, 33);
             this.btnModAlumnos.TabIndex = 8;
             this.btnModAlumnos.Text = "Modificar Alumnos";
             this.btnModAlumnos.UseVisualStyleBackColor = false;
@@ -214,9 +216,10 @@
             this.btnEliminarAlumnos.FlatAppearance.BorderSize = 0;
             this.btnEliminarAlumnos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
             this.btnEliminarAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarAlumnos.Location = new System.Drawing.Point(0, 63);
+            this.btnEliminarAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarAlumnos.Location = new System.Drawing.Point(0, 66);
             this.btnEliminarAlumnos.Name = "btnEliminarAlumnos";
-            this.btnEliminarAlumnos.Size = new System.Drawing.Size(251, 34);
+            this.btnEliminarAlumnos.Size = new System.Drawing.Size(251, 33);
             this.btnEliminarAlumnos.TabIndex = 9;
             this.btnEliminarAlumnos.Text = "Eliminar Alumnos";
             this.btnEliminarAlumnos.UseVisualStyleBackColor = false;
@@ -229,9 +232,10 @@
             this.btnListarAlumnos.FlatAppearance.BorderSize = 0;
             this.btnListarAlumnos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
             this.btnListarAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListarAlumnos.Location = new System.Drawing.Point(0, 97);
+            this.btnListarAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarAlumnos.Location = new System.Drawing.Point(0, 99);
             this.btnListarAlumnos.Name = "btnListarAlumnos";
-            this.btnListarAlumnos.Size = new System.Drawing.Size(251, 24);
+            this.btnListarAlumnos.Size = new System.Drawing.Size(251, 33);
             this.btnListarAlumnos.TabIndex = 10;
             this.btnListarAlumnos.Text = "Listar Alumnos";
             this.btnListarAlumnos.UseVisualStyleBackColor = false;
@@ -245,9 +249,9 @@
             this.pnlSubMenuAlumnos.Controls.Add(this.btnModAlumnos);
             this.pnlSubMenuAlumnos.Controls.Add(this.btnAgregarAlumnos);
             this.pnlSubMenuAlumnos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuAlumnos.Location = new System.Drawing.Point(0, 183);
+            this.pnlSubMenuAlumnos.Location = new System.Drawing.Point(0, 149);
             this.pnlSubMenuAlumnos.Name = "pnlSubMenuAlumnos";
-            this.pnlSubMenuAlumnos.Size = new System.Drawing.Size(251, 136);
+            this.pnlSubMenuAlumnos.Size = new System.Drawing.Size(251, 145);
             this.pnlSubMenuAlumnos.TabIndex = 28;
             // 
             // btnMaestros
@@ -257,9 +261,9 @@
             this.btnMaestros.FlatAppearance.BorderSize = 0;
             this.btnMaestros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnMaestros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaestros.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaestros.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaestros.ForeColor = System.Drawing.Color.White;
-            this.btnMaestros.Location = new System.Drawing.Point(0, 319);
+            this.btnMaestros.Location = new System.Drawing.Point(0, 294);
             this.btnMaestros.Name = "btnMaestros";
             this.btnMaestros.Size = new System.Drawing.Size(251, 41);
             this.btnMaestros.TabIndex = 31;
@@ -274,9 +278,10 @@
             this.btnAgregarMaestro.FlatAppearance.BorderSize = 0;
             this.btnAgregarMaestro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
             this.btnAgregarMaestro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarMaestro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarMaestro.Location = new System.Drawing.Point(0, 0);
             this.btnAgregarMaestro.Name = "btnAgregarMaestro";
-            this.btnAgregarMaestro.Size = new System.Drawing.Size(251, 31);
+            this.btnAgregarMaestro.Size = new System.Drawing.Size(251, 33);
             this.btnAgregarMaestro.TabIndex = 11;
             this.btnAgregarMaestro.Text = "Agregar Maestro";
             this.btnAgregarMaestro.UseVisualStyleBackColor = false;
@@ -289,9 +294,10 @@
             this.btnModificarMaestro.FlatAppearance.BorderSize = 0;
             this.btnModificarMaestro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
             this.btnModificarMaestro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificarMaestro.Location = new System.Drawing.Point(0, 31);
+            this.btnModificarMaestro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarMaestro.Location = new System.Drawing.Point(0, 33);
             this.btnModificarMaestro.Name = "btnModificarMaestro";
-            this.btnModificarMaestro.Size = new System.Drawing.Size(251, 22);
+            this.btnModificarMaestro.Size = new System.Drawing.Size(251, 33);
             this.btnModificarMaestro.TabIndex = 12;
             this.btnModificarMaestro.Text = "Modificar Maestro";
             this.btnModificarMaestro.UseVisualStyleBackColor = false;
@@ -304,9 +310,10 @@
             this.btnEliminarMaestro.FlatAppearance.BorderSize = 0;
             this.btnEliminarMaestro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
             this.btnEliminarMaestro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarMaestro.Location = new System.Drawing.Point(0, 53);
+            this.btnEliminarMaestro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarMaestro.Location = new System.Drawing.Point(0, 66);
             this.btnEliminarMaestro.Name = "btnEliminarMaestro";
-            this.btnEliminarMaestro.Size = new System.Drawing.Size(251, 23);
+            this.btnEliminarMaestro.Size = new System.Drawing.Size(251, 33);
             this.btnEliminarMaestro.TabIndex = 13;
             this.btnEliminarMaestro.Text = "Eliminar Maestro";
             this.btnEliminarMaestro.UseVisualStyleBackColor = false;
@@ -319,9 +326,10 @@
             this.btnListarMaestros.FlatAppearance.BorderSize = 0;
             this.btnListarMaestros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
             this.btnListarMaestros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListarMaestros.Location = new System.Drawing.Point(0, 76);
+            this.btnListarMaestros.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarMaestros.Location = new System.Drawing.Point(0, 99);
             this.btnListarMaestros.Name = "btnListarMaestros";
-            this.btnListarMaestros.Size = new System.Drawing.Size(251, 27);
+            this.btnListarMaestros.Size = new System.Drawing.Size(251, 33);
             this.btnListarMaestros.TabIndex = 14;
             this.btnListarMaestros.Text = "Listar Maestros";
             this.btnListarMaestros.UseVisualStyleBackColor = false;
@@ -335,9 +343,9 @@
             this.pnlSubMenuMaestros.Controls.Add(this.btnModificarMaestro);
             this.pnlSubMenuMaestros.Controls.Add(this.btnAgregarMaestro);
             this.pnlSubMenuMaestros.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuMaestros.Location = new System.Drawing.Point(0, 360);
+            this.pnlSubMenuMaestros.Location = new System.Drawing.Point(0, 335);
             this.pnlSubMenuMaestros.Name = "pnlSubMenuMaestros";
-            this.pnlSubMenuMaestros.Size = new System.Drawing.Size(251, 116);
+            this.pnlSubMenuMaestros.Size = new System.Drawing.Size(251, 143);
             this.pnlSubMenuMaestros.TabIndex = 30;
             // 
             // btnSesiones
@@ -347,9 +355,9 @@
             this.btnSesiones.FlatAppearance.BorderSize = 0;
             this.btnSesiones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnSesiones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSesiones.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSesiones.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSesiones.ForeColor = System.Drawing.Color.White;
-            this.btnSesiones.Location = new System.Drawing.Point(0, 476);
+            this.btnSesiones.Location = new System.Drawing.Point(0, 478);
             this.btnSesiones.Name = "btnSesiones";
             this.btnSesiones.Size = new System.Drawing.Size(251, 33);
             this.btnSesiones.TabIndex = 33;
@@ -364,9 +372,10 @@
             this.btnRegSesion.FlatAppearance.BorderSize = 0;
             this.btnRegSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
             this.btnRegSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegSesion.Location = new System.Drawing.Point(0, 0);
             this.btnRegSesion.Name = "btnRegSesion";
-            this.btnRegSesion.Size = new System.Drawing.Size(251, 24);
+            this.btnRegSesion.Size = new System.Drawing.Size(251, 33);
             this.btnRegSesion.TabIndex = 12;
             this.btnRegSesion.Text = "Registrar Sesion";
             this.btnRegSesion.UseVisualStyleBackColor = false;
@@ -379,9 +388,10 @@
             this.btnListarSesiones.FlatAppearance.BorderSize = 0;
             this.btnListarSesiones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
             this.btnListarSesiones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListarSesiones.Location = new System.Drawing.Point(0, 24);
+            this.btnListarSesiones.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarSesiones.Location = new System.Drawing.Point(0, 33);
             this.btnListarSesiones.Name = "btnListarSesiones";
-            this.btnListarSesiones.Size = new System.Drawing.Size(251, 28);
+            this.btnListarSesiones.Size = new System.Drawing.Size(251, 33);
             this.btnListarSesiones.TabIndex = 13;
             this.btnListarSesiones.Text = "Listar Sesiones";
             this.btnListarSesiones.UseVisualStyleBackColor = false;
@@ -393,9 +403,9 @@
             this.pnlSubMenuSesiones.Controls.Add(this.btnListarSesiones);
             this.pnlSubMenuSesiones.Controls.Add(this.btnRegSesion);
             this.pnlSubMenuSesiones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuSesiones.Location = new System.Drawing.Point(0, 509);
+            this.pnlSubMenuSesiones.Location = new System.Drawing.Point(0, 511);
             this.pnlSubMenuSesiones.Name = "pnlSubMenuSesiones";
-            this.pnlSubMenuSesiones.Size = new System.Drawing.Size(251, 66);
+            this.pnlSubMenuSesiones.Size = new System.Drawing.Size(251, 76);
             this.pnlSubMenuSesiones.TabIndex = 32;
             // 
             // btnFacturas
@@ -405,9 +415,9 @@
             this.btnFacturas.FlatAppearance.BorderSize = 0;
             this.btnFacturas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnFacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFacturas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFacturas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFacturas.ForeColor = System.Drawing.Color.White;
-            this.btnFacturas.Location = new System.Drawing.Point(0, 575);
+            this.btnFacturas.Location = new System.Drawing.Point(0, 587);
             this.btnFacturas.Name = "btnFacturas";
             this.btnFacturas.Size = new System.Drawing.Size(251, 33);
             this.btnFacturas.TabIndex = 35;
@@ -422,9 +432,10 @@
             this.btnGenerarFactura.FlatAppearance.BorderSize = 0;
             this.btnGenerarFactura.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
             this.btnGenerarFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerarFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerarFactura.Location = new System.Drawing.Point(0, 0);
             this.btnGenerarFactura.Name = "btnGenerarFactura";
-            this.btnGenerarFactura.Size = new System.Drawing.Size(251, 24);
+            this.btnGenerarFactura.Size = new System.Drawing.Size(251, 33);
             this.btnGenerarFactura.TabIndex = 15;
             this.btnGenerarFactura.Text = "Generar Factura";
             this.btnGenerarFactura.UseVisualStyleBackColor = false;
@@ -437,9 +448,10 @@
             this.btnHistorialFactura.FlatAppearance.BorderSize = 0;
             this.btnHistorialFactura.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
             this.btnHistorialFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistorialFactura.Location = new System.Drawing.Point(0, 24);
+            this.btnHistorialFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistorialFactura.Location = new System.Drawing.Point(0, 33);
             this.btnHistorialFactura.Name = "btnHistorialFactura";
-            this.btnHistorialFactura.Size = new System.Drawing.Size(251, 28);
+            this.btnHistorialFactura.Size = new System.Drawing.Size(251, 33);
             this.btnHistorialFactura.TabIndex = 16;
             this.btnHistorialFactura.Text = "Historial de Facturas";
             this.btnHistorialFactura.UseVisualStyleBackColor = false;
@@ -452,9 +464,10 @@
             this.btnIngresosTotales.FlatAppearance.BorderSize = 0;
             this.btnIngresosTotales.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
             this.btnIngresosTotales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIngresosTotales.Location = new System.Drawing.Point(0, 52);
+            this.btnIngresosTotales.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresosTotales.Location = new System.Drawing.Point(0, 66);
             this.btnIngresosTotales.Name = "btnIngresosTotales";
-            this.btnIngresosTotales.Size = new System.Drawing.Size(251, 28);
+            this.btnIngresosTotales.Size = new System.Drawing.Size(251, 33);
             this.btnIngresosTotales.TabIndex = 17;
             this.btnIngresosTotales.Text = "Ingresos Totales";
             this.btnIngresosTotales.UseVisualStyleBackColor = false;
@@ -467,9 +480,9 @@
             this.pnlSubMenuFacturas.Controls.Add(this.btnHistorialFactura);
             this.pnlSubMenuFacturas.Controls.Add(this.btnGenerarFactura);
             this.pnlSubMenuFacturas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuFacturas.Location = new System.Drawing.Point(0, 608);
+            this.pnlSubMenuFacturas.Location = new System.Drawing.Point(0, 620);
             this.pnlSubMenuFacturas.Name = "pnlSubMenuFacturas";
-            this.pnlSubMenuFacturas.Size = new System.Drawing.Size(251, 93);
+            this.pnlSubMenuFacturas.Size = new System.Drawing.Size(251, 108);
             this.pnlSubMenuFacturas.TabIndex = 34;
             // 
             // btnNominas
@@ -479,9 +492,9 @@
             this.btnNominas.FlatAppearance.BorderSize = 0;
             this.btnNominas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnNominas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNominas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNominas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNominas.ForeColor = System.Drawing.Color.White;
-            this.btnNominas.Location = new System.Drawing.Point(0, 701);
+            this.btnNominas.Location = new System.Drawing.Point(0, 728);
             this.btnNominas.Name = "btnNominas";
             this.btnNominas.Size = new System.Drawing.Size(251, 33);
             this.btnNominas.TabIndex = 37;
@@ -496,9 +509,10 @@
             this.btnGenerarNomina.FlatAppearance.BorderSize = 0;
             this.btnGenerarNomina.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
             this.btnGenerarNomina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerarNomina.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerarNomina.Location = new System.Drawing.Point(0, 0);
             this.btnGenerarNomina.Name = "btnGenerarNomina";
-            this.btnGenerarNomina.Size = new System.Drawing.Size(251, 24);
+            this.btnGenerarNomina.Size = new System.Drawing.Size(251, 33);
             this.btnGenerarNomina.TabIndex = 18;
             this.btnGenerarNomina.Text = "Generar Nomina";
             this.btnGenerarNomina.UseVisualStyleBackColor = false;
@@ -511,9 +525,10 @@
             this.btnHistorialNominas.FlatAppearance.BorderSize = 0;
             this.btnHistorialNominas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
             this.btnHistorialNominas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistorialNominas.Location = new System.Drawing.Point(0, 24);
+            this.btnHistorialNominas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistorialNominas.Location = new System.Drawing.Point(0, 33);
             this.btnHistorialNominas.Name = "btnHistorialNominas";
-            this.btnHistorialNominas.Size = new System.Drawing.Size(251, 28);
+            this.btnHistorialNominas.Size = new System.Drawing.Size(251, 33);
             this.btnHistorialNominas.TabIndex = 19;
             this.btnHistorialNominas.Text = "Historial de Facturas";
             this.btnHistorialNominas.UseVisualStyleBackColor = false;
@@ -526,9 +541,10 @@
             this.btnEgresosTotales.FlatAppearance.BorderSize = 0;
             this.btnEgresosTotales.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
             this.btnEgresosTotales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEgresosTotales.Location = new System.Drawing.Point(0, 52);
+            this.btnEgresosTotales.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEgresosTotales.Location = new System.Drawing.Point(0, 66);
             this.btnEgresosTotales.Name = "btnEgresosTotales";
-            this.btnEgresosTotales.Size = new System.Drawing.Size(251, 28);
+            this.btnEgresosTotales.Size = new System.Drawing.Size(251, 33);
             this.btnEgresosTotales.TabIndex = 20;
             this.btnEgresosTotales.Text = "Egresos Totales";
             this.btnEgresosTotales.UseVisualStyleBackColor = false;
@@ -541,9 +557,9 @@
             this.pnlSubMenuNominas.Controls.Add(this.btnHistorialNominas);
             this.pnlSubMenuNominas.Controls.Add(this.btnGenerarNomina);
             this.pnlSubMenuNominas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuNominas.Location = new System.Drawing.Point(0, 734);
+            this.pnlSubMenuNominas.Location = new System.Drawing.Point(0, 761);
             this.pnlSubMenuNominas.Name = "pnlSubMenuNominas";
-            this.pnlSubMenuNominas.Size = new System.Drawing.Size(251, 91);
+            this.pnlSubMenuNominas.Size = new System.Drawing.Size(251, 106);
             this.pnlSubMenuNominas.TabIndex = 36;
             // 
             // btnConfig
@@ -553,9 +569,9 @@
             this.btnConfig.FlatAppearance.BorderSize = 0;
             this.btnConfig.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfig.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfig.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfig.ForeColor = System.Drawing.Color.White;
-            this.btnConfig.Location = new System.Drawing.Point(0, 825);
+            this.btnConfig.Location = new System.Drawing.Point(0, 867);
             this.btnConfig.Name = "btnConfig";
             this.btnConfig.Size = new System.Drawing.Size(251, 33);
             this.btnConfig.TabIndex = 38;
@@ -570,9 +586,10 @@
             this.btnCambContra.FlatAppearance.BorderSize = 0;
             this.btnCambContra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
             this.btnCambContra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCambContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCambContra.Location = new System.Drawing.Point(0, 0);
             this.btnCambContra.Name = "btnCambContra";
-            this.btnCambContra.Size = new System.Drawing.Size(251, 25);
+            this.btnCambContra.Size = new System.Drawing.Size(251, 33);
             this.btnCambContra.TabIndex = 25;
             this.btnCambContra.Text = "Cambiar Contraseña";
             this.btnCambContra.UseVisualStyleBackColor = false;
@@ -582,9 +599,9 @@
             // 
             this.pnlSubMenuConfig.Controls.Add(this.btnCambContra);
             this.pnlSubMenuConfig.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuConfig.Location = new System.Drawing.Point(0, 858);
+            this.pnlSubMenuConfig.Location = new System.Drawing.Point(0, 900);
             this.pnlSubMenuConfig.Name = "pnlSubMenuConfig";
-            this.pnlSubMenuConfig.Size = new System.Drawing.Size(251, 31);
+            this.pnlSubMenuConfig.Size = new System.Drawing.Size(251, 40);
             this.pnlSubMenuConfig.TabIndex = 42;
             // 
             // btnSalir
@@ -594,9 +611,9 @@
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(0, 889);
+            this.btnSalir.Location = new System.Drawing.Point(0, 940);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(251, 33);
             this.btnSalir.TabIndex = 43;
@@ -608,7 +625,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1161, 922);
+            this.ClientSize = new System.Drawing.Size(1161, 973);
             this.Controls.Add(this.pnlControl);
             this.Controls.Add(this.pnlMenuLateral);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

@@ -54,7 +54,7 @@
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(0, 0);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(894, 883);
+            this.pnlContenedor.Size = new System.Drawing.Size(894, 934);
             this.pnlContenedor.TabIndex = 0;
             // 
             // lblListarAlumno
@@ -127,7 +127,7 @@
             this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.Fondo2;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(894, 883);
+            this.pictureBox1.Size = new System.Drawing.Size(894, 934);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -135,11 +135,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 883);
+            this.ClientSize = new System.Drawing.Size(894, 934);
             this.Controls.Add(this.pnlContenedor);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(910, 922);
-            this.MinimumSize = new System.Drawing.Size(910, 922);
+            this.MaximumSize = new System.Drawing.Size(910, 973);
+            this.MinimumSize = new System.Drawing.Size(910, 973);
             this.Name = "FrmListarAlumnos";
             this.Text = "Listar Alumnos";
             this.Load += new System.EventHandler(this.FrmListarAlumnos_Load_1);
