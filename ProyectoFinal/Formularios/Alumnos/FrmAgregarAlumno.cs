@@ -22,6 +22,13 @@ namespace ProyectoFinal.Formularios
             InitializeComponent();
         }
 
+        private void FrmAgregarAlumno_Load(object sender, EventArgs e)
+        {
+            Listar_Municipios();
+            Listar_Departamentos();
+        }
+
+        #region Validaciones
         //metodo para limpiar los textbox (recorre todo los controles , cuando encuentra el control textbox , lo limpia)
         public void limpiar_Datos()
         {
@@ -50,7 +57,6 @@ namespace ProyectoFinal.Formularios
             }
         }
 
-
         private bool Validar() // metodo para verificar si hay un textbox vacio(recorre todo los controles ,con el IsNullOrWhiteSpace nos damos cuenta si es nula o esta vacia , si esto pasa retornamos un false)
         {
             foreach (Control c in this.pnlAgregarAlumno.Controls)
@@ -74,10 +80,11 @@ namespace ProyectoFinal.Formularios
                     }
                 }
             }
-
             return true;
         }
+        #endregion
 
+        #region Método Listar Departamentos y Municipios
         public void Listar_Departamentos()
         {
             foreach (Control ctrl in this.pnlAgregarAlumno.Controls)
@@ -110,13 +117,9 @@ namespace ProyectoFinal.Formularios
                 }
             }
         }
+        #endregion
 
-        private void FrmAgregarAlumno_Load(object sender, EventArgs e)
-        {
-            Listar_Municipios();
-            Listar_Departamentos();
-        }
-
+        #region Botones Cerrar, Guardar
         private void btnCerrar_Click_1(object sender, EventArgs e)
         {
             this.Close();
@@ -124,7 +127,6 @@ namespace ProyectoFinal.Formularios
 
         private void btnGuardar_Click_1(object sender, EventArgs e)
         {
-
             try
             {
                 //llamamos al metodo validar y si este es igual a false , significa que esta vacia o nula.
@@ -141,8 +143,9 @@ namespace ProyectoFinal.Formularios
             }
             catch (Exception ex)
             {
-                MessageBox.Show("no se puedo agregar por" + ex);
+                MessageBox.Show("No se puedo agregar por" + ex);
             }
         }
+        #endregion
     }
 }

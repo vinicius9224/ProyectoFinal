@@ -21,16 +21,17 @@ namespace ProyectoFinal.Formularios.Alumnos
         {
             InitializeComponent();
         }
-
-        private void txtBus_TextChanged(object sender, EventArgs e)
+        private void FrmEliminarAlumno_Load_1(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = objeto.Buscadir(txtBus.Text);
+            Mostrar();
         }
 
         private void Mostrar()
         {
             dataGridView1.DataSource = objeto.Mostrar_completo();
         }
+
+        #region Validaciones
         public void limpiar_Datos()
         {
             foreach (Control ctrl in this.pnlFondo.Controls)
@@ -46,11 +47,9 @@ namespace ProyectoFinal.Formularios.Alumnos
             }
         }
 
-        private void FrmEliminarAlumno_Load_1(object sender, EventArgs e)
-        {
-            Mostrar();
-        }
+        #endregion
 
+        #region Botones Eliminar, Cerrar, Buscar
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
@@ -72,5 +71,11 @@ namespace ProyectoFinal.Formularios.Alumnos
         {
             this.Close();
         }
+
+        private void txtBus_TextChanged_1(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = objeto.Buscadir(txtBus.Text);
+        }
+        #endregion
     }
 }

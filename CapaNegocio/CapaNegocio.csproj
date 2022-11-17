@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatosAlumnos.cs" />
+    <Compile Include="DatosNominas.cs" />
     <Compile Include="DatosSesiones.cs" />
     <Compile Include="DatosTrabajadores.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -88,8 +88,8 @@
             this.Controls.Add(this.txtBus);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(910, 682);
-            this.MinimumSize = new System.Drawing.Size(910, 682);
+            this.MaximumSize = new System.Drawing.Size(910, 973);
+            this.MinimumSize = new System.Drawing.Size(910, 973);
             this.Name = "FrmEliminarMaestro";
             this.Text = "Eliminar Maestro";
             this.Load += new System.EventHandler(this.FrmEliminarMaestro_Load);

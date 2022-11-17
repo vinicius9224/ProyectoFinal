@@ -19,7 +19,13 @@ namespace ProyectoFinal.Formularios.Alumnos
         {
             InitializeComponent();
         }
+        private void FrmListarAlumnos_Load_1(object sender, EventArgs e)
+        {
+            Mostrar();
+            Noedi();
+        }
 
+        #region Validaciones
         private void Mostrar()
         {
             dataGridView1.DataSource = objeto.Mostrar_completo();
@@ -33,20 +39,19 @@ namespace ProyectoFinal.Formularios.Alumnos
             }
         }
 
+        #endregion
+
+        #region Botones y Barra de Busqueda
         private void txtBus_TextChanged(object sender, EventArgs e)
         {
             dataGridView1.DataSource = objeto.Buscadir(txtBus.Text);
-        }
-
-        private void FrmListarAlumnos_Load_1(object sender, EventArgs e)
-        {
-            Mostrar();
-            Noedi();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        #endregion
     }
 }

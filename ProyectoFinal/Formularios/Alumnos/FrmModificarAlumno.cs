@@ -30,6 +30,13 @@ namespace ProyectoFinal.Formularios.Alumnos
             Listar_Departamentos();
         }
 
+        private void Mostrar()
+        {
+            dataGridView1.DataSource = objeto.Mostrar_completo();
+        }
+
+        #region Validaciones
+
         public void limpiar_Datos()
         {
             foreach (Control ctrl in this.pnlAgregarAlumno.Controls)
@@ -82,11 +89,9 @@ namespace ProyectoFinal.Formularios.Alumnos
             return true;
         }
 
-        private void Mostrar()
-        {
-            dataGridView1.DataSource = objeto.Mostrar_completo();
-        }
+        #endregion
 
+        #region Método Listar Departamentos y Municipios
         public void Listar_Departamentos()
         {
             foreach (Control ctrl in this.pnlAgregarAlumno.Controls)
@@ -120,6 +125,8 @@ namespace ProyectoFinal.Formularios.Alumnos
                 }
             }
         }
+
+        #endregion
 
         #region Botones de Cerrar, Editar y Guardar
 

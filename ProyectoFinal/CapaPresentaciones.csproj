@@ -71,6 +71,12 @@
     <Compile Include="Formularios\Alumnos\FrmModificarAlumno.Designer.cs">
       <DependentUpon>FrmModificarAlumno.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Configuración\FrmEditarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Configuración\FrmEditarUsuario.Designer.cs">
+      <DependentUpon>FrmEditarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Facturas\FrmGenerarFactura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     <EmbeddedResource Include="Formularios\Alumnos\FrmModificarAlumno.resx">
       <DependentUpon>FrmModificarAlumno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Configuración\FrmEditarUsuario.resx">
+      <DependentUpon>FrmEditarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Facturas\FrmGenerarFactura.resx">
       <DependentUpon>FrmGenerarFactura.cs</DependentUpon>
     </EmbeddedResource>
@@ -255,15 +264,15 @@
     <Content Include="Recursos\Botones\minimizar.png" />
     <Content Include="Recursos\Botones\nomina-de-sueldos.png" />
     <Content Include="Recursos\Botones\perfil-del-usuario.png" />
-    <Content Include="Recursos\Fondos\fondo1 %282%29.png" />
     <Content Include="Recursos\Fondos\Fondo1.jpg" />
     <Content Include="Recursos\Fondos\Fondo2.png" />
+    <Content Include="Recursos\Fondos\Fondo3.jpeg" />
+    <Content Include="Recursos\Fondos\Fondo4.png" />
     <Content Include="Recursos\Fondos\FondoLogin %283%29.png" />
     <Content Include="Recursos\Fondos\Logo.ico" />
     <Content Include="Recursos\Fondos\Logo.jpg" />
-    <Content Include="Recursos\Fondos\photo-1557683316-973673baf926.jfif" />
+    <None Include="Recursos\Fondos\LogoFondo.png" />
     <Content Include="Recursos\Fondos\Screenshot_1.png" />
-    <Content Include="Recursos\Fondos\WhatsApp Image 2022-10-25 at 11.41.17 AM.jpeg" />
     <Content Include="Recursos\Fondos\WhatsApp Image 2022-10-25 at 11.41.19 AM.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

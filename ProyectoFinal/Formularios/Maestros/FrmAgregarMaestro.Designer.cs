@@ -254,8 +254,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(910, 682);
-            this.MinimumSize = new System.Drawing.Size(910, 682);
+            this.MaximumSize = new System.Drawing.Size(910, 973);
+            this.MinimumSize = new System.Drawing.Size(910, 973);
             this.Name = "FrmAgregarMaestro";
             this.Text = "Agregar Maestro";
             this.Load += new System.EventHandler(this.FrmAgregarMaestro_Load);

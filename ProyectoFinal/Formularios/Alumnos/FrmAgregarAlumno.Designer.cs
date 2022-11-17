@@ -30,13 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAgregarAlumno));
             this.pnlContenedor = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblRegAlumno = new System.Windows.Forms.Label();
             this.pnlFondoAgregarAlumno = new System.Windows.Forms.Panel();
-            this.pnlAgregarAlumno = new System.Windows.Forms.Panel();
-            this.lblTituloAlumno = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.pnlAgregarAlumno = new System.Windows.Forms.Panel();
+            this.lblTituloAlumno = new System.Windows.Forms.Label();
             this.txteva = new System.Windows.Forms.TextBox();
             this.txtdom = new System.Windows.Forms.TextBox();
             this.comboBoxMuni = new System.Windows.Forms.ComboBox();
@@ -63,11 +61,13 @@
             this.txtcod = new System.Windows.Forms.TextBox();
             this.lblNomResp = new System.Windows.Forms.Label();
             this.lblTelfResp = new System.Windows.Forms.Label();
+            this.lblRegAlumno = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlContenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlFondoAgregarAlumno.SuspendLayout();
             this.pnlAgregarAlumno.SuspendLayout();
             this.pnlResp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlContenedor
@@ -78,31 +78,8 @@
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(0, 0);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(894, 643);
+            this.pnlContenedor.Size = new System.Drawing.Size(894, 934);
             this.pnlContenedor.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.Fondo2;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(894, 643);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lblRegAlumno
-            // 
-            this.lblRegAlumno.BackColor = System.Drawing.Color.DimGray;
-            this.lblRegAlumno.Font = new System.Drawing.Font("Bodoni MT Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegAlumno.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblRegAlumno.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblRegAlumno.Location = new System.Drawing.Point(312, 64);
-            this.lblRegAlumno.Name = "lblRegAlumno";
-            this.lblRegAlumno.Size = new System.Drawing.Size(244, 25);
-            this.lblRegAlumno.TabIndex = 191;
-            this.lblRegAlumno.Text = "Agregar Alumno";
-            this.lblRegAlumno.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // pnlFondoAgregarAlumno
             // 
@@ -112,10 +89,41 @@
             this.pnlFondoAgregarAlumno.Controls.Add(this.btnCerrar);
             this.pnlFondoAgregarAlumno.Controls.Add(this.pnlAgregarAlumno);
             this.pnlFondoAgregarAlumno.Controls.Add(this.pnlResp);
-            this.pnlFondoAgregarAlumno.Location = new System.Drawing.Point(30, 167);
+            this.pnlFondoAgregarAlumno.Location = new System.Drawing.Point(30, 212);
             this.pnlFondoAgregarAlumno.Name = "pnlFondoAgregarAlumno";
-            this.pnlFondoAgregarAlumno.Size = new System.Drawing.Size(838, 319);
+            this.pnlFondoAgregarAlumno.Size = new System.Drawing.Size(838, 516);
             this.pnlFondoAgregarAlumno.TabIndex = 192;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(405, 437);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(83, 34);
+            this.btnGuardar.TabIndex = 12;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Brown;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar.Location = new System.Drawing.Point(295, 437);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(83, 34);
+            this.btnCerrar.TabIndex = 13;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
             // 
             // pnlAgregarAlumno
             // 
@@ -143,13 +151,13 @@
             this.pnlAgregarAlumno.Controls.Add(this.lblFechaNac);
             this.pnlAgregarAlumno.Location = new System.Drawing.Point(25, 28);
             this.pnlAgregarAlumno.Name = "pnlAgregarAlumno";
-            this.pnlAgregarAlumno.Size = new System.Drawing.Size(599, 212);
+            this.pnlAgregarAlumno.Size = new System.Drawing.Size(599, 365);
             this.pnlAgregarAlumno.TabIndex = 1;
             // 
             // lblTituloAlumno
             // 
             this.lblTituloAlumno.BackColor = System.Drawing.Color.DimGray;
-            this.lblTituloAlumno.Font = new System.Drawing.Font("Bodoni MT Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloAlumno.ForeColor = System.Drawing.SystemColors.Control;
             this.lblTituloAlumno.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblTituloAlumno.Location = new System.Drawing.Point(236, 0);
@@ -159,40 +167,9 @@
             this.lblTituloAlumno.Text = "Alumno";
             this.lblTituloAlumno.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnGuardar.FlatAppearance.BorderSize = 0;
-            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(405, 272);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 12;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Brown;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Location = new System.Drawing.Point(310, 272);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(75, 23);
-            this.btnCerrar.TabIndex = 13;
-            this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
-            // 
             // txteva
             // 
-            this.txteva.Location = new System.Drawing.Point(277, 109);
+            this.txteva.Location = new System.Drawing.Point(279, 155);
             this.txteva.Name = "txteva";
             this.txteva.Size = new System.Drawing.Size(100, 20);
             this.txteva.TabIndex = 6;
@@ -202,13 +179,13 @@
             this.txtdom.Location = new System.Drawing.Point(397, 66);
             this.txtdom.Multiline = true;
             this.txtdom.Name = "txtdom";
-            this.txtdom.Size = new System.Drawing.Size(180, 63);
+            this.txtdom.Size = new System.Drawing.Size(180, 109);
             this.txtdom.TabIndex = 3;
             // 
             // comboBoxMuni
             // 
             this.comboBoxMuni.FormattingEnabled = true;
-            this.comboBoxMuni.Location = new System.Drawing.Point(293, 171);
+            this.comboBoxMuni.Location = new System.Drawing.Point(295, 246);
             this.comboBoxMuni.Name = "comboBoxMuni";
             this.comboBoxMuni.Size = new System.Drawing.Size(121, 21);
             this.comboBoxMuni.TabIndex = 9;
@@ -216,36 +193,40 @@
             // lblNom
             // 
             this.lblNom.AutoSize = true;
-            this.lblNom.Location = new System.Drawing.Point(176, 50);
+            this.lblNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNom.Location = new System.Drawing.Point(170, 46);
             this.lblNom.Name = "lblNom";
-            this.lblNom.Size = new System.Drawing.Size(49, 13);
+            this.lblNom.Size = new System.Drawing.Size(63, 16);
             this.lblNom.TabIndex = 165;
             this.lblNom.Text = "Nombres";
             // 
             // lblDepartamento
             // 
             this.lblDepartamento.AutoSize = true;
-            this.lblDepartamento.Location = new System.Drawing.Point(172, 154);
+            this.lblDepartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDepartamento.Location = new System.Drawing.Point(168, 225);
             this.lblDepartamento.Name = "lblDepartamento";
-            this.lblDepartamento.Size = new System.Drawing.Size(74, 13);
+            this.lblDepartamento.Size = new System.Drawing.Size(93, 16);
             this.lblDepartamento.TabIndex = 184;
             this.lblDepartamento.Text = "Departamento";
             // 
             // lblEvaluacion
             // 
             this.lblEvaluacion.AutoSize = true;
-            this.lblEvaluacion.Location = new System.Drawing.Point(290, 93);
+            this.lblEvaluacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEvaluacion.Location = new System.Drawing.Point(281, 136);
             this.lblEvaluacion.Name = "lblEvaluacion";
-            this.lblEvaluacion.Size = new System.Drawing.Size(60, 13);
+            this.lblEvaluacion.Size = new System.Drawing.Size(74, 16);
             this.lblEvaluacion.TabIndex = 173;
             this.lblEvaluacion.Text = "Evaluación";
             // 
             // lblGrado
             // 
             this.lblGrado.AutoSize = true;
-            this.lblGrado.Location = new System.Drawing.Point(49, 93);
+            this.lblGrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGrado.Location = new System.Drawing.Point(45, 135);
             this.lblGrado.Name = "lblGrado";
-            this.lblGrado.Size = new System.Drawing.Size(36, 13);
+            this.lblGrado.Size = new System.Drawing.Size(45, 16);
             this.lblGrado.TabIndex = 179;
             this.lblGrado.Text = "Grado";
             // 
@@ -259,22 +240,23 @@
             // lblMunicipio
             // 
             this.lblMunicipio.AutoSize = true;
-            this.lblMunicipio.Location = new System.Drawing.Point(290, 155);
+            this.lblMunicipio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMunicipio.Location = new System.Drawing.Point(296, 225);
             this.lblMunicipio.Name = "lblMunicipio";
-            this.lblMunicipio.Size = new System.Drawing.Size(52, 13);
+            this.lblMunicipio.Size = new System.Drawing.Size(64, 16);
             this.lblMunicipio.TabIndex = 186;
             this.lblMunicipio.Text = "Municipio";
             // 
             // txtgra
             // 
-            this.txtgra.Location = new System.Drawing.Point(20, 109);
+            this.txtgra.Location = new System.Drawing.Point(22, 155);
             this.txtgra.Name = "txtgra";
             this.txtgra.Size = new System.Drawing.Size(121, 20);
             this.txtgra.TabIndex = 4;
             // 
             // txtcol
             // 
-            this.txtcol.Location = new System.Drawing.Point(161, 109);
+            this.txtcol.Location = new System.Drawing.Point(163, 155);
             this.txtcol.Name = "txtcol";
             this.txtcol.Size = new System.Drawing.Size(100, 20);
             this.txtcol.TabIndex = 5;
@@ -282,23 +264,24 @@
             // lblCod
             // 
             this.lblCod.AutoSize = true;
-            this.lblCod.Location = new System.Drawing.Point(45, 50);
+            this.lblCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCod.Location = new System.Drawing.Point(39, 46);
             this.lblCod.Name = "lblCod";
-            this.lblCod.Size = new System.Drawing.Size(40, 13);
+            this.lblCod.Size = new System.Drawing.Size(51, 16);
             this.lblCod.TabIndex = 167;
             this.lblCod.Text = "Código";
             // 
             // comboBoxDep
             // 
             this.comboBoxDep.FormattingEnabled = true;
-            this.comboBoxDep.Location = new System.Drawing.Point(158, 171);
+            this.comboBoxDep.Location = new System.Drawing.Point(160, 246);
             this.comboBoxDep.Name = "comboBoxDep";
             this.comboBoxDep.Size = new System.Drawing.Size(121, 21);
             this.comboBoxDep.TabIndex = 8;
             // 
             // txtfech
             // 
-            this.txtfech.Location = new System.Drawing.Point(20, 171);
+            this.txtfech.Location = new System.Drawing.Point(22, 246);
             this.txtfech.Name = "txtfech";
             this.txtfech.Size = new System.Drawing.Size(121, 20);
             this.txtfech.TabIndex = 7;
@@ -313,9 +296,10 @@
             // lblColegio
             // 
             this.lblColegio.AutoSize = true;
-            this.lblColegio.Location = new System.Drawing.Point(174, 93);
+            this.lblColegio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblColegio.Location = new System.Drawing.Point(170, 135);
             this.lblColegio.Name = "lblColegio";
-            this.lblColegio.Size = new System.Drawing.Size(42, 13);
+            this.lblColegio.Size = new System.Drawing.Size(54, 16);
             this.lblColegio.TabIndex = 187;
             this.lblColegio.Text = "Colegio";
             // 
@@ -329,27 +313,30 @@
             // lblApe
             // 
             this.lblApe.AutoSize = true;
-            this.lblApe.Location = new System.Drawing.Point(295, 50);
+            this.lblApe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApe.Location = new System.Drawing.Point(289, 46);
             this.lblApe.Name = "lblApe";
-            this.lblApe.Size = new System.Drawing.Size(49, 13);
+            this.lblApe.Size = new System.Drawing.Size(64, 16);
             this.lblApe.TabIndex = 170;
             this.lblApe.Text = "Apellidos";
             // 
             // lblDomicilio
             // 
             this.lblDomicilio.AutoSize = true;
-            this.lblDomicilio.Location = new System.Drawing.Point(406, 50);
+            this.lblDomicilio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDomicilio.Location = new System.Drawing.Point(400, 46);
             this.lblDomicilio.Name = "lblDomicilio";
-            this.lblDomicilio.Size = new System.Drawing.Size(49, 13);
+            this.lblDomicilio.Size = new System.Drawing.Size(63, 16);
             this.lblDomicilio.TabIndex = 172;
             this.lblDomicilio.Text = "Domicilio";
             // 
             // lblFechaNac
             // 
             this.lblFechaNac.AutoSize = true;
-            this.lblFechaNac.Location = new System.Drawing.Point(33, 155);
+            this.lblFechaNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaNac.Location = new System.Drawing.Point(29, 226);
             this.lblFechaNac.Name = "lblFechaNac";
-            this.lblFechaNac.Size = new System.Drawing.Size(63, 13);
+            this.lblFechaNac.Size = new System.Drawing.Size(76, 16);
             this.lblFechaNac.TabIndex = 171;
             this.lblFechaNac.Text = "Fecha Nac.";
             // 
@@ -363,13 +350,13 @@
             this.pnlResp.Controls.Add(this.lblTelfResp);
             this.pnlResp.Location = new System.Drawing.Point(644, 28);
             this.pnlResp.Name = "pnlResp";
-            this.pnlResp.Size = new System.Drawing.Size(162, 212);
+            this.pnlResp.Size = new System.Drawing.Size(162, 365);
             this.pnlResp.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.DimGray;
-            this.label1.Font = new System.Drawing.Font("Bodoni MT Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label1.Location = new System.Drawing.Point(14, 0);
@@ -381,14 +368,14 @@
             // 
             // txttelRes
             // 
-            this.txttelRes.Location = new System.Drawing.Point(18, 155);
+            this.txttelRes.Location = new System.Drawing.Point(18, 207);
             this.txttelRes.Name = "txttelRes";
             this.txttelRes.Size = new System.Drawing.Size(121, 20);
             this.txttelRes.TabIndex = 11;
             // 
             // txtcod
             // 
-            this.txtcod.Location = new System.Drawing.Point(18, 66);
+            this.txtcod.Location = new System.Drawing.Point(18, 118);
             this.txtcod.Name = "txtcod";
             this.txtcod.Size = new System.Drawing.Size(121, 20);
             this.txtcod.TabIndex = 10;
@@ -397,40 +384,66 @@
             // lblNomResp
             // 
             this.lblNomResp.AutoSize = true;
-            this.lblNomResp.Location = new System.Drawing.Point(11, 50);
+            this.lblNomResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomResp.Location = new System.Drawing.Point(26, 99);
             this.lblNomResp.Name = "lblNomResp";
-            this.lblNomResp.Size = new System.Drawing.Size(75, 13);
+            this.lblNomResp.Size = new System.Drawing.Size(95, 16);
             this.lblNomResp.TabIndex = 162;
             this.lblNomResp.Text = "Nombre Resp.";
             // 
             // lblTelfResp
             // 
             this.lblTelfResp.AutoSize = true;
-            this.lblTelfResp.Location = new System.Drawing.Point(15, 139);
+            this.lblTelfResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelfResp.Location = new System.Drawing.Point(30, 188);
             this.lblTelfResp.Name = "lblTelfResp";
-            this.lblTelfResp.Size = new System.Drawing.Size(80, 13);
+            this.lblTelfResp.Size = new System.Drawing.Size(100, 16);
             this.lblTelfResp.TabIndex = 166;
             this.lblTelfResp.Text = "Teléfono Resp.";
+            // 
+            // lblRegAlumno
+            // 
+            this.lblRegAlumno.BackColor = System.Drawing.Color.DimGray;
+            this.lblRegAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegAlumno.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblRegAlumno.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblRegAlumno.Location = new System.Drawing.Point(311, 122);
+            this.lblRegAlumno.Name = "lblRegAlumno";
+            this.lblRegAlumno.Size = new System.Drawing.Size(244, 33);
+            this.lblRegAlumno.TabIndex = 191;
+            this.lblRegAlumno.Text = "Agregar Alumno";
+            this.lblRegAlumno.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.Fondo2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(894, 934);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmAgregarAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 643);
+            this.ClientSize = new System.Drawing.Size(894, 934);
             this.Controls.Add(this.pnlContenedor);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(910, 682);
-            this.MinimumSize = new System.Drawing.Size(910, 682);
+            this.MaximumSize = new System.Drawing.Size(910, 973);
+            this.MinimumSize = new System.Drawing.Size(910, 973);
             this.Name = "FrmAgregarAlumno";
             this.Text = "Agregar Alumnos";
             this.Load += new System.EventHandler(this.FrmAgregarAlumno_Load);
             this.pnlContenedor.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlFondoAgregarAlumno.ResumeLayout(false);
             this.pnlAgregarAlumno.ResumeLayout(false);
             this.pnlAgregarAlumno.PerformLayout();
             this.pnlResp.ResumeLayout(false);
             this.pnlResp.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

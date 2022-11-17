@@ -22,6 +22,6 @@ namespace CapaDatos
             if (conexion.State == ConnectionState.Open)
                 conexion.Close();
             return conexion;
-        }
+        }        
     }
 }

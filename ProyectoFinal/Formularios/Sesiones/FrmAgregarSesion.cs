@@ -23,6 +23,7 @@ namespace ProyectoFinal.Formularios.Sesiones
             InitializeComponent();
         }
 
+        #region Validaciones
         //metodo para limpiar los textbox (recorre todo los controles , cuando encuentra el control textbox , lo limpia)
         public void limpiar_Datos()
         {
@@ -67,6 +68,27 @@ namespace ProyectoFinal.Formularios.Sesiones
             return (DatSes.ValidarDatos(ref idfact ,ref idtrab, codTrab, codFactur, fechSes));
         }
 
+        //Evento para mostrar los datos seleccionados
+        private Boolean ValidarNum()
+        {
+            try
+            {
+                int hora = int.Parse(txtCantHrsSes.Text);
+                if (hora > 24 || hora <= 0)
+                {
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                errorProvider1.SetError(txtCantHrsSes, "Este campo solo acepta numeros en un rango de 1 a 24");
+                return false;
+            }
+            return true;
+        }
+        #endregion
+
+        #region Botones Guardar, Seleccionar, Buscar
         //Evento para guardar los datos ingresados 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -102,7 +124,60 @@ namespace ProyectoFinal.Formularios.Sesiones
                 limpiar_Datos();
             }
         }
+        private void btnSeleccion_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cmbBxBuscar.Text == "Trabajadores" && dataGridView1.CurrentRow.Cells[0].Value != null)
+                {
+                    txtCodTrab.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                }
+                else
+               if (cmbBxBuscar.Text == "Facturas" && dataGridView1.CurrentRow.Cells[0].Value != null)
+                {
+                    txtCodFactur.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Ha habido un error: ", error.Message);
+            }
 
+        }
+
+        //Evento para mandar a listar los datos buscados
+        private void PictBxLupa_Click(object sender, EventArgs e)
+        {
+            if (cmbBxBuscar.Text == "Trabajadores" || cmbBxBuscar.Text == "Facturas")
+            {
+                dataGridView1.DataSource = DatSes.BuscarDato(txtBuscar.Text.Trim(), cmbBxBuscar.Text.Trim());
+            }
+            else
+            {
+                MessageBox.Show("Seleccione a que grupo pertenece el dato a buscar");
+            }
+
+        }
+        private void cmbBxBuscar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = DatSes.ListarDatosView(cmbBxBuscar.Text);
+        }
+
+        //Evento para que se borre la palabra buscar del txtbuscar
+        private void txtBuscar_Click(object sender, EventArgs e)
+        {
+            txtBuscar.Text = null;
+        }
+
+        //Evento para que se recoloque Buscar en el txtBuscar
+        private void txtBuscar_Leave(object sender, EventArgs e)
+        {
+            txtBuscar.Text = "Buscar códigos";
+        }
+
+        #endregion
+
+        #region Notificaciones de Errores
         //limpiamos los errorprovider una vez los textos cambian
         private void txtCodSes_TextChanged(object sender, EventArgs e)
         {
@@ -128,77 +203,8 @@ namespace ProyectoFinal.Formularios.Sesiones
         {
             limpiar_Datos();
         }
+        #endregion
 
-        private void cmbBxBuscar_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            dataGridView1.DataSource = DatSes.ListarDatosView(cmbBxBuscar.Text);
-        }
-
-        //Evento para mostrar los datos seleccionados
-        private void btnSeleccion_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (cmbBxBuscar.Text == "Trabajadores" && dataGridView1.CurrentRow.Cells[0].Value != null)
-                {
-                    txtCodTrab.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-                }
-                else
-               if (cmbBxBuscar.Text == "Facturas" && dataGridView1.CurrentRow.Cells[0].Value != null)
-                {
-                    txtCodFactur.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-                }
-            }
-            catch (Exception error)
-            {
-                MessageBox.Show("Ha habido un error: ", error.Message);
-            }
-           
-        }
-
-        //Evento para mandar a listar los datos buscados
-        private void PictBxLupa_Click(object sender, EventArgs e)
-        {
-            if (cmbBxBuscar.Text == "Trabajadores" || cmbBxBuscar.Text == "Facturas")
-            {
-                dataGridView1.DataSource = DatSes.BuscarDato(txtBuscar.Text.Trim(), cmbBxBuscar.Text.Trim());
-            }
-            else
-            {
-                MessageBox.Show("Seleccione a que grupo pertenece el dato a buscar");
-            }
-          
-        }
-
-        //Evento para que se borre la palabra buscar del txtbuscar
-        private void txtBuscar_Click(object sender, EventArgs e)
-        {
-            txtBuscar.Text = null;
-        }
-
-        //Evento para que se recoloque Buscar en el txtBuscar
-        private void txtBuscar_Leave(object sender, EventArgs e)
-        {
-            txtBuscar.Text = "Buscar códigos";
-        }
-
-        private Boolean ValidarNum()
-        {
-            try
-            {
-                int hora = int.Parse(txtCantHrsSes.Text);
-                if (hora > 24 || hora <=0)
-                {
-                    return false;
-                }
-            }
-            catch (Exception)
-            {
-                errorProvider1.SetError(txtCantHrsSes, "Este campo solo acepta numeros en un rango de 1 a 24");
-                return false;
-            }
-            return true;
-        }
     }
 
 }

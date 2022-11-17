@@ -19,47 +19,41 @@ namespace ProyectoFinal
         {
             InitializeComponent();
         }
+        //Variable que guarda el nombre del Usuario
+        public static string NomUser = "";
 
         public void Login()
         {
-            try
+            string conect = ConfigurationManager.ConnectionStrings["Conexion"].ConnectionString;
+            SqlConnection conexion = new SqlConnection(conect);
+            string consulta = "SELECT * FROM [dbo].[Usuario] WHERE NomUsuario=@NomUsuario AND PassWrd=@PassWrd";
+            conexion.Open();
+            SqlCommand sqlcomm = new SqlCommand(consulta, conexion);
+            sqlcomm.Parameters.AddWithValue("@NomUsuario", txtNomUsuario.Text.Trim());
+            sqlcomm.Parameters.AddWithValue("@PassWrd", txtContra.Text.Trim());
+            SqlDataAdapter sda = new SqlDataAdapter(sqlcomm);
+            DataTable Tabla = new DataTable();
+            sda.Fill(Tabla);
+            sqlcomm.ExecuteNonQuery();
+
+            if (Tabla.Rows.Count > 0)
             {
-                //Conexion a la Base de Datos
-                string conect = ConfigurationManager.ConnectionStrings["Conexion"].ConnectionString;
-                using (SqlConnection conexion = new SqlConnection(conect))
-                {
-                    conexion.Open();
-
-                    using (SqlCommand cmd = new SqlCommand(
-                        "SELECT NomUsuario,PassWrd " +
-                        "FROM Usuario " +
-                        "Where NomUsuario='" + txtNomUsuario.Text +
-                        " 'AND PassWrd='" + txtContra.Text + "'", conexion))
-                    {
-                        SqlDataReader dr = cmd.ExecuteReader();
-
-                        if (dr.Read())
-                        {
-                            //MessageBox.Show("Login exitoso");
-                            //Oculta el formulario de Login y abre el formulario de menu/inicio
-                            this.Hide();
-                            txtNomUsuario.Clear(); txtContra.Clear();
-                            FrmInicio ventanaMenu = new FrmInicio();
-                            ventanaMenu.Show();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Datos Incorrectos");
-                            txtNomUsuario.Clear(); txtContra.Clear();
-                        }
-                    }
-                }
+                //MessageBox.Show("Login exitoso");
+                //Oculta el formulario de Login y abre el formulario de menu/inicio
+                this.Hide();
+                //Guarda el nombre de usuario
+                NomUser = txtNomUsuario.Text;
+                txtNomUsuario.Clear(); txtContra.Clear();
+                FrmInicio ventanaMenu = new FrmInicio();
+                ventanaMenu.Show();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
-            } 
+                MessageBox.Show("Nombre de Usuario y Contraseña invalida. Intente de nuevo.");
+                txtNomUsuario.Clear(); txtContra.Clear();
+            }
         }
+
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -69,6 +63,15 @@ namespace ProyectoFinal
         private void FrmLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Desea salir del programa", "Cerra Programa", MessageBoxButtons.YesNo, MessageBoxIcon.Question)==DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            
         }
     }
 }
