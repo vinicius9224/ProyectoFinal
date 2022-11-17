@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace ProyectoFinal.Formularios.Nominas
 {
     public partial class FrmHistorialNominas : Form
     {
+        DatosNominas objeto = new DatosNominas();
         public FrmHistorialNominas()
         {
             InitializeComponent();
