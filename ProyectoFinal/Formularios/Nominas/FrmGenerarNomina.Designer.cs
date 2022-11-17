@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGenerarNomina));
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -36,7 +35,16 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.lblRegSes = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlDetaNomina = new System.Windows.Forms.Panel();
+            this.txtFechaGastosMensuales = new System.Windows.Forms.TextBox();
+            this.btnCalcular = new System.Windows.Forms.Button();
+            this.lblSalarioNeto = new System.Windows.Forms.Label();
+            this.txtSalarioNeto = new System.Windows.Forms.TextBox();
+            this.lblFechaGastoMensuales = new System.Windows.Forms.Label();
+            this.lblGastosFijos = new System.Windows.Forms.Label();
+            this.txtSueldoBruto = new System.Windows.Forms.TextBox();
+            this.lblSalarioBruto = new System.Windows.Forms.Label();
             this.lblDatosPago = new System.Windows.Forms.Label();
             this.lblDatosNomina = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -63,21 +71,10 @@
             this.lblPagoXHora = new System.Windows.Forms.Label();
             this.lblFechaPagoDesde = new System.Windows.Forms.Label();
             this.txtPagoDesde = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.alertaError = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtSueldoBruto = new System.Windows.Forms.TextBox();
-            this.lblSalarioBruto = new System.Windows.Forms.Label();
-            this.lblGastosFijos = new System.Windows.Forms.Label();
-            this.lblFechaGastoMensuales = new System.Windows.Forms.Label();
-            this.txtSalarioNeto = new System.Windows.Forms.TextBox();
-            this.lblSalarioNeto = new System.Windows.Forms.Label();
-            this.btnCalcular = new System.Windows.Forms.Button();
-            this.txtFechaGastosMensuales = new System.Windows.Forms.TextBox();
             this.pnlContenedor.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.pnlDetaNomina.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alertaError)).BeginInit();
+            this.pnlDetaNomina.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlContenedor
@@ -92,11 +89,11 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pnlDetaNomina);
             this.panel1.Controls.Add(this.btnHistorialNominas);
             this.panel1.Controls.Add(this.btnGuardar);
             this.panel1.Controls.Add(this.btnCerrar);
             this.panel1.Controls.Add(this.lblRegSes);
-            this.panel1.Controls.Add(this.pnlDetaNomina);
             this.panel1.Location = new System.Drawing.Point(35, 130);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(826, 606);
@@ -109,7 +106,7 @@
             this.btnHistorialNominas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnHistorialNominas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHistorialNominas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistorialNominas.Location = new System.Drawing.Point(335, 533);
+            this.btnHistorialNominas.Location = new System.Drawing.Point(335, 539);
             this.btnHistorialNominas.Name = "btnHistorialNominas";
             this.btnHistorialNominas.Size = new System.Drawing.Size(115, 44);
             this.btnHistorialNominas.TabIndex = 214;
@@ -124,7 +121,7 @@
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(561, 533);
+            this.btnGuardar.Location = new System.Drawing.Point(561, 539);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(115, 44);
             this.btnGuardar.TabIndex = 213;
@@ -139,7 +136,7 @@
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Brown;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(90, 533);
+            this.btnCerrar.Location = new System.Drawing.Point(90, 539);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(115, 44);
             this.btnCerrar.TabIndex = 212;
@@ -159,6 +156,17 @@
             this.lblRegSes.TabIndex = 4;
             this.lblRegSes.Text = "Generar Nóminas";
             this.lblRegSes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.Fondo2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(894, 934);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // pnlDetaNomina
             // 
@@ -197,10 +205,88 @@
             this.pnlDetaNomina.Controls.Add(this.lblPagoXHora);
             this.pnlDetaNomina.Controls.Add(this.lblFechaPagoDesde);
             this.pnlDetaNomina.Controls.Add(this.txtPagoDesde);
-            this.pnlDetaNomina.Location = new System.Drawing.Point(20, 39);
+            this.pnlDetaNomina.Location = new System.Drawing.Point(24, 81);
             this.pnlDetaNomina.Name = "pnlDetaNomina";
             this.pnlDetaNomina.Size = new System.Drawing.Size(779, 445);
-            this.pnlDetaNomina.TabIndex = 211;
+            this.pnlDetaNomina.TabIndex = 215;
+            // 
+            // txtFechaGastosMensuales
+            // 
+            this.txtFechaGastosMensuales.Location = new System.Drawing.Point(541, 385);
+            this.txtFechaGastosMensuales.Name = "txtFechaGastosMensuales";
+            this.txtFechaGastosMensuales.Size = new System.Drawing.Size(129, 20);
+            this.txtFechaGastosMensuales.TabIndex = 233;
+            // 
+            // btnCalcular
+            // 
+            this.btnCalcular.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnCalcular.FlatAppearance.BorderSize = 0;
+            this.btnCalcular.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalcular.Location = new System.Drawing.Point(316, 341);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(75, 26);
+            this.btnCalcular.TabIndex = 232;
+            this.btnCalcular.Text = "Calcular";
+            this.btnCalcular.UseVisualStyleBackColor = false;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
+            // 
+            // lblSalarioNeto
+            // 
+            this.lblSalarioNeto.AutoSize = true;
+            this.lblSalarioNeto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalarioNeto.Location = new System.Drawing.Point(313, 275);
+            this.lblSalarioNeto.Name = "lblSalarioNeto";
+            this.lblSalarioNeto.Size = new System.Drawing.Size(94, 16);
+            this.lblSalarioNeto.TabIndex = 231;
+            this.lblSalarioNeto.Text = "Salario Neto";
+            // 
+            // txtSalarioNeto
+            // 
+            this.txtSalarioNeto.Location = new System.Drawing.Point(316, 306);
+            this.txtSalarioNeto.Name = "txtSalarioNeto";
+            this.txtSalarioNeto.Size = new System.Drawing.Size(129, 20);
+            this.txtSalarioNeto.TabIndex = 230;
+            // 
+            // lblFechaGastoMensuales
+            // 
+            this.lblFechaGastoMensuales.AutoSize = true;
+            this.lblFechaGastoMensuales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaGastoMensuales.Location = new System.Drawing.Point(540, 358);
+            this.lblFechaGastoMensuales.Name = "lblFechaGastoMensuales";
+            this.lblFechaGastoMensuales.Size = new System.Drawing.Size(36, 16);
+            this.lblFechaGastoMensuales.TabIndex = 229;
+            this.lblFechaGastoMensuales.Text = "Mes";
+            // 
+            // lblGastosFijos
+            // 
+            this.lblGastosFijos.AutoSize = true;
+            this.lblGastosFijos.BackColor = System.Drawing.Color.Gold;
+            this.lblGastosFijos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGastosFijos.ForeColor = System.Drawing.Color.Black;
+            this.lblGastosFijos.Location = new System.Drawing.Point(540, 247);
+            this.lblGastosFijos.Name = "lblGastosFijos";
+            this.lblGastosFijos.Size = new System.Drawing.Size(110, 20);
+            this.lblGastosFijos.TabIndex = 227;
+            this.lblGastosFijos.Text = "Gastos Fijos";
+            // 
+            // txtSueldoBruto
+            // 
+            this.txtSueldoBruto.Location = new System.Drawing.Point(25, 385);
+            this.txtSueldoBruto.Name = "txtSueldoBruto";
+            this.txtSueldoBruto.Size = new System.Drawing.Size(161, 20);
+            this.txtSueldoBruto.TabIndex = 226;
+            // 
+            // lblSalarioBruto
+            // 
+            this.lblSalarioBruto.AutoSize = true;
+            this.lblSalarioBruto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalarioBruto.Location = new System.Drawing.Point(21, 351);
+            this.lblSalarioBruto.Name = "lblSalarioBruto";
+            this.lblSalarioBruto.Size = new System.Drawing.Size(97, 16);
+            this.lblSalarioBruto.TabIndex = 225;
+            this.lblSalarioBruto.Text = "Salario Bruto";
             // 
             // lblDatosPago
             // 
@@ -440,100 +526,6 @@
             this.txtPagoDesde.Size = new System.Drawing.Size(100, 20);
             this.txtPagoDesde.TabIndex = 197;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.Fondo2;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(894, 934);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // alertaError
-            // 
-            this.alertaError.ContainerControl = this;
-            this.alertaError.RightToLeft = true;
-            // 
-            // txtSueldoBruto
-            // 
-            this.txtSueldoBruto.Location = new System.Drawing.Point(25, 385);
-            this.txtSueldoBruto.Name = "txtSueldoBruto";
-            this.txtSueldoBruto.Size = new System.Drawing.Size(161, 20);
-            this.txtSueldoBruto.TabIndex = 226;
-            // 
-            // lblSalarioBruto
-            // 
-            this.lblSalarioBruto.AutoSize = true;
-            this.lblSalarioBruto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalarioBruto.Location = new System.Drawing.Point(21, 351);
-            this.lblSalarioBruto.Name = "lblSalarioBruto";
-            this.lblSalarioBruto.Size = new System.Drawing.Size(97, 16);
-            this.lblSalarioBruto.TabIndex = 225;
-            this.lblSalarioBruto.Text = "Salario Bruto";
-            // 
-            // lblGastosFijos
-            // 
-            this.lblGastosFijos.AutoSize = true;
-            this.lblGastosFijos.BackColor = System.Drawing.Color.Gold;
-            this.lblGastosFijos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGastosFijos.ForeColor = System.Drawing.Color.Black;
-            this.lblGastosFijos.Location = new System.Drawing.Point(540, 247);
-            this.lblGastosFijos.Name = "lblGastosFijos";
-            this.lblGastosFijos.Size = new System.Drawing.Size(110, 20);
-            this.lblGastosFijos.TabIndex = 227;
-            this.lblGastosFijos.Text = "Gastos Fijos";
-            // 
-            // lblFechaGastoMensuales
-            // 
-            this.lblFechaGastoMensuales.AutoSize = true;
-            this.lblFechaGastoMensuales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaGastoMensuales.Location = new System.Drawing.Point(540, 358);
-            this.lblFechaGastoMensuales.Name = "lblFechaGastoMensuales";
-            this.lblFechaGastoMensuales.Size = new System.Drawing.Size(36, 16);
-            this.lblFechaGastoMensuales.TabIndex = 229;
-            this.lblFechaGastoMensuales.Text = "Mes";
-            // 
-            // txtSalarioNeto
-            // 
-            this.txtSalarioNeto.Location = new System.Drawing.Point(316, 306);
-            this.txtSalarioNeto.Name = "txtSalarioNeto";
-            this.txtSalarioNeto.Size = new System.Drawing.Size(129, 20);
-            this.txtSalarioNeto.TabIndex = 230;
-            // 
-            // lblSalarioNeto
-            // 
-            this.lblSalarioNeto.AutoSize = true;
-            this.lblSalarioNeto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalarioNeto.Location = new System.Drawing.Point(313, 275);
-            this.lblSalarioNeto.Name = "lblSalarioNeto";
-            this.lblSalarioNeto.Size = new System.Drawing.Size(94, 16);
-            this.lblSalarioNeto.TabIndex = 231;
-            this.lblSalarioNeto.Text = "Salario Neto";
-            // 
-            // btnCalcular
-            // 
-            this.btnCalcular.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnCalcular.FlatAppearance.BorderSize = 0;
-            this.btnCalcular.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcular.Location = new System.Drawing.Point(316, 341);
-            this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(75, 26);
-            this.btnCalcular.TabIndex = 232;
-            this.btnCalcular.Text = "Calcular";
-            this.btnCalcular.UseVisualStyleBackColor = false;
-            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
-            // 
-            // txtFechaGastosMensuales
-            // 
-            this.txtFechaGastosMensuales.Location = new System.Drawing.Point(541, 385);
-            this.txtFechaGastosMensuales.Name = "txtFechaGastosMensuales";
-            this.txtFechaGastosMensuales.Size = new System.Drawing.Size(129, 20);
-            this.txtFechaGastosMensuales.TabIndex = 233;
-            // 
             // FrmGenerarNomina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -547,10 +539,9 @@
             this.Text = "Generar Nomina";
             this.pnlContenedor.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlDetaNomina.ResumeLayout(false);
             this.pnlDetaNomina.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alertaError)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -560,26 +551,22 @@
         private System.Windows.Forms.Panel pnlContenedor;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel pnlDetaNomina;
-        private System.Windows.Forms.TextBox txtTotalHoras;
-        private System.Windows.Forms.Label lblViatico;
-        private System.Windows.Forms.Label lblTotalHoras;
-        private System.Windows.Forms.TextBox txtViatico;
-        private System.Windows.Forms.TextBox txtPagoXHora;
-        private System.Windows.Forms.Label lblPagoXHora;
-        private System.Windows.Forms.Label lblFechaDePago;
-        private System.Windows.Forms.DateTimePicker dttFechaPago;
-        private System.Windows.Forms.TextBox txtPagoHasta;
-        private System.Windows.Forms.Label lblPagoHasta;
-        private System.Windows.Forms.Label lblFechaPagoDesde;
-        private System.Windows.Forms.TextBox txtPagoDesde;
         private System.Windows.Forms.Label lblRegSes;
         private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.ErrorProvider alertaError;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnHistorialNominas;
-        private System.Windows.Forms.TextBox txtGastosMensuales;
-        private System.Windows.Forms.Label lblGastosMensuales;
+        private System.Windows.Forms.Panel pnlDetaNomina;
+        private System.Windows.Forms.TextBox txtFechaGastosMensuales;
+        private System.Windows.Forms.Button btnCalcular;
+        private System.Windows.Forms.Label lblSalarioNeto;
+        private System.Windows.Forms.TextBox txtSalarioNeto;
+        private System.Windows.Forms.Label lblFechaGastoMensuales;
+        private System.Windows.Forms.Label lblGastosFijos;
+        private System.Windows.Forms.TextBox txtSueldoBruto;
+        private System.Windows.Forms.Label lblSalarioBruto;
+        private System.Windows.Forms.Label lblDatosPago;
+        private System.Windows.Forms.Label lblDatosNomina;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCargoTrab;
         private System.Windows.Forms.Label lblProfe;
         private System.Windows.Forms.TextBox txtApeTrabajador;
@@ -589,16 +576,19 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtCodTrabajador;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblDatosPago;
-        private System.Windows.Forms.Label lblDatosNomina;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtSueldoBruto;
-        private System.Windows.Forms.Label lblSalarioBruto;
-        private System.Windows.Forms.Label lblGastosFijos;
-        private System.Windows.Forms.Label lblFechaGastoMensuales;
-        private System.Windows.Forms.Button btnCalcular;
-        private System.Windows.Forms.Label lblSalarioNeto;
-        private System.Windows.Forms.TextBox txtSalarioNeto;
-        private System.Windows.Forms.TextBox txtFechaGastosMensuales;
+        private System.Windows.Forms.TextBox txtGastosMensuales;
+        private System.Windows.Forms.TextBox txtTotalHoras;
+        private System.Windows.Forms.Label lblGastosMensuales;
+        private System.Windows.Forms.Label lblViatico;
+        private System.Windows.Forms.Label lblTotalHoras;
+        private System.Windows.Forms.TextBox txtViatico;
+        private System.Windows.Forms.Label lblFechaDePago;
+        private System.Windows.Forms.DateTimePicker dttFechaPago;
+        private System.Windows.Forms.TextBox txtPagoHasta;
+        private System.Windows.Forms.TextBox txtPagoXHora;
+        private System.Windows.Forms.Label lblPagoHasta;
+        private System.Windows.Forms.Label lblPagoXHora;
+        private System.Windows.Forms.Label lblFechaPagoDesde;
+        private System.Windows.Forms.TextBox txtPagoDesde;
     }
 }

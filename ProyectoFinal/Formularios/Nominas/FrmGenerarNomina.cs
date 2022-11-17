@@ -124,10 +124,9 @@ namespace ProyectoFinal.Formularios
                 MessageBox.Show("No se puedo generar por" + ex);
             }
         }
-
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-              //objeto.BuscarMaestros(btnBuscar.Text);
+
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)
@@ -142,8 +141,11 @@ namespace ProyectoFinal.Formularios
         }
 
 
+
+
+
+
         #endregion
 
-      
     }
 }
