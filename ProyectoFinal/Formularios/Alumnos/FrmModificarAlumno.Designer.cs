@@ -120,9 +120,9 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 423);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 263);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(677, 296);
+            this.dataGridView1.Size = new System.Drawing.Size(677, 209);
             this.dataGridView1.TabIndex = 14;
             // 
             // btnGuardar
