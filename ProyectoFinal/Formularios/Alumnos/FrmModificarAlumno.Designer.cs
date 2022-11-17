@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmModificarAlumno));
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.pnlFondoAgregarAlumno = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -64,7 +65,6 @@
             this.lblNomResp = new System.Windows.Forms.Label();
             this.lblTelfResp = new System.Windows.Forms.Label();
             this.lblModAlumno = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlContenedor.SuspendLayout();
             this.pnlFondoAgregarAlumno.SuspendLayout();
@@ -101,6 +101,19 @@
             this.pnlFondoAgregarAlumno.Size = new System.Drawing.Size(838, 778);
             this.pnlFondoAgregarAlumno.TabIndex = 192;
             // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.DimGray;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label2.Location = new System.Drawing.Point(211, 400);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(227, 25);
+            this.label2.TabIndex = 188;
+            this.label2.Text = "Editar Alumno";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.Color.Khaki;
@@ -120,9 +133,9 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 263);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 453);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(677, 209);
+            this.dataGridView1.Size = new System.Drawing.Size(677, 234);
             this.dataGridView1.TabIndex = 14;
             // 
             // btnGuardar
@@ -444,19 +457,6 @@
             this.lblModAlumno.TabIndex = 191;
             this.lblModAlumno.Text = "Modificar Alumno";
             this.lblModAlumno.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.DimGray;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label2.Location = new System.Drawing.Point(223, 374);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(227, 25);
-            this.label2.TabIndex = 188;
-            this.label2.Text = "Editar Alumno";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // pictureBox1
             // 
