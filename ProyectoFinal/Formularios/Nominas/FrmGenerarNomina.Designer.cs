@@ -72,7 +72,7 @@
             this.txtSalarioNeto = new System.Windows.Forms.TextBox();
             this.lblSalarioNeto = new System.Windows.Forms.Label();
             this.btnCalcular = new System.Windows.Forms.Button();
-            this.lblFechaGastoMensual = new System.Windows.Forms.Label();
+            this.txtFechaGastosMensuales = new System.Windows.Forms.TextBox();
             this.pnlContenedor.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlDetaNomina.SuspendLayout();
@@ -157,13 +157,13 @@
             this.lblRegSes.Name = "lblRegSes";
             this.lblRegSes.Size = new System.Drawing.Size(244, 25);
             this.lblRegSes.TabIndex = 4;
-            this.lblRegSes.Text = "Generar Nominas";
+            this.lblRegSes.Text = "Generar Nóminas";
             this.lblRegSes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // pnlDetaNomina
             // 
             this.pnlDetaNomina.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.pnlDetaNomina.Controls.Add(this.lblFechaGastoMensual);
+            this.pnlDetaNomina.Controls.Add(this.txtFechaGastosMensuales);
             this.pnlDetaNomina.Controls.Add(this.btnCalcular);
             this.pnlDetaNomina.Controls.Add(this.lblSalarioNeto);
             this.pnlDetaNomina.Controls.Add(this.txtSalarioNeto);
@@ -224,7 +224,7 @@
             this.lblDatosNomina.Name = "lblDatosNomina";
             this.lblDatosNomina.Size = new System.Drawing.Size(147, 20);
             this.lblDatosNomina.TabIndex = 223;
-            this.lblDatosNomina.Text = "Datos de Nomina";
+            this.lblDatosNomina.Text = "Datos de Nómina";
             // 
             // label2
             // 
@@ -527,17 +527,12 @@
             this.btnCalcular.UseVisualStyleBackColor = false;
             this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
-            // lblFechaGastoMensual
+            // txtFechaGastosMensuales
             // 
-            this.lblFechaGastoMensual.AutoSize = true;
-            this.lblFechaGastoMensual.BackColor = System.Drawing.Color.White;
-            this.lblFechaGastoMensual.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaGastoMensual.ForeColor = System.Drawing.Color.Black;
-            this.lblFechaGastoMensual.Location = new System.Drawing.Point(536, 385);
-            this.lblFechaGastoMensual.Name = "lblFechaGastoMensual";
-            this.lblFechaGastoMensual.Size = new System.Drawing.Size(115, 13);
-            this.lblFechaGastoMensual.TabIndex = 215;
-            this.lblFechaGastoMensual.Text = "lblFechaGastoMensual";
+            this.txtFechaGastosMensuales.Location = new System.Drawing.Point(541, 385);
+            this.txtFechaGastosMensuales.Name = "txtFechaGastosMensuales";
+            this.txtFechaGastosMensuales.Size = new System.Drawing.Size(129, 20);
+            this.txtFechaGastosMensuales.TabIndex = 233;
             // 
             // FrmGenerarNomina
             // 
@@ -604,6 +599,6 @@
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.Label lblSalarioNeto;
         private System.Windows.Forms.TextBox txtSalarioNeto;
-        private System.Windows.Forms.Label lblFechaGastoMensual;
+        private System.Windows.Forms.TextBox txtFechaGastosMensuales;
     }
 }

@@ -25,7 +25,6 @@ namespace ProyectoFinal.Formularios
             txtSueldoBruto.Enabled = false;
             txtTotalHoras.Enabled = false;
             txtSalarioNeto.Enabled = false;
-            lblFechaDePago.Text = DateTime.Now.ToString(" MMM ");
         }
 
         #region ConfiguraciónFormulario
@@ -128,7 +127,7 @@ namespace ProyectoFinal.Formularios
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-              objeto.BuscarMaestros(btnBuscar.Text);
+              //objeto.BuscarMaestros(btnBuscar.Text);
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)
@@ -142,8 +141,9 @@ namespace ProyectoFinal.Formularios
             AbrirFormulario(new FrmHistorialNominas());
         }
 
+
         #endregion
 
-     
+      
     }
 }
