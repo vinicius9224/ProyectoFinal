@@ -30,36 +30,36 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.pnlLogo = new System.Windows.Forms.Panel();
+            this.pnlCerrar = new System.Windows.Forms.Panel();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.lblParrafo = new System.Windows.Forms.Label();
             this.lblNomEmpresa = new System.Windows.Forms.Label();
             this.pnlMenuLogin = new System.Windows.Forms.Panel();
             this.pnlBtnLogin = new System.Windows.Forms.Panel();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.picLoginFondo = new System.Windows.Forms.PictureBox();
             this.txtLinea2 = new System.Windows.Forms.TextBox();
             this.txtLinea1 = new System.Windows.Forms.TextBox();
             this.txtNomUsuario = new System.Windows.Forms.TextBox();
+            this.picFondoNomUsuario = new System.Windows.Forms.PictureBox();
             this.txtContra = new System.Windows.Forms.TextBox();
+            this.picFondoContra = new System.Windows.Forms.PictureBox();
             this.lblContra = new System.Windows.Forms.Label();
             this.lblNomUsuario = new System.Windows.Forms.Label();
             this.lblInicioSesion = new System.Windows.Forms.Label();
-            this.btnCerrar = new System.Windows.Forms.Button();
-            this.pnlCerrar = new System.Windows.Forms.Panel();
-            this.picLoginFondo = new System.Windows.Forms.PictureBox();
-            this.picFondoNomUsuario = new System.Windows.Forms.PictureBox();
-            this.picFondoContra = new System.Windows.Forms.PictureBox();
             this.picFondoLogin = new System.Windows.Forms.PictureBox();
-            this.picLogo = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.picFondo = new System.Windows.Forms.PictureBox();
             this.pnlLogo.SuspendLayout();
+            this.pnlCerrar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.pnlMenuLogin.SuspendLayout();
             this.pnlBtnLogin.SuspendLayout();
-            this.pnlCerrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLoginFondo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFondoNomUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFondoContra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFondoLogin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFondo)).BeginInit();
             this.SuspendLayout();
@@ -74,6 +74,46 @@
             this.pnlLogo.Name = "pnlLogo";
             this.pnlLogo.Size = new System.Drawing.Size(370, 150);
             this.pnlLogo.TabIndex = 32;
+            // 
+            // pnlCerrar
+            // 
+            this.pnlCerrar.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnlCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlCerrar.Controls.Add(this.btnCerrar);
+            this.pnlCerrar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pnlCerrar.Location = new System.Drawing.Point(282, 3);
+            this.pnlCerrar.Name = "pnlCerrar";
+            this.pnlCerrar.Size = new System.Drawing.Size(77, 51);
+            this.pnlCerrar.TabIndex = 25;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(213)))), ((int)(((byte)(213)))));
+            this.btnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.Color.Black;
+            this.btnCerrar.Location = new System.Drawing.Point(10, 11);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(60, 32);
+            this.btnCerrar.TabIndex = 24;
+            this.btnCerrar.Text = "Salir";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // picLogo
+            // 
+            this.picLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
+            this.picLogo.Location = new System.Drawing.Point(100, -1);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(176, 151);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 18;
+            this.picLogo.TabStop = false;
             // 
             // lblParrafo
             // 
@@ -146,6 +186,15 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // picLoginFondo
+            // 
+            this.picLoginFondo.Location = new System.Drawing.Point(39, 2);
+            this.picLoginFondo.Name = "picLoginFondo";
+            this.picLoginFondo.Size = new System.Drawing.Size(126, 55);
+            this.picLoginFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLoginFondo.TabIndex = 23;
+            this.picLoginFondo.TabStop = false;
+            // 
             // txtLinea2
             // 
             this.txtLinea2.BackColor = System.Drawing.Color.Black;
@@ -179,6 +228,16 @@
             this.txtNomUsuario.Size = new System.Drawing.Size(183, 19);
             this.txtNomUsuario.TabIndex = 0;
             // 
+            // picFondoNomUsuario
+            // 
+            this.picFondoNomUsuario.Image = ((System.Drawing.Image)(resources.GetObject("picFondoNomUsuario.Image")));
+            this.picFondoNomUsuario.Location = new System.Drawing.Point(89, 98);
+            this.picFondoNomUsuario.Name = "picFondoNomUsuario";
+            this.picFondoNomUsuario.Size = new System.Drawing.Size(200, 44);
+            this.picFondoNomUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picFondoNomUsuario.TabIndex = 20;
+            this.picFondoNomUsuario.TabStop = false;
+            // 
             // txtContra
             // 
             this.txtContra.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -190,6 +249,16 @@
             this.txtContra.PasswordChar = '*';
             this.txtContra.Size = new System.Drawing.Size(183, 19);
             this.txtContra.TabIndex = 1;
+            // 
+            // picFondoContra
+            // 
+            this.picFondoContra.Image = ((System.Drawing.Image)(resources.GetObject("picFondoContra.Image")));
+            this.picFondoContra.Location = new System.Drawing.Point(89, 171);
+            this.picFondoContra.Name = "picFondoContra";
+            this.picFondoContra.Size = new System.Drawing.Size(200, 44);
+            this.picFondoContra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picFondoContra.TabIndex = 18;
+            this.picFondoContra.TabStop = false;
             // 
             // lblContra
             // 
@@ -230,63 +299,6 @@
             this.lblInicioSesion.TabIndex = 12;
             this.lblInicioSesion.Text = "Inicio de Sesión";
             // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(213)))), ((int)(((byte)(213)))));
-            this.btnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.ForeColor = System.Drawing.Color.Black;
-            this.btnCerrar.Location = new System.Drawing.Point(10, 11);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(60, 32);
-            this.btnCerrar.TabIndex = 24;
-            this.btnCerrar.Text = "Salir";
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // pnlCerrar
-            // 
-            this.pnlCerrar.BackColor = System.Drawing.Color.Gainsboro;
-            this.pnlCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pnlCerrar.Controls.Add(this.btnCerrar);
-            this.pnlCerrar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pnlCerrar.Location = new System.Drawing.Point(282, 3);
-            this.pnlCerrar.Name = "pnlCerrar";
-            this.pnlCerrar.Size = new System.Drawing.Size(77, 51);
-            this.pnlCerrar.TabIndex = 25;
-            // 
-            // picLoginFondo
-            // 
-            this.picLoginFondo.Location = new System.Drawing.Point(39, 2);
-            this.picLoginFondo.Name = "picLoginFondo";
-            this.picLoginFondo.Size = new System.Drawing.Size(126, 55);
-            this.picLoginFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picLoginFondo.TabIndex = 23;
-            this.picLoginFondo.TabStop = false;
-            // 
-            // picFondoNomUsuario
-            // 
-            this.picFondoNomUsuario.Image = ((System.Drawing.Image)(resources.GetObject("picFondoNomUsuario.Image")));
-            this.picFondoNomUsuario.Location = new System.Drawing.Point(89, 98);
-            this.picFondoNomUsuario.Name = "picFondoNomUsuario";
-            this.picFondoNomUsuario.Size = new System.Drawing.Size(200, 44);
-            this.picFondoNomUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picFondoNomUsuario.TabIndex = 20;
-            this.picFondoNomUsuario.TabStop = false;
-            // 
-            // picFondoContra
-            // 
-            this.picFondoContra.Image = ((System.Drawing.Image)(resources.GetObject("picFondoContra.Image")));
-            this.picFondoContra.Location = new System.Drawing.Point(89, 171);
-            this.picFondoContra.Name = "picFondoContra";
-            this.picFondoContra.Size = new System.Drawing.Size(200, 44);
-            this.picFondoContra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picFondoContra.TabIndex = 18;
-            this.picFondoContra.TabStop = false;
-            // 
             // picFondoLogin
             // 
             this.picFondoLogin.Image = ((System.Drawing.Image)(resources.GetObject("picFondoLogin.Image")));
@@ -296,18 +308,6 @@
             this.picFondoLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picFondoLogin.TabIndex = 0;
             this.picFondoLogin.TabStop = false;
-            // 
-            // picLogo
-            // 
-            this.picLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
-            this.picLogo.Location = new System.Drawing.Point(100, -1);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(176, 151);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLogo.TabIndex = 18;
-            this.picLogo.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -350,15 +350,15 @@
             this.Text = "Login";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmLogin_FormClosed);
             this.pnlLogo.ResumeLayout(false);
+            this.pnlCerrar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.pnlMenuLogin.ResumeLayout(false);
             this.pnlMenuLogin.PerformLayout();
             this.pnlBtnLogin.ResumeLayout(false);
-            this.pnlCerrar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLoginFondo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFondoNomUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFondoContra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFondoLogin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFondo)).EndInit();
             this.ResumeLayout(false);

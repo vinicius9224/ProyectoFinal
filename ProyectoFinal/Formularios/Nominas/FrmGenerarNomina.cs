@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,13 @@ namespace ProyectoFinal.Formularios
         public FrmGenerarNomina()
         {
             InitializeComponent();
+            txtApeTrabajador.Enabled = false;
+            txtNomTrabajador.Enabled = false;
+            txtCargoTrab.Enabled = false;
+            txtSueldoBruto.Enabled = false;
+            txtTotalHoras.Enabled = false;
+            txtSalarioNeto.Enabled = false;
+            lblFechaDePago.Text = DateTime.Now.ToString(" MMM ");
         }
 
         #region ConfiguraciónFormulario
@@ -105,7 +113,9 @@ namespace ProyectoFinal.Formularios
                 }
                 else
                 {
-                    objeto.GenerarNominas(dttFechaPago.Value, txtPagoDesde.Text, txtPagoHasta.Text,txtDescripNomina.Text );
+                    //objeto.GenerarNominas(
+                    //    dttFechaPago.Value, txtPagoDesde.Text, txtPagoHasta.Text,
+                    //    txtViatico.Text,txtPagoXHora.Text,txtSalarioNeto.Text,txtGastosMensuales.Text);
                     MessageBox.Show("Nomina Generada.");
                     Limpiar_Datos();
                 }
@@ -116,12 +126,24 @@ namespace ProyectoFinal.Formularios
             }
         }
 
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+              objeto.BuscarMaestros(btnBuscar.Text);
+        }
+
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnHistorialNominas_Click(object sender, EventArgs e)
         {
             Limpiar_Datos();
             AbrirFormulario(new FrmHistorialNominas());
         }
+
         #endregion
 
+     
     }
 }

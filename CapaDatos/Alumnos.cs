@@ -101,7 +101,6 @@ namespace CapaDatos
             ada.Fill(tabla);
             conexion.Cerrar();
             return tabla;
-
         }
 
         public DataTable MostrarDepartamentos()
