@@ -78,7 +78,7 @@
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(0, 0);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(894, 934);
+            this.pnlContenedor.Size = new System.Drawing.Size(894, 689);
             this.pnlContenedor.TabIndex = 2;
             // 
             // pnlFondoAgregarAlumno
@@ -89,9 +89,9 @@
             this.pnlFondoAgregarAlumno.Controls.Add(this.btnCerrar);
             this.pnlFondoAgregarAlumno.Controls.Add(this.pnlAgregarAlumno);
             this.pnlFondoAgregarAlumno.Controls.Add(this.pnlResp);
-            this.pnlFondoAgregarAlumno.Location = new System.Drawing.Point(30, 212);
+            this.pnlFondoAgregarAlumno.Location = new System.Drawing.Point(26, 121);
             this.pnlFondoAgregarAlumno.Name = "pnlFondoAgregarAlumno";
-            this.pnlFondoAgregarAlumno.Size = new System.Drawing.Size(838, 516);
+            this.pnlFondoAgregarAlumno.Size = new System.Drawing.Size(838, 462);
             this.pnlFondoAgregarAlumno.TabIndex = 192;
             // 
             // btnGuardar
@@ -101,7 +101,7 @@
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(405, 437);
+            this.btnGuardar.Location = new System.Drawing.Point(405, 408);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(83, 34);
             this.btnGuardar.TabIndex = 12;
@@ -117,7 +117,7 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Location = new System.Drawing.Point(295, 437);
+            this.btnCerrar.Location = new System.Drawing.Point(295, 408);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(83, 34);
             this.btnCerrar.TabIndex = 13;
@@ -407,7 +407,7 @@
             this.lblRegAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegAlumno.ForeColor = System.Drawing.SystemColors.Control;
             this.lblRegAlumno.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblRegAlumno.Location = new System.Drawing.Point(311, 122);
+            this.lblRegAlumno.Location = new System.Drawing.Point(308, 75);
             this.lblRegAlumno.Name = "lblRegAlumno";
             this.lblRegAlumno.Size = new System.Drawing.Size(244, 33);
             this.lblRegAlumno.TabIndex = 191;
@@ -420,7 +420,7 @@
             this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.Fondo2;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(894, 934);
+            this.pictureBox1.Size = new System.Drawing.Size(894, 689);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -429,11 +429,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 934);
+            this.ClientSize = new System.Drawing.Size(894, 689);
             this.Controls.Add(this.pnlContenedor);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(910, 973);
-            this.MinimumSize = new System.Drawing.Size(910, 973);
+            this.MaximumSize = new System.Drawing.Size(910, 728);
+            this.MinimumSize = new System.Drawing.Size(910, 728);
             this.Name = "FrmAgregarAlumno";
             this.Text = "Agregar Alumnos";
             this.Load += new System.EventHandler(this.FrmAgregarAlumno_Load);

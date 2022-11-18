@@ -30,10 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInicio));
-            this.pnlControl = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lblHora = new System.Windows.Forms.Label();
-            this.lblFecha = new System.Windows.Forms.Label();
             this.pnlMenuLateral = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.pnlSubMenuConfig = new System.Windows.Forms.Panel();
@@ -65,11 +61,13 @@
             this.btnModAlumnos = new System.Windows.Forms.Button();
             this.btnAgregarAlumnos = new System.Windows.Forms.Button();
             this.btnAlumnos = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Tiempo = new System.Windows.Forms.Timer(this.components);
-            this.pnlControl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pnlControl = new System.Windows.Forms.Panel();
             this.pnlMenuLateral.SuspendLayout();
             this.pnlSubMenuConfig.SuspendLayout();
             this.pnlSubMenuNominas.SuspendLayout();
@@ -77,52 +75,11 @@
             this.pnlSubMenuSesiones.SuspendLayout();
             this.pnlSubMenuMaestros.SuspendLayout();
             this.pnlSubMenuAlumnos.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pnlControl.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnlControl
-            // 
-            this.pnlControl.Controls.Add(this.pictureBox2);
-            this.pnlControl.Controls.Add(this.lblHora);
-            this.pnlControl.Controls.Add(this.lblFecha);
-            this.pnlControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlControl.Location = new System.Drawing.Point(251, 0);
-            this.pnlControl.Name = "pnlControl";
-            this.pnlControl.Size = new System.Drawing.Size(910, 973);
-            this.pnlControl.TabIndex = 3;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::ProyectoFinal.Properties.Resources.LogoFondo1;
-            this.pictureBox2.Location = new System.Drawing.Point(38, 323);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(844, 480);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            // 
-            // lblHora
-            // 
-            this.lblHora.AutoSize = true;
-            this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblHora.Location = new System.Drawing.Point(421, 172);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(126, 46);
-            this.lblHora.TabIndex = 4;
-            this.lblHora.Text = "label1";
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.ForeColor = System.Drawing.Color.SlateGray;
-            this.lblFecha.Location = new System.Drawing.Point(400, 240);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(86, 31);
-            this.lblFecha.TabIndex = 1;
-            this.lblFecha.Text = "label2";
             // 
             // pnlMenuLateral
             // 
@@ -141,17 +98,17 @@
             this.pnlMenuLateral.Controls.Add(this.btnMaestros);
             this.pnlMenuLateral.Controls.Add(this.pnlSubMenuAlumnos);
             this.pnlMenuLateral.Controls.Add(this.btnAlumnos);
-            this.pnlMenuLateral.Controls.Add(this.panel1);
+            this.pnlMenuLateral.Controls.Add(this.pnlLogo);
             this.pnlMenuLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenuLateral.Location = new System.Drawing.Point(0, 0);
             this.pnlMenuLateral.Name = "pnlMenuLateral";
-            this.pnlMenuLateral.Size = new System.Drawing.Size(251, 973);
+            this.pnlMenuLateral.Size = new System.Drawing.Size(251, 728);
             this.pnlMenuLateral.TabIndex = 2;
             // 
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.MediumBlue;
-            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -159,7 +116,7 @@
             this.btnSalir.ForeColor = System.Drawing.Color.White;
             this.btnSalir.Location = new System.Drawing.Point(0, 940);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(251, 33);
+            this.btnSalir.Size = new System.Drawing.Size(234, 33);
             this.btnSalir.TabIndex = 43;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
@@ -171,7 +128,7 @@
             this.pnlSubMenuConfig.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubMenuConfig.Location = new System.Drawing.Point(0, 900);
             this.pnlSubMenuConfig.Name = "pnlSubMenuConfig";
-            this.pnlSubMenuConfig.Size = new System.Drawing.Size(251, 40);
+            this.pnlSubMenuConfig.Size = new System.Drawing.Size(234, 40);
             this.pnlSubMenuConfig.TabIndex = 42;
             // 
             // btnCambContra
@@ -184,7 +141,7 @@
             this.btnCambContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCambContra.Location = new System.Drawing.Point(0, 0);
             this.btnCambContra.Name = "btnCambContra";
-            this.btnCambContra.Size = new System.Drawing.Size(251, 33);
+            this.btnCambContra.Size = new System.Drawing.Size(234, 33);
             this.btnCambContra.TabIndex = 25;
             this.btnCambContra.Text = "Cambiar Contraseña";
             this.btnCambContra.UseVisualStyleBackColor = false;
@@ -201,7 +158,7 @@
             this.btnConfig.ForeColor = System.Drawing.Color.White;
             this.btnConfig.Location = new System.Drawing.Point(0, 867);
             this.btnConfig.Name = "btnConfig";
-            this.btnConfig.Size = new System.Drawing.Size(251, 33);
+            this.btnConfig.Size = new System.Drawing.Size(234, 33);
             this.btnConfig.TabIndex = 38;
             this.btnConfig.Text = "Configuración";
             this.btnConfig.UseVisualStyleBackColor = false;
@@ -216,7 +173,7 @@
             this.pnlSubMenuNominas.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubMenuNominas.Location = new System.Drawing.Point(0, 761);
             this.pnlSubMenuNominas.Name = "pnlSubMenuNominas";
-            this.pnlSubMenuNominas.Size = new System.Drawing.Size(251, 106);
+            this.pnlSubMenuNominas.Size = new System.Drawing.Size(234, 106);
             this.pnlSubMenuNominas.TabIndex = 36;
             // 
             // btnEgresosTotales
@@ -229,7 +186,7 @@
             this.btnEgresosTotales.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEgresosTotales.Location = new System.Drawing.Point(0, 66);
             this.btnEgresosTotales.Name = "btnEgresosTotales";
-            this.btnEgresosTotales.Size = new System.Drawing.Size(251, 33);
+            this.btnEgresosTotales.Size = new System.Drawing.Size(234, 33);
             this.btnEgresosTotales.TabIndex = 20;
             this.btnEgresosTotales.Text = "Egresos Totales";
             this.btnEgresosTotales.UseVisualStyleBackColor = false;
@@ -245,7 +202,7 @@
             this.btnHistorialNominas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistorialNominas.Location = new System.Drawing.Point(0, 33);
             this.btnHistorialNominas.Name = "btnHistorialNominas";
-            this.btnHistorialNominas.Size = new System.Drawing.Size(251, 33);
+            this.btnHistorialNominas.Size = new System.Drawing.Size(234, 33);
             this.btnHistorialNominas.TabIndex = 19;
             this.btnHistorialNominas.Text = "Historial de Facturas";
             this.btnHistorialNominas.UseVisualStyleBackColor = false;
@@ -261,7 +218,7 @@
             this.btnGenerarNomina.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerarNomina.Location = new System.Drawing.Point(0, 0);
             this.btnGenerarNomina.Name = "btnGenerarNomina";
-            this.btnGenerarNomina.Size = new System.Drawing.Size(251, 33);
+            this.btnGenerarNomina.Size = new System.Drawing.Size(234, 33);
             this.btnGenerarNomina.TabIndex = 18;
             this.btnGenerarNomina.Text = "Generar Nomina";
             this.btnGenerarNomina.UseVisualStyleBackColor = false;
@@ -278,7 +235,7 @@
             this.btnNominas.ForeColor = System.Drawing.Color.White;
             this.btnNominas.Location = new System.Drawing.Point(0, 728);
             this.btnNominas.Name = "btnNominas";
-            this.btnNominas.Size = new System.Drawing.Size(251, 33);
+            this.btnNominas.Size = new System.Drawing.Size(234, 33);
             this.btnNominas.TabIndex = 37;
             this.btnNominas.Text = "Nominas";
             this.btnNominas.UseVisualStyleBackColor = false;
@@ -293,7 +250,7 @@
             this.pnlSubMenuFacturas.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubMenuFacturas.Location = new System.Drawing.Point(0, 620);
             this.pnlSubMenuFacturas.Name = "pnlSubMenuFacturas";
-            this.pnlSubMenuFacturas.Size = new System.Drawing.Size(251, 108);
+            this.pnlSubMenuFacturas.Size = new System.Drawing.Size(234, 108);
             this.pnlSubMenuFacturas.TabIndex = 34;
             // 
             // btnIngresosTotales
@@ -306,7 +263,7 @@
             this.btnIngresosTotales.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresosTotales.Location = new System.Drawing.Point(0, 66);
             this.btnIngresosTotales.Name = "btnIngresosTotales";
-            this.btnIngresosTotales.Size = new System.Drawing.Size(251, 33);
+            this.btnIngresosTotales.Size = new System.Drawing.Size(234, 33);
             this.btnIngresosTotales.TabIndex = 17;
             this.btnIngresosTotales.Text = "Ingresos Totales";
             this.btnIngresosTotales.UseVisualStyleBackColor = false;
@@ -322,7 +279,7 @@
             this.btnHistorialFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistorialFactura.Location = new System.Drawing.Point(0, 33);
             this.btnHistorialFactura.Name = "btnHistorialFactura";
-            this.btnHistorialFactura.Size = new System.Drawing.Size(251, 33);
+            this.btnHistorialFactura.Size = new System.Drawing.Size(234, 33);
             this.btnHistorialFactura.TabIndex = 16;
             this.btnHistorialFactura.Text = "Historial de Facturas";
             this.btnHistorialFactura.UseVisualStyleBackColor = false;
@@ -338,7 +295,7 @@
             this.btnGenerarFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerarFactura.Location = new System.Drawing.Point(0, 0);
             this.btnGenerarFactura.Name = "btnGenerarFactura";
-            this.btnGenerarFactura.Size = new System.Drawing.Size(251, 33);
+            this.btnGenerarFactura.Size = new System.Drawing.Size(234, 33);
             this.btnGenerarFactura.TabIndex = 15;
             this.btnGenerarFactura.Text = "Generar Factura";
             this.btnGenerarFactura.UseVisualStyleBackColor = false;
@@ -355,7 +312,7 @@
             this.btnFacturas.ForeColor = System.Drawing.Color.White;
             this.btnFacturas.Location = new System.Drawing.Point(0, 587);
             this.btnFacturas.Name = "btnFacturas";
-            this.btnFacturas.Size = new System.Drawing.Size(251, 33);
+            this.btnFacturas.Size = new System.Drawing.Size(234, 33);
             this.btnFacturas.TabIndex = 35;
             this.btnFacturas.Text = "Facturas";
             this.btnFacturas.UseVisualStyleBackColor = false;
@@ -369,7 +326,7 @@
             this.pnlSubMenuSesiones.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubMenuSesiones.Location = new System.Drawing.Point(0, 511);
             this.pnlSubMenuSesiones.Name = "pnlSubMenuSesiones";
-            this.pnlSubMenuSesiones.Size = new System.Drawing.Size(251, 76);
+            this.pnlSubMenuSesiones.Size = new System.Drawing.Size(234, 76);
             this.pnlSubMenuSesiones.TabIndex = 32;
             // 
             // btnListarSesiones
@@ -382,7 +339,7 @@
             this.btnListarSesiones.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListarSesiones.Location = new System.Drawing.Point(0, 33);
             this.btnListarSesiones.Name = "btnListarSesiones";
-            this.btnListarSesiones.Size = new System.Drawing.Size(251, 33);
+            this.btnListarSesiones.Size = new System.Drawing.Size(234, 33);
             this.btnListarSesiones.TabIndex = 13;
             this.btnListarSesiones.Text = "Listar Sesiones";
             this.btnListarSesiones.UseVisualStyleBackColor = false;
@@ -398,7 +355,7 @@
             this.btnRegSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegSesion.Location = new System.Drawing.Point(0, 0);
             this.btnRegSesion.Name = "btnRegSesion";
-            this.btnRegSesion.Size = new System.Drawing.Size(251, 33);
+            this.btnRegSesion.Size = new System.Drawing.Size(234, 33);
             this.btnRegSesion.TabIndex = 12;
             this.btnRegSesion.Text = "Registrar Sesion";
             this.btnRegSesion.UseVisualStyleBackColor = false;
@@ -415,7 +372,7 @@
             this.btnSesiones.ForeColor = System.Drawing.Color.White;
             this.btnSesiones.Location = new System.Drawing.Point(0, 478);
             this.btnSesiones.Name = "btnSesiones";
-            this.btnSesiones.Size = new System.Drawing.Size(251, 33);
+            this.btnSesiones.Size = new System.Drawing.Size(234, 33);
             this.btnSesiones.TabIndex = 33;
             this.btnSesiones.Text = "Sesiones";
             this.btnSesiones.UseVisualStyleBackColor = false;
@@ -431,7 +388,7 @@
             this.pnlSubMenuMaestros.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubMenuMaestros.Location = new System.Drawing.Point(0, 335);
             this.pnlSubMenuMaestros.Name = "pnlSubMenuMaestros";
-            this.pnlSubMenuMaestros.Size = new System.Drawing.Size(251, 143);
+            this.pnlSubMenuMaestros.Size = new System.Drawing.Size(234, 143);
             this.pnlSubMenuMaestros.TabIndex = 30;
             // 
             // btnListarMaestros
@@ -444,7 +401,7 @@
             this.btnListarMaestros.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListarMaestros.Location = new System.Drawing.Point(0, 99);
             this.btnListarMaestros.Name = "btnListarMaestros";
-            this.btnListarMaestros.Size = new System.Drawing.Size(251, 33);
+            this.btnListarMaestros.Size = new System.Drawing.Size(234, 33);
             this.btnListarMaestros.TabIndex = 14;
             this.btnListarMaestros.Text = "Listar Maestros";
             this.btnListarMaestros.UseVisualStyleBackColor = false;
@@ -460,7 +417,7 @@
             this.btnEliminarMaestro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarMaestro.Location = new System.Drawing.Point(0, 66);
             this.btnEliminarMaestro.Name = "btnEliminarMaestro";
-            this.btnEliminarMaestro.Size = new System.Drawing.Size(251, 33);
+            this.btnEliminarMaestro.Size = new System.Drawing.Size(234, 33);
             this.btnEliminarMaestro.TabIndex = 13;
             this.btnEliminarMaestro.Text = "Eliminar Maestro";
             this.btnEliminarMaestro.UseVisualStyleBackColor = false;
@@ -476,7 +433,7 @@
             this.btnModificarMaestro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificarMaestro.Location = new System.Drawing.Point(0, 33);
             this.btnModificarMaestro.Name = "btnModificarMaestro";
-            this.btnModificarMaestro.Size = new System.Drawing.Size(251, 33);
+            this.btnModificarMaestro.Size = new System.Drawing.Size(234, 33);
             this.btnModificarMaestro.TabIndex = 12;
             this.btnModificarMaestro.Text = "Modificar Maestro";
             this.btnModificarMaestro.UseVisualStyleBackColor = false;
@@ -492,7 +449,7 @@
             this.btnAgregarMaestro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarMaestro.Location = new System.Drawing.Point(0, 0);
             this.btnAgregarMaestro.Name = "btnAgregarMaestro";
-            this.btnAgregarMaestro.Size = new System.Drawing.Size(251, 33);
+            this.btnAgregarMaestro.Size = new System.Drawing.Size(234, 33);
             this.btnAgregarMaestro.TabIndex = 11;
             this.btnAgregarMaestro.Text = "Agregar Maestro";
             this.btnAgregarMaestro.UseVisualStyleBackColor = false;
@@ -509,7 +466,7 @@
             this.btnMaestros.ForeColor = System.Drawing.Color.White;
             this.btnMaestros.Location = new System.Drawing.Point(0, 294);
             this.btnMaestros.Name = "btnMaestros";
-            this.btnMaestros.Size = new System.Drawing.Size(251, 41);
+            this.btnMaestros.Size = new System.Drawing.Size(234, 41);
             this.btnMaestros.TabIndex = 31;
             this.btnMaestros.Text = "Maestros";
             this.btnMaestros.UseVisualStyleBackColor = false;
@@ -525,7 +482,7 @@
             this.pnlSubMenuAlumnos.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubMenuAlumnos.Location = new System.Drawing.Point(0, 149);
             this.pnlSubMenuAlumnos.Name = "pnlSubMenuAlumnos";
-            this.pnlSubMenuAlumnos.Size = new System.Drawing.Size(251, 145);
+            this.pnlSubMenuAlumnos.Size = new System.Drawing.Size(234, 145);
             this.pnlSubMenuAlumnos.TabIndex = 28;
             // 
             // btnListarAlumnos
@@ -538,7 +495,7 @@
             this.btnListarAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListarAlumnos.Location = new System.Drawing.Point(0, 99);
             this.btnListarAlumnos.Name = "btnListarAlumnos";
-            this.btnListarAlumnos.Size = new System.Drawing.Size(251, 33);
+            this.btnListarAlumnos.Size = new System.Drawing.Size(234, 33);
             this.btnListarAlumnos.TabIndex = 10;
             this.btnListarAlumnos.Text = "Listar Alumnos";
             this.btnListarAlumnos.UseVisualStyleBackColor = false;
@@ -554,7 +511,7 @@
             this.btnEliminarAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarAlumnos.Location = new System.Drawing.Point(0, 66);
             this.btnEliminarAlumnos.Name = "btnEliminarAlumnos";
-            this.btnEliminarAlumnos.Size = new System.Drawing.Size(251, 33);
+            this.btnEliminarAlumnos.Size = new System.Drawing.Size(234, 33);
             this.btnEliminarAlumnos.TabIndex = 9;
             this.btnEliminarAlumnos.Text = "Eliminar Alumnos";
             this.btnEliminarAlumnos.UseVisualStyleBackColor = false;
@@ -570,7 +527,7 @@
             this.btnModAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModAlumnos.Location = new System.Drawing.Point(0, 33);
             this.btnModAlumnos.Name = "btnModAlumnos";
-            this.btnModAlumnos.Size = new System.Drawing.Size(251, 33);
+            this.btnModAlumnos.Size = new System.Drawing.Size(234, 33);
             this.btnModAlumnos.TabIndex = 8;
             this.btnModAlumnos.Text = "Modificar Alumnos";
             this.btnModAlumnos.UseVisualStyleBackColor = false;
@@ -586,7 +543,7 @@
             this.btnAgregarAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarAlumnos.Location = new System.Drawing.Point(0, 0);
             this.btnAgregarAlumnos.Name = "btnAgregarAlumnos";
-            this.btnAgregarAlumnos.Size = new System.Drawing.Size(251, 33);
+            this.btnAgregarAlumnos.Size = new System.Drawing.Size(234, 33);
             this.btnAgregarAlumnos.TabIndex = 7;
             this.btnAgregarAlumnos.Text = "Agregar Alumnos";
             this.btnAgregarAlumnos.UseVisualStyleBackColor = false;
@@ -603,20 +560,20 @@
             this.btnAlumnos.ForeColor = System.Drawing.Color.White;
             this.btnAlumnos.Location = new System.Drawing.Point(0, 115);
             this.btnAlumnos.Name = "btnAlumnos";
-            this.btnAlumnos.Size = new System.Drawing.Size(251, 34);
+            this.btnAlumnos.Size = new System.Drawing.Size(234, 34);
             this.btnAlumnos.TabIndex = 29;
             this.btnAlumnos.Text = "Alumnos";
             this.btnAlumnos.UseVisualStyleBackColor = false;
             this.btnAlumnos.Click += new System.EventHandler(this.btnAlumnos_Click);
             // 
-            // panel1
+            // pnlLogo
             // 
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(251, 115);
-            this.panel1.TabIndex = 5;
+            this.pnlLogo.Controls.Add(this.pictureBox1);
+            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(234, 115);
+            this.pnlLogo.TabIndex = 5;
             // 
             // pictureBox1
             // 
@@ -624,7 +581,7 @@
             this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.Logo;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(251, 115);
+            this.pictureBox1.Size = new System.Drawing.Size(234, 115);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -634,11 +591,54 @@
             this.Tiempo.Enabled = true;
             this.Tiempo.Tick += new System.EventHandler(this.Tiempo_Tick);
             // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.ForeColor = System.Drawing.Color.SlateGray;
+            this.lblFecha.Location = new System.Drawing.Point(382, 79);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(86, 31);
+            this.lblFecha.TabIndex = 1;
+            this.lblFecha.Text = "label2";
+            // 
+            // lblHora
+            // 
+            this.lblHora.AutoSize = true;
+            this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblHora.Location = new System.Drawing.Point(403, 11);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(126, 46);
+            this.lblHora.TabIndex = 4;
+            this.lblHora.Text = "label1";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ProyectoFinal.Properties.Resources.LogoFondo1;
+            this.pictureBox2.Location = new System.Drawing.Point(20, 162);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(844, 480);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pnlControl
+            // 
+            this.pnlControl.Controls.Add(this.pictureBox2);
+            this.pnlControl.Controls.Add(this.lblHora);
+            this.pnlControl.Controls.Add(this.lblFecha);
+            this.pnlControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlControl.Location = new System.Drawing.Point(251, 0);
+            this.pnlControl.Name = "pnlControl";
+            this.pnlControl.Size = new System.Drawing.Size(910, 728);
+            this.pnlControl.TabIndex = 3;
+            // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1161, 973);
+            this.ClientSize = new System.Drawing.Size(1161, 728);
             this.Controls.Add(this.pnlControl);
             this.Controls.Add(this.pnlMenuLateral);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -646,9 +646,6 @@
             this.Name = "FrmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
-            this.pnlControl.ResumeLayout(false);
-            this.pnlControl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlMenuLateral.ResumeLayout(false);
             this.pnlSubMenuConfig.ResumeLayout(false);
             this.pnlSubMenuNominas.ResumeLayout(false);
@@ -656,20 +653,19 @@
             this.pnlSubMenuSesiones.ResumeLayout(false);
             this.pnlSubMenuMaestros.ResumeLayout(false);
             this.pnlSubMenuAlumnos.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.pnlLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.pnlControl.ResumeLayout(false);
+            this.pnlControl.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnlControl;
         private System.Windows.Forms.Panel pnlMenuLateral;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblHora;
-        private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Timer Tiempo;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Panel pnlSubMenuConfig;
@@ -701,6 +697,9 @@
         private System.Windows.Forms.Button btnModAlumnos;
         private System.Windows.Forms.Button btnAgregarAlumnos;
         private System.Windows.Forms.Button btnAlumnos;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel pnlControl;
     }
 }

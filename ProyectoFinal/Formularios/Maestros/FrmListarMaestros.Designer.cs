@@ -65,13 +65,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 643);
+            this.ClientSize = new System.Drawing.Size(894, 689);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtBus);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(910, 973);
-            this.MinimumSize = new System.Drawing.Size(910, 973);
+            this.MaximumSize = new System.Drawing.Size(910, 728);
+            this.MinimumSize = new System.Drawing.Size(910, 728);
             this.Name = "FrmListarMaestros";
             this.Text = "Listar Maestros";
             this.Load += new System.EventHandler(this.FrmListarMaestros_Load);

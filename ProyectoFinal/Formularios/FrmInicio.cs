@@ -21,7 +21,7 @@ namespace ProyectoFinal.Formularios
         public FrmInicio()
         {
             InitializeComponent();
-            //PersonalizarDesing();
+            PersonalizarDesing();
         }
 
         #region ConfigFormulario
@@ -45,51 +45,51 @@ namespace ProyectoFinal.Formularios
         }
 
         //Configuración de los paneles
-        //private void PersonalizarDesing()
-        //{
-        //    pnlLogo.Visible = false;
-        //    pnlMenuLateral.Visible = false;
-        //    pnlSubMenuAlumnos.Visible = false;
-        //    pnlSubMenuMaestros.Visible = false;
-        //    pnlSubMenuSesiones.Visible = false;
-        //    pnlSubMenuFacturas.Visible = false;
-        //    pnlSubMenuNominas.Visible = false;
-        //    pnlSubConfig.Visible = false;
-        //}
+        private void PersonalizarDesing()
+        {
+            //pnlLogo.Visible = false;
+            //pnlMenuLateral.Visible = false;
+            pnlSubMenuAlumnos.Visible = false;
+            pnlSubMenuMaestros.Visible = false;
+            pnlSubMenuSesiones.Visible = false;
+            pnlSubMenuFacturas.Visible = false;
+            pnlSubMenuNominas.Visible = false;
+            pnlSubMenuConfig.Visible = false;
+        }
 
-        //private void HideSubMenu()//Ocultas los paneles despues de hacer click
-        //{
-        //    if (pnlSubMenuAlumnos.Visible == true)
-        //    {
-        //        pnlSubMenuAlumnos.Visible = false;
-        //    }
-        //    if (pnlSubMenuMaestros.Visible == true)
-        //    {
-        //        pnlSubMenuMaestros.Visible = false;
-        //    }
-        //    if (pnlSubMenuSesiones.Visible == true)
-        //    {
-        //        pnlSubMenuSesiones.Visible = false;
-        //    }
-        //    if (pnlSubMenuFacturas.Visible == true)
-        //    {
-        //        pnlSubMenuFacturas.Visible = false;
-        //    }
-        //    if (pnlSubMenuNominas.Visible == true)
-        //    {
-        //        pnlSubMenuNominas.Visible = false;
-        //    }
-        //    if (pnlSubMenuConfig.Visible == true)
-        //    {
-        //        pnlSubMenuConfig.Visible = false;
-        //    }
-        //}
+        private void HideSubMenu()//Ocultas los paneles despues de hacer click
+        {
+            if (pnlSubMenuAlumnos.Visible == true)
+            {
+                pnlSubMenuAlumnos.Visible = false;
+            }
+            if (pnlSubMenuMaestros.Visible == true)
+            {
+                pnlSubMenuMaestros.Visible = false;
+            }
+            if (pnlSubMenuSesiones.Visible == true)
+            {
+                pnlSubMenuSesiones.Visible = false;
+            }
+            if (pnlSubMenuFacturas.Visible == true)
+            {
+                pnlSubMenuFacturas.Visible = false;
+            }
+            if (pnlSubMenuNominas.Visible == true)
+            {
+                pnlSubMenuNominas.Visible = false;
+            }
+            if (pnlSubMenuConfig.Visible == true)
+            {
+                pnlSubMenuConfig.Visible = false;
+            }
+        }
 
         private void ShowSubMenu(Panel Submenu)//Muestra los paneles
         {
             if (Submenu.Visible == false)
             {
-                //HideSubMenu();
+                HideSubMenu();
                 Submenu.Visible = true;
             }
             else

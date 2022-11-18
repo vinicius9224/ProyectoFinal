@@ -31,11 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGenerarNomina));
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnHistorialNominas = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
-            this.lblRegSes = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlDetaNomina = new System.Windows.Forms.Panel();
             this.txtFechaGastosMensuales = new System.Windows.Forms.TextBox();
             this.btnCalcular = new System.Windows.Forms.Button();
@@ -71,10 +66,15 @@
             this.lblPagoXHora = new System.Windows.Forms.Label();
             this.lblFechaPagoDesde = new System.Windows.Forms.Label();
             this.txtPagoDesde = new System.Windows.Forms.TextBox();
+            this.btnHistorialNominas = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.lblRegSes = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlContenedor.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlDetaNomina.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlContenedor
@@ -84,7 +84,7 @@
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(0, 0);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(894, 934);
+            this.pnlContenedor.Size = new System.Drawing.Size(894, 689);
             this.pnlContenedor.TabIndex = 0;
             // 
             // panel1
@@ -94,79 +94,10 @@
             this.panel1.Controls.Add(this.btnGuardar);
             this.panel1.Controls.Add(this.btnCerrar);
             this.panel1.Controls.Add(this.lblRegSes);
-            this.panel1.Location = new System.Drawing.Point(35, 130);
+            this.panel1.Location = new System.Drawing.Point(30, 37);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(826, 606);
             this.panel1.TabIndex = 1;
-            // 
-            // btnHistorialNominas
-            // 
-            this.btnHistorialNominas.BackColor = System.Drawing.Color.RosyBrown;
-            this.btnHistorialNominas.FlatAppearance.BorderSize = 0;
-            this.btnHistorialNominas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnHistorialNominas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistorialNominas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistorialNominas.Location = new System.Drawing.Point(335, 539);
-            this.btnHistorialNominas.Name = "btnHistorialNominas";
-            this.btnHistorialNominas.Size = new System.Drawing.Size(115, 44);
-            this.btnHistorialNominas.TabIndex = 214;
-            this.btnHistorialNominas.Text = "Historial Nominas";
-            this.btnHistorialNominas.UseVisualStyleBackColor = false;
-            this.btnHistorialNominas.Click += new System.EventHandler(this.btnHistorialNominas_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnGuardar.FlatAppearance.BorderSize = 0;
-            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(561, 539);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(115, 44);
-            this.btnGuardar.TabIndex = 213;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Brown;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(90, 539);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(115, 44);
-            this.btnCerrar.TabIndex = 212;
-            this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // lblRegSes
-            // 
-            this.lblRegSes.BackColor = System.Drawing.Color.DimGray;
-            this.lblRegSes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegSes.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblRegSes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblRegSes.Location = new System.Drawing.Point(284, 0);
-            this.lblRegSes.Name = "lblRegSes";
-            this.lblRegSes.Size = new System.Drawing.Size(244, 25);
-            this.lblRegSes.TabIndex = 4;
-            this.lblRegSes.Text = "Generar Nóminas";
-            this.lblRegSes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.Fondo2;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(894, 934);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // pnlDetaNomina
             // 
@@ -526,22 +457,91 @@
             this.txtPagoDesde.Size = new System.Drawing.Size(100, 20);
             this.txtPagoDesde.TabIndex = 197;
             // 
+            // btnHistorialNominas
+            // 
+            this.btnHistorialNominas.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnHistorialNominas.FlatAppearance.BorderSize = 0;
+            this.btnHistorialNominas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnHistorialNominas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistorialNominas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistorialNominas.Location = new System.Drawing.Point(335, 539);
+            this.btnHistorialNominas.Name = "btnHistorialNominas";
+            this.btnHistorialNominas.Size = new System.Drawing.Size(115, 44);
+            this.btnHistorialNominas.TabIndex = 214;
+            this.btnHistorialNominas.Text = "Historial Nominas";
+            this.btnHistorialNominas.UseVisualStyleBackColor = false;
+            this.btnHistorialNominas.Click += new System.EventHandler(this.btnHistorialNominas_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(561, 539);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(115, 44);
+            this.btnGuardar.TabIndex = 213;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Brown;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.Location = new System.Drawing.Point(90, 539);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(115, 44);
+            this.btnCerrar.TabIndex = 212;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // lblRegSes
+            // 
+            this.lblRegSes.BackColor = System.Drawing.Color.DimGray;
+            this.lblRegSes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegSes.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblRegSes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblRegSes.Location = new System.Drawing.Point(284, 0);
+            this.lblRegSes.Name = "lblRegSes";
+            this.lblRegSes.Size = new System.Drawing.Size(244, 25);
+            this.lblRegSes.TabIndex = 4;
+            this.lblRegSes.Text = "Generar Nóminas";
+            this.lblRegSes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.Fondo2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(894, 689);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmGenerarNomina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 934);
+            this.ClientSize = new System.Drawing.Size(894, 689);
             this.Controls.Add(this.pnlContenedor);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(910, 973);
-            this.MinimumSize = new System.Drawing.Size(910, 973);
+            this.MaximumSize = new System.Drawing.Size(910, 728);
+            this.MinimumSize = new System.Drawing.Size(910, 728);
             this.Name = "FrmGenerarNomina";
             this.Text = "Generar Nomina";
             this.pnlContenedor.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlDetaNomina.ResumeLayout(false);
             this.pnlDetaNomina.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

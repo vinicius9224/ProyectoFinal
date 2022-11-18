@@ -54,7 +54,7 @@
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(0, 0);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(894, 934);
+            this.pnlContenedor.Size = new System.Drawing.Size(894, 689);
             this.pnlContenedor.TabIndex = 0;
             // 
             // lblListarAlumno
@@ -63,7 +63,7 @@
             this.lblListarAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblListarAlumno.ForeColor = System.Drawing.SystemColors.Control;
             this.lblListarAlumno.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblListarAlumno.Location = new System.Drawing.Point(309, 41);
+            this.lblListarAlumno.Location = new System.Drawing.Point(309, 25);
             this.lblListarAlumno.Name = "lblListarAlumno";
             this.lblListarAlumno.Size = new System.Drawing.Size(244, 28);
             this.lblListarAlumno.TabIndex = 19;
@@ -77,7 +77,7 @@
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(388, 840);
+            this.btnCerrar.Location = new System.Drawing.Point(397, 643);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(87, 34);
             this.btnCerrar.TabIndex = 6;
@@ -87,7 +87,7 @@
             // 
             // txtBus
             // 
-            this.txtBus.Location = new System.Drawing.Point(148, 109);
+            this.txtBus.Location = new System.Drawing.Point(148, 78);
             this.txtBus.Name = "txtBus";
             this.txtBus.Size = new System.Drawing.Size(641, 20);
             this.txtBus.TabIndex = 4;
@@ -99,7 +99,7 @@
             this.lblBuscar.BackColor = System.Drawing.Color.Gray;
             this.lblBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBuscar.ForeColor = System.Drawing.Color.White;
-            this.lblBuscar.Location = new System.Drawing.Point(68, 109);
+            this.lblBuscar.Location = new System.Drawing.Point(68, 78);
             this.lblBuscar.Name = "lblBuscar";
             this.lblBuscar.Size = new System.Drawing.Size(65, 20);
             this.lblBuscar.TabIndex = 5;
@@ -108,9 +108,9 @@
             // pnlFondoListar
             // 
             this.pnlFondoListar.Controls.Add(this.dataGridView1);
-            this.pnlFondoListar.Location = new System.Drawing.Point(57, 150);
+            this.pnlFondoListar.Location = new System.Drawing.Point(54, 114);
             this.pnlFondoListar.Name = "pnlFondoListar";
-            this.pnlFondoListar.Size = new System.Drawing.Size(773, 674);
+            this.pnlFondoListar.Size = new System.Drawing.Size(773, 521);
             this.pnlFondoListar.TabIndex = 1;
             // 
             // dataGridView1
@@ -118,7 +118,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(17, 14);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(737, 641);
+            this.dataGridView1.Size = new System.Drawing.Size(737, 493);
             this.dataGridView1.TabIndex = 0;
             // 
             // pictureBox1
@@ -127,7 +127,7 @@
             this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.Fondo2;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(894, 934);
+            this.pictureBox1.Size = new System.Drawing.Size(894, 689);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -136,11 +136,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 934);
+            this.ClientSize = new System.Drawing.Size(894, 689);
             this.Controls.Add(this.pnlContenedor);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(910, 973);
-            this.MinimumSize = new System.Drawing.Size(910, 973);
+            this.MaximumSize = new System.Drawing.Size(910, 728);
+            this.MinimumSize = new System.Drawing.Size(910, 728);
             this.Name = "FrmListarAlumnos";
             this.Text = "Listar Alumnos";
             this.Load += new System.EventHandler(this.FrmListarAlumnos_Load_1);

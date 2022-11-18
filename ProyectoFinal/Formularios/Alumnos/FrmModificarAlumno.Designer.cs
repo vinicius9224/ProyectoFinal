@@ -65,24 +65,24 @@
             this.lblNomResp = new System.Windows.Forms.Label();
             this.lblTelfResp = new System.Windows.Forms.Label();
             this.lblModAlumno = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picBoxFondo = new System.Windows.Forms.PictureBox();
             this.pnlContenedor.SuspendLayout();
             this.pnlFondoAgregarAlumno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnlAgregarAlumno.SuspendLayout();
             this.pnlResp.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxFondo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlContenedor
             // 
             this.pnlContenedor.Controls.Add(this.pnlFondoAgregarAlumno);
             this.pnlContenedor.Controls.Add(this.lblModAlumno);
-            this.pnlContenedor.Controls.Add(this.pictureBox1);
+            this.pnlContenedor.Controls.Add(this.picBoxFondo);
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(0, 0);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(894, 934);
+            this.pnlContenedor.Size = new System.Drawing.Size(894, 689);
             this.pnlContenedor.TabIndex = 3;
             // 
             // pnlFondoAgregarAlumno
@@ -96,9 +96,9 @@
             this.pnlFondoAgregarAlumno.Controls.Add(this.btnCerrar);
             this.pnlFondoAgregarAlumno.Controls.Add(this.pnlAgregarAlumno);
             this.pnlFondoAgregarAlumno.Controls.Add(this.pnlResp);
-            this.pnlFondoAgregarAlumno.Location = new System.Drawing.Point(29, 88);
+            this.pnlFondoAgregarAlumno.Location = new System.Drawing.Point(28, 73);
             this.pnlFondoAgregarAlumno.Name = "pnlFondoAgregarAlumno";
-            this.pnlFondoAgregarAlumno.Size = new System.Drawing.Size(838, 778);
+            this.pnlFondoAgregarAlumno.Size = new System.Drawing.Size(838, 604);
             this.pnlFondoAgregarAlumno.TabIndex = 192;
             // 
             // label2
@@ -107,7 +107,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label2.Location = new System.Drawing.Point(211, 400);
+            this.label2.Location = new System.Drawing.Point(184, 307);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(227, 25);
             this.label2.TabIndex = 188;
@@ -121,7 +121,7 @@
             this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(722, 453);
+            this.btnEditar.Location = new System.Drawing.Point(733, 342);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 31);
             this.btnEditar.TabIndex = 15;
@@ -133,7 +133,7 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 453);
+            this.dataGridView1.Location = new System.Drawing.Point(27, 342);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(677, 234);
             this.dataGridView1.TabIndex = 14;
@@ -145,7 +145,7 @@
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(722, 551);
+            this.btnGuardar.Location = new System.Drawing.Point(733, 438);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 40);
             this.btnGuardar.TabIndex = 12;
@@ -161,7 +161,7 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Location = new System.Drawing.Point(722, 655);
+            this.btnCerrar.Location = new System.Drawing.Point(733, 544);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(75, 32);
             this.btnCerrar.TabIndex = 13;
@@ -193,9 +193,9 @@
             this.pnlAgregarAlumno.Controls.Add(this.lblApe);
             this.pnlAgregarAlumno.Controls.Add(this.lblDomicilio);
             this.pnlAgregarAlumno.Controls.Add(this.lblFechaNac);
-            this.pnlAgregarAlumno.Location = new System.Drawing.Point(25, 28);
+            this.pnlAgregarAlumno.Location = new System.Drawing.Point(27, 12);
             this.pnlAgregarAlumno.Name = "pnlAgregarAlumno";
-            this.pnlAgregarAlumno.Size = new System.Drawing.Size(599, 317);
+            this.pnlAgregarAlumno.Size = new System.Drawing.Size(599, 286);
             this.pnlAgregarAlumno.TabIndex = 1;
             // 
             // lblTituloAlumno
@@ -392,9 +392,9 @@
             this.pnlResp.Controls.Add(this.txtcod);
             this.pnlResp.Controls.Add(this.lblNomResp);
             this.pnlResp.Controls.Add(this.lblTelfResp);
-            this.pnlResp.Location = new System.Drawing.Point(644, 28);
+            this.pnlResp.Location = new System.Drawing.Point(646, 12);
             this.pnlResp.Name = "pnlResp";
-            this.pnlResp.Size = new System.Drawing.Size(162, 317);
+            this.pnlResp.Size = new System.Drawing.Size(162, 286);
             this.pnlResp.TabIndex = 2;
             // 
             // label1
@@ -458,26 +458,26 @@
             this.lblModAlumno.Text = "Modificar Alumno";
             this.lblModAlumno.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // pictureBox1
+            // picBoxFondo
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.Fondo2;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(894, 934);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.picBoxFondo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picBoxFondo.Image = global::ProyectoFinal.Properties.Resources.Fondo2;
+            this.picBoxFondo.Location = new System.Drawing.Point(0, 0);
+            this.picBoxFondo.Name = "picBoxFondo";
+            this.picBoxFondo.Size = new System.Drawing.Size(894, 689);
+            this.picBoxFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxFondo.TabIndex = 0;
+            this.picBoxFondo.TabStop = false;
             // 
             // FrmModificarAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 934);
+            this.ClientSize = new System.Drawing.Size(894, 689);
             this.Controls.Add(this.pnlContenedor);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(910, 973);
-            this.MinimumSize = new System.Drawing.Size(910, 973);
+            this.MaximumSize = new System.Drawing.Size(910, 728);
+            this.MinimumSize = new System.Drawing.Size(910, 728);
             this.Name = "FrmModificarAlumno";
             this.Text = "Modificar Alumno";
             this.Load += new System.EventHandler(this.FrmModificarAlumno_Load_1);
@@ -488,7 +488,7 @@
             this.pnlAgregarAlumno.PerformLayout();
             this.pnlResp.ResumeLayout(false);
             this.pnlResp.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxFondo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -528,7 +528,7 @@
         private System.Windows.Forms.Label lblNomResp;
         private System.Windows.Forms.Label lblTelfResp;
         private System.Windows.Forms.Label lblModAlumno;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picBoxFondo;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Label label2;

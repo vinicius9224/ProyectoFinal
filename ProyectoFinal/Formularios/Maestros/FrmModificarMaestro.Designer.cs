@@ -272,7 +272,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 643);
+            this.ClientSize = new System.Drawing.Size(894, 689);
             this.Controls.Add(this.BtnAgregar);
             this.Controls.Add(this.comEst);
             this.Controls.Add(this.comProf);
@@ -298,8 +298,8 @@
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(910, 973);
-            this.MinimumSize = new System.Drawing.Size(910, 973);
+            this.MaximumSize = new System.Drawing.Size(910, 728);
+            this.MinimumSize = new System.Drawing.Size(910, 728);
             this.Name = "FrmModificarMaestro";
             this.Text = "Modificar Maestro";
             this.Load += new System.EventHandler(this.FrmModificarMaestro_Load);
