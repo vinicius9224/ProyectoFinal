@@ -22,7 +22,7 @@ namespace ProyectoFinal.Formularios
             txtApeTrabajador.Enabled = false;
             txtNomTrabajador.Enabled = false;
             txtCargoTrab.Enabled = false;
-            txtSueldoBruto.Enabled = false;
+            txtSalario.Enabled = false;
             txtTotalHoras.Enabled = false;
             txtSalarioNeto.Enabled = false;
         }

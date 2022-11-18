@@ -131,6 +131,12 @@
     <Compile Include="Formularios\Maestros\FrmModificarMaestro.Designer.cs">
       <DependentUpon>FrmModificarMaestro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Nominas\FrmDatosNomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Nominas\FrmDatosNomina.Designer.cs">
+      <DependentUpon>FrmDatosNomina.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Nominas\FrmEgresosTotales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Maestros\FrmModificarMaestro.resx">
       <DependentUpon>FrmModificarMaestro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Nominas\FrmDatosNomina.resx">
+      <DependentUpon>FrmDatosNomina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Nominas\FrmEgresosTotales.resx">
       <DependentUpon>FrmEgresosTotales.cs</DependentUpon>

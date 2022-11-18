@@ -12,9 +12,9 @@ namespace CapaNegocio
     {
         private Nominas nominas=new Nominas();
 
-        public void GenerarNominas(DateTime FechaPago_Nomina, string pagoDesde_Nomina, string pagoHasta_Nomina, float SalarioNeto, float Viatico, float GastosMensuales, int TotalHoras, float PagoxHoras)
+        public void GenerarNominas(DateTime FechaPago_Nomina, string pagoDesde_Nomina, string pagoHasta_Nomina, float SalarioNeto, float Viatico, int TotalHoras, float PagoxHoras)
         {
-            nominas.GenerarNominas( FechaPago_Nomina,  pagoDesde_Nomina,  pagoHasta_Nomina, SalarioNeto, Viatico, GastosMensuales, TotalHoras, PagoxHoras);            
+            nominas.GenerarNominas( FechaPago_Nomina,  pagoDesde_Nomina,  pagoHasta_Nomina, SalarioNeto, Viatico, TotalHoras, PagoxHoras);            
         }
 
         //public DataTable ListarNominas()

@@ -1,6 +1,7 @@
-﻿namespace ProyectoFinal.Formularios
+﻿
+namespace ProyectoFinal.Formularios.Nominas
 {
-    partial class FrmGenerarNomina
+    partial class FrmDatosNomina
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +29,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGenerarNomina));
-            this.pnlContenedor = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.pnlDetaNomina = new System.Windows.Forms.Panel();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.lblSalarioNeto = new System.Windows.Forms.Label();
@@ -38,7 +36,6 @@
             this.txtSalario = new System.Windows.Forms.TextBox();
             this.lblSalarioBruto = new System.Windows.Forms.Label();
             this.lblDatosPago = new System.Windows.Forms.Label();
-            this.lblDatosNomina = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCargoTrab = new System.Windows.Forms.TextBox();
             this.lblProfe = new System.Windows.Forms.Label();
@@ -53,46 +50,11 @@
             this.lblViatico = new System.Windows.Forms.Label();
             this.lblTotalHoras = new System.Windows.Forms.Label();
             this.txtViatico = new System.Windows.Forms.TextBox();
-            this.lblFechaDePago = new System.Windows.Forms.Label();
-            this.dttFechaPago = new System.Windows.Forms.DateTimePicker();
-            this.txtPagoHasta = new System.Windows.Forms.TextBox();
             this.txtPagoXHora = new System.Windows.Forms.TextBox();
-            this.lblPagoHasta = new System.Windows.Forms.Label();
             this.lblPagoXHora = new System.Windows.Forms.Label();
-            this.lblFechaPagoDesde = new System.Windows.Forms.Label();
-            this.txtPagoDesde = new System.Windows.Forms.TextBox();
-            this.btnHistorialNominas = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.lblRegSes = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pnlContenedor.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.pnlDetaNomina.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pnlContenedor
-            // 
-            this.pnlContenedor.Controls.Add(this.panel1);
-            this.pnlContenedor.Controls.Add(this.pictureBox1);
-            this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContenedor.Location = new System.Drawing.Point(0, 0);
-            this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(894, 689);
-            this.pnlContenedor.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.pnlDetaNomina);
-            this.panel1.Controls.Add(this.btnHistorialNominas);
-            this.panel1.Controls.Add(this.btnGuardar);
-            this.panel1.Controls.Add(this.btnCerrar);
-            this.panel1.Controls.Add(this.lblRegSes);
-            this.panel1.Location = new System.Drawing.Point(30, 37);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(826, 606);
-            this.panel1.TabIndex = 1;
             // 
             // pnlDetaNomina
             // 
@@ -103,7 +65,6 @@
             this.pnlDetaNomina.Controls.Add(this.txtSalario);
             this.pnlDetaNomina.Controls.Add(this.lblSalarioBruto);
             this.pnlDetaNomina.Controls.Add(this.lblDatosPago);
-            this.pnlDetaNomina.Controls.Add(this.lblDatosNomina);
             this.pnlDetaNomina.Controls.Add(this.label2);
             this.pnlDetaNomina.Controls.Add(this.txtCargoTrab);
             this.pnlDetaNomina.Controls.Add(this.lblProfe);
@@ -118,18 +79,12 @@
             this.pnlDetaNomina.Controls.Add(this.lblViatico);
             this.pnlDetaNomina.Controls.Add(this.lblTotalHoras);
             this.pnlDetaNomina.Controls.Add(this.txtViatico);
-            this.pnlDetaNomina.Controls.Add(this.lblFechaDePago);
-            this.pnlDetaNomina.Controls.Add(this.dttFechaPago);
-            this.pnlDetaNomina.Controls.Add(this.txtPagoHasta);
             this.pnlDetaNomina.Controls.Add(this.txtPagoXHora);
-            this.pnlDetaNomina.Controls.Add(this.lblPagoHasta);
             this.pnlDetaNomina.Controls.Add(this.lblPagoXHora);
-            this.pnlDetaNomina.Controls.Add(this.lblFechaPagoDesde);
-            this.pnlDetaNomina.Controls.Add(this.txtPagoDesde);
-            this.pnlDetaNomina.Location = new System.Drawing.Point(24, 81);
+            this.pnlDetaNomina.Location = new System.Drawing.Point(155, 119);
             this.pnlDetaNomina.Name = "pnlDetaNomina";
-            this.pnlDetaNomina.Size = new System.Drawing.Size(779, 445);
-            this.pnlDetaNomina.TabIndex = 215;
+            this.pnlDetaNomina.Size = new System.Drawing.Size(495, 445);
+            this.pnlDetaNomina.TabIndex = 216;
             // 
             // btnCalcular
             // 
@@ -144,7 +99,6 @@
             this.btnCalcular.TabIndex = 232;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = false;
-            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // lblSalarioNeto
             // 
@@ -191,18 +145,6 @@
             this.lblDatosPago.Size = new System.Drawing.Size(128, 20);
             this.lblDatosPago.TabIndex = 224;
             this.lblDatosPago.Text = "Datos de Pago";
-            // 
-            // lblDatosNomina
-            // 
-            this.lblDatosNomina.AutoSize = true;
-            this.lblDatosNomina.BackColor = System.Drawing.Color.Gold;
-            this.lblDatosNomina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDatosNomina.ForeColor = System.Drawing.Color.Black;
-            this.lblDatosNomina.Location = new System.Drawing.Point(538, 24);
-            this.lblDatosNomina.Name = "lblDatosNomina";
-            this.lblDatosNomina.Size = new System.Drawing.Size(147, 20);
-            this.lblDatosNomina.TabIndex = 223;
-            this.lblDatosNomina.Text = "Datos de Nómina";
             // 
             // label2
             // 
@@ -280,7 +222,6 @@
             this.btnBuscar.TabIndex = 215;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtCodTrabajador
             // 
@@ -333,46 +274,12 @@
             this.txtViatico.Size = new System.Drawing.Size(100, 20);
             this.txtViatico.TabIndex = 202;
             // 
-            // lblFechaDePago
-            // 
-            this.lblFechaDePago.AutoSize = true;
-            this.lblFechaDePago.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaDePago.Location = new System.Drawing.Point(505, 153);
-            this.lblFechaDePago.Name = "lblFechaDePago";
-            this.lblFechaDePago.Size = new System.Drawing.Size(113, 16);
-            this.lblFechaDePago.TabIndex = 208;
-            this.lblFechaDePago.Text = "Fecha de pago";
-            // 
-            // dttFechaPago
-            // 
-            this.dttFechaPago.Location = new System.Drawing.Point(508, 189);
-            this.dttFechaPago.Name = "dttFechaPago";
-            this.dttFechaPago.Size = new System.Drawing.Size(200, 20);
-            this.dttFechaPago.TabIndex = 207;
-            // 
-            // txtPagoHasta
-            // 
-            this.txtPagoHasta.Location = new System.Drawing.Point(650, 108);
-            this.txtPagoHasta.Name = "txtPagoHasta";
-            this.txtPagoHasta.Size = new System.Drawing.Size(100, 20);
-            this.txtPagoHasta.TabIndex = 200;
-            // 
             // txtPagoXHora
             // 
             this.txtPagoXHora.Location = new System.Drawing.Point(315, 166);
             this.txtPagoXHora.Name = "txtPagoXHora";
             this.txtPagoXHora.Size = new System.Drawing.Size(100, 20);
             this.txtPagoXHora.TabIndex = 206;
-            // 
-            // lblPagoHasta
-            // 
-            this.lblPagoHasta.AutoSize = true;
-            this.lblPagoHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPagoHasta.Location = new System.Drawing.Point(647, 74);
-            this.lblPagoHasta.Name = "lblPagoHasta";
-            this.lblPagoHasta.Size = new System.Drawing.Size(87, 16);
-            this.lblPagoHasta.TabIndex = 199;
-            this.lblPagoHasta.Text = "Pago hasta";
             // 
             // lblPagoXHora
             // 
@@ -384,121 +291,36 @@
             this.lblPagoXHora.TabIndex = 205;
             this.lblPagoXHora.Text = "Pago por hora";
             // 
-            // lblFechaPagoDesde
-            // 
-            this.lblFechaPagoDesde.AutoSize = true;
-            this.lblFechaPagoDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaPagoDesde.Location = new System.Drawing.Point(509, 74);
-            this.lblFechaPagoDesde.Name = "lblFechaPagoDesde";
-            this.lblFechaPagoDesde.Size = new System.Drawing.Size(93, 16);
-            this.lblFechaPagoDesde.TabIndex = 198;
-            this.lblFechaPagoDesde.Text = "Pago desde";
-            // 
-            // txtPagoDesde
-            // 
-            this.txtPagoDesde.Location = new System.Drawing.Point(512, 108);
-            this.txtPagoDesde.Name = "txtPagoDesde";
-            this.txtPagoDesde.Size = new System.Drawing.Size(100, 20);
-            this.txtPagoDesde.TabIndex = 197;
-            // 
-            // btnHistorialNominas
-            // 
-            this.btnHistorialNominas.BackColor = System.Drawing.Color.RosyBrown;
-            this.btnHistorialNominas.FlatAppearance.BorderSize = 0;
-            this.btnHistorialNominas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnHistorialNominas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistorialNominas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistorialNominas.Location = new System.Drawing.Point(335, 539);
-            this.btnHistorialNominas.Name = "btnHistorialNominas";
-            this.btnHistorialNominas.Size = new System.Drawing.Size(115, 44);
-            this.btnHistorialNominas.TabIndex = 214;
-            this.btnHistorialNominas.Text = "Historial Nominas";
-            this.btnHistorialNominas.UseVisualStyleBackColor = false;
-            this.btnHistorialNominas.Click += new System.EventHandler(this.btnHistorialNominas_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnGuardar.FlatAppearance.BorderSize = 0;
-            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(561, 539);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(115, 44);
-            this.btnGuardar.TabIndex = 213;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Brown;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(90, 539);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(115, 44);
-            this.btnCerrar.TabIndex = 212;
-            this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
             // lblRegSes
             // 
             this.lblRegSes.BackColor = System.Drawing.Color.DimGray;
             this.lblRegSes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegSes.ForeColor = System.Drawing.SystemColors.Control;
             this.lblRegSes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblRegSes.Location = new System.Drawing.Point(284, 0);
+            this.lblRegSes.Location = new System.Drawing.Point(266, 71);
             this.lblRegSes.Name = "lblRegSes";
-            this.lblRegSes.Size = new System.Drawing.Size(244, 25);
-            this.lblRegSes.TabIndex = 4;
-            this.lblRegSes.Text = "Generar Nóminas";
+            this.lblRegSes.Size = new System.Drawing.Size(304, 25);
+            this.lblRegSes.TabIndex = 217;
+            this.lblRegSes.Text = "Generar Nóminas del Maestro";
             this.lblRegSes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.Fondo2;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(894, 689);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // FrmGenerarNomina
+            // FrmDatosNomina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(894, 689);
-            this.Controls.Add(this.pnlContenedor);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(910, 728);
-            this.MinimumSize = new System.Drawing.Size(910, 728);
-            this.Name = "FrmGenerarNomina";
-            this.Text = "Generar Nomina";
-            this.pnlContenedor.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.Controls.Add(this.lblRegSes);
+            this.Controls.Add(this.pnlDetaNomina);
+            this.Name = "FrmDatosNomina";
+            this.Text = "FrmDatosNomina";
             this.pnlDetaNomina.ResumeLayout(false);
             this.pnlDetaNomina.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlContenedor;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblRegSes;
-        private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnHistorialNominas;
         private System.Windows.Forms.Panel pnlDetaNomina;
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.Label lblSalarioNeto;
@@ -506,7 +328,6 @@
         private System.Windows.Forms.TextBox txtSalario;
         private System.Windows.Forms.Label lblSalarioBruto;
         private System.Windows.Forms.Label lblDatosPago;
-        private System.Windows.Forms.Label lblDatosNomina;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCargoTrab;
         private System.Windows.Forms.Label lblProfe;
@@ -521,13 +342,8 @@
         private System.Windows.Forms.Label lblViatico;
         private System.Windows.Forms.Label lblTotalHoras;
         private System.Windows.Forms.TextBox txtViatico;
-        private System.Windows.Forms.Label lblFechaDePago;
-        private System.Windows.Forms.DateTimePicker dttFechaPago;
-        private System.Windows.Forms.TextBox txtPagoHasta;
         private System.Windows.Forms.TextBox txtPagoXHora;
-        private System.Windows.Forms.Label lblPagoHasta;
         private System.Windows.Forms.Label lblPagoXHora;
-        private System.Windows.Forms.Label lblFechaPagoDesde;
-        private System.Windows.Forms.TextBox txtPagoDesde;
+        private System.Windows.Forms.Label lblRegSes;
     }
 }
