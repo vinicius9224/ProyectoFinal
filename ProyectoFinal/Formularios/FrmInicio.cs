@@ -124,11 +124,6 @@ namespace ProyectoFinal.Formularios
             //HideSubMenu();
         }
 
-        private void btnEliminarAlumnos_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario(new FrmEliminarAlumno());
-            //HideSubMenu();
-        }
 
         private void btnListarAlumnos_Click(object sender, EventArgs e)
         {
@@ -154,11 +149,6 @@ namespace ProyectoFinal.Formularios
             //HideSubMenu();
         } 
 
-        private void btnEliminarMaestro_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario(new FrmEliminarMaestro());
-            //HideSubMenu();
-        }
 
         private void btnListarMaestros_Click(object sender, EventArgs e)
         {

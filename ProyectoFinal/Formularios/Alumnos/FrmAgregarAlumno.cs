@@ -136,6 +136,7 @@ namespace ProyectoFinal.Formularios
                 }
                 else
                 {
+                    //Agregar el comboBoxEstadoAlum con los parametros en CapaDatos,CapaNegocio en agregar y editar. Ademas de cambiarle los proced.Almc. 
                     objeto.AgregarAlumno(txtcod.Text, txtnom.Text, txtape.Text, txtfech.Text, txtresp.Text, txttelRes.Text, txtcol.Text, txtgra.Text, txtdom.Text, txteva.Text, int.Parse(comboBoxDep.SelectedValue.ToString()), int.Parse(comboBoxMuni.SelectedValue.ToString()));
                     MessageBox.Show("Alumno Agregado");
                     limpiar_Datos();

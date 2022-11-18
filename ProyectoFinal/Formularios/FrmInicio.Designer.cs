@@ -51,13 +51,11 @@
             this.btnSesiones = new System.Windows.Forms.Button();
             this.pnlSubMenuMaestros = new System.Windows.Forms.Panel();
             this.btnListarMaestros = new System.Windows.Forms.Button();
-            this.btnEliminarMaestro = new System.Windows.Forms.Button();
             this.btnModificarMaestro = new System.Windows.Forms.Button();
             this.btnAgregarMaestro = new System.Windows.Forms.Button();
             this.btnMaestros = new System.Windows.Forms.Button();
             this.pnlSubMenuAlumnos = new System.Windows.Forms.Panel();
             this.btnListarAlumnos = new System.Windows.Forms.Button();
-            this.btnEliminarAlumnos = new System.Windows.Forms.Button();
             this.btnModAlumnos = new System.Windows.Forms.Button();
             this.btnAgregarAlumnos = new System.Windows.Forms.Button();
             this.btnAlumnos = new System.Windows.Forms.Button();
@@ -114,7 +112,7 @@
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(0, 940);
+            this.btnSalir.Location = new System.Drawing.Point(0, 882);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(234, 33);
             this.btnSalir.TabIndex = 43;
@@ -126,7 +124,7 @@
             // 
             this.pnlSubMenuConfig.Controls.Add(this.btnCambContra);
             this.pnlSubMenuConfig.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuConfig.Location = new System.Drawing.Point(0, 900);
+            this.pnlSubMenuConfig.Location = new System.Drawing.Point(0, 842);
             this.pnlSubMenuConfig.Name = "pnlSubMenuConfig";
             this.pnlSubMenuConfig.Size = new System.Drawing.Size(234, 40);
             this.pnlSubMenuConfig.TabIndex = 42;
@@ -156,7 +154,7 @@
             this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfig.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfig.ForeColor = System.Drawing.Color.White;
-            this.btnConfig.Location = new System.Drawing.Point(0, 867);
+            this.btnConfig.Location = new System.Drawing.Point(0, 809);
             this.btnConfig.Name = "btnConfig";
             this.btnConfig.Size = new System.Drawing.Size(234, 33);
             this.btnConfig.TabIndex = 38;
@@ -171,7 +169,7 @@
             this.pnlSubMenuNominas.Controls.Add(this.btnHistorialNominas);
             this.pnlSubMenuNominas.Controls.Add(this.btnGenerarNomina);
             this.pnlSubMenuNominas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuNominas.Location = new System.Drawing.Point(0, 761);
+            this.pnlSubMenuNominas.Location = new System.Drawing.Point(0, 703);
             this.pnlSubMenuNominas.Name = "pnlSubMenuNominas";
             this.pnlSubMenuNominas.Size = new System.Drawing.Size(234, 106);
             this.pnlSubMenuNominas.TabIndex = 36;
@@ -204,7 +202,7 @@
             this.btnHistorialNominas.Name = "btnHistorialNominas";
             this.btnHistorialNominas.Size = new System.Drawing.Size(234, 33);
             this.btnHistorialNominas.TabIndex = 19;
-            this.btnHistorialNominas.Text = "Historial de Facturas";
+            this.btnHistorialNominas.Text = "Historial de Nóminas";
             this.btnHistorialNominas.UseVisualStyleBackColor = false;
             this.btnHistorialNominas.Click += new System.EventHandler(this.btnHistorialNominas_Click);
             // 
@@ -220,7 +218,7 @@
             this.btnGenerarNomina.Name = "btnGenerarNomina";
             this.btnGenerarNomina.Size = new System.Drawing.Size(234, 33);
             this.btnGenerarNomina.TabIndex = 18;
-            this.btnGenerarNomina.Text = "Generar Nomina";
+            this.btnGenerarNomina.Text = "Generar Nómina";
             this.btnGenerarNomina.UseVisualStyleBackColor = false;
             this.btnGenerarNomina.Click += new System.EventHandler(this.btnGenerarNomina_Click);
             // 
@@ -233,11 +231,11 @@
             this.btnNominas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNominas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNominas.ForeColor = System.Drawing.Color.White;
-            this.btnNominas.Location = new System.Drawing.Point(0, 728);
+            this.btnNominas.Location = new System.Drawing.Point(0, 670);
             this.btnNominas.Name = "btnNominas";
             this.btnNominas.Size = new System.Drawing.Size(234, 33);
             this.btnNominas.TabIndex = 37;
-            this.btnNominas.Text = "Nominas";
+            this.btnNominas.Text = "Nóminas";
             this.btnNominas.UseVisualStyleBackColor = false;
             this.btnNominas.Click += new System.EventHandler(this.btnNominas_Click);
             // 
@@ -248,7 +246,7 @@
             this.pnlSubMenuFacturas.Controls.Add(this.btnHistorialFactura);
             this.pnlSubMenuFacturas.Controls.Add(this.btnGenerarFactura);
             this.pnlSubMenuFacturas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuFacturas.Location = new System.Drawing.Point(0, 620);
+            this.pnlSubMenuFacturas.Location = new System.Drawing.Point(0, 562);
             this.pnlSubMenuFacturas.Name = "pnlSubMenuFacturas";
             this.pnlSubMenuFacturas.Size = new System.Drawing.Size(234, 108);
             this.pnlSubMenuFacturas.TabIndex = 34;
@@ -310,7 +308,7 @@
             this.btnFacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFacturas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFacturas.ForeColor = System.Drawing.Color.White;
-            this.btnFacturas.Location = new System.Drawing.Point(0, 587);
+            this.btnFacturas.Location = new System.Drawing.Point(0, 529);
             this.btnFacturas.Name = "btnFacturas";
             this.btnFacturas.Size = new System.Drawing.Size(234, 33);
             this.btnFacturas.TabIndex = 35;
@@ -324,7 +322,7 @@
             this.pnlSubMenuSesiones.Controls.Add(this.btnListarSesiones);
             this.pnlSubMenuSesiones.Controls.Add(this.btnRegSesion);
             this.pnlSubMenuSesiones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuSesiones.Location = new System.Drawing.Point(0, 511);
+            this.pnlSubMenuSesiones.Location = new System.Drawing.Point(0, 453);
             this.pnlSubMenuSesiones.Name = "pnlSubMenuSesiones";
             this.pnlSubMenuSesiones.Size = new System.Drawing.Size(234, 76);
             this.pnlSubMenuSesiones.TabIndex = 32;
@@ -370,7 +368,7 @@
             this.btnSesiones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSesiones.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSesiones.ForeColor = System.Drawing.Color.White;
-            this.btnSesiones.Location = new System.Drawing.Point(0, 478);
+            this.btnSesiones.Location = new System.Drawing.Point(0, 420);
             this.btnSesiones.Name = "btnSesiones";
             this.btnSesiones.Size = new System.Drawing.Size(234, 33);
             this.btnSesiones.TabIndex = 33;
@@ -382,13 +380,12 @@
             // 
             this.pnlSubMenuMaestros.BackColor = System.Drawing.Color.White;
             this.pnlSubMenuMaestros.Controls.Add(this.btnListarMaestros);
-            this.pnlSubMenuMaestros.Controls.Add(this.btnEliminarMaestro);
             this.pnlSubMenuMaestros.Controls.Add(this.btnModificarMaestro);
             this.pnlSubMenuMaestros.Controls.Add(this.btnAgregarMaestro);
             this.pnlSubMenuMaestros.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuMaestros.Location = new System.Drawing.Point(0, 335);
+            this.pnlSubMenuMaestros.Location = new System.Drawing.Point(0, 307);
             this.pnlSubMenuMaestros.Name = "pnlSubMenuMaestros";
-            this.pnlSubMenuMaestros.Size = new System.Drawing.Size(234, 143);
+            this.pnlSubMenuMaestros.Size = new System.Drawing.Size(234, 113);
             this.pnlSubMenuMaestros.TabIndex = 30;
             // 
             // btnListarMaestros
@@ -399,29 +396,13 @@
             this.btnListarMaestros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
             this.btnListarMaestros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListarMaestros.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarMaestros.Location = new System.Drawing.Point(0, 99);
+            this.btnListarMaestros.Location = new System.Drawing.Point(0, 66);
             this.btnListarMaestros.Name = "btnListarMaestros";
             this.btnListarMaestros.Size = new System.Drawing.Size(234, 33);
             this.btnListarMaestros.TabIndex = 14;
             this.btnListarMaestros.Text = "Listar Maestros";
             this.btnListarMaestros.UseVisualStyleBackColor = false;
             this.btnListarMaestros.Click += new System.EventHandler(this.btnListarMaestros_Click);
-            // 
-            // btnEliminarMaestro
-            // 
-            this.btnEliminarMaestro.BackColor = System.Drawing.Color.White;
-            this.btnEliminarMaestro.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEliminarMaestro.FlatAppearance.BorderSize = 0;
-            this.btnEliminarMaestro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
-            this.btnEliminarMaestro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarMaestro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarMaestro.Location = new System.Drawing.Point(0, 66);
-            this.btnEliminarMaestro.Name = "btnEliminarMaestro";
-            this.btnEliminarMaestro.Size = new System.Drawing.Size(234, 33);
-            this.btnEliminarMaestro.TabIndex = 13;
-            this.btnEliminarMaestro.Text = "Eliminar Maestro";
-            this.btnEliminarMaestro.UseVisualStyleBackColor = false;
-            this.btnEliminarMaestro.Click += new System.EventHandler(this.btnEliminarMaestro_Click);
             // 
             // btnModificarMaestro
             // 
@@ -435,7 +416,7 @@
             this.btnModificarMaestro.Name = "btnModificarMaestro";
             this.btnModificarMaestro.Size = new System.Drawing.Size(234, 33);
             this.btnModificarMaestro.TabIndex = 12;
-            this.btnModificarMaestro.Text = "Modificar Maestro";
+            this.btnModificarMaestro.Text = "Modificar Maestros";
             this.btnModificarMaestro.UseVisualStyleBackColor = false;
             this.btnModificarMaestro.Click += new System.EventHandler(this.btnModificarMaestro_Click);
             // 
@@ -451,7 +432,7 @@
             this.btnAgregarMaestro.Name = "btnAgregarMaestro";
             this.btnAgregarMaestro.Size = new System.Drawing.Size(234, 33);
             this.btnAgregarMaestro.TabIndex = 11;
-            this.btnAgregarMaestro.Text = "Agregar Maestro";
+            this.btnAgregarMaestro.Text = "Agregar Maestros";
             this.btnAgregarMaestro.UseVisualStyleBackColor = false;
             this.btnAgregarMaestro.Click += new System.EventHandler(this.btnAgregarMaestro_Click);
             // 
@@ -464,7 +445,7 @@
             this.btnMaestros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaestros.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaestros.ForeColor = System.Drawing.Color.White;
-            this.btnMaestros.Location = new System.Drawing.Point(0, 294);
+            this.btnMaestros.Location = new System.Drawing.Point(0, 266);
             this.btnMaestros.Name = "btnMaestros";
             this.btnMaestros.Size = new System.Drawing.Size(234, 41);
             this.btnMaestros.TabIndex = 31;
@@ -476,13 +457,12 @@
             // 
             this.pnlSubMenuAlumnos.BackColor = System.Drawing.Color.White;
             this.pnlSubMenuAlumnos.Controls.Add(this.btnListarAlumnos);
-            this.pnlSubMenuAlumnos.Controls.Add(this.btnEliminarAlumnos);
             this.pnlSubMenuAlumnos.Controls.Add(this.btnModAlumnos);
             this.pnlSubMenuAlumnos.Controls.Add(this.btnAgregarAlumnos);
             this.pnlSubMenuAlumnos.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubMenuAlumnos.Location = new System.Drawing.Point(0, 149);
             this.pnlSubMenuAlumnos.Name = "pnlSubMenuAlumnos";
-            this.pnlSubMenuAlumnos.Size = new System.Drawing.Size(234, 145);
+            this.pnlSubMenuAlumnos.Size = new System.Drawing.Size(234, 117);
             this.pnlSubMenuAlumnos.TabIndex = 28;
             // 
             // btnListarAlumnos
@@ -493,29 +473,13 @@
             this.btnListarAlumnos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
             this.btnListarAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListarAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarAlumnos.Location = new System.Drawing.Point(0, 99);
+            this.btnListarAlumnos.Location = new System.Drawing.Point(0, 66);
             this.btnListarAlumnos.Name = "btnListarAlumnos";
             this.btnListarAlumnos.Size = new System.Drawing.Size(234, 33);
             this.btnListarAlumnos.TabIndex = 10;
             this.btnListarAlumnos.Text = "Listar Alumnos";
             this.btnListarAlumnos.UseVisualStyleBackColor = false;
             this.btnListarAlumnos.Click += new System.EventHandler(this.btnListarAlumnos_Click);
-            // 
-            // btnEliminarAlumnos
-            // 
-            this.btnEliminarAlumnos.BackColor = System.Drawing.Color.White;
-            this.btnEliminarAlumnos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEliminarAlumnos.FlatAppearance.BorderSize = 0;
-            this.btnEliminarAlumnos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Beige;
-            this.btnEliminarAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarAlumnos.Location = new System.Drawing.Point(0, 66);
-            this.btnEliminarAlumnos.Name = "btnEliminarAlumnos";
-            this.btnEliminarAlumnos.Size = new System.Drawing.Size(234, 33);
-            this.btnEliminarAlumnos.TabIndex = 9;
-            this.btnEliminarAlumnos.Text = "Eliminar Alumnos";
-            this.btnEliminarAlumnos.UseVisualStyleBackColor = false;
-            this.btnEliminarAlumnos.Click += new System.EventHandler(this.btnEliminarAlumnos_Click);
             // 
             // btnModAlumnos
             // 
@@ -687,13 +651,11 @@
         private System.Windows.Forms.Button btnSesiones;
         private System.Windows.Forms.Panel pnlSubMenuMaestros;
         private System.Windows.Forms.Button btnListarMaestros;
-        private System.Windows.Forms.Button btnEliminarMaestro;
         private System.Windows.Forms.Button btnModificarMaestro;
         private System.Windows.Forms.Button btnAgregarMaestro;
         private System.Windows.Forms.Button btnMaestros;
         private System.Windows.Forms.Panel pnlSubMenuAlumnos;
         private System.Windows.Forms.Button btnListarAlumnos;
-        private System.Windows.Forms.Button btnEliminarAlumnos;
         private System.Windows.Forms.Button btnModAlumnos;
         private System.Windows.Forms.Button btnAgregarAlumnos;
         private System.Windows.Forms.Button btnAlumnos;

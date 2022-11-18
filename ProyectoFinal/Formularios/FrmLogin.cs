@@ -49,7 +49,7 @@ namespace ProyectoFinal
             }
             else
             {
-                MessageBox.Show("Nombre de Usuario y Contraseña invalida. Intente de nuevo.");
+                MessageBox.Show("Nombre de Usuario y Contraseña incorrecta. Intente de nuevo.");
                 txtNomUsuario.Clear(); txtContra.Clear();
             }
         }
@@ -67,7 +67,7 @@ namespace ProyectoFinal
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Desea salir del programa", "Cerra Programa", MessageBoxButtons.YesNo, MessageBoxIcon.Question)==DialogResult.Yes)
+            if (MessageBox.Show("Desea salir del programa", "Cerrar Programa", MessageBoxButtons.YesNo, MessageBoxIcon.Question)==DialogResult.Yes)
             {
                 Application.Exit();
             }

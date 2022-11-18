@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmListarAlumnos));
             this.pnlContenedor = new System.Windows.Forms.Panel();
-            this.lblListarAlumno = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.txtBus = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.pnlFondoListar = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblListarAlumno = new System.Windows.Forms.Label();
             this.pnlContenedor.SuspendLayout();
             this.pnlFondoListar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -56,19 +56,6 @@
             this.pnlContenedor.Name = "pnlContenedor";
             this.pnlContenedor.Size = new System.Drawing.Size(894, 689);
             this.pnlContenedor.TabIndex = 0;
-            // 
-            // lblListarAlumno
-            // 
-            this.lblListarAlumno.BackColor = System.Drawing.Color.DimGray;
-            this.lblListarAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListarAlumno.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblListarAlumno.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblListarAlumno.Location = new System.Drawing.Point(309, 25);
-            this.lblListarAlumno.Name = "lblListarAlumno";
-            this.lblListarAlumno.Size = new System.Drawing.Size(244, 28);
-            this.lblListarAlumno.TabIndex = 19;
-            this.lblListarAlumno.Text = "Listar Alumno";
-            this.lblListarAlumno.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnCerrar
             // 
@@ -131,6 +118,19 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // lblListarAlumno
+            // 
+            this.lblListarAlumno.BackColor = System.Drawing.Color.DimGray;
+            this.lblListarAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListarAlumno.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblListarAlumno.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblListarAlumno.Location = new System.Drawing.Point(321, 31);
+            this.lblListarAlumno.Name = "lblListarAlumno";
+            this.lblListarAlumno.Size = new System.Drawing.Size(244, 28);
+            this.lblListarAlumno.TabIndex = 20;
+            this.lblListarAlumno.Text = "Listar Alumnos";
+            this.lblListarAlumno.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // FrmListarAlumnos
             // 

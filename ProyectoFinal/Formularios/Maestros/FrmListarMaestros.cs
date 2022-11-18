@@ -21,7 +21,7 @@ namespace ProyectoFinal.Formularios.Maestros
 
         private void Mostrar()
         {
-          dataGridView1.DataSource = objeto.Mostrar_Trabajadores();
+          //dataGridView1.DataSource = objeto.Mostrar_Trabajadores();
         }
 
 
@@ -33,15 +33,6 @@ namespace ProyectoFinal.Formularios.Maestros
             }
         }
         
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-           
-        }
-
-        private void txtBus_TextChanged(object sender, EventArgs e)
-        {
-            dataGridView1.DataSource = objeto.Buscador(txtBus.Text);
-        }
 
         private void FrmListarMaestros_Load(object sender, EventArgs e)
         {
@@ -49,6 +40,14 @@ namespace ProyectoFinal.Formularios.Maestros
             Noedi();
         }
 
-        
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtBus_TextChanged(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = objeto.Buscador(txtBus.Text);
+        }
     }
 }

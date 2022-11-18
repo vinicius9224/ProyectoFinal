@@ -36,6 +36,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.picBoxFondo = new System.Windows.Forms.PictureBox();
             this.pnlContenedor.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxFondo)).BeginInit();
             this.SuspendLayout();
@@ -45,7 +46,6 @@
             this.pnlContenedor.Controls.Add(this.panel1);
             this.pnlContenedor.Controls.Add(this.lblRegSes);
             this.pnlContenedor.Controls.Add(this.btnCerrar);
-            this.pnlContenedor.Controls.Add(this.dataGridView1);
             this.pnlContenedor.Controls.Add(this.picBoxFondo);
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(0, 0);
@@ -55,9 +55,10 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(37, 92);
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Location = new System.Drawing.Point(12, 92);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(821, 150);
+            this.panel1.Size = new System.Drawing.Size(846, 505);
             this.panel1.TabIndex = 239;
             // 
             // lblRegSes
@@ -81,7 +82,7 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Location = new System.Drawing.Point(386, 618);
+            this.btnCerrar.Location = new System.Drawing.Point(377, 619);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(115, 44);
             this.btnCerrar.TabIndex = 217;
@@ -92,9 +93,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(37, 273);
+            this.dataGridView1.Location = new System.Drawing.Point(24, 30);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(821, 329);
+            this.dataGridView1.Size = new System.Drawing.Size(794, 454);
             this.dataGridView1.TabIndex = 1;
             // 
             // picBoxFondo
@@ -120,6 +121,7 @@
             this.Name = "FrmEgresosTotales";
             this.Text = "Egresos Totales";
             this.pnlContenedor.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxFondo)).EndInit();
             this.ResumeLayout(false);

@@ -1,7 +1,7 @@
 ﻿
 namespace ProyectoFinal.Formularios.Nominas
 {
-    partial class FrmDatosNomina
+    partial class FrmDetalleNomina
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,9 @@ namespace ProyectoFinal.Formularios.Nominas
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.lblRegSes = new System.Windows.Forms.Label();
             this.pnlDetaNomina = new System.Windows.Forms.Panel();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.lblSalarioNeto = new System.Windows.Forms.Label();
@@ -52,9 +55,53 @@ namespace ProyectoFinal.Formularios.Nominas
             this.txtViatico = new System.Windows.Forms.TextBox();
             this.txtPagoXHora = new System.Windows.Forms.TextBox();
             this.lblPagoXHora = new System.Windows.Forms.Label();
-            this.lblRegSes = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             this.pnlDetaNomina.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnGuardar);
+            this.panel1.Controls.Add(this.btnCerrar);
+            this.panel1.Controls.Add(this.lblRegSes);
+            this.panel1.Controls.Add(this.pnlDetaNomina);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(894, 689);
+            this.panel1.TabIndex = 0;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.Gray;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Brown;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar.Location = new System.Drawing.Point(253, 611);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(115, 44);
+            this.btnCerrar.TabIndex = 220;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            // 
+            // lblRegSes
+            // 
+            this.lblRegSes.BackColor = System.Drawing.Color.DimGray;
+            this.lblRegSes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegSes.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblRegSes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblRegSes.Location = new System.Drawing.Point(297, 91);
+            this.lblRegSes.Name = "lblRegSes";
+            this.lblRegSes.Size = new System.Drawing.Size(304, 25);
+            this.lblRegSes.TabIndex = 219;
+            this.lblRegSes.Text = "Generar Nóminas del Maestro";
+            this.lblRegSes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // pnlDetaNomina
             // 
@@ -81,19 +128,20 @@ namespace ProyectoFinal.Formularios.Nominas
             this.pnlDetaNomina.Controls.Add(this.txtViatico);
             this.pnlDetaNomina.Controls.Add(this.txtPagoXHora);
             this.pnlDetaNomina.Controls.Add(this.lblPagoXHora);
-            this.pnlDetaNomina.Location = new System.Drawing.Point(155, 119);
+            this.pnlDetaNomina.Location = new System.Drawing.Point(99, 146);
             this.pnlDetaNomina.Name = "pnlDetaNomina";
-            this.pnlDetaNomina.Size = new System.Drawing.Size(495, 445);
-            this.pnlDetaNomina.TabIndex = 216;
+            this.pnlDetaNomina.Size = new System.Drawing.Size(659, 445);
+            this.pnlDetaNomina.TabIndex = 218;
             // 
             // btnCalcular
             // 
-            this.btnCalcular.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnCalcular.BackColor = System.Drawing.Color.Maroon;
             this.btnCalcular.FlatAppearance.BorderSize = 0;
-            this.btnCalcular.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnCalcular.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcular.Location = new System.Drawing.Point(316, 341);
+            this.btnCalcular.ForeColor = System.Drawing.Color.White;
+            this.btnCalcular.Location = new System.Drawing.Point(486, 341);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(75, 26);
             this.btnCalcular.TabIndex = 232;
@@ -104,7 +152,7 @@ namespace ProyectoFinal.Formularios.Nominas
             // 
             this.lblSalarioNeto.AutoSize = true;
             this.lblSalarioNeto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalarioNeto.Location = new System.Drawing.Point(313, 275);
+            this.lblSalarioNeto.Location = new System.Drawing.Point(483, 275);
             this.lblSalarioNeto.Name = "lblSalarioNeto";
             this.lblSalarioNeto.Size = new System.Drawing.Size(95, 16);
             this.lblSalarioNeto.TabIndex = 231;
@@ -112,7 +160,7 @@ namespace ProyectoFinal.Formularios.Nominas
             // 
             // txtSalarioNeto
             // 
-            this.txtSalarioNeto.Location = new System.Drawing.Point(316, 306);
+            this.txtSalarioNeto.Location = new System.Drawing.Point(486, 306);
             this.txtSalarioNeto.Name = "txtSalarioNeto";
             this.txtSalarioNeto.Size = new System.Drawing.Size(129, 20);
             this.txtSalarioNeto.TabIndex = 230;
@@ -140,7 +188,7 @@ namespace ProyectoFinal.Formularios.Nominas
             this.lblDatosPago.BackColor = System.Drawing.Color.Gold;
             this.lblDatosPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDatosPago.ForeColor = System.Drawing.Color.Black;
-            this.lblDatosPago.Location = new System.Drawing.Point(312, 24);
+            this.lblDatosPago.Location = new System.Drawing.Point(482, 24);
             this.lblDatosPago.Name = "lblDatosPago";
             this.lblDatosPago.Size = new System.Drawing.Size(128, 20);
             this.lblDatosPago.TabIndex = 224;
@@ -211,11 +259,12 @@ namespace ProyectoFinal.Formularios.Nominas
             // 
             // btnBuscar
             // 
-            this.btnBuscar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnBuscar.BackColor = System.Drawing.Color.Brown;
             this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Location = new System.Drawing.Point(192, 104);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(67, 26);
@@ -242,7 +291,7 @@ namespace ProyectoFinal.Formularios.Nominas
             // 
             // txtTotalHoras
             // 
-            this.txtTotalHoras.Location = new System.Drawing.Point(315, 240);
+            this.txtTotalHoras.Location = new System.Drawing.Point(485, 240);
             this.txtTotalHoras.Name = "txtTotalHoras";
             this.txtTotalHoras.Size = new System.Drawing.Size(100, 20);
             this.txtTotalHoras.TabIndex = 210;
@@ -251,7 +300,7 @@ namespace ProyectoFinal.Formularios.Nominas
             // 
             this.lblViatico.AutoSize = true;
             this.lblViatico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblViatico.Location = new System.Drawing.Point(313, 74);
+            this.lblViatico.Location = new System.Drawing.Point(483, 74);
             this.lblViatico.Name = "lblViatico";
             this.lblViatico.Size = new System.Drawing.Size(56, 16);
             this.lblViatico.TabIndex = 201;
@@ -261,7 +310,7 @@ namespace ProyectoFinal.Formularios.Nominas
             // 
             this.lblTotalHoras.AutoSize = true;
             this.lblTotalHoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalHoras.Location = new System.Drawing.Point(313, 203);
+            this.lblTotalHoras.Location = new System.Drawing.Point(483, 203);
             this.lblTotalHoras.Name = "lblTotalHoras";
             this.lblTotalHoras.Size = new System.Drawing.Size(87, 16);
             this.lblTotalHoras.TabIndex = 209;
@@ -269,14 +318,14 @@ namespace ProyectoFinal.Formularios.Nominas
             // 
             // txtViatico
             // 
-            this.txtViatico.Location = new System.Drawing.Point(315, 104);
+            this.txtViatico.Location = new System.Drawing.Point(485, 104);
             this.txtViatico.Name = "txtViatico";
             this.txtViatico.Size = new System.Drawing.Size(100, 20);
             this.txtViatico.TabIndex = 202;
             // 
             // txtPagoXHora
             // 
-            this.txtPagoXHora.Location = new System.Drawing.Point(315, 166);
+            this.txtPagoXHora.Location = new System.Drawing.Point(485, 166);
             this.txtPagoXHora.Name = "txtPagoXHora";
             this.txtPagoXHora.Size = new System.Drawing.Size(100, 20);
             this.txtPagoXHora.TabIndex = 206;
@@ -285,42 +334,57 @@ namespace ProyectoFinal.Formularios.Nominas
             // 
             this.lblPagoXHora.AutoSize = true;
             this.lblPagoXHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPagoXHora.Location = new System.Drawing.Point(313, 137);
+            this.lblPagoXHora.Location = new System.Drawing.Point(483, 137);
             this.lblPagoXHora.Name = "lblPagoXHora";
             this.lblPagoXHora.Size = new System.Drawing.Size(107, 16);
             this.lblPagoXHora.TabIndex = 205;
             this.lblPagoXHora.Text = "Pago por hora";
             // 
-            // lblRegSes
+            // pictureBox1
             // 
-            this.lblRegSes.BackColor = System.Drawing.Color.DimGray;
-            this.lblRegSes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegSes.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblRegSes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblRegSes.Location = new System.Drawing.Point(266, 71);
-            this.lblRegSes.Name = "lblRegSes";
-            this.lblRegSes.Size = new System.Drawing.Size(304, 25);
-            this.lblRegSes.TabIndex = 217;
-            this.lblRegSes.Text = "Generar Nóminas del Maestro";
-            this.lblRegSes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.Fondo2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(894, 689);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
-            // FrmDatosNomina
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(438, 611);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(115, 44);
+            this.btnGuardar.TabIndex = 221;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            // 
+            // FrmDetalleNomina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(894, 689);
-            this.Controls.Add(this.lblRegSes);
-            this.Controls.Add(this.pnlDetaNomina);
-            this.Name = "FrmDatosNomina";
+            this.Controls.Add(this.panel1);
+            this.Name = "FrmDetalleNomina";
             this.Text = "FrmDatosNomina";
+            this.panel1.ResumeLayout(false);
             this.pnlDetaNomina.ResumeLayout(false);
             this.pnlDetaNomina.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblRegSes;
         private System.Windows.Forms.Panel pnlDetaNomina;
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.Label lblSalarioNeto;
@@ -344,6 +408,8 @@ namespace ProyectoFinal.Formularios.Nominas
         private System.Windows.Forms.TextBox txtViatico;
         private System.Windows.Forms.TextBox txtPagoXHora;
         private System.Windows.Forms.Label lblPagoXHora;
-        private System.Windows.Forms.Label lblRegSes;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }

@@ -24,7 +24,7 @@ namespace ProyectoFinal.Formularios
         }
         public void limpiar_Datos()
         {
-            foreach (Control ctrl in this.Controls)
+            foreach (Control ctrl in this.pnlDatosMaestro.Controls)
             {
                 if (ctrl is TextBox)
                 {
@@ -39,7 +39,7 @@ namespace ProyectoFinal.Formularios
 
         private bool Validar() // metodo para verificar si hay un textbox vacio(recorre todo los controles ,con el IsNullOrWhiteSpace nos damos cuenta si es nula o esta vacia , si esto pasa retornamos un false)
         {
-            foreach (Control c in this.Controls)
+            foreach (Control c in this.pnlDatosMaestro.Controls)
             {
                 if (c is TextBox)
                 {
@@ -53,7 +53,7 @@ namespace ProyectoFinal.Formularios
         }
         public void Listar_Departamentos()
         {
-            foreach (Control ctrl in this.Controls)
+            foreach (Control ctrl in this.pnlDatosMaestro.Controls)
             {
                 if (ctrl is ComboBox)
                 {
@@ -70,7 +70,7 @@ namespace ProyectoFinal.Formularios
 
         public void Listar_Municipios()
         {
-            foreach (Control ctrl in this.Controls)
+            foreach (Control ctrl in this.pnlDatosMaestro.Controls)
             {
                 if (ctrl is ComboBox)
                 {
@@ -116,27 +116,6 @@ namespace ProyectoFinal.Formularios
             }
         }
 
-        private void BtnAgregar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                //llamamos al metodo validar y si este es igual a false , significa que esta vacia o nula.
-                if (Validar() == false)
-                {
-                    MessageBox.Show("No pueden quedar espacios en blanco.");
-                }
-                else
-                {
-                    objeto.Agregar_Maestro(txtcod.Text, txtnom.Text, txtape.Text, txtdom.Text, txtsal.Text, txtTel.Text, int.Parse(comProf.SelectedValue.ToString()), int.Parse(comDep.SelectedValue.ToString()), int.Parse(comMuni.SelectedValue.ToString()), int.Parse(comEst.SelectedValue.ToString()));
-                    MessageBox.Show("Maestro Agregado");
-                    limpiar_Datos();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("no se puedo agregar por" + ex);
-            }
-        }
 
         public void ver()
         {
@@ -154,16 +133,44 @@ namespace ProyectoFinal.Formularios
         
         }
 
-        private void txtsal_KeyPress(object sender, KeyPressEventArgs e)
+        //private void txtsal_KeyPress(object sender, KeyPressEventArgs e)
+        //{
+        //    if((e.KeyChar >=32 && e.KeyChar<=47 || (e.KeyChar>=58 && e.KeyChar <= 255)))
+        //    {
+        //        MessageBox.Show("Solo se Pueden Ingresar Numeros","", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        e.Handled = true;
+        //        return;
+
+        //    }
+
+        //}
+
+        private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            if((e.KeyChar >=32 && e.KeyChar<=47 || (e.KeyChar>=58 && e.KeyChar <= 255)))
+            try
             {
-                MessageBox.Show("Solo se Pueden Ingresar Numeros","", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                e.Handled = true;
-                return;
-
+                //llamamos al metodo validar y si este es igual a false , significa que esta vacia o nula.
+                if (Validar() == false)
+                {
+                    MessageBox.Show("No pueden quedar espacios en blanco.");
+                }
+                else
+                {
+                    //comEst.Text es donde antes iba el salario
+                    objeto.Agregar_Maestro(txtcod.Text, txtnom.Text, txtape.Text, txtdom.Text, comEst.Text, txtTel.Text, int.Parse(comProf.SelectedValue.ToString()), int.Parse(comDep.SelectedValue.ToString()), int.Parse(comMuni.SelectedValue.ToString()), int.Parse(comEst.SelectedValue.ToString()));
+                    MessageBox.Show("Maestro Agregado");
+                    limpiar_Datos();
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se puedo agregar por" + ex);
+            }
+        }
 
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
