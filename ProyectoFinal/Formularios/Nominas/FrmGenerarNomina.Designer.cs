@@ -32,12 +32,9 @@
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlDetaNomina = new System.Windows.Forms.Panel();
-            this.txtFechaGastosMensuales = new System.Windows.Forms.TextBox();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.lblSalarioNeto = new System.Windows.Forms.Label();
             this.txtSalarioNeto = new System.Windows.Forms.TextBox();
-            this.lblFechaGastoMensuales = new System.Windows.Forms.Label();
-            this.lblGastosFijos = new System.Windows.Forms.Label();
             this.txtSueldoBruto = new System.Windows.Forms.TextBox();
             this.lblSalarioBruto = new System.Windows.Forms.Label();
             this.lblDatosPago = new System.Windows.Forms.Label();
@@ -52,9 +49,7 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtCodTrabajador = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtGastosMensuales = new System.Windows.Forms.TextBox();
             this.txtTotalHoras = new System.Windows.Forms.TextBox();
-            this.lblGastosMensuales = new System.Windows.Forms.Label();
             this.lblViatico = new System.Windows.Forms.Label();
             this.lblTotalHoras = new System.Windows.Forms.Label();
             this.txtViatico = new System.Windows.Forms.TextBox();
@@ -102,12 +97,9 @@
             // pnlDetaNomina
             // 
             this.pnlDetaNomina.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.pnlDetaNomina.Controls.Add(this.txtFechaGastosMensuales);
             this.pnlDetaNomina.Controls.Add(this.btnCalcular);
             this.pnlDetaNomina.Controls.Add(this.lblSalarioNeto);
             this.pnlDetaNomina.Controls.Add(this.txtSalarioNeto);
-            this.pnlDetaNomina.Controls.Add(this.lblFechaGastoMensuales);
-            this.pnlDetaNomina.Controls.Add(this.lblGastosFijos);
             this.pnlDetaNomina.Controls.Add(this.txtSueldoBruto);
             this.pnlDetaNomina.Controls.Add(this.lblSalarioBruto);
             this.pnlDetaNomina.Controls.Add(this.lblDatosPago);
@@ -122,9 +114,7 @@
             this.pnlDetaNomina.Controls.Add(this.btnBuscar);
             this.pnlDetaNomina.Controls.Add(this.txtCodTrabajador);
             this.pnlDetaNomina.Controls.Add(this.label1);
-            this.pnlDetaNomina.Controls.Add(this.txtGastosMensuales);
             this.pnlDetaNomina.Controls.Add(this.txtTotalHoras);
-            this.pnlDetaNomina.Controls.Add(this.lblGastosMensuales);
             this.pnlDetaNomina.Controls.Add(this.lblViatico);
             this.pnlDetaNomina.Controls.Add(this.lblTotalHoras);
             this.pnlDetaNomina.Controls.Add(this.txtViatico);
@@ -140,13 +130,6 @@
             this.pnlDetaNomina.Name = "pnlDetaNomina";
             this.pnlDetaNomina.Size = new System.Drawing.Size(779, 445);
             this.pnlDetaNomina.TabIndex = 215;
-            // 
-            // txtFechaGastosMensuales
-            // 
-            this.txtFechaGastosMensuales.Location = new System.Drawing.Point(541, 385);
-            this.txtFechaGastosMensuales.Name = "txtFechaGastosMensuales";
-            this.txtFechaGastosMensuales.Size = new System.Drawing.Size(129, 20);
-            this.txtFechaGastosMensuales.TabIndex = 233;
             // 
             // btnCalcular
             // 
@@ -179,28 +162,6 @@
             this.txtSalarioNeto.Name = "txtSalarioNeto";
             this.txtSalarioNeto.Size = new System.Drawing.Size(129, 20);
             this.txtSalarioNeto.TabIndex = 230;
-            // 
-            // lblFechaGastoMensuales
-            // 
-            this.lblFechaGastoMensuales.AutoSize = true;
-            this.lblFechaGastoMensuales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaGastoMensuales.Location = new System.Drawing.Point(540, 358);
-            this.lblFechaGastoMensuales.Name = "lblFechaGastoMensuales";
-            this.lblFechaGastoMensuales.Size = new System.Drawing.Size(36, 16);
-            this.lblFechaGastoMensuales.TabIndex = 229;
-            this.lblFechaGastoMensuales.Text = "Mes";
-            // 
-            // lblGastosFijos
-            // 
-            this.lblGastosFijos.AutoSize = true;
-            this.lblGastosFijos.BackColor = System.Drawing.Color.Gold;
-            this.lblGastosFijos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGastosFijos.ForeColor = System.Drawing.Color.Black;
-            this.lblGastosFijos.Location = new System.Drawing.Point(540, 247);
-            this.lblGastosFijos.Name = "lblGastosFijos";
-            this.lblGastosFijos.Size = new System.Drawing.Size(110, 20);
-            this.lblGastosFijos.TabIndex = 227;
-            this.lblGastosFijos.Text = "Gastos Fijos";
             // 
             // txtSueldoBruto
             // 
@@ -338,29 +299,12 @@
             this.label1.TabIndex = 213;
             this.label1.Text = "Código del Maestro";
             // 
-            // txtGastosMensuales
-            // 
-            this.txtGastosMensuales.Location = new System.Drawing.Point(542, 326);
-            this.txtGastosMensuales.Name = "txtGastosMensuales";
-            this.txtGastosMensuales.Size = new System.Drawing.Size(129, 20);
-            this.txtGastosMensuales.TabIndex = 212;
-            // 
             // txtTotalHoras
             // 
             this.txtTotalHoras.Location = new System.Drawing.Point(315, 240);
             this.txtTotalHoras.Name = "txtTotalHoras";
             this.txtTotalHoras.Size = new System.Drawing.Size(100, 20);
             this.txtTotalHoras.TabIndex = 210;
-            // 
-            // lblGastosMensuales
-            // 
-            this.lblGastosMensuales.AutoSize = true;
-            this.lblGastosMensuales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGastosMensuales.Location = new System.Drawing.Point(539, 292);
-            this.lblGastosMensuales.Name = "lblGastosMensuales";
-            this.lblGastosMensuales.Size = new System.Drawing.Size(135, 16);
-            this.lblGastosMensuales.TabIndex = 211;
-            this.lblGastosMensuales.Text = "Gastos Mensuales";
             // 
             // lblViatico
             // 
@@ -556,12 +500,9 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnHistorialNominas;
         private System.Windows.Forms.Panel pnlDetaNomina;
-        private System.Windows.Forms.TextBox txtFechaGastosMensuales;
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.Label lblSalarioNeto;
         private System.Windows.Forms.TextBox txtSalarioNeto;
-        private System.Windows.Forms.Label lblFechaGastoMensuales;
-        private System.Windows.Forms.Label lblGastosFijos;
         private System.Windows.Forms.TextBox txtSueldoBruto;
         private System.Windows.Forms.Label lblSalarioBruto;
         private System.Windows.Forms.Label lblDatosPago;
@@ -576,9 +517,7 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtCodTrabajador;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtGastosMensuales;
         private System.Windows.Forms.TextBox txtTotalHoras;
-        private System.Windows.Forms.Label lblGastosMensuales;
         private System.Windows.Forms.Label lblViatico;
         private System.Windows.Forms.Label lblTotalHoras;
         private System.Windows.Forms.TextBox txtViatico;

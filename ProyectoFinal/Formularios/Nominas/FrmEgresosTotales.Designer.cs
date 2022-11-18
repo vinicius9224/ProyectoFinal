@@ -34,13 +34,21 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.picBoxFondo = new System.Windows.Forms.PictureBox();
+            this.txtFechaGastosMensuales = new System.Windows.Forms.TextBox();
+            this.lblFechaGastoMensuales = new System.Windows.Forms.Label();
+            this.lblGastosFijos = new System.Windows.Forms.Label();
+            this.txtGastosMensuales = new System.Windows.Forms.TextBox();
+            this.lblGastosMensuales = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pnlContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxFondo)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlContenedor
             // 
+            this.pnlContenedor.Controls.Add(this.panel1);
             this.pnlContenedor.Controls.Add(this.lblRegSes);
             this.pnlContenedor.Controls.Add(this.btnCerrar);
             this.pnlContenedor.Controls.Add(this.dataGridView1);
@@ -72,7 +80,7 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Location = new System.Drawing.Point(393, 597);
+            this.btnCerrar.Location = new System.Drawing.Point(386, 618);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(115, 44);
             this.btnCerrar.TabIndex = 217;
@@ -83,9 +91,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(37, 94);
+            this.dataGridView1.Location = new System.Drawing.Point(37, 273);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(821, 487);
+            this.dataGridView1.Size = new System.Drawing.Size(821, 329);
             this.dataGridView1.TabIndex = 1;
             // 
             // picBoxFondo
@@ -98,6 +106,64 @@
             this.picBoxFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxFondo.TabIndex = 0;
             this.picBoxFondo.TabStop = false;
+            // 
+            // txtFechaGastosMensuales
+            // 
+            this.txtFechaGastosMensuales.Location = new System.Drawing.Point(179, 89);
+            this.txtFechaGastosMensuales.Name = "txtFechaGastosMensuales";
+            this.txtFechaGastosMensuales.Size = new System.Drawing.Size(129, 20);
+            this.txtFechaGastosMensuales.TabIndex = 238;
+            // 
+            // lblFechaGastoMensuales
+            // 
+            this.lblFechaGastoMensuales.AutoSize = true;
+            this.lblFechaGastoMensuales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaGastoMensuales.Location = new System.Drawing.Point(176, 55);
+            this.lblFechaGastoMensuales.Name = "lblFechaGastoMensuales";
+            this.lblFechaGastoMensuales.Size = new System.Drawing.Size(36, 16);
+            this.lblFechaGastoMensuales.TabIndex = 237;
+            this.lblFechaGastoMensuales.Text = "Mes";
+            // 
+            // lblGastosFijos
+            // 
+            this.lblGastosFijos.AutoSize = true;
+            this.lblGastosFijos.BackColor = System.Drawing.Color.Gold;
+            this.lblGastosFijos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGastosFijos.ForeColor = System.Drawing.Color.Black;
+            this.lblGastosFijos.Location = new System.Drawing.Point(23, 10);
+            this.lblGastosFijos.Name = "lblGastosFijos";
+            this.lblGastosFijos.Size = new System.Drawing.Size(110, 20);
+            this.lblGastosFijos.TabIndex = 236;
+            this.lblGastosFijos.Text = "Gastos Fijos";
+            // 
+            // txtGastosMensuales
+            // 
+            this.txtGastosMensuales.Location = new System.Drawing.Point(25, 89);
+            this.txtGastosMensuales.Name = "txtGastosMensuales";
+            this.txtGastosMensuales.Size = new System.Drawing.Size(129, 20);
+            this.txtGastosMensuales.TabIndex = 235;
+            // 
+            // lblGastosMensuales
+            // 
+            this.lblGastosMensuales.AutoSize = true;
+            this.lblGastosMensuales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGastosMensuales.Location = new System.Drawing.Point(22, 55);
+            this.lblGastosMensuales.Name = "lblGastosMensuales";
+            this.lblGastosMensuales.Size = new System.Drawing.Size(135, 16);
+            this.lblGastosMensuales.TabIndex = 234;
+            this.lblGastosMensuales.Text = "Gastos Mensuales";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lblGastosFijos);
+            this.panel1.Controls.Add(this.txtFechaGastosMensuales);
+            this.panel1.Controls.Add(this.lblGastosMensuales);
+            this.panel1.Controls.Add(this.lblFechaGastoMensuales);
+            this.panel1.Controls.Add(this.txtGastosMensuales);
+            this.panel1.Location = new System.Drawing.Point(37, 92);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(821, 150);
+            this.panel1.TabIndex = 239;
             // 
             // FrmEgresosTotales
             // 
@@ -113,6 +179,8 @@
             this.pnlContenedor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxFondo)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -124,5 +192,11 @@
         private System.Windows.Forms.PictureBox picBoxFondo;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Label lblRegSes;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblGastosFijos;
+        private System.Windows.Forms.TextBox txtFechaGastosMensuales;
+        private System.Windows.Forms.Label lblGastosMensuales;
+        private System.Windows.Forms.Label lblFechaGastoMensuales;
+        private System.Windows.Forms.TextBox txtGastosMensuales;
     }
 }

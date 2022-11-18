@@ -34,12 +34,16 @@
             this.pnlHistorialNominas = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtBus = new System.Windows.Forms.TextBox();
+            this.lblBuscar = new System.Windows.Forms.Label();
             this.pnlContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlContenedor
             // 
+            this.pnlContenedor.Controls.Add(this.txtBus);
+            this.pnlContenedor.Controls.Add(this.lblBuscar);
             this.pnlContenedor.Controls.Add(this.lblHistorialSes);
             this.pnlContenedor.Controls.Add(this.pnlHistorialNominas);
             this.pnlContenedor.Controls.Add(this.btnCerrar);
@@ -56,7 +60,7 @@
             this.lblHistorialSes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHistorialSes.ForeColor = System.Drawing.SystemColors.Control;
             this.lblHistorialSes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblHistorialSes.Location = new System.Drawing.Point(289, 32);
+            this.lblHistorialSes.Location = new System.Drawing.Point(322, 29);
             this.lblHistorialSes.Name = "lblHistorialSes";
             this.lblHistorialSes.Size = new System.Drawing.Size(244, 25);
             this.lblHistorialSes.TabIndex = 215;
@@ -66,9 +70,9 @@
             // pnlHistorialNominas
             // 
             this.pnlHistorialNominas.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlHistorialNominas.Location = new System.Drawing.Point(12, 73);
+            this.pnlHistorialNominas.Location = new System.Drawing.Point(41, 136);
             this.pnlHistorialNominas.Name = "pnlHistorialNominas";
-            this.pnlHistorialNominas.Size = new System.Drawing.Size(870, 478);
+            this.pnlHistorialNominas.Size = new System.Drawing.Size(810, 449);
             this.pnlHistorialNominas.TabIndex = 217;
             // 
             // btnCerrar
@@ -79,7 +83,7 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Location = new System.Drawing.Point(396, 576);
+            this.btnCerrar.Location = new System.Drawing.Point(392, 607);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(115, 44);
             this.btnCerrar.TabIndex = 216;
@@ -98,6 +102,25 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // txtBus
+            // 
+            this.txtBus.Location = new System.Drawing.Point(171, 89);
+            this.txtBus.Name = "txtBus";
+            this.txtBus.Size = new System.Drawing.Size(641, 20);
+            this.txtBus.TabIndex = 218;
+            // 
+            // lblBuscar
+            // 
+            this.lblBuscar.AutoSize = true;
+            this.lblBuscar.BackColor = System.Drawing.Color.Gray;
+            this.lblBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscar.ForeColor = System.Drawing.Color.White;
+            this.lblBuscar.Location = new System.Drawing.Point(91, 89);
+            this.lblBuscar.Name = "lblBuscar";
+            this.lblBuscar.Size = new System.Drawing.Size(65, 20);
+            this.lblBuscar.TabIndex = 219;
+            this.lblBuscar.Text = "Buscar";
+            // 
             // FrmHistorialNominas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -110,6 +133,7 @@
             this.Name = "FrmHistorialNominas";
             this.Text = "Historial Nominas";
             this.pnlContenedor.ResumeLayout(false);
+            this.pnlContenedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -121,5 +145,7 @@
         private System.Windows.Forms.Panel pnlHistorialNominas;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtBus;
+        private System.Windows.Forms.Label lblBuscar;
     }
 }
