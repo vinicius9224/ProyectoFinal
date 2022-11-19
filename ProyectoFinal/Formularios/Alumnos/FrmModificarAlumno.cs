@@ -32,7 +32,7 @@ namespace ProyectoFinal.Formularios.Alumnos
 
         private void Mostrar()
         {
-            dataGridView1.DataSource = objeto.Mostrar_completo();
+            //dataGridView1.DataSource = objeto.Mostrar_completo();
         }
 
         #region Validaciones
@@ -170,6 +170,7 @@ namespace ProyectoFinal.Formularios.Alumnos
                 {
                     try
                     {
+                        //Agregar el comboBoxEstadoAlum con los parametros en CapaDatos,CapaNegocio en agregar y editar. Ademas de cambiarle los proced.Almc. 
                         objeto.Editar_Alumnos(txtcod.Text, txtnom.Text, txtape.Text, txtfech.Text, txtresp.Text, txttelRes.Text, txtcol.Text, txtgra.Text, txtdom.Text, txteva.Text, int.Parse(comboBoxDep.SelectedValue.ToString()), int.Parse(comboBoxMuni.SelectedValue.ToString()), idAlumno);
                         MessageBox.Show("Actualizado");
                         dataGridView1.DataSource = objeto.Mostrar_completo();

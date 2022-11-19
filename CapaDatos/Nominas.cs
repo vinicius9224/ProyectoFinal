@@ -14,7 +14,7 @@ namespace CapaDatos
         // intanciar los comandos sqlClient para poder utilizar las funciones
         SqlCommand comando = new SqlCommand();
 
-        public DataTable GenerarNominas( DateTime FechaPago_Nomina, string pagoDesde_Nomina, string pagoHasta_Nomina, float SalarioNeto, float Viatico, float GastosMensuales, int TotalHoras, float PagoxHoras)
+        public DataTable GenerarNominas( DateTime FechaPago_Nomina, string pagoDesde_Nomina, string pagoHasta_Nomina, float SalarioNeto, float Viatico, int TotalHoras, float PagoxHoras)
         {
             //Instrucciones que abren la conexion, y meten los parametros mandados del formulario, devuelven una tabla que si tiene datos el codigo dado es repetido. 
             DataTable tabla = new DataTable();
@@ -26,7 +26,6 @@ namespace CapaDatos
             comando.Parameters.AddWithValue("@pagoHasta_Nomina", pagoHasta_Nomina);
             comando.Parameters.AddWithValue("@salario_Neto", SalarioNeto);
             comando.Parameters.AddWithValue("@viaticos", Viatico);
-            comando.Parameters.AddWithValue("@GastosMensuales", GastosMensuales);
             comando.Parameters.AddWithValue("@total_Horas", TotalHoras);
             comando.Parameters.AddWithValue("@valor_pHoras", PagoxHoras);
             SqlDataReader reader = comando.ExecuteReader();

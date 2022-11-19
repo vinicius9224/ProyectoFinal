@@ -65,24 +65,26 @@
             this.lblNomResp = new System.Windows.Forms.Label();
             this.lblTelfResp = new System.Windows.Forms.Label();
             this.lblModAlumno = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picBoxFondo = new System.Windows.Forms.PictureBox();
+            this.comboBoxEstadoAlum = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.pnlContenedor.SuspendLayout();
             this.pnlFondoAgregarAlumno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnlAgregarAlumno.SuspendLayout();
             this.pnlResp.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxFondo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlContenedor
             // 
             this.pnlContenedor.Controls.Add(this.pnlFondoAgregarAlumno);
             this.pnlContenedor.Controls.Add(this.lblModAlumno);
-            this.pnlContenedor.Controls.Add(this.pictureBox1);
+            this.pnlContenedor.Controls.Add(this.picBoxFondo);
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(0, 0);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(894, 934);
+            this.pnlContenedor.Size = new System.Drawing.Size(894, 689);
             this.pnlContenedor.TabIndex = 3;
             // 
             // pnlFondoAgregarAlumno
@@ -96,9 +98,9 @@
             this.pnlFondoAgregarAlumno.Controls.Add(this.btnCerrar);
             this.pnlFondoAgregarAlumno.Controls.Add(this.pnlAgregarAlumno);
             this.pnlFondoAgregarAlumno.Controls.Add(this.pnlResp);
-            this.pnlFondoAgregarAlumno.Location = new System.Drawing.Point(29, 88);
+            this.pnlFondoAgregarAlumno.Location = new System.Drawing.Point(28, 73);
             this.pnlFondoAgregarAlumno.Name = "pnlFondoAgregarAlumno";
-            this.pnlFondoAgregarAlumno.Size = new System.Drawing.Size(838, 778);
+            this.pnlFondoAgregarAlumno.Size = new System.Drawing.Size(838, 604);
             this.pnlFondoAgregarAlumno.TabIndex = 192;
             // 
             // label2
@@ -107,7 +109,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label2.Location = new System.Drawing.Point(211, 400);
+            this.label2.Location = new System.Drawing.Point(227, 321);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(227, 25);
             this.label2.TabIndex = 188;
@@ -121,7 +123,7 @@
             this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(722, 453);
+            this.btnEditar.Location = new System.Drawing.Point(733, 352);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 31);
             this.btnEditar.TabIndex = 15;
@@ -133,9 +135,9 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 453);
+            this.dataGridView1.Location = new System.Drawing.Point(27, 352);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(677, 234);
+            this.dataGridView1.Size = new System.Drawing.Size(687, 234);
             this.dataGridView1.TabIndex = 14;
             // 
             // btnGuardar
@@ -145,7 +147,7 @@
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(722, 551);
+            this.btnGuardar.Location = new System.Drawing.Point(733, 448);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 40);
             this.btnGuardar.TabIndex = 12;
@@ -161,7 +163,7 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Location = new System.Drawing.Point(722, 655);
+            this.btnCerrar.Location = new System.Drawing.Point(733, 554);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(75, 32);
             this.btnCerrar.TabIndex = 13;
@@ -172,6 +174,8 @@
             // pnlAgregarAlumno
             // 
             this.pnlAgregarAlumno.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnlAgregarAlumno.Controls.Add(this.comboBoxEstadoAlum);
+            this.pnlAgregarAlumno.Controls.Add(this.label3);
             this.pnlAgregarAlumno.Controls.Add(this.lblTituloAlumno);
             this.pnlAgregarAlumno.Controls.Add(this.txteva);
             this.pnlAgregarAlumno.Controls.Add(this.txtdom);
@@ -193,9 +197,9 @@
             this.pnlAgregarAlumno.Controls.Add(this.lblApe);
             this.pnlAgregarAlumno.Controls.Add(this.lblDomicilio);
             this.pnlAgregarAlumno.Controls.Add(this.lblFechaNac);
-            this.pnlAgregarAlumno.Location = new System.Drawing.Point(25, 28);
+            this.pnlAgregarAlumno.Location = new System.Drawing.Point(27, 12);
             this.pnlAgregarAlumno.Name = "pnlAgregarAlumno";
-            this.pnlAgregarAlumno.Size = new System.Drawing.Size(599, 317);
+            this.pnlAgregarAlumno.Size = new System.Drawing.Size(599, 302);
             this.pnlAgregarAlumno.TabIndex = 1;
             // 
             // lblTituloAlumno
@@ -213,9 +217,10 @@
             // 
             // txteva
             // 
-            this.txteva.Location = new System.Drawing.Point(279, 155);
+            this.txteva.Location = new System.Drawing.Point(397, 209);
+            this.txteva.Multiline = true;
             this.txteva.Name = "txteva";
-            this.txteva.Size = new System.Drawing.Size(100, 20);
+            this.txteva.Size = new System.Drawing.Size(180, 74);
             this.txteva.TabIndex = 6;
             // 
             // txtdom
@@ -229,7 +234,7 @@
             // comboBoxMuni
             // 
             this.comboBoxMuni.FormattingEnabled = true;
-            this.comboBoxMuni.Location = new System.Drawing.Point(292, 247);
+            this.comboBoxMuni.Location = new System.Drawing.Point(161, 209);
             this.comboBoxMuni.Name = "comboBoxMuni";
             this.comboBoxMuni.Size = new System.Drawing.Size(121, 21);
             this.comboBoxMuni.TabIndex = 9;
@@ -240,7 +245,7 @@
             this.lblNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNom.Location = new System.Drawing.Point(170, 47);
             this.lblNom.Name = "lblNom";
-            this.lblNom.Size = new System.Drawing.Size(63, 16);
+            this.lblNom.Size = new System.Drawing.Size(64, 16);
             this.lblNom.TabIndex = 165;
             this.lblNom.Text = "Nombres";
             // 
@@ -248,9 +253,9 @@
             // 
             this.lblDepartamento.AutoSize = true;
             this.lblDepartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDepartamento.Location = new System.Drawing.Point(165, 227);
+            this.lblDepartamento.Location = new System.Drawing.Point(24, 189);
             this.lblDepartamento.Name = "lblDepartamento";
-            this.lblDepartamento.Size = new System.Drawing.Size(93, 16);
+            this.lblDepartamento.Size = new System.Drawing.Size(94, 16);
             this.lblDepartamento.TabIndex = 184;
             this.lblDepartamento.Text = "Departamento";
             // 
@@ -258,9 +263,9 @@
             // 
             this.lblEvaluacion.AutoSize = true;
             this.lblEvaluacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEvaluacion.Location = new System.Drawing.Point(289, 136);
+            this.lblEvaluacion.Location = new System.Drawing.Point(407, 190);
             this.lblEvaluacion.Name = "lblEvaluacion";
-            this.lblEvaluacion.Size = new System.Drawing.Size(74, 16);
+            this.lblEvaluacion.Size = new System.Drawing.Size(75, 16);
             this.lblEvaluacion.TabIndex = 173;
             this.lblEvaluacion.Text = "Evaluación";
             // 
@@ -270,7 +275,7 @@
             this.lblGrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGrado.Location = new System.Drawing.Point(39, 136);
             this.lblGrado.Name = "lblGrado";
-            this.lblGrado.Size = new System.Drawing.Size(45, 16);
+            this.lblGrado.Size = new System.Drawing.Size(46, 16);
             this.lblGrado.TabIndex = 179;
             this.lblGrado.Text = "Grado";
             // 
@@ -285,9 +290,9 @@
             // 
             this.lblMunicipio.AutoSize = true;
             this.lblMunicipio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMunicipio.Location = new System.Drawing.Point(305, 228);
+            this.lblMunicipio.Location = new System.Drawing.Point(164, 190);
             this.lblMunicipio.Name = "lblMunicipio";
-            this.lblMunicipio.Size = new System.Drawing.Size(64, 16);
+            this.lblMunicipio.Size = new System.Drawing.Size(65, 16);
             this.lblMunicipio.TabIndex = 186;
             this.lblMunicipio.Text = "Municipio";
             // 
@@ -311,23 +316,23 @@
             this.lblCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCod.Location = new System.Drawing.Point(39, 47);
             this.lblCod.Name = "lblCod";
-            this.lblCod.Size = new System.Drawing.Size(51, 16);
+            this.lblCod.Size = new System.Drawing.Size(52, 16);
             this.lblCod.TabIndex = 167;
             this.lblCod.Text = "Código";
             // 
             // comboBoxDep
             // 
             this.comboBoxDep.FormattingEnabled = true;
-            this.comboBoxDep.Location = new System.Drawing.Point(157, 247);
+            this.comboBoxDep.Location = new System.Drawing.Point(16, 209);
             this.comboBoxDep.Name = "comboBoxDep";
             this.comboBoxDep.Size = new System.Drawing.Size(121, 21);
             this.comboBoxDep.TabIndex = 8;
             // 
             // txtfech
             // 
-            this.txtfech.Location = new System.Drawing.Point(19, 247);
+            this.txtfech.Location = new System.Drawing.Point(279, 155);
             this.txtfech.Name = "txtfech";
-            this.txtfech.Size = new System.Drawing.Size(121, 20);
+            this.txtfech.Size = new System.Drawing.Size(105, 20);
             this.txtfech.TabIndex = 7;
             // 
             // txtape
@@ -343,7 +348,7 @@
             this.lblColegio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblColegio.Location = new System.Drawing.Point(170, 136);
             this.lblColegio.Name = "lblColegio";
-            this.lblColegio.Size = new System.Drawing.Size(54, 16);
+            this.lblColegio.Size = new System.Drawing.Size(55, 16);
             this.lblColegio.TabIndex = 187;
             this.lblColegio.Text = "Colegio";
             // 
@@ -360,7 +365,7 @@
             this.lblApe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApe.Location = new System.Drawing.Point(289, 47);
             this.lblApe.Name = "lblApe";
-            this.lblApe.Size = new System.Drawing.Size(64, 16);
+            this.lblApe.Size = new System.Drawing.Size(65, 16);
             this.lblApe.TabIndex = 170;
             this.lblApe.Text = "Apellidos";
             // 
@@ -370,7 +375,7 @@
             this.lblDomicilio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDomicilio.Location = new System.Drawing.Point(400, 47);
             this.lblDomicilio.Name = "lblDomicilio";
-            this.lblDomicilio.Size = new System.Drawing.Size(63, 16);
+            this.lblDomicilio.Size = new System.Drawing.Size(64, 16);
             this.lblDomicilio.TabIndex = 172;
             this.lblDomicilio.Text = "Domicilio";
             // 
@@ -378,9 +383,9 @@
             // 
             this.lblFechaNac.AutoSize = true;
             this.lblFechaNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaNac.Location = new System.Drawing.Point(26, 228);
+            this.lblFechaNac.Location = new System.Drawing.Point(286, 136);
             this.lblFechaNac.Name = "lblFechaNac";
-            this.lblFechaNac.Size = new System.Drawing.Size(76, 16);
+            this.lblFechaNac.Size = new System.Drawing.Size(77, 16);
             this.lblFechaNac.TabIndex = 171;
             this.lblFechaNac.Text = "Fecha Nac.";
             // 
@@ -392,9 +397,9 @@
             this.pnlResp.Controls.Add(this.txtcod);
             this.pnlResp.Controls.Add(this.lblNomResp);
             this.pnlResp.Controls.Add(this.lblTelfResp);
-            this.pnlResp.Location = new System.Drawing.Point(644, 28);
+            this.pnlResp.Location = new System.Drawing.Point(646, 12);
             this.pnlResp.Name = "pnlResp";
-            this.pnlResp.Size = new System.Drawing.Size(162, 317);
+            this.pnlResp.Size = new System.Drawing.Size(162, 302);
             this.pnlResp.TabIndex = 2;
             // 
             // label1
@@ -431,7 +436,7 @@
             this.lblNomResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomResp.Location = new System.Drawing.Point(22, 84);
             this.lblNomResp.Name = "lblNomResp";
-            this.lblNomResp.Size = new System.Drawing.Size(95, 16);
+            this.lblNomResp.Size = new System.Drawing.Size(96, 16);
             this.lblNomResp.TabIndex = 162;
             this.lblNomResp.Text = "Nombre Resp.";
             // 
@@ -441,7 +446,7 @@
             this.lblTelfResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelfResp.Location = new System.Drawing.Point(22, 173);
             this.lblTelfResp.Name = "lblTelfResp";
-            this.lblTelfResp.Size = new System.Drawing.Size(100, 16);
+            this.lblTelfResp.Size = new System.Drawing.Size(101, 16);
             this.lblTelfResp.TabIndex = 166;
             this.lblTelfResp.Text = "Teléfono Resp.";
             // 
@@ -458,26 +463,44 @@
             this.lblModAlumno.Text = "Modificar Alumno";
             this.lblModAlumno.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // pictureBox1
+            // picBoxFondo
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.Fondo2;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(894, 934);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.picBoxFondo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picBoxFondo.Image = global::ProyectoFinal.Properties.Resources.Fondo2;
+            this.picBoxFondo.Location = new System.Drawing.Point(0, 0);
+            this.picBoxFondo.Name = "picBoxFondo";
+            this.picBoxFondo.Size = new System.Drawing.Size(894, 689);
+            this.picBoxFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxFondo.TabIndex = 0;
+            this.picBoxFondo.TabStop = false;
+            // 
+            // comboBoxEstadoAlum
+            // 
+            this.comboBoxEstadoAlum.FormattingEnabled = true;
+            this.comboBoxEstadoAlum.Location = new System.Drawing.Point(16, 262);
+            this.comboBoxEstadoAlum.Name = "comboBoxEstadoAlum";
+            this.comboBoxEstadoAlum.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxEstadoAlum.TabIndex = 190;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(17, 241);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 16);
+            this.label3.TabIndex = 191;
+            this.label3.Text = "Estado";
             // 
             // FrmModificarAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 934);
+            this.ClientSize = new System.Drawing.Size(894, 689);
             this.Controls.Add(this.pnlContenedor);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(910, 973);
-            this.MinimumSize = new System.Drawing.Size(910, 973);
+            this.MaximumSize = new System.Drawing.Size(910, 728);
+            this.MinimumSize = new System.Drawing.Size(910, 728);
             this.Name = "FrmModificarAlumno";
             this.Text = "Modificar Alumno";
             this.Load += new System.EventHandler(this.FrmModificarAlumno_Load_1);
@@ -488,7 +511,7 @@
             this.pnlAgregarAlumno.PerformLayout();
             this.pnlResp.ResumeLayout(false);
             this.pnlResp.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxFondo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -528,9 +551,11 @@
         private System.Windows.Forms.Label lblNomResp;
         private System.Windows.Forms.Label lblTelfResp;
         private System.Windows.Forms.Label lblModAlumno;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picBoxFondo;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBoxEstadoAlum;
+        private System.Windows.Forms.Label label3;
     }
 }

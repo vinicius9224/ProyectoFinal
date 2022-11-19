@@ -41,11 +41,11 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picBoxFondo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.pnlFondo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxFondo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -54,11 +54,11 @@
             this.panel1.Controls.Add(this.txtBus);
             this.panel1.Controls.Add(this.lblBuscar);
             this.panel1.Controls.Add(this.pnlFondo);
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.picBoxFondo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(894, 934);
+            this.panel1.Size = new System.Drawing.Size(894, 689);
             this.panel1.TabIndex = 0;
             // 
             // lblEliminarAlumno
@@ -100,9 +100,9 @@
             this.pnlFondo.Controls.Add(this.btnCerrar);
             this.pnlFondo.Controls.Add(this.btnEliminar);
             this.pnlFondo.Controls.Add(this.dataGridView1);
-            this.pnlFondo.Location = new System.Drawing.Point(43, 109);
+            this.pnlFondo.Location = new System.Drawing.Point(43, 114);
             this.pnlFondo.Name = "pnlFondo";
-            this.pnlFondo.Size = new System.Drawing.Size(808, 708);
+            this.pnlFondo.Size = new System.Drawing.Size(808, 524);
             this.pnlFondo.TabIndex = 1;
             // 
             // btnCerrar
@@ -113,7 +113,7 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Location = new System.Drawing.Point(208, 596);
+            this.btnCerrar.Location = new System.Drawing.Point(184, 472);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(179, 37);
             this.btnCerrar.TabIndex = 3;
@@ -128,7 +128,7 @@
             this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(435, 596);
+            this.btnEliminar.Location = new System.Drawing.Point(432, 472);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(179, 37);
             this.btnEliminar.TabIndex = 2;
@@ -174,30 +174,30 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.Size = new System.Drawing.Size(743, 526);
+            this.dataGridView1.Size = new System.Drawing.Size(743, 420);
             this.dataGridView1.TabIndex = 12;
             // 
-            // pictureBox1
+            // picBoxFondo
             // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.Fondo2;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(894, 934);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.picBoxFondo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.picBoxFondo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picBoxFondo.Image = global::ProyectoFinal.Properties.Resources.Fondo2;
+            this.picBoxFondo.Location = new System.Drawing.Point(0, 0);
+            this.picBoxFondo.Name = "picBoxFondo";
+            this.picBoxFondo.Size = new System.Drawing.Size(894, 689);
+            this.picBoxFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxFondo.TabIndex = 0;
+            this.picBoxFondo.TabStop = false;
             // 
             // FrmEliminarAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 934);
+            this.ClientSize = new System.Drawing.Size(894, 689);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(910, 973);
-            this.MinimumSize = new System.Drawing.Size(910, 973);
+            this.MaximumSize = new System.Drawing.Size(910, 728);
+            this.MinimumSize = new System.Drawing.Size(910, 728);
             this.Name = "FrmEliminarAlumno";
             this.Text = "Eliminar Alumno";
             this.Load += new System.EventHandler(this.FrmEliminarAlumno_Load_1);
@@ -205,7 +205,7 @@
             this.panel1.PerformLayout();
             this.pnlFondo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxFondo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -213,7 +213,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picBoxFondo;
         private System.Windows.Forms.Panel pnlFondo;
         private System.Windows.Forms.TextBox txtBus;
         private System.Windows.Forms.Label lblBuscar;

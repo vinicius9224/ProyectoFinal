@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CapaNegocio;
+using System;
 using System.Windows.Forms;
-using CapaNegocio;
 
 namespace ProyectoFinal.Formularios.Maestros
 {
@@ -31,10 +24,16 @@ namespace ProyectoFinal.Formularios.Maestros
             Listar_Municipios();
 
         }
+        private void Mostrar()
+        {
+            //dataGridView1.DataSource = objeto.Mostrar_Trabajadores();
+        }
+
+        #region Validaciones
 
         public void limpiar_Datos()
         {
-            foreach (Control ctrl in this.Controls)
+            foreach (Control ctrl in this.pnlModMaestro.Controls)
             {
                 if (ctrl is TextBox)
                 {
@@ -48,7 +47,7 @@ namespace ProyectoFinal.Formularios.Maestros
         }
         private bool Validar() // metodo para verificar si hay un textbox vacio(recorre todo los controles ,con el IsNullOrWhiteSpace nos damos cuenta si es nula o esta vacia , si esto pasa retornamos un false)
         {
-            foreach (Control c in this.Controls)
+            foreach (Control c in this.pnlModMaestro.Controls)
             {
                 if (c is TextBox)
                 {
@@ -61,10 +60,12 @@ namespace ProyectoFinal.Formularios.Maestros
 
             return true;
         }
+        #endregion
 
+        #region Listar Municipios, Departamentos, Estados, Profesines
         public void Listar_Departamentos()
         {
-            foreach (Control ctrl in this.Controls)
+            foreach (Control ctrl in this.pnlModMaestro.Controls)
             {
                 if (ctrl is ComboBox)
                 {
@@ -81,7 +82,7 @@ namespace ProyectoFinal.Formularios.Maestros
 
         public void Listar_Municipios()
         {
-            foreach (Control ctrl in this.Controls)
+            foreach (Control ctrl in this.pnlModMaestro.Controls)
             {
                 if (ctrl is ComboBox)
                 {
@@ -97,7 +98,7 @@ namespace ProyectoFinal.Formularios.Maestros
 
         public void Listar_Profesiones()
         {
-            foreach (Control ctrl in this.Controls)
+            foreach (Control ctrl in this.pnlModMaestro.Controls)
             {
                 if (ctrl is ComboBox)
                 {
@@ -127,38 +128,13 @@ namespace ProyectoFinal.Formularios.Maestros
             }
         }
 
+        #endregion
 
+        #region Botones
 
-        private void Mostrar()
+        private void btnCerrar_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = objeto.Mostrar_Trabajadores();
-        }
-
-      
-
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-
-                txtcod.Text = dataGridView1.CurrentRow.Cells["codigo"].Value.ToString();
-                txtnom.Text = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
-                txtape.Text = dataGridView1.CurrentRow.Cells["Apellido"].Value.ToString();
-                txtdom.Text = dataGridView1.CurrentRow.Cells["Domicilio"].Value.ToString();
-                txtsal.Text = dataGridView1.CurrentRow.Cells["salario"].Value.ToString();
-                txtTel.Text = dataGridView1.CurrentRow.Cells["Telefono"].Value.ToString();
-                comProf.Text = dataGridView1.CurrentRow.Cells["Profesion"].Value.ToString();
-                comDep.Text = dataGridView1.CurrentRow.Cells["Departamento"].Value.ToString();
-                comMuni.Text = dataGridView1.CurrentRow.Cells["Municipio"].Value.ToString();
-                comEst.Text = dataGridView1.CurrentRow.Cells["Estado"].Value.ToString();
-                idAlumno = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
-                Editacion = true;
-            }
-            else
-            {
-                MessageBox.Show("Selecciona una Fila");
-            }
+            this.Close();
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -173,7 +149,8 @@ namespace ProyectoFinal.Formularios.Maestros
                 {
                     try
                     {
-                        objeto.Editar_Maestro(txtcod.Text, txtnom.Text, txtape.Text, txtdom.Text, txtsal.Text, txtTel.Text, int.Parse(comProf.SelectedValue.ToString()), int.Parse(comDep.SelectedValue.ToString()), int.Parse(comMuni.SelectedValue.ToString()), int.Parse(comEst.SelectedValue.ToString()),idAlumno);
+                        //comEst.Text es donde antes iba el salario
+                        objeto.Editar_Maestro(txtcod.Text, txtnom.Text, txtape.Text, txtdom.Text, comEst.Text, txtTel.Text, int.Parse(comProf.SelectedValue.ToString()), int.Parse(comDep.SelectedValue.ToString()), int.Parse(comMuni.SelectedValue.ToString()), int.Parse(comEst.SelectedValue.ToString()), idAlumno);
                         MessageBox.Show("Actualizado");
                         dataGridView1.DataSource = objeto.Mostrar_Trabajadores();
                         limpiar_Datos();
@@ -185,5 +162,32 @@ namespace ProyectoFinal.Formularios.Maestros
                 }
             }
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+
+                txtcod.Text = dataGridView1.CurrentRow.Cells["codigo"].Value.ToString();
+                txtnom.Text = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
+                txtape.Text = dataGridView1.CurrentRow.Cells["Apellido"].Value.ToString();
+                txtdom.Text = dataGridView1.CurrentRow.Cells["Domicilio"].Value.ToString();
+                //comEst.Text es donde antes iba el salario
+                comEst.Text = dataGridView1.CurrentRow.Cells["salario"].Value.ToString();
+                txtTel.Text = dataGridView1.CurrentRow.Cells["Telefono"].Value.ToString();
+                comProf.Text = dataGridView1.CurrentRow.Cells["Profesion"].Value.ToString();
+                comDep.Text = dataGridView1.CurrentRow.Cells["Departamento"].Value.ToString();
+                comMuni.Text = dataGridView1.CurrentRow.Cells["Municipio"].Value.ToString();
+                comEst.Text = dataGridView1.CurrentRow.Cells["Estado"].Value.ToString();
+                idAlumno = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+                Editacion = true;
+            }
+            else
+            {
+                MessageBox.Show("Selecciona una Fila");
+            }
+        }
+        #endregion
     }
 }

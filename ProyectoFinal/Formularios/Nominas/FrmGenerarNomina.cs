@@ -19,12 +19,7 @@ namespace ProyectoFinal.Formularios
         public FrmGenerarNomina()
         {
             InitializeComponent();
-            txtApeTrabajador.Enabled = false;
-            txtNomTrabajador.Enabled = false;
-            txtCargoTrab.Enabled = false;
-            txtSueldoBruto.Enabled = false;
-            txtTotalHoras.Enabled = false;
-            txtSalarioNeto.Enabled = false;
+          
         }
 
         #region ConfiguraciónFormulario
@@ -124,10 +119,9 @@ namespace ProyectoFinal.Formularios
                 MessageBox.Show("No se puedo generar por" + ex);
             }
         }
-
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-              //objeto.BuscarMaestros(btnBuscar.Text);
+
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)
@@ -138,12 +132,14 @@ namespace ProyectoFinal.Formularios
         private void btnHistorialNominas_Click(object sender, EventArgs e)
         {
             Limpiar_Datos();
-            AbrirFormulario(new FrmHistorialNominas());
+            AbrirFormulario(new FrmDetalleNomina());
         }
-
 
         #endregion
 
-      
+        private void pnlDetaNomina_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
