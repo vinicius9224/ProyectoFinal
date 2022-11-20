@@ -60,13 +60,12 @@
             this.btnAgregarAlumnos = new System.Windows.Forms.Button();
             this.btnAlumnos = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Tiempo = new System.Windows.Forms.Timer(this.components);
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
-            this.pnlControl = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlControl = new System.Windows.Forms.Panel();
             this.pnlMenuLateral.SuspendLayout();
             this.pnlSubMenuConfig.SuspendLayout();
             this.pnlSubMenuNominas.SuspendLayout();
@@ -75,10 +74,9 @@
             this.pnlSubMenuMaestros.SuspendLayout();
             this.pnlSubMenuAlumnos.SuspendLayout();
             this.pnlLogo.SuspendLayout();
-            this.pnlControl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pnlControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMenuLateral
@@ -541,6 +539,17 @@
             this.pnlLogo.Size = new System.Drawing.Size(234, 115);
             this.pnlLogo.TabIndex = 5;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(234, 115);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // Tiempo
             // 
             this.Tiempo.Enabled = true;
@@ -568,27 +577,6 @@
             this.lblHora.TabIndex = 4;
             this.lblHora.Text = "label1";
             // 
-            // pnlControl
-            // 
-            this.pnlControl.Controls.Add(this.pictureBox3);
-            this.pnlControl.Controls.Add(this.pictureBox2);
-            this.pnlControl.Controls.Add(this.lblHora);
-            this.pnlControl.Controls.Add(this.lblFecha);
-            this.pnlControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlControl.Location = new System.Drawing.Point(251, 0);
-            this.pnlControl.Name = "pnlControl";
-            this.pnlControl.Size = new System.Drawing.Size(910, 728);
-            this.pnlControl.TabIndex = 3;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(658, 43);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(191, 110);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::ProyectoFinal.Properties.Resources.LogoFondo1;
@@ -599,16 +587,16 @@
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
+            // pnlControl
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(234, 115);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.pnlControl.Controls.Add(this.pictureBox2);
+            this.pnlControl.Controls.Add(this.lblHora);
+            this.pnlControl.Controls.Add(this.lblFecha);
+            this.pnlControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlControl.Location = new System.Drawing.Point(251, 0);
+            this.pnlControl.Name = "pnlControl";
+            this.pnlControl.Size = new System.Drawing.Size(910, 728);
+            this.pnlControl.TabIndex = 3;
             // 
             // FrmInicio
             // 
@@ -630,11 +618,10 @@
             this.pnlSubMenuMaestros.ResumeLayout(false);
             this.pnlSubMenuAlumnos.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlControl.ResumeLayout(false);
             this.pnlControl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -676,6 +663,5 @@
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel pnlControl;
-        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
