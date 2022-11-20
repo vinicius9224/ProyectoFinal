@@ -231,14 +231,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -261,6 +255,7 @@
   <ItemGroup>
     <None Include="Recursos\Botones\BotonLoginFondo.png" />
     <Content Include="Recursos\Botones\cerrar-sesion.png" />
+    <None Include="Recursos\Botones\cerrar.png" />
     <Content Include="Recursos\Botones\conferencia.png" />
     <Content Include="Recursos\Botones\cuenta.png" />
     <Content Include="Recursos\Botones\estudiante.png" />
