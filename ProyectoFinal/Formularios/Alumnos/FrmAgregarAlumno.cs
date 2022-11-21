@@ -25,7 +25,15 @@ namespace ProyectoFinal.Formularios
         private void FrmAgregarAlumno_Load(object sender, EventArgs e)
         {
             Listar_Municipios();
+
+            Listar_Estado();
+
             Listar_Departamentos();
+
+
+
+
+
         }
 
         #region Validaciones
@@ -85,6 +93,22 @@ namespace ProyectoFinal.Formularios
         #endregion
 
         #region Método Listar Departamentos y Municipios
+
+        public void Listar_Estado()
+        {
+            foreach (Control ctrl in this.pnlAgregarAlumno.Controls)
+            {
+                if (ctrl is ComboBox)
+                {
+                    DatosAlumnos objeto = new DatosAlumnos();
+                    comboBoxEstadoAlum.DataSource = objeto.Mostrar_estado();
+                    comboBoxEstadoAlum.DisplayMember = "nom_EstadoAlumno";
+                    comboBoxEstadoAlum.ValueMember = "Id";
+                    objeto.Mostrar_estado().Clear();
+                    ctrl.Text = "";
+                }
+            }
+        }
         public void Listar_Departamentos()
         {
             foreach (Control ctrl in this.pnlAgregarAlumno.Controls)
@@ -117,6 +141,8 @@ namespace ProyectoFinal.Formularios
                 }
             }
         }
+
+        
         #endregion
 
         #region Botones Cerrar, Guardar
@@ -137,7 +163,7 @@ namespace ProyectoFinal.Formularios
                 else
                 {
                     //Agregar el comboBoxEstadoAlum con los parametros en CapaDatos,CapaNegocio en agregar y editar. Ademas de cambiarle los proced.Almc. 
-                    objeto.AgregarAlumno(txtcod.Text, txtnom.Text, txtape.Text, txtfech.Text, txtresp.Text, txttelRes.Text, txtcol.Text, txtgra.Text, txtdom.Text, txteva.Text, int.Parse(comboBoxDep.SelectedValue.ToString()), int.Parse(comboBoxMuni.SelectedValue.ToString()));
+                    objeto.AgregarAlumno(txtcod.Text, txtnom.Text, txtape.Text, txtfech.Text, txtresp.Text, txttelRes.Text, txtcol.Text, txtgra.Text, txtdom.Text, txteva.Text, int.Parse(comboBoxDep.SelectedValue.ToString()), int.Parse(comboBoxMuni.SelectedValue.ToString()), int.Parse(comboBoxEstadoAlum.SelectedValue.ToString()));
                     MessageBox.Show("Alumno Agregado");
                     limpiar_Datos();
                 }
@@ -148,5 +174,10 @@ namespace ProyectoFinal.Formularios
             }
         }
         #endregion
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
