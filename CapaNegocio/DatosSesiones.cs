@@ -41,5 +41,19 @@ namespace CapaNegocio
             return tabla;
         }
 
+        public DataTable ListSesiones(int Mes, String Año)
+        {
+            DataTable tabla = new DataTable();
+            try
+            {
+                tabla = Sesiones.ListSesiones(Mes, int.Parse(Año));
+            }
+            catch (Exception)
+            {
+
+            }
+            return tabla;
+        }
+
     }
 }
