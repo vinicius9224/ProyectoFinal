@@ -21,14 +21,14 @@ namespace CapaNegocio
             return tabla;
         }
         // agregamos los registros esto ya es para enviarselo mas facil a la capa de presentacion
-        public void AgregarAlumno(string cod, string nom, string ape, string fecha, string nomRes, string telRes, string colegio, string grado, string domiPersona, string evaluacion, int DeparId, int MuniId)
+        public void AgregarAlumno(string cod, string nom, string ape, string fecha, string nomRes, string telRes, string colegio, string grado, string domiPersona, string evaluacion, int DeparId, int MuniId, int estado)
         {
-            obj.Agregar_Alumnos(cod, nom, ape, fecha, nomRes, telRes, colegio, grado, domiPersona, evaluacion, DeparId, MuniId);
+            obj.Agregar_Alumnos(cod, nom, ape, Convert.ToDateTime(fecha), nomRes, telRes, colegio, grado, domiPersona, evaluacion, DeparId, MuniId,estado);
         }
 
-        public void Editar_Alumnos(string cod, string nom, string ape, string fecha, string nomRes, string telRes, string colegio, string grado, string domiPersona, string evaluacion, int DeparId, int MuniId, string id)
+        public void Editar_Alumnos(string cod, string nom, string ape, DateTime fecha, string nomRes, string telRes, string colegio, string grado, string domiPersona, string evaluacion, int DeparId, int MuniId, string id,int estado)
         {
-            obj.Editar_Alumnos(cod, nom, ape, Convert.ToDateTime(fecha), nomRes, telRes, colegio, grado, domiPersona, evaluacion, DeparId, MuniId, Convert.ToInt32(id));
+            obj.Editar_Alumnos(cod, nom, ape, Convert.ToDateTime(fecha), nomRes, telRes, colegio, grado, domiPersona, evaluacion, DeparId, MuniId, Convert.ToInt32(id), estado);
         }
 
         public void Eliminar_Alumnos(string id)
@@ -66,5 +66,17 @@ namespace CapaNegocio
             tabla = obj.llenarcombo(parametro);
             return tabla;
         }
+
+        public DataTable Mostrar_estado()
+        {
+            // instanceamos la clase datatable
+            DataTable tabla = new DataTable();
+            tabla = obj.MostrarEstado();
+            return tabla;
+        }
+
+
+
+
     }
 }

@@ -34,6 +34,8 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.pnlAgregarAlumno = new System.Windows.Forms.Panel();
+            this.comboBoxEstadoAlum = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.lblTituloAlumno = new System.Windows.Forms.Label();
             this.txteva = new System.Windows.Forms.TextBox();
             this.txtdom = new System.Windows.Forms.TextBox();
@@ -63,8 +65,6 @@
             this.lblTelfResp = new System.Windows.Forms.Label();
             this.lblRegAlumno = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.comboBoxEstadoAlum = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.pnlContenedor.SuspendLayout();
             this.pnlFondoAgregarAlumno.SuspendLayout();
             this.pnlAgregarAlumno.SuspendLayout();
@@ -157,6 +157,24 @@
             this.pnlAgregarAlumno.Name = "pnlAgregarAlumno";
             this.pnlAgregarAlumno.Size = new System.Drawing.Size(599, 365);
             this.pnlAgregarAlumno.TabIndex = 1;
+            // 
+            // comboBoxEstadoAlum
+            // 
+            this.comboBoxEstadoAlum.FormattingEnabled = true;
+            this.comboBoxEstadoAlum.Location = new System.Drawing.Point(22, 303);
+            this.comboBoxEstadoAlum.Name = "comboBoxEstadoAlum";
+            this.comboBoxEstadoAlum.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxEstadoAlum.TabIndex = 18;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(23, 282);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 16);
+            this.label2.TabIndex = 189;
+            this.label2.Text = "Estado";
             // 
             // lblTituloAlumno
             // 
@@ -429,24 +447,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // comboBoxEstadoAlum
-            // 
-            this.comboBoxEstadoAlum.FormattingEnabled = true;
-            this.comboBoxEstadoAlum.Location = new System.Drawing.Point(22, 303);
-            this.comboBoxEstadoAlum.Name = "comboBoxEstadoAlum";
-            this.comboBoxEstadoAlum.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxEstadoAlum.TabIndex = 188;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 282);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 16);
-            this.label2.TabIndex = 189;
-            this.label2.Text = "Estado";
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FrmAgregarAlumno
             // 
@@ -456,7 +457,7 @@
             this.Controls.Add(this.pnlContenedor);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(910, 728);
-            this.MinimumSize = new System.Drawing.Size(910, 728);
+            this.MinimumSize = new System.Drawing.Size(910, 726);
             this.Name = "FrmAgregarAlumno";
             this.Text = "Agregar Alumnos";
             this.Load += new System.EventHandler(this.FrmAgregarAlumno_Load);

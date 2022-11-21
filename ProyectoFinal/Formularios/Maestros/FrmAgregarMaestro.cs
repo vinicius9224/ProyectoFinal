@@ -86,7 +86,7 @@ namespace ProyectoFinal.Formularios
 
         public void Listar_Profesiones()
         {
-            foreach (Control ctrl in this.Controls)
+            foreach (Control ctrl in this.pnlDatosMaestro.Controls)
             {
                 if (ctrl is ComboBox)
                 {
@@ -102,7 +102,7 @@ namespace ProyectoFinal.Formularios
 
         public void Listar_Estado()
         {
-            foreach (Control ctrl in this.Controls)
+            foreach (Control ctrl in this.pnlDatosMaestro.Controls)
             {
                 if (ctrl is ComboBox)
                 {
@@ -117,33 +117,17 @@ namespace ProyectoFinal.Formularios
         }
 
 
-        public void ver()
-        {
-            Listar_Profesiones();
-            Listar_Municipios();
-           
-        }
+        
 
         private void FrmAgregarMaestro_Load(object sender, EventArgs e)
         {
             Listar_Estado();
+            Listar_Profesiones();
+            Listar_Municipios();
             Listar_Departamentos();
-            ver();
-         
-        
         }
 
-        //private void txtsal_KeyPress(object sender, KeyPressEventArgs e)
-        //{
-        //    if((e.KeyChar >=32 && e.KeyChar<=47 || (e.KeyChar>=58 && e.KeyChar <= 255)))
-        //    {
-        //        MessageBox.Show("Solo se Pueden Ingresar Numeros","", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //        e.Handled = true;
-        //        return;
-
-        //    }
-
-        //}
+        
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
@@ -157,7 +141,7 @@ namespace ProyectoFinal.Formularios
                 else
                 {
                     //comEst.Text es donde antes iba el salario
-                    objeto.Agregar_Maestro(txtcod.Text, txtnom.Text, txtape.Text, txtdom.Text, comEst.Text, txtTel.Text, int.Parse(comProf.SelectedValue.ToString()), int.Parse(comDep.SelectedValue.ToString()), int.Parse(comMuni.SelectedValue.ToString()), int.Parse(comEst.SelectedValue.ToString()));
+                    objeto.Agregar_Maestro(txtcod.Text, txtnom.Text, txtape.Text, txtdom.Text, txtTel.Text, int.Parse(comProf.SelectedValue.ToString()), int.Parse(comDep.SelectedValue.ToString()), int.Parse(comMuni.SelectedValue.ToString()), int.Parse(comEst.SelectedValue.ToString()));
                     MessageBox.Show("Maestro Agregado");
                     limpiar_Datos();
                 }
