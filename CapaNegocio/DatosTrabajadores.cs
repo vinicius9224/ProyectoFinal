@@ -13,17 +13,17 @@ namespace CapaNegocio
 
         private Trabajadores obj = new Trabajadores();
 
-        public void Agregar_Maestro(string cod, string nom, string ape, string domicilio, string salario, string telefono, int profesionId, int departamentoId, int municipioId, int Estado)
+        public void Agregar_Maestro(string cod, string nom, string ape, string domicilio, string telefono, int profesionId, int departamentoId, int municipioId, int Estado)
         {
 
-            obj.Agregar_Maestro(cod, nom, ape, domicilio, Convert.ToDouble(salario), telefono, profesionId, departamentoId, municipioId, Estado);
+            obj.Agregar_Maestro(cod, nom, ape, domicilio, telefono, profesionId, departamentoId, municipioId, Estado);
 
         }
 
-        public void Editar_Maestro(string cod, string nom, string ape, string domicilio, string salario, string telefono, int profesionId, int departamentoId, int municipioId, int Estado,string id)
+        public void Editar_Maestro(string cod, string nom, string ape, string domicilio,string telefono, int profesionId, int departamentoId, int municipioId, int Estado,string id)
         {
 
-            obj.Modificar_Maestro(cod, nom, ape, domicilio, Convert.ToDouble(salario), telefono, profesionId, departamentoId, municipioId, Estado,Convert.ToInt32(id));
+            obj.Modificar_Maestro(cod, nom, ape, domicilio, telefono, profesionId, departamentoId, municipioId, Estado,Convert.ToInt32(id));
 
         }
 

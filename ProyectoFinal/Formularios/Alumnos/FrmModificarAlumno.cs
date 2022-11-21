@@ -25,14 +25,16 @@ namespace ProyectoFinal.Formularios.Alumnos
 
         private void FrmModificarAlumno_Load_1(object sender, EventArgs e)
         {
+            Listar_Estado();
             Listar_Municipios();
             Mostrar();
             Listar_Departamentos();
+         
         }
 
         private void Mostrar()
         {
-            //dataGridView1.DataSource = objeto.Mostrar_completo();
+           dataGridView1.DataSource = objeto.Mostrar_completo();
         }
 
         #region Validaciones
@@ -92,6 +94,22 @@ namespace ProyectoFinal.Formularios.Alumnos
         #endregion
 
         #region Método Listar Departamentos y Municipios
+
+        public void Listar_Estado()
+        {
+            foreach (Control ctrl in this.pnlAgregarAlumno.Controls)
+            {
+                if (ctrl is ComboBox)
+                {
+                    DatosAlumnos objeto = new DatosAlumnos();
+                    comboBoxEstadoAlum.DataSource = objeto.Mostrar_estado();
+                    comboBoxEstadoAlum.DisplayMember = "nom_EstadoAlumno";
+                    comboBoxEstadoAlum.ValueMember = "Id";
+                    objeto.Mostrar_estado().Clear();
+                    ctrl.Text = "";
+                }
+            }
+        }
         public void Listar_Departamentos()
         {
             foreach (Control ctrl in this.pnlAgregarAlumno.Controls)
@@ -149,6 +167,7 @@ namespace ProyectoFinal.Formularios.Alumnos
                 comboBoxDep.Text = dataGridView1.CurrentRow.Cells["Departamento"].Value.ToString();
                 comboBoxMuni.Text = dataGridView1.CurrentRow.Cells["Municipio"].Value.ToString();
                 idAlumno = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+                comboBoxEstadoAlum.Text = dataGridView1.CurrentRow.Cells["Estado"].Value.ToString();
 
                 Editacion = true;
             }
@@ -171,7 +190,7 @@ namespace ProyectoFinal.Formularios.Alumnos
                     try
                     {
                         //Agregar el comboBoxEstadoAlum con los parametros en CapaDatos,CapaNegocio en agregar y editar. Ademas de cambiarle los proced.Almc. 
-                        objeto.Editar_Alumnos(txtcod.Text, txtnom.Text, txtape.Text, txtfech.Text, txtresp.Text, txttelRes.Text, txtcol.Text, txtgra.Text, txtdom.Text, txteva.Text, int.Parse(comboBoxDep.SelectedValue.ToString()), int.Parse(comboBoxMuni.SelectedValue.ToString()), idAlumno);
+                        objeto.Editar_Alumnos(txtcod.Text, txtnom.Text, txtape.Text,Convert.ToDateTime(txtfech.Text) , txtresp.Text, txttelRes.Text, txtcol.Text, txtgra.Text, txtdom.Text, txteva.Text, int.Parse(comboBoxDep.SelectedValue.ToString()), int.Parse(comboBoxMuni.SelectedValue.ToString()), idAlumno, int.Parse(comboBoxEstadoAlum.SelectedValue.ToString()));
                         MessageBox.Show("Actualizado");
                         dataGridView1.DataSource = objeto.Mostrar_completo();
                         limpiar_Datos();

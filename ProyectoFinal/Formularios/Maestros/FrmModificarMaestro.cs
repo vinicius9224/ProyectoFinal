@@ -19,14 +19,14 @@ namespace ProyectoFinal.Formularios.Maestros
         {
             Mostrar();
             Listar_Estado();
-            Listar_Departamentos();
             Listar_Profesiones();
             Listar_Municipios();
+            Listar_Departamentos();
 
         }
         private void Mostrar()
         {
-            //dataGridView1.DataSource = objeto.Mostrar_Trabajadores();
+           dataGridView1.DataSource = objeto.Mostrar_Trabajadores();
         }
 
         #region Validaciones
@@ -114,7 +114,7 @@ namespace ProyectoFinal.Formularios.Maestros
 
         public void Listar_Estado()
         {
-            foreach (Control ctrl in this.Controls)
+            foreach (Control ctrl in this.pnlModMaestro.Controls)
             {
                 if (ctrl is ComboBox)
                 {
@@ -150,7 +150,7 @@ namespace ProyectoFinal.Formularios.Maestros
                     try
                     {
                         //comEst.Text es donde antes iba el salario
-                        objeto.Editar_Maestro(txtcod.Text, txtnom.Text, txtape.Text, txtdom.Text, comEst.Text, txtTel.Text, int.Parse(comProf.SelectedValue.ToString()), int.Parse(comDep.SelectedValue.ToString()), int.Parse(comMuni.SelectedValue.ToString()), int.Parse(comEst.SelectedValue.ToString()), idAlumno);
+                        objeto.Editar_Maestro(txtcod.Text, txtnom.Text, txtape.Text, txtdom.Text, txtTel.Text, int.Parse(comProf.SelectedValue.ToString()), int.Parse(comDep.SelectedValue.ToString()), int.Parse(comMuni.SelectedValue.ToString()), int.Parse(comEst.SelectedValue.ToString()), idAlumno);
                         MessageBox.Show("Actualizado");
                         dataGridView1.DataSource = objeto.Mostrar_Trabajadores();
                         limpiar_Datos();
@@ -173,8 +173,6 @@ namespace ProyectoFinal.Formularios.Maestros
                 txtnom.Text = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
                 txtape.Text = dataGridView1.CurrentRow.Cells["Apellido"].Value.ToString();
                 txtdom.Text = dataGridView1.CurrentRow.Cells["Domicilio"].Value.ToString();
-                //comEst.Text es donde antes iba el salario
-                comEst.Text = dataGridView1.CurrentRow.Cells["salario"].Value.ToString();
                 txtTel.Text = dataGridView1.CurrentRow.Cells["Telefono"].Value.ToString();
                 comProf.Text = dataGridView1.CurrentRow.Cells["Profesion"].Value.ToString();
                 comDep.Text = dataGridView1.CurrentRow.Cells["Departamento"].Value.ToString();

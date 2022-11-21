@@ -36,12 +36,12 @@ namespace CapaDatos
             return tabla;
         }
 
-        public void Agregar_Maestro(string cod, string nom, string ape, string domicilio, double salario, string telefono, int profesionId, int departamentoId, int municipioId, int Estado)
+        public void Agregar_Maestro(string cod, string nom, string ape, string domicilio, string telefono, int profesionId, int departamentoId, int municipioId, int Estado)
         {
             //abrimos la conexion
             comando.Connection = conexion.Abrir();
             // aca hacemos el transact sql (que es la consulta o el procedimiento almacenado)
-            comando.CommandText = "insert into Trabajadores values ('" + cod + "','" + nom + "','" + ape + "','" + domicilio + "','" + salario + "','" + telefono + "','" + profesionId + "','" + departamentoId + "','" + municipioId + "','" + Estado + "')";
+            comando.CommandText = "insert into Trabajadores values ('" + cod + "','" + nom + "','" + ape + "','" + domicilio + "','" + telefono + "','" + profesionId + "','" + departamentoId + "','" + municipioId + "','" + Estado + "')";
             // aca especificamos el tipo de comando para indicar si es consulta o procedimiento almacenado
             comando.CommandType = CommandType.Text;
             //operación para ejecutar cualquier instrucción SQL arbitraria en SQL Server si no desea que se devuelva ningún conjunto de resultados.
@@ -98,7 +98,7 @@ namespace CapaDatos
             comando.Connection = conexion.Abrir();
 
             //hacer la consulta sql
-               comando.CommandText = " SELECT T.cod_Trabajador as [codigo], T.nom_Trabajador as [Nombre], T.ape_Trabajador as [Apellido], T.domicilio_Trabajador as [Domicilio], T.salario_Trabajador as [salario], T.telefono_Trabajador as [Telefono], P.nom_Profesion as [Profesion], D.nom_Departamento[Departamento], M.nom_Municipio as [Municipio], E.nom_EstadoTrabajador as [Estado] "
+               comando.CommandText = " SELECT T.cod_Trabajador as [codigo], T.nom_Trabajador as [Nombre], T.ape_Trabajador as [Apellido], T.domicilio_Trabajador as [Domicilio],T.telefono_Trabajador as [Telefono], P.nom_Profesion as [Profesion], D.nom_Departamento[Departamento], M.nom_Municipio as [Municipio], E.nom_EstadoTrabajador as [Estado] "
                 + "FROM Trabajadores T  "
                 + " INNER JOIN Departamentos D ON D.Id = T.DepartamentoId"
                 + " INNER JOIN Municipios M ON M.Id = T.MunicipioId "
@@ -124,7 +124,7 @@ namespace CapaDatos
 
         }
 
-        public void Modificar_Maestro(string cod, string nom, string ape, string domicilio, double salario, string telefono, int profesionId, int departamentoId, int municipioId, int Estado,int id)
+        public void Modificar_Maestro(string cod, string nom, string ape, string domicilio, string telefono, int profesionId, int departamentoId, int municipioId, int Estado,int id)
         {
             //abrimos la conexion
             comando.Connection = conexion.Abrir();
@@ -138,7 +138,6 @@ namespace CapaDatos
             comando.Parameters.AddWithValue("@Nom_Trab", nom);
             comando.Parameters.AddWithValue("@Ape_Trab", ape);
             comando.Parameters.AddWithValue("@Domi_Trab", domicilio);
-            comando.Parameters.AddWithValue("@Sal_Trab", salario);
             comando.Parameters.AddWithValue("@Tel_Trab", telefono);
             comando.Parameters.AddWithValue("@Prof_Trab", profesionId);
             comando.Parameters.AddWithValue("@DepaId", departamentoId);

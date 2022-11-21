@@ -19,7 +19,7 @@ namespace ProyectoFinal.Formularios
         public FrmGenerarNomina()
         {
             InitializeComponent();
-          
+            //btnDetaNominas.Hide();
         }
 
         #region ConfiguraciónFormulario
@@ -107,26 +107,17 @@ namespace ProyectoFinal.Formularios
                 }
                 else
                 {
-                    //objeto.GenerarNominas(
-                    //    dttFechaPago.Value, txtPagoDesde.Text, txtPagoHasta.Text,
-                    //    txtViatico.Text,txtPagoXHora.Text,txtSalarioNeto.Text,txtGastosMensuales.Text);
+                    objeto.GenerarNominas(dttFechaPago.Value, txtPagoDesde.Text, txtPagoHasta.Text);
                     MessageBox.Show("Nomina Generada.");
+                    //btnDetaNominas.Show();
                     Limpiar_Datos();
+                    AbrirFormulario(new FrmDetalleNomina());
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("No se puedo generar por" + ex);
             }
-        }
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCalcular_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnHistorialNominas_Click(object sender, EventArgs e)
@@ -136,10 +127,5 @@ namespace ProyectoFinal.Formularios
         }
 
         #endregion
-
-        private void pnlDetaNomina_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

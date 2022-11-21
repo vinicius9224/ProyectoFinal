@@ -64,8 +64,9 @@
             this.Tiempo = new System.Windows.Forms.Timer(this.components);
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlControl = new System.Windows.Forms.Panel();
+            this.picCerrarApp = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlMenuLateral.SuspendLayout();
             this.pnlSubMenuConfig.SuspendLayout();
             this.pnlSubMenuNominas.SuspendLayout();
@@ -75,8 +76,9 @@
             this.pnlSubMenuAlumnos.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCerrarApp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenuLateral
@@ -577,6 +579,30 @@
             this.lblHora.TabIndex = 4;
             this.lblHora.Text = "label1";
             // 
+            // pnlControl
+            // 
+            this.pnlControl.Controls.Add(this.picCerrarApp);
+            this.pnlControl.Controls.Add(this.pictureBox2);
+            this.pnlControl.Controls.Add(this.lblHora);
+            this.pnlControl.Controls.Add(this.lblFecha);
+            this.pnlControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlControl.Location = new System.Drawing.Point(251, 0);
+            this.pnlControl.Name = "pnlControl";
+            this.pnlControl.Size = new System.Drawing.Size(910, 728);
+            this.pnlControl.TabIndex = 3;
+            // 
+            // picCerrarApp
+            // 
+            this.picCerrarApp.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picCerrarApp.Image = global::ProyectoFinal.Properties.Resources.cerrar;
+            this.picCerrarApp.Location = new System.Drawing.Point(867, 3);
+            this.picCerrarApp.Name = "picCerrarApp";
+            this.picCerrarApp.Size = new System.Drawing.Size(40, 38);
+            this.picCerrarApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picCerrarApp.TabIndex = 7;
+            this.picCerrarApp.TabStop = false;
+            this.picCerrarApp.Click += new System.EventHandler(this.picCerrarApp_Click);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::ProyectoFinal.Properties.Resources.LogoFondo1;
@@ -586,17 +612,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
-            // 
-            // pnlControl
-            // 
-            this.pnlControl.Controls.Add(this.pictureBox2);
-            this.pnlControl.Controls.Add(this.lblHora);
-            this.pnlControl.Controls.Add(this.lblFecha);
-            this.pnlControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlControl.Location = new System.Drawing.Point(251, 0);
-            this.pnlControl.Name = "pnlControl";
-            this.pnlControl.Size = new System.Drawing.Size(910, 728);
-            this.pnlControl.TabIndex = 3;
             // 
             // FrmInicio
             // 
@@ -619,9 +634,10 @@
             this.pnlSubMenuAlumnos.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlControl.ResumeLayout(false);
             this.pnlControl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCerrarApp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -663,5 +679,6 @@
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel pnlControl;
+        private System.Windows.Forms.PictureBox picCerrarApp;
     }
 }

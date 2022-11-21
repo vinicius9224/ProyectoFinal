@@ -22,7 +22,7 @@ namespace CapaDatos
             //Se abre la cadena de conexion con la clase.
             comando.Connection = conexion.Abrir();
             // se llama a la consulta o el procedimiento almacenado
-            comando.CommandText = "Listadores_Alumnos";
+            comando.CommandText = "ListarAlumnos";
             // se especifica el tipo de comando si es text o procedure
             comando.CommandType = CommandType.Text;
             // comienza a leer todo lo que hay en la db y si coincide con el procedure o en la consulta todo ok
@@ -35,38 +35,39 @@ namespace CapaDatos
         }
 
         // en este metodo se le pasa todos los atributos para que coincidan con los de la db (en orden a como estan en la tabla por ejemplo si es varchar tiene que ser string)
-        public void Agregar_Alumnos(string cod, string nom, string ape, string fecha, string nomRes, string telRes, string colegio, string grado, string domiPersona, string evaluacion, int DeparId, int MuniId)
+        public void Agregar_Alumnos(string cod, string nom, string ape, DateTime fecha, string nomRes, string telRes, string colegio, string grado, string domiPersona, string evaluacion, int DeparId, int MuniId,int estado)
         {
             //abrimos la conexion
             comando.Connection = conexion.Abrir();
             // aca hacemos el transact sql (que es la consulta o el procedimiento almacenado)
-            comando.CommandText = "insert into Alumnos values ('" + cod + "','" + nom + "','" + ape + "','" + fecha + "','" + nomRes + "','" + telRes + "','" + colegio + "','" + grado + "','" + domiPersona + "','" + evaluacion + "','" + DeparId + "','" + MuniId + "')";
+            comando.CommandText = "insert into Alumnos values ('" + cod + "','" + nom + "','" + ape + "','" + fecha + "','" + nomRes + "','" + telRes + "','" + colegio + "','" + grado + "','" + domiPersona + "','" + evaluacion + "','" + DeparId + "','" + MuniId + "','"+ estado +"')";
             // aca especificamos el tipo de comando para indicar si es consulta o procedimiento almacenado
             comando.CommandType = CommandType.Text;
             //operación para ejecutar cualquier instrucción SQL arbitraria en SQL Server si no desea que se devuelva ningún conjunto de resultados.
             comando.ExecuteNonQuery();
         }
 
-        public void Editar_Alumnos(string cod, string nom, string ape, DateTime fecha, string nomRes, string telRes, string colegio, string grado, string domiPersona, string evaluacion, int DeparId, int MuniId, int id)
+        public void Editar_Alumnos(string cod, string nom, string ape, DateTime fecha, string nomRes, string telRes, string colegio, string grado, string domiPersona, string evaluacion, int DeparId, int MuniId, int id,int estado)
         {
             //abrimos la conexion
             comando.Connection = conexion.Abrir();
-            comando.CommandText = "EditarAlumnos";
+            comando.CommandText = "EditarAlumno";
             // se especifica el tipo de comando si es text o procedure
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("@id_Alum", id);
             comando.Parameters.AddWithValue("@Cod_Alum", cod);
             comando.Parameters.AddWithValue("@Nom_Alum", nom);
             comando.Parameters.AddWithValue("@Ape_Alum", ape);
-            comando.Parameters.AddWithValue("FechaNac_Alum", fecha);
+            comando.Parameters.AddWithValue("@FechaNac_Alum", fecha);
             comando.Parameters.AddWithValue("@NomResp_Alum", nomRes);
             comando.Parameters.AddWithValue("@TelfResp_Alum", telRes);
             comando.Parameters.AddWithValue("@Coleg_Alum", colegio);
             comando.Parameters.AddWithValue("@gradAcad_Alum ", grado);
             comando.Parameters.AddWithValue("@Domi_Alum", domiPersona);
-            comando.Parameters.AddWithValue("Eval_Alum", evaluacion);
+            comando.Parameters.AddWithValue("@Eval_Alum", evaluacion);
             comando.Parameters.AddWithValue("@DepaId", DeparId);
             comando.Parameters.AddWithValue("@MunId", MuniId);
+            comando.Parameters.AddWithValue("@Est_AlumId", estado);
             comando.ExecuteNonQuery();
         }
 
@@ -88,7 +89,7 @@ namespace CapaDatos
             // abrir la db
             comando.Connection = conexion.Abrir();
             //hacer la consulta sql
-            comando.CommandText = "SELECT A.Id, A.cod_Alumno as[Codigo], A.nom_Alumno as [Nombres] , A.ape_Alumno as [Apellidos], A.fechaNac_Alumno as [Fecha], A.nomResp_Alumno as [Responsable], A.telfResp_Alumno as [Telefono],A.colegio_Alumno as [Colegio], A.gradoAcad_Alumno as [Grado], A.domicilio_Alumno as [Domicilio], A.evaluacion_Alumno as [Evaluacion], D.nom_Departamento as [Departamento], M.nom_Municipio as [Municipio] "
+            comando.CommandText = "SELECT A.Id, A.cod_Alumno as[Codigo], A.nom_Alumno as [Nombres] , A.ape_Alumno as [Apellidos], A.fechaNac_Alumno as [Fecha], A.nomResp_Alumno as [Responsable], A.telfResp_Alumno as [Telefono],A.colegio_Alumno as [Colegio], A.gradoAcad_Alumno as [Grado], A.domicilio_Alumno as [Domicilio], A.evaluacion_Alumno as [Evaluacion], D.nom_Departamento as [Departamento], M.nom_Municipio as [Municipio],E.EstadoAlumnoId as [Estado] "
                 + "FROM Alumnos A "
                 + "INNER JOIN Departamentos D ON D.Id = A.DepartamentoId "
                 + "INNER JOIN Municipios M ON M.Id = A.MunicipioId " 
@@ -128,6 +129,25 @@ namespace CapaDatos
             comando.Connection = conexion.Abrir();
             // se llama a la consulta o el procedimiento almacenado
             comando.CommandText = "SELECT * FROM Municipios";
+            // se especifica el tipo de comando si es text o procedure
+            comando.CommandType = CommandType.Text;
+            // comienza a leer todo lo que hay en la db y si coincide con el procedure o en la consulta todo ok
+            SqlDataReader reader = comando.ExecuteReader();
+            // si la tabla esta cargada con los datos leidos todo ok.
+            tabla.Load(reader);
+            comando.Parameters.Clear();
+            comando.Connection = conexion.Cerrar();
+
+            return tabla;
+        }
+
+        public DataTable MostrarEstado()
+        {
+            DataTable tabla = new DataTable();
+            //Se abre la cadena de conexion con la clase.
+            comando.Connection = conexion.Abrir();
+            // se llama a la consulta o el procedimiento almacenado
+            comando.CommandText = "SELECT * FROM EstadoAlumnos";
             // se especifica el tipo de comando si es text o procedure
             comando.CommandType = CommandType.Text;
             // comienza a leer todo lo que hay en la db y si coincide con el procedure o en la consulta todo ok
