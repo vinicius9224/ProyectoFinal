@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProyectoFinal.Properties {
-    using System;
-    
-    
+namespace ProyectoFinal.Properties
+{
+
+
     /// <summary>
     ///   Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
     /// </summary>
@@ -66,26 +66,6 @@ namespace ProyectoFinal.Properties {
         internal static System.Drawing.Bitmap BotonLoginFondo {
             get {
                 object obj = ResourceManager.GetObject("BotonLoginFondo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Fondo_ListarSesiones {
-            get {
-                object obj = ResourceManager.GetObject("Fondo ListarSesiones", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Fondo_ListarSesiones1 {
-            get {
-                object obj = ResourceManager.GetObject("Fondo ListarSesiones1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

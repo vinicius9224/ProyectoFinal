@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmModificarSesion));
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.paneldatos = new System.Windows.Forms.Panel();
             this.btnMenu = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.paneldatos = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbxAño = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -60,31 +60,6 @@
             this.panelContenedor.Size = new System.Drawing.Size(939, 643);
             this.panelContenedor.TabIndex = 0;
             // 
-            // btnMenu
-            // 
-            this.btnMenu.BackColor = System.Drawing.SystemColors.Control;
-            this.btnMenu.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenu.Location = new System.Drawing.Point(416, 597);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(100, 34);
-            this.btnMenu.TabIndex = 3;
-            this.btnMenu.Text = "Ir al menú";
-            this.btnMenu.UseVisualStyleBackColor = false;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Image = global::ProyectoFinal.Properties.Resources.Fondo_ListarSesiones;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Location = new System.Drawing.Point(378, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 27);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Lista de Sesiones";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // paneldatos
             // 
             this.paneldatos.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -96,10 +71,34 @@
             this.paneldatos.Controls.Add(this.lblTotal);
             this.paneldatos.Controls.Add(this.label2);
             this.paneldatos.Controls.Add(this.dataGridView1);
-            this.paneldatos.Location = new System.Drawing.Point(40, 51);
+            this.paneldatos.Location = new System.Drawing.Point(27, 51);
             this.paneldatos.Name = "paneldatos";
             this.paneldatos.Size = new System.Drawing.Size(859, 522);
             this.paneldatos.TabIndex = 1;
+            // 
+            // btnMenu
+            // 
+            this.btnMenu.BackColor = System.Drawing.SystemColors.Control;
+            this.btnMenu.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenu.Location = new System.Drawing.Point(403, 590);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(100, 34);
+            this.btnMenu.TabIndex = 3;
+            this.btnMenu.Text = "Ir al menú";
+            this.btnMenu.UseVisualStyleBackColor = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.Location = new System.Drawing.Point(366, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(195, 27);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Lista de Sesiones";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
@@ -209,7 +208,6 @@
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.Fondo_ListarSesiones1;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(939, 643);
