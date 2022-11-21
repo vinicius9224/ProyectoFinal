@@ -28,6 +28,7 @@ namespace ProyectoFinal.Formularios.Alumnos
         #region Validaciones
         private void Mostrar()
         {
+            
             dataGridView1.DataSource = objeto.Mostrar_completo();
         }
 
