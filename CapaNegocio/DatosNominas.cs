@@ -12,30 +12,21 @@ namespace CapaNegocio
     {
         private Nominas nominas=new Nominas();
 
-        public void GenerarNominas(DateTime FechaPago_Nomina, string pagoDesde_Nomina, string pagoHasta_Nomina, float SalarioNeto, float Viatico, int TotalHoras, float PagoxHoras)
+        public void GenerarNominas(DateTime FechaPago_Nomina, string pagoDesde_Nomina, string pagoHasta_Nomina)
         {
-            nominas.GenerarNominas( FechaPago_Nomina,  pagoDesde_Nomina,  pagoHasta_Nomina, SalarioNeto, Viatico, TotalHoras, PagoxHoras);            
+            nominas.GenerarNominas( FechaPago_Nomina,  pagoDesde_Nomina,  pagoHasta_Nomina);            
         }
-
-        //public DataTable ListarNominas()
+        public void DetaNomina(string viatico,  string pago_Hora, string totalHoras, string nominaid, string sesionid)
+        {
+            nominas.DetalleNomina(float.Parse(viatico), float.Parse(pago_Hora), int.Parse(totalHoras),Convert.ToInt32(nominaid), Convert.ToInt32(sesionid));
+        }
+        //public DataTable Mostrar_Total()
         //{
+        //    // instanceamos la clase datatable
         //    DataTable tabla = new DataTable();
-        //    tabla = Nominas.ListarNominas();
+        //    tabla = nominas.TotalHoras();
         //    return tabla;
         //}
-
-        //public DataTable MostrarEgresosTotales()
-        //{
-        //    DataTable tabla = new DataTable();
-        //    tabla = Nominas.MostrarEgresosTotales();
-        //    return tabla;
-        //}
-        public DataTable BuscarMaestros(string parametro)
-        {
-            DataTable tabla = new DataTable();
-            tabla = nominas.Buscar(parametro);
-            return tabla;
-        }
 
     }
 }

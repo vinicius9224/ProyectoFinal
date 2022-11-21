@@ -30,14 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHistorialNominas));
             this.pnlContenedor = new System.Windows.Forms.Panel();
+            this.txtBus = new System.Windows.Forms.TextBox();
+            this.lblBuscar = new System.Windows.Forms.Label();
             this.lblHistorialSes = new System.Windows.Forms.Label();
             this.pnlHistorialNominas = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtBus = new System.Windows.Forms.TextBox();
-            this.lblBuscar = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pnlContenedor.SuspendLayout();
+            this.pnlHistorialNominas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlContenedor
@@ -53,6 +56,26 @@
             this.pnlContenedor.Name = "pnlContenedor";
             this.pnlContenedor.Size = new System.Drawing.Size(894, 689);
             this.pnlContenedor.TabIndex = 214;
+            // 
+            // txtBus
+            // 
+            this.txtBus.Location = new System.Drawing.Point(171, 89);
+            this.txtBus.Name = "txtBus";
+            this.txtBus.Size = new System.Drawing.Size(641, 20);
+            this.txtBus.TabIndex = 218;
+            this.txtBus.TextChanged += new System.EventHandler(this.txtBus_TextChanged);
+            // 
+            // lblBuscar
+            // 
+            this.lblBuscar.AutoSize = true;
+            this.lblBuscar.BackColor = System.Drawing.Color.Gray;
+            this.lblBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscar.ForeColor = System.Drawing.Color.White;
+            this.lblBuscar.Location = new System.Drawing.Point(91, 89);
+            this.lblBuscar.Name = "lblBuscar";
+            this.lblBuscar.Size = new System.Drawing.Size(65, 20);
+            this.lblBuscar.TabIndex = 219;
+            this.lblBuscar.Text = "Buscar";
             // 
             // lblHistorialSes
             // 
@@ -70,6 +93,7 @@
             // pnlHistorialNominas
             // 
             this.pnlHistorialNominas.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlHistorialNominas.Controls.Add(this.dataGridView1);
             this.pnlHistorialNominas.Location = new System.Drawing.Point(41, 136);
             this.pnlHistorialNominas.Name = "pnlHistorialNominas";
             this.pnlHistorialNominas.Size = new System.Drawing.Size(810, 449);
@@ -102,24 +126,13 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // txtBus
+            // dataGridView1
             // 
-            this.txtBus.Location = new System.Drawing.Point(171, 89);
-            this.txtBus.Name = "txtBus";
-            this.txtBus.Size = new System.Drawing.Size(641, 20);
-            this.txtBus.TabIndex = 218;
-            // 
-            // lblBuscar
-            // 
-            this.lblBuscar.AutoSize = true;
-            this.lblBuscar.BackColor = System.Drawing.Color.Gray;
-            this.lblBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscar.ForeColor = System.Drawing.Color.White;
-            this.lblBuscar.Location = new System.Drawing.Point(91, 89);
-            this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(65, 20);
-            this.lblBuscar.TabIndex = 219;
-            this.lblBuscar.Text = "Buscar";
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(16, 16);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(782, 421);
+            this.dataGridView1.TabIndex = 1;
             // 
             // FrmHistorialNominas
             // 
@@ -132,9 +145,12 @@
             this.MinimumSize = new System.Drawing.Size(910, 728);
             this.Name = "FrmHistorialNominas";
             this.Text = "Historial Nominas";
+            this.Load += new System.EventHandler(this.FrmHistorialNominas_Load);
             this.pnlContenedor.ResumeLayout(false);
             this.pnlContenedor.PerformLayout();
+            this.pnlHistorialNominas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -147,5 +163,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtBus;
         private System.Windows.Forms.Label lblBuscar;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

@@ -261,6 +261,7 @@
   <ItemGroup>
     <None Include="Recursos\Botones\BotonLoginFondo.png" />
     <Content Include="Recursos\Botones\cerrar-sesion.png" />
+    <Content Include="Recursos\Botones\cerrar.png" />
     <Content Include="Recursos\Botones\conferencia.png" />
     <Content Include="Recursos\Botones\cuenta.png" />
     <Content Include="Recursos\Botones\estudiante.png" />

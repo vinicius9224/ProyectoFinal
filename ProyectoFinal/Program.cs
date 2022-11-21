@@ -1,5 +1,6 @@
 ﻿using ProyectoFinal.Formularios;
 using ProyectoFinal.Formularios.Alumnos;
+using ProyectoFinal.Formularios.Nominas;
 using ProyectoFinal.Formularios.Sesiones;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace ProyectoFinal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmLogin());
+            Application.Run(new FrmDetalleNomina());
         }
     }
 }

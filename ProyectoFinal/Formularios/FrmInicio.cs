@@ -253,5 +253,9 @@ namespace ProyectoFinal.Formularios
 
         #endregion
 
+        private void picCerrarApp_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
