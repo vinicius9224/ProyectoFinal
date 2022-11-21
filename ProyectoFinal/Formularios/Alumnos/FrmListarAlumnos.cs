@@ -28,7 +28,7 @@ namespace ProyectoFinal.Formularios.Alumnos
         #region Validaciones
         private void Mostrar()
         {
-            //dataGridView1.DataSource = objeto.Mostrar_completo();
+            dataGridView1.DataSource = objeto.Mostrar_completo();
         }
 
         private void Noedi()
@@ -44,7 +44,7 @@ namespace ProyectoFinal.Formularios.Alumnos
         #region Botones y Barra de Busqueda
         private void txtBus_TextChanged(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = objeto.Buscadir(txtBus.Text);
+            //dataGridView1.DataSource = objeto.Buscadir(txtBus.Text);
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

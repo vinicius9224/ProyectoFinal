@@ -14,20 +14,34 @@ namespace CapaDatos
         // intanciar los comandos sqlClient para poder utilizar las funciones
         SqlCommand comando = new SqlCommand();
 
-        public DataTable GenerarNominas( DateTime FechaPago_Nomina, string pagoDesde_Nomina, string pagoHasta_Nomina, float SalarioNeto, float Viatico, int TotalHoras, float PagoxHoras)
+        public DataTable GenerarNominas( DateTime FechaPago_Nomina, string pagoDesde_Nomina, string pagoHasta_Nomina)
         {
             //Instrucciones que abren la conexion, y meten los parametros mandados del formulario, devuelven una tabla que si tiene datos el codigo dado es repetido. 
             DataTable tabla = new DataTable();
             comando.Connection = conexion.Abrir();
-            comando.CommandText = "GenerarNomina";
+            comando.CommandText = "GenerarNominas";
             comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@FechaPago_Nomina", FechaPago_Nomina);
-            comando.Parameters.AddWithValue("@pagoDesde_Nomina", pagoDesde_Nomina);
-            comando.Parameters.AddWithValue("@pagoHasta_Nomina", pagoHasta_Nomina);
-            comando.Parameters.AddWithValue("@salario_Neto", SalarioNeto);
-            comando.Parameters.AddWithValue("@viaticos", Viatico);
-            comando.Parameters.AddWithValue("@total_Horas", TotalHoras);
-            comando.Parameters.AddWithValue("@valor_pHoras", PagoxHoras);
+            comando.Parameters.AddWithValue("@fecha_pagoNomina", FechaPago_Nomina);
+            comando.Parameters.AddWithValue("@fech_Nom_Desde", pagoDesde_Nomina);
+            comando.Parameters.AddWithValue("@fech_Nom_Hasta", pagoHasta_Nomina);
+            SqlDataReader reader = comando.ExecuteReader();
+            tabla.Load(reader);
+            comando.Parameters.Clear();
+            comando.Connection = conexion.Cerrar();
+            return tabla;
+        }
+        public DataTable DetalleNomina(float viatico, float pago_Hora, int totalHoras, int nominaid,int sesionid)
+        {
+            //Instrucciones que abren la conexion, y meten los parametros mandados del formulario, devuelven una tabla que si tiene datos el codigo dado es repetido. 
+            DataTable tabla = new DataTable();
+            comando.Connection = conexion.Abrir();
+            comando.CommandText = "GenerarDetaNomina";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@viaticos", viatico);
+            comando.Parameters.AddWithValue("@valor_pHoras", pago_Hora);
+            comando.Parameters.AddWithValue("@total_Horas", totalHoras);
+            comando.Parameters.AddWithValue("@NominaId", nominaid);
+            comando.Parameters.AddWithValue("@SesionId", sesionid);
             SqlDataReader reader = comando.ExecuteReader();
             tabla.Load(reader);
             comando.Parameters.Clear();
@@ -35,51 +49,32 @@ namespace CapaDatos
             return tabla;
         }
 
-        //public DataTable ListarNominas()
-        //{
-        //    //Instrucciones que abren la conexion, y meten los parametros mandados del formulario, devuelven una tabla que si tiene datos el codigo dado es repetido. 
-        //    DataTable tabla = new DataTable();
-        //    comando.Connection = conexion.Abrir();
-        //    comando.CommandText = "ListarNominas";
-        //    comando.CommandType = CommandType.StoredProcedure;
-        //}
 
-        //public DataTable MostrarEgresosTotales()
-        //{
-        //    //Instrucciones que abren la conexion, y meten los parametros mandados del formulario, devuelven una tabla que si tiene datos el codigo dado es repetido. 
-        //    DataTable tabla = new DataTable();
-        //    comando.Connection = conexion.Abrir();
-        //    comando.CommandText = "MostrarEgresosTotales";
-        //    comando.CommandType = CommandType.StoredProcedure;
-        //}
-
-        //public DataTable MostrarMaestros()
-        //{
-        //    Instrucciones que abren la conexion, y meten los parametros mandados del formulario, devuelven una tabla que si tiene datos el codigo dado es repetido. 
-        //    DataTable tabla = new DataTable();
-        //    comando.Connection = conexion.Abrir();
-        //    comando.CommandText = "MostrarMaestros";
-        //    comando.CommandType = CommandType.StoredProcedure;
-        //}
-        public DataTable Buscar(string parametro)
+        public DataTable TotalHoras()
         {
-            //Intanciar los comandos sqlClient para poder utilizar las funciones
+            // intanciar los comandos sqlClient para poder utilizar las funciones
             SqlCommand comando = new SqlCommand();
-            //Abrir la db
+            // abrir la db
             comando.Connection = conexion.Abrir();
-            //Hacer la consulta sql
-            comando.CommandText = "SELECT T.Id, T.cod_Trabajador as[Codigo], T.nom_Trabajador [Nombres] , T.ape_Trabajador as [Apellidos],T.salario_Trabajador as [SalarioBruto],P.nom_Profesion "
-                + "FROM Trabajadores T "
-                + "INNER JOIN Profesiones P ON P.Id = T.ProfesionId "
-                + "where cod_Trabajador like ('" + parametro + "')";
+            //hacer la consulta sql
+            comando.CommandText = " select SUM(S.cantHoras_Sesion)AS TotalHoras"
+                +"from DetalleNominas D"
+                +"INNER JOIN Sesiones S ON S.Id=S.Id"
+                +"INNER JOIN Facturas F ON D.Id=F.Id"
+                +"INNER JOIN Trabajadores T ON D.Id=T.Id"
+                + "WHERE T.Id=F.Id";
             //operación para ejecutar cualquier instrucción SQL arbitraria en SQL Server si no desea que se devuelva ningún conjunto de resultados.
             comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
             // intanciar los comandos sqlClient para poder utilizar las funciones
             DataTable tabla = new DataTable();
             SqlDataAdapter ada = new SqlDataAdapter(comando);
             ada.Fill(tabla);
             conexion.Cerrar();
+
             return tabla;
+
         }
+
     }
 }
