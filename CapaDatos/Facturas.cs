@@ -89,9 +89,9 @@ namespace CapaDatos
             {
                 nombre = reader["Nombres"].ToString();
             }
-        
-            return Tuple.Create(nombre);
             conexion.Cerrar();
+            return Tuple.Create(nombre);
+
 
         }
 
@@ -109,16 +109,15 @@ namespace CapaDatos
 
             if (reader.Read())
             {
-               
-              return reader["cod_Factura"].ToString();
-
+                conexion.Cerrar();
+                return reader["cod_Factura"].ToString();
             }
             else
             {
-
+                conexion.Cerrar();
                 return "NULL";
             }
-            conexion.Cerrar();
+
             
         }
 
