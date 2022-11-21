@@ -20,7 +20,7 @@ namespace ProyectoFinal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmDetalleNomina());
+            Application.Run(new FrmLogin());
         }
     }
 }
