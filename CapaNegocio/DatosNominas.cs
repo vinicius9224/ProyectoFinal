@@ -20,13 +20,13 @@ namespace CapaNegocio
         {
             nominas.DetalleNomina(float.Parse(viatico), float.Parse(pago_Hora), int.Parse(totalHoras),Convert.ToInt32(nominaid), Convert.ToInt32(sesionid));
         }
-        public DataTable Mostrar_Total()
-        {
-            // instanceamos la clase datatable
-            DataTable tabla = new DataTable();
-            tabla = nominas.TotalHoras();
-            return tabla;
-        }
+        //public DataTable Mostrar_Total()
+        //{
+        //    // instanceamos la clase datatable
+        //    DataTable tabla = new DataTable();
+        //    tabla = nominas.TotalHoras();
+        //    return tabla;
+        //}
 
     }
 }
