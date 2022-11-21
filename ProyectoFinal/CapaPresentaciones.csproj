@@ -273,6 +273,7 @@
     <Content Include="Recursos\Botones\minimizar.png" />
     <Content Include="Recursos\Botones\nomina-de-sueldos.png" />
     <Content Include="Recursos\Botones\perfil-del-usuario.png" />
+    <None Include="Recursos\Fondos\Fondo ListarSesiones.jpg" />
     <Content Include="Recursos\Fondos\Fondo1.jpg" />
     <Content Include="Recursos\Fondos\Fondo2.png" />
     <Content Include="Recursos\Fondos\Fondo3.jpeg" />

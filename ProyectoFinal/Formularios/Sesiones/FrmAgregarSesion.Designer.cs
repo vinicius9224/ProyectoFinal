@@ -36,10 +36,10 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.lblRegSes = new System.Windows.Forms.Label();
             this.panelBuscar = new System.Windows.Forms.Panel();
+            this.lblBuscar = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnSeleccion = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.PictBxLupa = new System.Windows.Forms.PictureBox();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.cmbBxBuscar = new System.Windows.Forms.ComboBox();
             this.panelDatos = new System.Windows.Forms.Panel();
             this.txtCodFactur = new System.Windows.Forms.TextBox();
@@ -58,7 +58,6 @@
             this.panelContenedor.SuspendLayout();
             this.panelBuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictBxLupa)).BeginInit();
             this.panelDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -137,15 +136,35 @@
             // panelBuscar
             // 
             this.panelBuscar.BackColor = System.Drawing.SystemColors.Control;
+            this.panelBuscar.Controls.Add(this.lblBuscar);
+            this.panelBuscar.Controls.Add(this.txtBuscar);
             this.panelBuscar.Controls.Add(this.btnSeleccion);
             this.panelBuscar.Controls.Add(this.dataGridView1);
-            this.panelBuscar.Controls.Add(this.PictBxLupa);
-            this.panelBuscar.Controls.Add(this.txtBuscar);
             this.panelBuscar.Controls.Add(this.cmbBxBuscar);
             this.panelBuscar.Location = new System.Drawing.Point(351, 67);
             this.panelBuscar.Name = "panelBuscar";
             this.panelBuscar.Size = new System.Drawing.Size(534, 510);
             this.panelBuscar.TabIndex = 2;
+            // 
+            // lblBuscar
+            // 
+            this.lblBuscar.BackColor = System.Drawing.Color.Gray;
+            this.lblBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscar.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblBuscar.Location = new System.Drawing.Point(15, 8);
+            this.lblBuscar.Name = "lblBuscar";
+            this.lblBuscar.Size = new System.Drawing.Size(76, 23);
+            this.lblBuscar.TabIndex = 6;
+            this.lblBuscar.Text = "Buscar";
+            this.lblBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(97, 10);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(296, 20);
+            this.txtBuscar.TabIndex = 5;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // btnSeleccion
             // 
@@ -174,31 +193,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(501, 423);
             this.dataGridView1.TabIndex = 3;
             // 
-            // PictBxLupa
-            // 
-            this.PictBxLupa.BackColor = System.Drawing.Color.White;
-            this.PictBxLupa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PictBxLupa.Image = global::ProyectoFinal.Properties.Resources.lupa;
-            this.PictBxLupa.Location = new System.Drawing.Point(426, 3);
-            this.PictBxLupa.Name = "PictBxLupa";
-            this.PictBxLupa.Size = new System.Drawing.Size(48, 37);
-            this.PictBxLupa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictBxLupa.TabIndex = 2;
-            this.PictBxLupa.TabStop = false;
-            this.PictBxLupa.Click += new System.EventHandler(this.PictBxLupa_Click);
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.ForeColor = System.Drawing.Color.Black;
-            this.txtBuscar.Location = new System.Drawing.Point(138, 10);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(266, 21);
-            this.txtBuscar.TabIndex = 1;
-            this.txtBuscar.Text = "Buscar códigos";
-            this.txtBuscar.Click += new System.EventHandler(this.txtBuscar_Click);
-            this.txtBuscar.Leave += new System.EventHandler(this.txtBuscar_Leave);
-            // 
             // cmbBxBuscar
             // 
             this.cmbBxBuscar.BackColor = System.Drawing.Color.Silver;
@@ -208,7 +202,7 @@
             this.cmbBxBuscar.Items.AddRange(new object[] {
             "Trabajadores",
             "Facturas"});
-            this.cmbBxBuscar.Location = new System.Drawing.Point(9, 10);
+            this.cmbBxBuscar.Location = new System.Drawing.Point(399, 10);
             this.cmbBxBuscar.Name = "cmbBxBuscar";
             this.cmbBxBuscar.Size = new System.Drawing.Size(105, 21);
             this.cmbBxBuscar.TabIndex = 0;
@@ -375,7 +369,6 @@
             this.panelBuscar.ResumeLayout(false);
             this.panelBuscar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictBxLupa)).EndInit();
             this.panelDatos.ResumeLayout(false);
             this.panelDatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -390,9 +383,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblRegSes;
         private System.Windows.Forms.Panel panelBuscar;
-        private System.Windows.Forms.PictureBox PictBxLupa;
-        private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.ComboBox cmbBxBuscar;
         private System.Windows.Forms.Panel panelDatos;
         private System.Windows.Forms.TextBox txtCodFactur;
         private System.Windows.Forms.TextBox txtCodTrab;
@@ -409,5 +399,8 @@
         private System.Windows.Forms.Button btnSeleccion;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label lblBuscar;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.ComboBox cmbBxBuscar;
     }
 }

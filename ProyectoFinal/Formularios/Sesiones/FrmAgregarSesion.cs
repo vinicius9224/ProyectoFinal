@@ -145,36 +145,18 @@ namespace ProyectoFinal.Formularios.Sesiones
 
         }
 
-        //Evento para mandar a listar los datos buscados
-        private void PictBxLupa_Click(object sender, EventArgs e)
-        {
-            if (cmbBxBuscar.Text == "Trabajadores" || cmbBxBuscar.Text == "Facturas")
-            {
-                dataGridView1.DataSource = DatSes.BuscarDato(txtBuscar.Text.Trim(), cmbBxBuscar.Text.Trim());
-            }
-            else
-            {
-                MessageBox.Show("Seleccione a que grupo pertenece el dato a buscar");
-            }
-
-        }
         private void cmbBxBuscar_SelectedIndexChanged(object sender, EventArgs e)
         {
             dataGridView1.DataSource = DatSes.ListarDatosView(cmbBxBuscar.Text);
         }
 
-        //Evento para que se borre la palabra buscar del txtbuscar
-        private void txtBuscar_Click(object sender, EventArgs e)
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            txtBuscar.Text = null;
+            if (cmbBxBuscar.Text == "Trabajadores" || cmbBxBuscar.Text == "Facturas")
+            {
+                dataGridView1.DataSource = DatSes.BuscarDato(txtBuscar.Text, cmbBxBuscar.Text.Trim());
+            }
         }
-
-        //Evento para que se recoloque Buscar en el txtBuscar
-        private void txtBuscar_Leave(object sender, EventArgs e)
-        {
-            txtBuscar.Text = "Buscar códigos";
-        }
-
         #endregion
 
         #region Notificaciones de Errores
@@ -204,7 +186,6 @@ namespace ProyectoFinal.Formularios.Sesiones
             limpiar_Datos();
         }
         #endregion
-
     }
 
 }
