@@ -150,10 +150,22 @@ namespace ProyectoFinal.Formularios.Maestros
                     try
                     {
                         //comEst.Text es donde antes iba el salario
-                        objeto.Editar_Maestro(txtcod.Text, txtnom.Text, txtape.Text, txtdom.Text, txtTel.Text, int.Parse(comProf.SelectedValue.ToString()), int.Parse(comDep.SelectedValue.ToString()), int.Parse(comMuni.SelectedValue.ToString()), int.Parse(comEst.SelectedValue.ToString()), idAlumno);
-                        MessageBox.Show("Actualizado");
-                        dataGridView1.DataSource = objeto.Mostrar_Trabajadores();
-                        limpiar_Datos();
+
+
+                        if (txtTel.Text.Length == 8)
+                        {
+                            objeto.Editar_Maestro(txtcod.Text, txtnom.Text, txtape.Text, txtdom.Text, txtTel.Text, int.Parse(comProf.SelectedValue.ToString()), int.Parse(comDep.SelectedValue.ToString()), int.Parse(comMuni.SelectedValue.ToString()), int.Parse(comEst.SelectedValue.ToString()), idAlumno);
+                            MessageBox.Show("Actualizado");
+                            dataGridView1.DataSource = objeto.Mostrar_Trabajadores();
+                            limpiar_Datos();
+
+                        }
+                        else
+                        {
+                           MessageBox.Show("llenar telefono completo");
+                        }
+
+                       
                     }
                     catch (Exception ex)
                     {
@@ -179,6 +191,7 @@ namespace ProyectoFinal.Formularios.Maestros
                 comMuni.Text = dataGridView1.CurrentRow.Cells["Municipio"].Value.ToString();
                 comEst.Text = dataGridView1.CurrentRow.Cells["Estado"].Value.ToString();
                 idAlumno = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+                txtcod.Enabled = false;
                 Editacion = true;
             }
             else
@@ -187,5 +200,58 @@ namespace ProyectoFinal.Formularios.Maestros
             }
         }
         #endregion
+
+        private void comProf_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void comDep_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void comMuni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void comEst_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtnom_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+
+                MessageBox.Show("Solo letras", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtape_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+
+                MessageBox.Show("Solo letras", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtTel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo Numeros", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
+        }
     }
+
 }

@@ -167,6 +167,7 @@
             this.comEst.Name = "comEst";
             this.comEst.Size = new System.Drawing.Size(121, 24);
             this.comEst.TabIndex = 80;
+            this.comEst.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comEst_KeyPress);
             // 
             // lblTituloAlumno
             // 
@@ -189,6 +190,7 @@
             this.comProf.Name = "comProf";
             this.comProf.Size = new System.Drawing.Size(114, 24);
             this.comProf.TabIndex = 79;
+            this.comProf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comProf_KeyPress);
             // 
             // comMuni
             // 
@@ -198,6 +200,7 @@
             this.comMuni.Name = "comMuni";
             this.comMuni.Size = new System.Drawing.Size(121, 24);
             this.comMuni.TabIndex = 78;
+            this.comMuni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comMuni_KeyPress);
             // 
             // comDep
             // 
@@ -207,6 +210,7 @@
             this.comDep.Name = "comDep";
             this.comDep.Size = new System.Drawing.Size(121, 24);
             this.comDep.TabIndex = 77;
+            this.comDep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comDep_KeyPress);
             // 
             // label1
             // 
@@ -225,6 +229,7 @@
             this.txtnom.Name = "txtnom";
             this.txtnom.Size = new System.Drawing.Size(121, 23);
             this.txtnom.TabIndex = 75;
+            this.txtnom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnom_KeyPress);
             // 
             // txtape
             // 
@@ -233,14 +238,17 @@
             this.txtape.Name = "txtape";
             this.txtape.Size = new System.Drawing.Size(105, 23);
             this.txtape.TabIndex = 74;
+            this.txtape.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtape_KeyPress);
             // 
             // txtTel
             // 
             this.txtTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTel.Location = new System.Drawing.Point(194, 137);
+            this.txtTel.MaxLength = 8;
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(121, 23);
             this.txtTel.TabIndex = 73;
+            this.txtTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTel_KeyPress);
             // 
             // txtdom
             // 
@@ -397,7 +405,7 @@
             this.Controls.Add(this.pnlFondo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(910, 728);
-            this.MinimumSize = new System.Drawing.Size(910, 728);
+            this.MinimumSize = new System.Drawing.Size(910, 726);
             this.Name = "FrmModificarMaestro";
             this.Text = "Modificar Maestro";
             this.Load += new System.EventHandler(this.FrmModificarMaestro_Load);

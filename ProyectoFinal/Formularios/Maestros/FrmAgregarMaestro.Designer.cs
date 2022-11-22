@@ -148,6 +148,7 @@
             this.comEst.Name = "comEst";
             this.comEst.Size = new System.Drawing.Size(121, 23);
             this.comEst.TabIndex = 40;
+            this.comEst.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comEst_KeyPress);
             // 
             // comProf
             // 
@@ -157,6 +158,7 @@
             this.comProf.Name = "comProf";
             this.comProf.Size = new System.Drawing.Size(121, 23);
             this.comProf.TabIndex = 39;
+            this.comProf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comProf_KeyPress);
             // 
             // comMuni
             // 
@@ -166,6 +168,7 @@
             this.comMuni.Name = "comMuni";
             this.comMuni.Size = new System.Drawing.Size(121, 23);
             this.comMuni.TabIndex = 38;
+            this.comMuni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comMuni_KeyPress);
             // 
             // comDep
             // 
@@ -175,6 +178,7 @@
             this.comDep.Name = "comDep";
             this.comDep.Size = new System.Drawing.Size(121, 23);
             this.comDep.TabIndex = 37;
+            this.comDep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comDep_KeyPress);
             // 
             // label1
             // 
@@ -182,7 +186,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(177, 73);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 16);
+            this.label1.Size = new System.Drawing.Size(58, 16);
             this.label1.TabIndex = 36;
             this.label1.Text = "Código";
             // 
@@ -193,6 +197,7 @@
             this.txtnom.Name = "txtnom";
             this.txtnom.Size = new System.Drawing.Size(146, 21);
             this.txtnom.TabIndex = 35;
+            this.txtnom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnom_KeyPress);
             // 
             // txtape
             // 
@@ -201,14 +206,17 @@
             this.txtape.Name = "txtape";
             this.txtape.Size = new System.Drawing.Size(146, 21);
             this.txtape.TabIndex = 34;
+            this.txtape.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtape_KeyPress);
             // 
             // txtTel
             // 
             this.txtTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTel.Location = new System.Drawing.Point(128, 349);
+            this.txtTel.MaxLength = 8;
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(146, 21);
             this.txtTel.TabIndex = 33;
+            this.txtTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTel_KeyPress);
             // 
             // txtdom
             // 
@@ -226,6 +234,7 @@
             this.txtcod.Name = "txtcod";
             this.txtcod.Size = new System.Drawing.Size(125, 21);
             this.txtcod.TabIndex = 31;
+            this.txtcod.TextChanged += new System.EventHandler(this.txtcod_TextChanged);
             // 
             // label10
             // 
@@ -233,7 +242,7 @@
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(362, 163);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(73, 16);
+            this.label10.Size = new System.Drawing.Size(74, 16);
             this.label10.TabIndex = 30;
             this.label10.Text = "Municipio";
             // 
@@ -243,7 +252,7 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(177, 239);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 16);
+            this.label9.Size = new System.Drawing.Size(66, 16);
             this.label9.TabIndex = 29;
             this.label9.Text = "Apellido";
             // 
@@ -253,7 +262,7 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(555, 162);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 16);
+            this.label8.Size = new System.Drawing.Size(73, 16);
             this.label8.TabIndex = 28;
             this.label8.Text = "Domicilio";
             // 
@@ -263,7 +272,7 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(177, 313);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 16);
+            this.label7.Size = new System.Drawing.Size(70, 16);
             this.label7.TabIndex = 27;
             this.label7.Text = "Teléfono";
             // 
@@ -273,7 +282,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(344, 73);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 16);
+            this.label5.Size = new System.Drawing.Size(106, 16);
             this.label5.TabIndex = 26;
             this.label5.Text = "Departamento";
             // 
@@ -283,7 +292,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(362, 239);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 16);
+            this.label4.Size = new System.Drawing.Size(74, 16);
             this.label4.TabIndex = 25;
             this.label4.Text = "Profesión";
             // 
@@ -293,7 +302,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(376, 313);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 16);
+            this.label3.Size = new System.Drawing.Size(57, 16);
             this.label3.TabIndex = 24;
             this.label3.Text = "Estado";
             // 
@@ -303,7 +312,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(177, 163);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 16);
+            this.label2.Size = new System.Drawing.Size(63, 16);
             this.label2.TabIndex = 23;
             this.label2.Text = "Nombre";
             // 
@@ -326,7 +335,7 @@
             this.Controls.Add(this.pnlFondo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(910, 728);
-            this.MinimumSize = new System.Drawing.Size(910, 728);
+            this.MinimumSize = new System.Drawing.Size(910, 726);
             this.Name = "FrmAgregarMaestro";
             this.Text = "Agregar Maestro";
             this.Load += new System.EventHandler(this.FrmAgregarMaestro_Load);

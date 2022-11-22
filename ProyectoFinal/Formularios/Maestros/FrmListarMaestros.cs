@@ -22,6 +22,7 @@ namespace ProyectoFinal.Formularios.Maestros
         private void Mostrar()
         {
          dataGridView1.DataSource = objeto.Mostrar_Trabajadores();
+         
         }
 
 

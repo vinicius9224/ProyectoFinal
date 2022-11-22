@@ -20,6 +20,9 @@ namespace ProyectoFinal.Formularios
         public FrmAgregarAlumno()
         {
             InitializeComponent();
+            
+
+
         }
 
         private void FrmAgregarAlumno_Load(object sender, EventArgs e)
@@ -168,14 +171,24 @@ namespace ProyectoFinal.Formularios
                 else
                 {
                     //Agregar el comboBoxEstadoAlum con los parametros en CapaDatos,CapaNegocio en agregar y editar. Ademas de cambiarle los proced.Almc. 
-                    objeto.AgregarAlumno(txtcod.Text, txtnom.Text, txtape.Text, datTimeSes.Value, txtresp.Text, txttelRes.Text, txtcol.Text, txtgra.Text, txtdom.Text, txteva.Text, int.Parse(comboBoxDep.SelectedValue.ToString()), int.Parse(comboBoxMuni.SelectedValue.ToString()), int.Parse(comboBoxEstadoAlum.SelectedValue.ToString()));
-                    MessageBox.Show("Alumno Agregado");
-                    limpiar_Datos();
+
+                    if (txttelRes.Text.Length == 8)
+                    {
+                        objeto.AgregarAlumno(txtcod.Text, txtnom.Text, txtape.Text, datTimeSes.Value, txtresp.Text, txttelRes.Text, txtcol.Text, txtgra.Text, txtdom.Text, txteva.Text, int.Parse(comboBoxDep.SelectedValue.ToString()), int.Parse(comboBoxMuni.SelectedValue.ToString()), int.Parse(comboBoxEstadoAlum.SelectedValue.ToString()));
+                        MessageBox.Show("Alumno Agregado");
+                        limpiar_Datos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("llenar telefono completo");
+                    }
+
+                   
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se puedo agregar por" + ex.Message);
+                MessageBox.Show("No se puedo agregar por que hay codigo repetido"+ex.Message);
             }
         }
         #endregion
@@ -187,7 +200,7 @@ namespace ProyectoFinal.Formularios
 
         private void txtnom_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if((e.KeyChar >= 32 && e.KeyChar <=64) || (e.KeyChar >= 91 && e.KeyChar <=96)  ||(e.KeyChar >= 123 && e.KeyChar <=255))
+            if((e.KeyChar >= 33 && e.KeyChar <=64) || (e.KeyChar >= 91 && e.KeyChar <=96)  ||(e.KeyChar >= 123 && e.KeyChar <=255))
             {
 
                 MessageBox.Show("Solo letras", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -197,7 +210,7 @@ namespace ProyectoFinal.Formularios
         }
         private void txtape_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
             {
 
                 MessageBox.Show("Solo letras", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -218,7 +231,59 @@ namespace ProyectoFinal.Formularios
 
         }
 
-       
+        private void txttelRes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) ||  (e.KeyChar >= 58 && e.KeyChar <= 255) )
+            {
+             MessageBox.Show("Solo Numeros", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+             e.Handled = true;
+             return;
+            }
+          
+        }
+
+        private void comboBoxMuni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void comboBoxDep_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void comboBoxEstadoAlum_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtcod_TextChanged(object sender, EventArgs e)
+        {
+
+            string conect = ConfigurationManager.ConnectionStrings["Conexion"].ConnectionString;
+            SqlConnection conexion = new SqlConnection(conect);
+
+            string codigo = txtcod.Text;
+
+            string consulta1 = "select nom_Alumno from Alumnos where cod_Alumno = '"+codigo+"'";
+            SqlCommand sqlcomm = new SqlCommand(consulta1, conexion);
+            conexion.Open();
+
+            sqlcomm.Parameters.AddWithValue("cod_Alumno",codigo);
+     
+            using (SqlDataReader dr = sqlcomm.ExecuteReader())
+            {
+                if (dr.Read())
+                {
+                    MessageBox.Show("Ya Existe un Alumno con ese codigo");
+                    limpiar_Datos();
+                    return;
+                }
+            }
+            conexion.Close();
+
+
+        }
     }
 
    

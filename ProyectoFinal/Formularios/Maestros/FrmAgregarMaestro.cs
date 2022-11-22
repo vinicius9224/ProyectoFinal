@@ -141,9 +141,19 @@ namespace ProyectoFinal.Formularios
                 else
                 {
                     //comEst.Text es donde antes iba el salario
-                    objeto.Agregar_Maestro(txtcod.Text, txtnom.Text, txtape.Text, txtdom.Text, txtTel.Text, int.Parse(comProf.SelectedValue.ToString()), int.Parse(comDep.SelectedValue.ToString()), int.Parse(comMuni.SelectedValue.ToString()), int.Parse(comEst.SelectedValue.ToString()));
-                    MessageBox.Show("Maestro Agregado");
-                    limpiar_Datos();
+
+                    if (txtTel.Text.Length == 8)
+                    {
+                        objeto.Agregar_Maestro(txtcod.Text, txtnom.Text, txtape.Text, txtdom.Text, txtTel.Text, int.Parse(comProf.SelectedValue.ToString()), int.Parse(comDep.SelectedValue.ToString()), int.Parse(comMuni.SelectedValue.ToString()), int.Parse(comEst.SelectedValue.ToString()));
+                        MessageBox.Show("Maestro Agregado");
+                        limpiar_Datos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("llenar telefono completo");
+                    }
+
+                   
                 }
             }
             catch (Exception ex)
@@ -155,6 +165,83 @@ namespace ProyectoFinal.Formularios
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void comDep_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void comMuni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void comProf_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void comEst_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtnom_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+
+                MessageBox.Show("Solo letras", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtape_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+
+                MessageBox.Show("Solo letras", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtTel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo Numeros", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtcod_TextChanged(object sender, EventArgs e)
+        {
+            string conect = ConfigurationManager.ConnectionStrings["Conexion"].ConnectionString;
+            SqlConnection conexion = new SqlConnection(conect);
+
+            string codigo = txtcod.Text;
+
+            string consulta1 = "select nom_Trabajador from Trabajadores where cod_Trabajador = '" + codigo + "'";
+            SqlCommand sqlcomm = new SqlCommand(consulta1, conexion);
+            conexion.Open();
+
+            sqlcomm.Parameters.AddWithValue("cod_Trabajador", codigo);
+
+            using (SqlDataReader dr = sqlcomm.ExecuteReader())
+            {
+                if (dr.Read())
+                {
+                    MessageBox.Show("Ya Existe un Maestro con ese codigo");
+                    limpiar_Datos();
+                    return;
+                }
+            }
+            conexion.Close();
         }
     }
 }
