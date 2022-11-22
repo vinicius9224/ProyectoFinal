@@ -37,7 +37,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(327, 188);
+            this.dataGridView1.Location = new System.Drawing.Point(332, 230);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(149, 155);
             this.dataGridView1.TabIndex = 0;
@@ -57,9 +57,9 @@
             "octubre",
             "Noviembre",
             "Diciembre"});
-            this.cmbBxBuscar.Location = new System.Drawing.Point(342, 161);
+            this.cmbBxBuscar.Location = new System.Drawing.Point(332, 192);
             this.cmbBxBuscar.Name = "cmbBxBuscar";
-            this.cmbBxBuscar.Size = new System.Drawing.Size(121, 21);
+            this.cmbBxBuscar.Size = new System.Drawing.Size(149, 21);
             this.cmbBxBuscar.TabIndex = 1;
             this.cmbBxBuscar.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 

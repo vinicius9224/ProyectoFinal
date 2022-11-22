@@ -14,9 +14,6 @@ namespace ProyectoFinal.Formularios
 {
     public partial class FrmGenerarFactura : Form
     {
-       
-       
-
         private DataTable dt;
 
        DatosFacturas obj = new DatosFacturas();
@@ -25,6 +22,22 @@ namespace ProyectoFinal.Formularios
             InitializeComponent();
         }
 
+        #region FormualarioConfig
+        private void FrmGenerarFactura_Load(object sender, EventArgs e)
+        {
+            dt = new DataTable();
+            dt.Columns.Add("#sesiones");
+            dt.Columns.Add("costo");
+            dt.Columns.Add("total");
+            dataGridView1.DataSource = dt;
+            txtcod.Text = obj.Facturas();
+            Listar_modalidades();
+            Listar_Servicios();
+        }
+
+        #endregion
+
+        #region Validar
         public void limpiar_Datos()
         {
             foreach (Control ctrl in this.Controls)
@@ -40,34 +53,10 @@ namespace ProyectoFinal.Formularios
             }
         }
 
+        #endregion
 
-        private void FrmGenerarFactura_Load(object sender, EventArgs e)
-        {
-           
-            dt = new DataTable();
+        #region Listar Servicios y Modalidades
 
-            dt.Columns.Add("#sesiones");
-            dt.Columns.Add("costo");
-            dt.Columns.Add("total");
-            dataGridView1.DataSource = dt;
-            txtcod.Text = obj.Facturas();
-            Listar_modalidades();
-            Listar_Servicios();
-
-
-        }
-
-        public void mostrar()
-        {
-            DataRow row = dt.NewRow();
-
-            row["#sesiones"] = txtcant.Text;
-            row["costo"] = txtcost.Text;
-            row["total"] = Int32.Parse(txtcant.Text) * double.Parse(txtcost.Text);
-            dt.Rows.Add(row);
-        }
-
-        
         public void Listar_Servicios()
         {
             foreach (Control ctrl in this.Controls)
@@ -103,9 +92,32 @@ namespace ProyectoFinal.Formularios
             }
         }
 
+        public void mostrar()
+        {
+            DataRow row = dt.NewRow();
 
+            row["#sesiones"] = txtcant.Text;
+            row["costo"] = txtcost.Text;
+            row["total"] = Int32.Parse(txtcant.Text) * double.Parse(txtcost.Text);
+            dt.Rows.Add(row);
+        }
 
+        #endregion
 
+        #region Botones
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                obj.datosfact(txtcod.Text, txtcant.Text, txtcost.Text, txtfech.Text, txtId.Text, txtest.Text, comser.SelectedValue.ToString(), commod.SelectedValue.ToString());
+                MessageBox.Show("Factura Hecha");
+                limpiar_Datos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se puedo agregar por" + ex);
+            }
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -115,27 +127,8 @@ namespace ProyectoFinal.Formularios
         private void button2_Click(object sender, EventArgs e)
         {
             var resultado2 = obj.alumnos(Convert.ToInt32(txtId.Text));
-
             txtnom.Text = resultado2.Item1;
-
-
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            try
-            {
-
-
-               obj.datosfact(txtcod.Text, txtcant.Text, txtcost.Text, txtfech.Text, txtId.Text, txtest.Text, comser.SelectedValue.ToString(), commod.SelectedValue.ToString());
-               MessageBox.Show("Factura Hecha");
-                limpiar_Datos();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("No se puedo agregar por" + ex);
-            }
-        }
+        #endregion
     }
 }

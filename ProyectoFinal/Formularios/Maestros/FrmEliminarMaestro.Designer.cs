@@ -41,14 +41,14 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(138, 122);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(533, 252);
+            this.dataGridView1.Size = new System.Drawing.Size(533, 407);
             this.dataGridView1.TabIndex = 0;
             // 
             // txtBus
             // 
             this.txtBus.Location = new System.Drawing.Point(213, 70);
             this.txtBus.Name = "txtBus";
-            this.txtBus.Size = new System.Drawing.Size(645, 20);
+            this.txtBus.Size = new System.Drawing.Size(458, 20);
             this.txtBus.TabIndex = 2;
             // 
             // lblBuscar
@@ -70,7 +70,7 @@
             this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(460, 435);
+            this.btnEliminar.Location = new System.Drawing.Point(312, 570);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(179, 37);
             this.btnEliminar.TabIndex = 5;
