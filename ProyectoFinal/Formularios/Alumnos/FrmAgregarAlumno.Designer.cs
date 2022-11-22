@@ -164,7 +164,7 @@
             this.datTimeSes.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.datTimeSes.Location = new System.Drawing.Point(270, 155);
             this.datTimeSes.MaxDate = new System.DateTime(2050, 1, 1, 0, 0, 0, 0);
-            this.datTimeSes.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
+            this.datTimeSes.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.datTimeSes.Name = "datTimeSes";
             this.datTimeSes.Size = new System.Drawing.Size(121, 20);
             this.datTimeSes.TabIndex = 190;

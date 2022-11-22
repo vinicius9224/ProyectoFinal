@@ -19,12 +19,26 @@ namespace ProyectoFinal.Formularios.Facturas
         public FrmHistorialFacturas()
         {
             InitializeComponent();
+            dataGridView1.AllowUserToAddRows = false;
         }
+
+
 
         private void cmbBxBuscar_SelectedIndexChanged(object sender, EventArgs e)
         {
             DatosFacturas data = new DatosFacturas();
             dataGridView1.DataSource = data.ListarDatosViewdetalles(cmbBxBuscar.Text);
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                dataGridView1.ReadOnly = true;
+            }
+        }
+
+      
+
+        private void FrmHistorialFacturas_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }

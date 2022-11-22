@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -21,6 +23,7 @@ namespace ProyectoFinal.Formularios
         {
             InitializeComponent();
             txtnom.Enabled =false;
+            dataGridView1.AllowUserToAddRows = false;
         }
 
         #region FormualarioConfig
@@ -33,7 +36,9 @@ namespace ProyectoFinal.Formularios
             dataGridView1.DataSource = dt;
             txtcod.Text = obj.Facturas();
             Listar_modalidades();
+            Listar_Estados();
             Listar_Servicios();
+           
         }
 
         #endregion
@@ -93,18 +98,44 @@ namespace ProyectoFinal.Formularios
             }
         }
 
+        public void Listar_Estados()
+        {
+            foreach (Control ctrl in this.pnlContenedor.Controls)
+            {
+                if (ctrl is ComboBox)
+                {
+                    DatosFacturas objeto = new DatosFacturas();
+
+                    comest.DataSource = objeto.ListarestSesion();
+                    comest.DisplayMember = "nom_EstadoSesion";
+                    comest.ValueMember = "Id";
+                    objeto.ListarestSesion().Clear();
+                    ctrl.Text = "";
+                }
+            }
+        }
+
         public void mostrar()
         {
             DataRow row = dt.NewRow();
 
-            row["#sesiones"] = txtcant.Text;
-            row["costo"] = txtcost.Text;
+           
 
-            
-            row["total"] = Int32.Parse(txtcant.Text) * double.Parse(txtcost.Text);
-      
+            if(dataGridView1.RowCount==0)
+            {
+                row["#sesiones"] = txtcant.Text;
+                row["costo"] = txtcost.Text;
+                row["total"] = Int32.Parse(txtcant.Text) * double.Parse(txtcost.Text);
+                dt.Rows.Add(row);
+            }
+            else
+            {
+                MessageBox.Show("Error solo se puede facturar una vez");
+            }
 
-            dt.Rows.Add(row);
+
+
+
         }
 
         #endregion
@@ -114,7 +145,7 @@ namespace ProyectoFinal.Formularios
         {
             try
             {
-                obj.datosfact(txtcod.Text, txtcant.Text, txtcost.Text, txtfech.Text, txtId.Text, txtest.Text, comser.SelectedValue.ToString(), commod.SelectedValue.ToString());
+                obj.datosfact(txtcod.Text, txtcant.Text, txtcost.Text, datTimeSes.Value, txtId.Text, comest.SelectedValue.ToString(), comser.SelectedValue.ToString(), commod.SelectedValue.ToString());
                 MessageBox.Show("Factura Realizada.");
                 limpiar_Datos();
             }
@@ -126,7 +157,13 @@ namespace ProyectoFinal.Formularios
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+
+
+
             mostrar();
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -135,5 +172,80 @@ namespace ProyectoFinal.Formularios
             txtnom.Text = resultado2.Item1;
         }
         #endregion
+
+        private void comser_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void comest_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void commod_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtcant_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo Numeros", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtcost_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo Numeros", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtId_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo Numeros", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtcod_TextChanged(object sender, EventArgs e)
+        {
+            string conect = ConfigurationManager.ConnectionStrings["Conexion"].ConnectionString;
+            SqlConnection conexion = new SqlConnection(conect);
+
+            string codigo = txtcod.Text;
+
+            string consulta1 = "select costo_Factura from Facturas where cod_Factura = '" + codigo + "'";
+            SqlCommand sqlcomm = new SqlCommand(consulta1, conexion);
+            conexion.Open();
+
+            sqlcomm.Parameters.AddWithValue("cod_Factura", codigo);
+
+            using (SqlDataReader dr = sqlcomm.ExecuteReader())
+            {
+                if (dr.Read())
+                {
+                    MessageBox.Show("ya hay una factura con ese codigo");
+                    limpiar_Datos();
+                    return;
+                }
+            }
+            conexion.Close();
+        }
+
+        private void pnlContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

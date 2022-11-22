@@ -19,6 +19,7 @@ namespace ProyectoFinal.Formularios.Facturas
         public FrmIngresosTotales()
         {
             InitializeComponent();
+            dataGridView1.AllowUserToAddRows = false;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

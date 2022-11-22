@@ -188,7 +188,7 @@ namespace ProyectoFinal.Formularios
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se puedo agregar por que hay codigo repetido"+ex.Message);
+                MessageBox.Show("No se puedo agregar por"+ex.Message);
             }
         }
         #endregion
