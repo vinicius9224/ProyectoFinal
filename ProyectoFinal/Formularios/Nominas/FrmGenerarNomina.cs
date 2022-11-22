@@ -47,47 +47,23 @@ namespace ProyectoFinal.Formularios
         //metodo para limpiar los textbox (recorre todo los controles , cuando encuentra el control textbox , lo limpia)
         public void Limpiar_Datos()
         {
-            foreach (Control ctrl in this.pnlContenedor.Controls)
-            {
-                if (ctrl is TextBox)
-                {
-                    ctrl.Text = "";
-                }
-            }
-
             foreach (Control ctrl in this.pnlDetaNomina.Controls)
             {
-                if (ctrl is TextBox)
+                if (ctrl is DateTimePicker)
                 {
-                    ctrl.Text = "";
+                    ctrl.ResetText();
                 }
             }
         }
         // metodo para verificar si hay un textbox vacio(recorre todo los controles , si esto pasa la bandera se vuelve falsa)
         private bool Validar() // metodo para verificar si hay un textbox vacio(recorre todo los controles ,con el IsNullOrWhiteSpace nos damos cuenta si es nula o esta vacia , si esto pasa retornamos un false)
         {
-            foreach (Control c in this.pnlContenedor.Controls)
+            if (dttDesde.Value > dttHasta.Value || dttFechaPago.Value> dttHasta.Value)
             {
-                if (c is TextBox)
-                {
-                    if (string.IsNullOrWhiteSpace(((TextBox)c).Text))
-                    {
-                        return false;
-                    }
-                }
-            }
-
-            foreach (Control c in this.pnlDetaNomina.Controls)
-            {
-                if (c is TextBox)
-                {
-                    if (string.IsNullOrWhiteSpace(((TextBox)c).Text))
-                    {
-                        return false;
-                    }
-                }
+                return false;
             }
             return true;
+            
         }
         #endregion
 
@@ -104,20 +80,20 @@ namespace ProyectoFinal.Formularios
                 //llamamos al metodo validar y si este es igual a false , significa que esta vacia o nula.
                 if (Validar() == false)
                 {
-                    MessageBox.Show("No pueden quedar espacios en blanco.");
+                    MessageBox.Show("Las fechas están fuera de rango");
+                    Limpiar_Datos();
                 }
                 else
                 {
                     objeto.GenerarNominas(dttFechaPago.Value, dttHasta.Value, dttDesde.Value);
                     MessageBox.Show("Nomina Generada.");
                     //btnDetaNominas.Show();
-                    Limpiar_Datos();
                     AbrirFormulario(new FrmDetalleNomina());
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se puedo generar por" + ex);
+                MessageBox.Show("No se pudo generar por: " + ex.Message);
             }
         }
 
