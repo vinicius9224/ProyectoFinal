@@ -76,15 +76,25 @@ namespace ProyectoFinal.Formularios.Sesiones
                 int hora = int.Parse(txtCantHrsSes.Text);
                 if (hora > 24 || hora <= 0)
                 {
+                    errorProvider1.SetError(txtCantHrsSes, "Este campo solo acepta numeros en un rango de 1 a 24");
                     return false;
                 }
             }
             catch (Exception)
-            {
-                errorProvider1.SetError(txtCantHrsSes, "Este campo solo acepta numeros en un rango de 1 a 24");
+            {   
                 return false;
             }
             return true;
+        }
+
+        private void txtCantHrsSes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                errorProvider1.SetError(txtCantHrsSes, "Este campo solo admite numeros"); ;
+                e.Handled = true;
+            }
         }
         #endregion
 
@@ -186,6 +196,7 @@ namespace ProyectoFinal.Formularios.Sesiones
             limpiar_Datos();
         }
         #endregion
+
     }
 
 }

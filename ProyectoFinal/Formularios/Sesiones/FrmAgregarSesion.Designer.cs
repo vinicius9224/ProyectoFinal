@@ -249,6 +249,7 @@
             this.txtCantHrsSes.Size = new System.Drawing.Size(140, 20);
             this.txtCantHrsSes.TabIndex = 7;
             this.txtCantHrsSes.TextChanged += new System.EventHandler(this.txtCantHrsSes_TextChanged);
+            this.txtCantHrsSes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantHrsSes_KeyPress);
             // 
             // datTimeSes
             // 
