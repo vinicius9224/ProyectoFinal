@@ -109,16 +109,18 @@ namespace CapaDatos
 
             if (reader.Read())
             {
-                conexion.Cerrar();
+                
                 return reader["cod_Factura"].ToString();
             }
             else
             {
-                conexion.Cerrar();
+               
                 return "NULL";
             }
 
-            
+            conexion.Cerrar();
+
+
         }
 
         public DataTable ListarDatosView(string op)

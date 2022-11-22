@@ -40,7 +40,7 @@ namespace ProyectoFinal.Formularios
         #region Validar
         public void limpiar_Datos()
         {
-            foreach (Control ctrl in this.Controls)
+            foreach (Control ctrl in this.pnlContenedor.Controls)
             {
                 if (ctrl is TextBox)
                 {
@@ -59,7 +59,7 @@ namespace ProyectoFinal.Formularios
 
         public void Listar_Servicios()
         {
-            foreach (Control ctrl in this.Controls)
+            foreach (Control ctrl in this.pnlContenedor.Controls)
 
             {
                 if (ctrl is ComboBox)
@@ -77,7 +77,7 @@ namespace ProyectoFinal.Formularios
 
         public void Listar_modalidades()
         {
-            foreach (Control ctrl in this.Controls)
+            foreach (Control ctrl in this.pnlContenedor.Controls)
             {
                 if (ctrl is ComboBox)
                 {
@@ -98,7 +98,11 @@ namespace ProyectoFinal.Formularios
 
             row["#sesiones"] = txtcant.Text;
             row["costo"] = txtcost.Text;
+
+            
             row["total"] = Int32.Parse(txtcant.Text) * double.Parse(txtcost.Text);
+      
+
             dt.Rows.Add(row);
         }
 
