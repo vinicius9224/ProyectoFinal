@@ -34,6 +34,8 @@ namespace ProyectoFinal.Formularios.Nominas
             this.btnCerrar = new System.Windows.Forms.Button();
             this.lblRegSes = new System.Windows.Forms.Label();
             this.pnlDetaNomina = new System.Windows.Forms.Panel();
+            this.txtNominaId = new System.Windows.Forms.TextBox();
+            this.txtSesionId = new System.Windows.Forms.TextBox();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.lblSalarioNeto = new System.Windows.Forms.Label();
             this.txtSalarioNeto = new System.Windows.Forms.TextBox();
@@ -55,8 +57,6 @@ namespace ProyectoFinal.Formularios.Nominas
             this.txtPagoXHora = new System.Windows.Forms.TextBox();
             this.lblPagoXHora = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtSesionId = new System.Windows.Forms.TextBox();
-            this.txtNominaId = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.pnlDetaNomina.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -146,8 +146,22 @@ namespace ProyectoFinal.Formularios.Nominas
             this.pnlDetaNomina.Controls.Add(this.lblPagoXHora);
             this.pnlDetaNomina.Location = new System.Drawing.Point(99, 146);
             this.pnlDetaNomina.Name = "pnlDetaNomina";
-            this.pnlDetaNomina.Size = new System.Drawing.Size(659, 395);
+            this.pnlDetaNomina.Size = new System.Drawing.Size(665, 392);
             this.pnlDetaNomina.TabIndex = 218;
+            // 
+            // txtNominaId
+            // 
+            this.txtNominaId.Location = new System.Drawing.Point(273, 199);
+            this.txtNominaId.Name = "txtNominaId";
+            this.txtNominaId.Size = new System.Drawing.Size(100, 20);
+            this.txtNominaId.TabIndex = 234;
+            // 
+            // txtSesionId
+            // 
+            this.txtSesionId.Location = new System.Drawing.Point(273, 240);
+            this.txtSesionId.Name = "txtSesionId";
+            this.txtSesionId.Size = new System.Drawing.Size(100, 20);
+            this.txtSesionId.TabIndex = 233;
             // 
             // btnCalcular
             // 
@@ -294,7 +308,7 @@ namespace ProyectoFinal.Formularios.Nominas
             // 
             this.txtTotalHoras.Location = new System.Drawing.Point(485, 240);
             this.txtTotalHoras.Name = "txtTotalHoras";
-            this.txtTotalHoras.Size = new System.Drawing.Size(100, 20);
+            this.txtTotalHoras.Size = new System.Drawing.Size(130, 20);
             this.txtTotalHoras.TabIndex = 210;
             // 
             // lblViatico
@@ -321,14 +335,14 @@ namespace ProyectoFinal.Formularios.Nominas
             // 
             this.txtViatico.Location = new System.Drawing.Point(485, 104);
             this.txtViatico.Name = "txtViatico";
-            this.txtViatico.Size = new System.Drawing.Size(100, 20);
+            this.txtViatico.Size = new System.Drawing.Size(125, 20);
             this.txtViatico.TabIndex = 202;
             // 
             // txtPagoXHora
             // 
             this.txtPagoXHora.Location = new System.Drawing.Point(485, 166);
             this.txtPagoXHora.Name = "txtPagoXHora";
-            this.txtPagoXHora.Size = new System.Drawing.Size(100, 20);
+            this.txtPagoXHora.Size = new System.Drawing.Size(125, 20);
             this.txtPagoXHora.TabIndex = 206;
             // 
             // lblPagoXHora
@@ -351,20 +365,6 @@ namespace ProyectoFinal.Formularios.Nominas
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // txtSesionId
-            // 
-            this.txtSesionId.Location = new System.Drawing.Point(273, 240);
-            this.txtSesionId.Name = "txtSesionId";
-            this.txtSesionId.Size = new System.Drawing.Size(100, 20);
-            this.txtSesionId.TabIndex = 233;
-            // 
-            // txtNominaId
-            // 
-            this.txtNominaId.Location = new System.Drawing.Point(273, 199);
-            this.txtNominaId.Name = "txtNominaId";
-            this.txtNominaId.Size = new System.Drawing.Size(100, 20);
-            this.txtNominaId.TabIndex = 234;
             // 
             // FrmDetalleNomina
             // 

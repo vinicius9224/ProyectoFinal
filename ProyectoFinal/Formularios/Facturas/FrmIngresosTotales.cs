@@ -27,8 +27,5 @@ namespace ProyectoFinal.Formularios.Facturas
             dataGridView1.DataSource = data.ListarDatosView1(cmbBxBuscar.Text);
 
         }
-
-
-
     }
 }

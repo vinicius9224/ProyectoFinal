@@ -157,7 +157,7 @@ namespace ProyectoFinal.Formularios.Maestros
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("no se puedo agregar por" + ex.Message);
+                        MessageBox.Show("No se puedo agregar por" + ex.Message);
                     }
                 }
             }

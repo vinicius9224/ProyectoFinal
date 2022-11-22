@@ -40,7 +40,7 @@ namespace ProyectoFinal.Formularios
         #region Validar
         public void limpiar_Datos()
         {
-            foreach (Control ctrl in this.Controls)
+            foreach (Control ctrl in this.pnlContenedor.Controls)
             {
                 if (ctrl is TextBox)
                 {
@@ -59,7 +59,7 @@ namespace ProyectoFinal.Formularios
 
         public void Listar_Servicios()
         {
-            foreach (Control ctrl in this.Controls)
+            foreach (Control ctrl in this.pnlContenedor.Controls)
 
             {
                 if (ctrl is ComboBox)
@@ -77,7 +77,7 @@ namespace ProyectoFinal.Formularios
 
         public void Listar_modalidades()
         {
-            foreach (Control ctrl in this.Controls)
+            foreach (Control ctrl in this.pnlContenedor.Controls)
             {
                 if (ctrl is ComboBox)
                 {
@@ -110,7 +110,7 @@ namespace ProyectoFinal.Formularios
             try
             {
                 obj.datosfact(txtcod.Text, txtcant.Text, txtcost.Text, txtfech.Text, txtId.Text, txtest.Text, comser.SelectedValue.ToString(), commod.SelectedValue.ToString());
-                MessageBox.Show("Factura Hecha");
+                MessageBox.Show("Factura Realizada.");
                 limpiar_Datos();
             }
             catch (Exception ex)
