@@ -109,13 +109,18 @@ namespace CapaDatos
 
             if (reader.Read())
             {
+
                 return reader["cod_Factura"].ToString();
             }
             else
             {
+
                 return "NULL";
             }
+
             conexion.Cerrar();
+
+
         }
 
         public DataTable ListarDatosView(string op)
@@ -296,6 +301,18 @@ namespace CapaDatos
             }
             return tabla;
         }
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 }
