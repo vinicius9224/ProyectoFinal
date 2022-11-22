@@ -23,14 +23,15 @@ namespace ProyectoFinal.Formularios
         }
 
         #region ConfiguraciónFormulario
+
         private Form FormularioActual = null;
         private void AbrirFormulario(Form NuevoFormulario)
         {
             //Verifica si existe un formulario activo
             if (FormularioActual != null)
 
-                //Configurar vuevo formulario
-                FormularioActual.Close();
+            //Configurar vuevo formulario
+            FormularioActual.Close();
             FormularioActual = NuevoFormulario;
             NuevoFormulario.TopLevel = false;
             NuevoFormulario.FormBorderStyle = FormBorderStyle.None;
@@ -107,7 +108,7 @@ namespace ProyectoFinal.Formularios
                 }
                 else
                 {
-                    objeto.GenerarNominas(dttFechaPago.Value, txtPagoDesde.Text, txtPagoHasta.Text);
+                    objeto.GenerarNominas(dttFechaPago.Value, dttHasta.Value, dttDesde.Value);
                     MessageBox.Show("Nomina Generada.");
                     //btnDetaNominas.Show();
                     Limpiar_Datos();
@@ -118,12 +119,6 @@ namespace ProyectoFinal.Formularios
             {
                 MessageBox.Show("No se puedo generar por" + ex);
             }
-        }
-
-        private void btnHistorialNominas_Click(object sender, EventArgs e)
-        {
-            Limpiar_Datos();
-            AbrirFormulario(new FrmDetalleNomina());
         }
 
         #endregion

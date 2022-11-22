@@ -101,7 +101,7 @@ namespace ProyectoFinal.Formularios
         private void Tiempo_Tick(object sender, EventArgs e)
         {
             lblHora.Text = DateTime.Now.ToString("hh:mm:ss");
-            lblFecha.Text = DateTime.Now.ToString("dddd MMM yyy");
+            lblFecha.Text = DateTime.Now.ToLongDateString(); ;
         }
 
         #endregion

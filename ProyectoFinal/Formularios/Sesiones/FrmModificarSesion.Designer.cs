@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmModificarSesion));
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.paneldatos = new System.Windows.Forms.Panel();
             this.btnMenu = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.paneldatos = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbxAño = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -60,22 +60,6 @@
             this.panelContenedor.Size = new System.Drawing.Size(939, 643);
             this.panelContenedor.TabIndex = 0;
             // 
-            // paneldatos
-            // 
-            this.paneldatos.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.paneldatos.Controls.Add(this.label5);
-            this.paneldatos.Controls.Add(this.cmbxAño);
-            this.paneldatos.Controls.Add(this.label4);
-            this.paneldatos.Controls.Add(this.label3);
-            this.paneldatos.Controls.Add(this.cmbxMes);
-            this.paneldatos.Controls.Add(this.lblTotal);
-            this.paneldatos.Controls.Add(this.label2);
-            this.paneldatos.Controls.Add(this.dataGridView1);
-            this.paneldatos.Location = new System.Drawing.Point(27, 51);
-            this.paneldatos.Name = "paneldatos";
-            this.paneldatos.Size = new System.Drawing.Size(859, 522);
-            this.paneldatos.TabIndex = 1;
-            // 
             // btnMenu
             // 
             this.btnMenu.BackColor = System.Drawing.SystemColors.Control;
@@ -99,6 +83,22 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Lista de Sesiones";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // paneldatos
+            // 
+            this.paneldatos.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.paneldatos.Controls.Add(this.label5);
+            this.paneldatos.Controls.Add(this.cmbxAño);
+            this.paneldatos.Controls.Add(this.label4);
+            this.paneldatos.Controls.Add(this.label3);
+            this.paneldatos.Controls.Add(this.cmbxMes);
+            this.paneldatos.Controls.Add(this.lblTotal);
+            this.paneldatos.Controls.Add(this.label2);
+            this.paneldatos.Controls.Add(this.dataGridView1);
+            this.paneldatos.Location = new System.Drawing.Point(27, 51);
+            this.paneldatos.Name = "paneldatos";
+            this.paneldatos.Size = new System.Drawing.Size(859, 522);
+            this.paneldatos.TabIndex = 1;
             // 
             // label5
             // 
@@ -171,8 +171,9 @@
             // 
             // lblTotal
             // 
-            this.lblTotal.BackColor = System.Drawing.Color.Turquoise;
+            this.lblTotal.BackColor = System.Drawing.Color.Gold;
             this.lblTotal.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblTotal.Location = new System.Drawing.Point(726, 479);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(100, 32);

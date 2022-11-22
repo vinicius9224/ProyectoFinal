@@ -11,8 +11,8 @@ namespace CapaDatos
 {
    public class Facturas
     {
-   
-        public void Agregarfactura(string cod , int cant,double costo ,string fecha ,int alumno ,int estado ,int servicio , int modalidad)
+
+        public void Agregarfactura(string cod, int cant, double costo, string fecha, int alumno, int estado, int servicio, int modalidad)
         {
             ConexionBD conexion = new ConexionBD();
             SqlCommand comando = new SqlCommand();
@@ -73,8 +73,8 @@ namespace CapaDatos
 
         public Tuple<string> Alumno(int id)
         {
-           ConexionBD conexion = new ConexionBD();
-           SqlCommand comando = new SqlCommand();
+            ConexionBD conexion = new ConexionBD();
+            SqlCommand comando = new SqlCommand();
 
             comando.Connection = conexion.Abrir();
 
@@ -295,7 +295,7 @@ namespace CapaDatos
                     conexion.Cerrar();
                     break;
 
-                
+
 
 
             }

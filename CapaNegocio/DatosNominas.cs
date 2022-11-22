@@ -12,7 +12,7 @@ namespace CapaNegocio
     {
         private Nominas nominas=new Nominas();
 
-        public void GenerarNominas(DateTime FechaPago_Nomina, string pagoDesde_Nomina, string pagoHasta_Nomina)
+        public void GenerarNominas(DateTime FechaPago_Nomina, DateTime pagoDesde_Nomina, DateTime pagoHasta_Nomina)
         {
             nominas.GenerarNominas( FechaPago_Nomina,  pagoDesde_Nomina,  pagoHasta_Nomina);            
         }
