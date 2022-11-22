@@ -20,6 +20,7 @@ namespace ProyectoFinal.Formularios
         public FrmGenerarFactura()
         {
             InitializeComponent();
+            txtnom.Enabled =false;
         }
 
         #region FormualarioConfig

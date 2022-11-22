@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGenerarFactura));
             this.label1 = new System.Windows.Forms.Label();
             this.pnlContenedor = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.commod = new System.Windows.Forms.ComboBox();
             this.comser = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -52,7 +53,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtcod = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label10 = new System.Windows.Forms.Label();
             this.pnlContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -94,6 +94,16 @@
             this.pnlContenedor.Name = "pnlContenedor";
             this.pnlContenedor.Size = new System.Drawing.Size(894, 689);
             this.pnlContenedor.TabIndex = 27;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(162, 102);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(116, 17);
+            this.label10.TabIndex = 48;
+            this.label10.Text = "Buscar Alumno";
             // 
             // commod
             // 
@@ -287,20 +297,10 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(165, 293);
+            this.dataGridView1.Location = new System.Drawing.Point(336, 293);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(478, 206);
+            this.dataGridView1.Size = new System.Drawing.Size(337, 206);
             this.dataGridView1.TabIndex = 27;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(162, 102);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(116, 17);
-            this.label10.TabIndex = 48;
-            this.label10.Text = "Buscar Alumno";
             // 
             // FrmGenerarFactura
             // 

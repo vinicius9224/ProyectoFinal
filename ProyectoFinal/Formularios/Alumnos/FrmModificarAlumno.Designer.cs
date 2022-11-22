@@ -37,6 +37,7 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.pnlAgregarAlumno = new System.Windows.Forms.Panel();
+            this.datTimeSes = new System.Windows.Forms.DateTimePicker();
             this.comboBoxEstadoAlum = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtcod = new System.Windows.Forms.TextBox();
@@ -67,7 +68,6 @@
             this.txtresp = new System.Windows.Forms.TextBox();
             this.lblModAlumno = new System.Windows.Forms.Label();
             this.picBoxFondo = new System.Windows.Forms.PictureBox();
-            this.datTimeSes = new System.Windows.Forms.DateTimePicker();
             this.pnlContenedor.SuspendLayout();
             this.pnlFondoAgregarAlumno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -202,6 +202,18 @@
             this.pnlAgregarAlumno.Size = new System.Drawing.Size(599, 302);
             this.pnlAgregarAlumno.TabIndex = 1;
             // 
+            // datTimeSes
+            // 
+            this.datTimeSes.CustomFormat = "yyyy--MM-dd";
+            this.datTimeSes.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.datTimeSes.Location = new System.Drawing.Point(279, 141);
+            this.datTimeSes.MaxDate = new System.DateTime(2050, 1, 1, 0, 0, 0, 0);
+            this.datTimeSes.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
+            this.datTimeSes.Name = "datTimeSes";
+            this.datTimeSes.Size = new System.Drawing.Size(103, 20);
+            this.datTimeSes.TabIndex = 192;
+            this.datTimeSes.Value = new System.DateTime(2022, 11, 6, 0, 0, 0, 0);
+            // 
             // comboBoxEstadoAlum
             // 
             this.comboBoxEstadoAlum.FormattingEnabled = true;
@@ -209,6 +221,7 @@
             this.comboBoxEstadoAlum.Name = "comboBoxEstadoAlum";
             this.comboBoxEstadoAlum.Size = new System.Drawing.Size(121, 21);
             this.comboBoxEstadoAlum.TabIndex = 190;
+            this.comboBoxEstadoAlum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxEstadoAlum_KeyPress);
             // 
             // label3
             // 
@@ -227,6 +240,7 @@
             this.txtcod.Size = new System.Drawing.Size(121, 20);
             this.txtcod.TabIndex = 10;
             this.txtcod.Tag = "nombre";
+            this.txtcod.TextChanged += new System.EventHandler(this.txtcod_TextChanged);
             // 
             // lblTituloAlumno
             // 
@@ -264,6 +278,7 @@
             this.comboBoxMuni.Name = "comboBoxMuni";
             this.comboBoxMuni.Size = new System.Drawing.Size(121, 21);
             this.comboBoxMuni.TabIndex = 9;
+            this.comboBoxMuni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxMuni_KeyPress);
             // 
             // lblNom
             // 
@@ -311,6 +326,7 @@
             this.txtnom.Name = "txtnom";
             this.txtnom.Size = new System.Drawing.Size(100, 20);
             this.txtnom.TabIndex = 1;
+            this.txtnom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnom_KeyPress);
             // 
             // lblMunicipio
             // 
@@ -353,6 +369,7 @@
             this.comboBoxDep.Name = "comboBoxDep";
             this.comboBoxDep.Size = new System.Drawing.Size(121, 21);
             this.comboBoxDep.TabIndex = 8;
+            this.comboBoxDep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxDep_KeyPress);
             // 
             // txtape
             // 
@@ -360,6 +377,7 @@
             this.txtape.Name = "txtape";
             this.txtape.Size = new System.Drawing.Size(100, 20);
             this.txtape.TabIndex = 2;
+            this.txtape.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtape_KeyPress);
             // 
             // lblColegio
             // 
@@ -430,9 +448,11 @@
             // txttelRes
             // 
             this.txttelRes.Location = new System.Drawing.Point(18, 192);
+            this.txttelRes.MaxLength = 8;
             this.txttelRes.Name = "txttelRes";
             this.txttelRes.Size = new System.Drawing.Size(121, 20);
             this.txttelRes.TabIndex = 11;
+            this.txttelRes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttelRes_KeyPress);
             // 
             // lblNomResp
             // 
@@ -460,6 +480,7 @@
             this.txtresp.Name = "txtresp";
             this.txtresp.Size = new System.Drawing.Size(121, 20);
             this.txtresp.TabIndex = 0;
+            this.txtresp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtresp_KeyPress);
             // 
             // lblModAlumno
             // 
@@ -484,18 +505,6 @@
             this.picBoxFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxFondo.TabIndex = 0;
             this.picBoxFondo.TabStop = false;
-            // 
-            // datTimeSes
-            // 
-            this.datTimeSes.CustomFormat = "yyyy--MM-dd";
-            this.datTimeSes.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.datTimeSes.Location = new System.Drawing.Point(279, 141);
-            this.datTimeSes.MaxDate = new System.DateTime(2050, 1, 1, 0, 0, 0, 0);
-            this.datTimeSes.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
-            this.datTimeSes.Name = "datTimeSes";
-            this.datTimeSes.Size = new System.Drawing.Size(103, 20);
-            this.datTimeSes.TabIndex = 192;
-            this.datTimeSes.Value = new System.DateTime(2022, 11, 6, 0, 0, 0, 0);
             // 
             // FrmModificarAlumno
             // 

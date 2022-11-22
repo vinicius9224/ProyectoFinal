@@ -37,14 +37,27 @@ namespace CapaDatos
         // en este metodo se le pasa todos los atributos para que coincidan con los de la db (en orden a como estan en la tabla por ejemplo si es varchar tiene que ser string)
         public void Agregar_Alumnos(string cod, string nom, string ape, DateTime fecha, string nomRes, string telRes, string colegio, string grado, string domiPersona, string evaluacion, int DeparId, int MuniId,int estado)
         {
-            //abrimos la conexion
             comando.Connection = conexion.Abrir();
-            // aca hacemos el transact sql (que es la consulta o el procedimiento almacenado)
-            comando.CommandText = "insert into Alumnos values ('" + cod + "','" + nom + "','" + ape + "','" + fecha + "','" + nomRes + "','" + telRes + "','" + colegio + "','" + grado + "','" + domiPersona + "','" + evaluacion + "','" + DeparId + "','" + MuniId + "','"+ estado +"')";
-            // aca especificamos el tipo de comando para indicar si es consulta o procedimiento almacenado
-            comando.CommandType = CommandType.Text;
-            //operación para ejecutar cualquier instrucción SQL arbitraria en SQL Server si no desea que se devuelva ningún conjunto de resultados.
+            comando.CommandText = "AgregarAlumno";
+            // se especifica el tipo de comando si es text o procedure
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@Cod_Alum", cod);
+            comando.Parameters.AddWithValue("@Nom_Alum", nom);
+            comando.Parameters.AddWithValue("@Ape_Alum", ape);
+            comando.Parameters.AddWithValue("@FechaNac_Alum", fecha);
+            comando.Parameters.AddWithValue("@NomResp_Alum", nomRes);
+            comando.Parameters.AddWithValue("@telfResp_Alum", telRes);
+            comando.Parameters.AddWithValue("@Coleg_Alum", colegio);
+            comando.Parameters.AddWithValue("@gradAcad_Alum ", grado);
+            comando.Parameters.AddWithValue("@Domi_Alum", domiPersona);
+            comando.Parameters.AddWithValue("@Eval_Alum", evaluacion);
+            comando.Parameters.AddWithValue("@DepaId", DeparId);
+            comando.Parameters.AddWithValue("@MunId", MuniId);
+            comando.Parameters.AddWithValue("@Est_AlumId", estado);
             comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+            conexion.Cerrar();
+
         }
 
         public void Editar_Alumnos(string cod, string nom, string ape, DateTime fecha, string nomRes, string telRes, string colegio, string grado, string domiPersona, string evaluacion, int DeparId, int MuniId, int id,int estado)
@@ -69,6 +82,8 @@ namespace CapaDatos
             comando.Parameters.AddWithValue("@MunId", MuniId);
             comando.Parameters.AddWithValue("@Est_AlumId", estado);
             comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+            conexion.Cerrar();
         }
 
         public void Eliminar(int id)
