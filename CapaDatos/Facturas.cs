@@ -113,10 +113,9 @@ namespace CapaDatos
             }
             else
             {
-                conexion.Cerrar();
                 return "NULL";
             }
-            //conexion.Cerrar();
+            conexion.Cerrar();
         }
 
         public DataTable ListarDatosView(string op)
