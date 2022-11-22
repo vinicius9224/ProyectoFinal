@@ -81,7 +81,7 @@
             this.btnCerrar.BackColor = System.Drawing.Color.Gray;
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Brown;
-            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.Location = new System.Drawing.Point(183, 464);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(83, 35);
@@ -96,7 +96,7 @@
             this.btnVerificar.FlatAppearance.BorderSize = 0;
             this.btnVerificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnVerificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerificar.Location = new System.Drawing.Point(295, 203);
             this.btnVerificar.Name = "btnVerificar";
             this.btnVerificar.Size = new System.Drawing.Size(100, 23);
@@ -118,10 +118,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(170, 96);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 16);
+            this.label2.Size = new System.Drawing.Size(148, 17);
             this.label2.TabIndex = 197;
             this.label2.Text = "Nombre de Usuario";
             // 
@@ -141,11 +141,11 @@
             // 
             this.lblContra.AutoSize = true;
             this.lblContra.BackColor = System.Drawing.Color.White;
-            this.lblContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContra.ForeColor = System.Drawing.Color.Black;
             this.lblContra.Location = new System.Drawing.Point(59, 20);
             this.lblContra.Name = "lblContra";
-            this.lblContra.Size = new System.Drawing.Size(193, 16);
+            this.lblContra.Size = new System.Drawing.Size(203, 17);
             this.lblContra.TabIndex = 2;
             this.lblContra.Text = "Digite la nueva contraseña";
             // 
@@ -164,7 +164,7 @@
             // 
             this.btnConfirmar.FlatAppearance.BorderSize = 0;
             this.btnConfirmar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.Location = new System.Drawing.Point(174, 102);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(92, 23);
@@ -179,7 +179,7 @@
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(48, 102);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(86, 23);
@@ -191,10 +191,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(73, 173);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 16);
+            this.label1.Size = new System.Drawing.Size(203, 17);
             this.label1.TabIndex = 195;
             this.label1.Text = "Digite la contraseña actual";
             // 

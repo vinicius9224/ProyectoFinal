@@ -21,13 +21,6 @@ namespace ProyectoFinal.Formularios.Facturas
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-           
-
-
-        }
-
         private void cmbBxBuscar_SelectedIndexChanged(object sender, EventArgs e)
         {
             DatosFacturas data = new DatosFacturas();
