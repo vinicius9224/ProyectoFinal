@@ -17,6 +17,7 @@ namespace ProyectoFinal.Formularios.Maestros
         public FrmListarMaestros()
         {
             InitializeComponent();
+            dataGridView1.AllowUserToAddRows = false;
         }
 
         private void Mostrar()

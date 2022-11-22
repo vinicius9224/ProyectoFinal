@@ -31,12 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGenerarFactura));
             this.label1 = new System.Windows.Forms.Label();
             this.pnlContenedor = new System.Windows.Forms.Panel();
+            this.datTimeSes = new System.Windows.Forms.DateTimePicker();
+            this.comest = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.commod = new System.Windows.Forms.ComboBox();
             this.comser = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtest = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.txtnom = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -49,7 +50,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtfech = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtcod = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -67,12 +67,13 @@
             // 
             // pnlContenedor
             // 
+            this.pnlContenedor.Controls.Add(this.datTimeSes);
+            this.pnlContenedor.Controls.Add(this.comest);
             this.pnlContenedor.Controls.Add(this.label10);
             this.pnlContenedor.Controls.Add(this.commod);
             this.pnlContenedor.Controls.Add(this.comser);
             this.pnlContenedor.Controls.Add(this.label9);
             this.pnlContenedor.Controls.Add(this.label8);
-            this.pnlContenedor.Controls.Add(this.txtest);
             this.pnlContenedor.Controls.Add(this.button3);
             this.pnlContenedor.Controls.Add(this.txtnom);
             this.pnlContenedor.Controls.Add(this.button2);
@@ -85,7 +86,6 @@
             this.pnlContenedor.Controls.Add(this.label5);
             this.pnlContenedor.Controls.Add(this.label4);
             this.pnlContenedor.Controls.Add(this.label3);
-            this.pnlContenedor.Controls.Add(this.txtfech);
             this.pnlContenedor.Controls.Add(this.label2);
             this.pnlContenedor.Controls.Add(this.txtcod);
             this.pnlContenedor.Controls.Add(this.dataGridView1);
@@ -94,6 +94,28 @@
             this.pnlContenedor.Name = "pnlContenedor";
             this.pnlContenedor.Size = new System.Drawing.Size(894, 689);
             this.pnlContenedor.TabIndex = 27;
+            this.pnlContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContenedor_Paint);
+            // 
+            // datTimeSes
+            // 
+            this.datTimeSes.CustomFormat = "yyyy--MM-dd";
+            this.datTimeSes.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.datTimeSes.Location = new System.Drawing.Point(353, 248);
+            this.datTimeSes.MaxDate = new System.DateTime(2050, 1, 1, 0, 0, 0, 0);
+            this.datTimeSes.MinDate = new System.DateTime(2018, 1, 1, 0, 0, 0, 0);
+            this.datTimeSes.Name = "datTimeSes";
+            this.datTimeSes.Size = new System.Drawing.Size(121, 20);
+            this.datTimeSes.TabIndex = 191;
+            this.datTimeSes.Value = new System.DateTime(2022, 11, 22, 0, 0, 0, 0);
+            // 
+            // comest
+            // 
+            this.comest.FormattingEnabled = true;
+            this.comest.Location = new System.Drawing.Point(537, 170);
+            this.comest.Name = "comest";
+            this.comest.Size = new System.Drawing.Size(121, 21);
+            this.comest.TabIndex = 28;
+            this.comest.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comest_KeyPress);
             // 
             // label10
             // 
@@ -112,6 +134,7 @@
             this.commod.Name = "commod";
             this.commod.Size = new System.Drawing.Size(155, 21);
             this.commod.TabIndex = 47;
+            this.commod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.commod_KeyPress);
             // 
             // comser
             // 
@@ -120,6 +143,7 @@
             this.comser.Name = "comser";
             this.comser.Size = new System.Drawing.Size(129, 21);
             this.comser.TabIndex = 46;
+            this.comser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comser_KeyPress);
             // 
             // label9
             // 
@@ -140,13 +164,6 @@
             this.label8.Size = new System.Drawing.Size(58, 17);
             this.label8.TabIndex = 44;
             this.label8.Text = "Estado";
-            // 
-            // txtest
-            // 
-            this.txtest.Location = new System.Drawing.Point(543, 169);
-            this.txtest.Name = "txtest";
-            this.txtest.Size = new System.Drawing.Size(100, 20);
-            this.txtest.TabIndex = 43;
             // 
             // button3
             // 
@@ -190,6 +207,7 @@
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(135, 20);
             this.txtId.TabIndex = 39;
+            this.txtId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtId_KeyPress);
             // 
             // txtcost
             // 
@@ -197,6 +215,7 @@
             this.txtcost.Name = "txtcost";
             this.txtcost.Size = new System.Drawing.Size(129, 20);
             this.txtcost.TabIndex = 38;
+            this.txtcost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcost_KeyPress);
             // 
             // txtcant
             // 
@@ -204,6 +223,7 @@
             this.txtcant.Name = "txtcant";
             this.txtcant.Size = new System.Drawing.Size(129, 20);
             this.txtcant.TabIndex = 37;
+            this.txtcant.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcant_KeyPress);
             // 
             // label7
             // 
@@ -270,13 +290,6 @@
             this.label3.TabIndex = 31;
             this.label3.Text = "Fecha";
             // 
-            // txtfech
-            // 
-            this.txtfech.Location = new System.Drawing.Point(360, 248);
-            this.txtfech.Name = "txtfech";
-            this.txtfech.Size = new System.Drawing.Size(100, 20);
-            this.txtfech.TabIndex = 30;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -293,6 +306,7 @@
             this.txtcod.Name = "txtcod";
             this.txtcod.Size = new System.Drawing.Size(144, 20);
             this.txtcod.TabIndex = 28;
+            this.txtcod.TextChanged += new System.EventHandler(this.txtcod_TextChanged);
             // 
             // dataGridView1
             // 
@@ -330,7 +344,6 @@
         private System.Windows.Forms.ComboBox comser;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtest;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox txtnom;
         private System.Windows.Forms.Button button2;
@@ -343,10 +356,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtfech;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtcod;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox comest;
+        private System.Windows.Forms.DateTimePicker datTimeSes;
     }
 }

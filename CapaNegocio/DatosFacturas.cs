@@ -26,7 +26,7 @@ namespace CapaNegocio
             return obj.Alumno(id);
         }
 
-        public void datosfact(string cod, string cant, string costo, string fecha, string alumno, string estado, string servicio, string modalidad)
+        public void datosfact(string cod, string cant, string costo, DateTime fecha, string alumno, string estado, string servicio, string modalidad)
         {
             obj.Agregarfactura(cod, Convert.ToInt32(cant), Convert.ToDouble(costo), fecha, Convert.ToInt32(alumno), Convert.ToInt32(estado), Convert.ToInt32(servicio), Convert.ToInt32(modalidad));
         }
@@ -56,6 +56,14 @@ namespace CapaNegocio
         {
             DataTable tabla = new DataTable();
             tabla = obj.ListarDatosView2(op);
+            return tabla;
+        }
+
+
+        public DataTable ListarestSesion()
+        {
+            DataTable tabla = new DataTable();
+            tabla = obj.MostrarestadoSesiones();
             return tabla;
         }
 

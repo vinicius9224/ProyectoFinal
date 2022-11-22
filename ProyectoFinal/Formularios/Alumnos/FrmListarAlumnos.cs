@@ -18,6 +18,7 @@ namespace ProyectoFinal.Formularios.Alumnos
         public FrmListarAlumnos()
         {
             InitializeComponent();
+            dataGridView1.AllowUserToAddRows = false;
         }
         private void FrmListarAlumnos_Load_1(object sender, EventArgs e)
         {

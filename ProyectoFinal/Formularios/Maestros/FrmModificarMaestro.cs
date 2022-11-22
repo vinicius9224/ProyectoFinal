@@ -13,6 +13,7 @@ namespace ProyectoFinal.Formularios.Maestros
         public FrmModificarMaestro()
         {
             InitializeComponent();
+            dataGridView1.AllowUserToAddRows = false;
         }
 
         private void FrmModificarMaestro_Load(object sender, EventArgs e)
