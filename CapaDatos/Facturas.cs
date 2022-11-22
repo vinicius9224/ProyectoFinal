@@ -102,7 +102,7 @@ namespace CapaDatos
             conexion.Abrir();
 
             string query = "select (select distinct top 1 cod_Factura from Facturas order by cod_Factura desc) +1 as cod_Factura";
-            SqlCommand cmd = new SqlCommand(query, conexion.Abrir());
+            SqlCommand cmd = new SqlCommand(query,conexion.Abrir());
 
             SqlDataReader reader = cmd.ExecuteReader();
 
