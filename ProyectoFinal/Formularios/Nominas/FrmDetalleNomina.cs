@@ -72,7 +72,7 @@ namespace ProyectoFinal.Formularios.Nominas
                 else
                 {
                     objeto.DetaNomina(txtViatico.Text,txtPagoXHora.Text,txtTotalHoras.Text,txtNominaId.Text,txtSesionId.Text);
-                    MessageBox.Show("Nomina Generada.");
+                    MessageBox.Show("Nómina Generada.");
                     Limpiar_Datos();
                 }
             }

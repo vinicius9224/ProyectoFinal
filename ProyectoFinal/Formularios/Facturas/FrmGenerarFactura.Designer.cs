@@ -157,7 +157,7 @@
             // 
             this.txtnom.Location = new System.Drawing.Point(165, 170);
             this.txtnom.Name = "txtnom";
-            this.txtnom.Size = new System.Drawing.Size(129, 20);
+            this.txtnom.Size = new System.Drawing.Size(177, 20);
             this.txtnom.TabIndex = 41;
             // 
             // button2
@@ -180,7 +180,6 @@
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(135, 20);
             this.txtId.TabIndex = 39;
-            this.txtId.Text = "Código del alumno";
             // 
             // txtcost
             // 
