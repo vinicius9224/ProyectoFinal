@@ -39,6 +39,7 @@
             this.pnlAgregarAlumno = new System.Windows.Forms.Panel();
             this.comboBoxEstadoAlum = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtcod = new System.Windows.Forms.TextBox();
             this.lblTituloAlumno = new System.Windows.Forms.Label();
             this.txteva = new System.Windows.Forms.TextBox();
             this.txtdom = new System.Windows.Forms.TextBox();
@@ -53,21 +54,20 @@
             this.txtcol = new System.Windows.Forms.TextBox();
             this.lblCod = new System.Windows.Forms.Label();
             this.comboBoxDep = new System.Windows.Forms.ComboBox();
-            this.txtfech = new System.Windows.Forms.TextBox();
             this.txtape = new System.Windows.Forms.TextBox();
             this.lblColegio = new System.Windows.Forms.Label();
-            this.txtresp = new System.Windows.Forms.TextBox();
             this.lblApe = new System.Windows.Forms.Label();
             this.lblDomicilio = new System.Windows.Forms.Label();
             this.lblFechaNac = new System.Windows.Forms.Label();
             this.pnlResp = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txttelRes = new System.Windows.Forms.TextBox();
-            this.txtcod = new System.Windows.Forms.TextBox();
             this.lblNomResp = new System.Windows.Forms.Label();
             this.lblTelfResp = new System.Windows.Forms.Label();
+            this.txtresp = new System.Windows.Forms.TextBox();
             this.lblModAlumno = new System.Windows.Forms.Label();
             this.picBoxFondo = new System.Windows.Forms.PictureBox();
+            this.datTimeSes = new System.Windows.Forms.DateTimePicker();
             this.pnlContenedor.SuspendLayout();
             this.pnlFondoAgregarAlumno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -174,6 +174,7 @@
             // pnlAgregarAlumno
             // 
             this.pnlAgregarAlumno.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnlAgregarAlumno.Controls.Add(this.datTimeSes);
             this.pnlAgregarAlumno.Controls.Add(this.comboBoxEstadoAlum);
             this.pnlAgregarAlumno.Controls.Add(this.label3);
             this.pnlAgregarAlumno.Controls.Add(this.txtcod);
@@ -191,7 +192,6 @@
             this.pnlAgregarAlumno.Controls.Add(this.txtcol);
             this.pnlAgregarAlumno.Controls.Add(this.lblCod);
             this.pnlAgregarAlumno.Controls.Add(this.comboBoxDep);
-            this.pnlAgregarAlumno.Controls.Add(this.txtfech);
             this.pnlAgregarAlumno.Controls.Add(this.txtape);
             this.pnlAgregarAlumno.Controls.Add(this.lblColegio);
             this.pnlAgregarAlumno.Controls.Add(this.lblApe);
@@ -219,6 +219,14 @@
             this.label3.Size = new System.Drawing.Size(58, 17);
             this.label3.TabIndex = 191;
             this.label3.Text = "Estado";
+            // 
+            // txtcod
+            // 
+            this.txtcod.Location = new System.Drawing.Point(16, 66);
+            this.txtcod.Name = "txtcod";
+            this.txtcod.Size = new System.Drawing.Size(121, 20);
+            this.txtcod.TabIndex = 10;
+            this.txtcod.Tag = "nombre";
             // 
             // lblTituloAlumno
             // 
@@ -346,13 +354,6 @@
             this.comboBoxDep.Size = new System.Drawing.Size(121, 21);
             this.comboBoxDep.TabIndex = 8;
             // 
-            // txtfech
-            // 
-            this.txtfech.Location = new System.Drawing.Point(279, 137);
-            this.txtfech.Name = "txtfech";
-            this.txtfech.Size = new System.Drawing.Size(105, 20);
-            this.txtfech.TabIndex = 7;
-            // 
             // txtape
             // 
             this.txtape.Location = new System.Drawing.Point(279, 66);
@@ -369,13 +370,6 @@
             this.lblColegio.Size = new System.Drawing.Size(62, 17);
             this.lblColegio.TabIndex = 187;
             this.lblColegio.Text = "Colegio";
-            // 
-            // txtresp
-            // 
-            this.txtresp.Location = new System.Drawing.Point(18, 103);
-            this.txtresp.Name = "txtresp";
-            this.txtresp.Size = new System.Drawing.Size(121, 20);
-            this.txtresp.TabIndex = 0;
             // 
             // lblApe
             // 
@@ -440,14 +434,6 @@
             this.txttelRes.Size = new System.Drawing.Size(121, 20);
             this.txttelRes.TabIndex = 11;
             // 
-            // txtcod
-            // 
-            this.txtcod.Location = new System.Drawing.Point(16, 66);
-            this.txtcod.Name = "txtcod";
-            this.txtcod.Size = new System.Drawing.Size(121, 20);
-            this.txtcod.TabIndex = 10;
-            this.txtcod.Tag = "nombre";
-            // 
             // lblNomResp
             // 
             this.lblNomResp.AutoSize = true;
@@ -467,6 +453,13 @@
             this.lblTelfResp.Size = new System.Drawing.Size(119, 17);
             this.lblTelfResp.TabIndex = 166;
             this.lblTelfResp.Text = "Teléfono Resp.";
+            // 
+            // txtresp
+            // 
+            this.txtresp.Location = new System.Drawing.Point(18, 103);
+            this.txtresp.Name = "txtresp";
+            this.txtresp.Size = new System.Drawing.Size(121, 20);
+            this.txtresp.TabIndex = 0;
             // 
             // lblModAlumno
             // 
@@ -492,6 +485,18 @@
             this.picBoxFondo.TabIndex = 0;
             this.picBoxFondo.TabStop = false;
             // 
+            // datTimeSes
+            // 
+            this.datTimeSes.CustomFormat = "yyyy--MM-dd";
+            this.datTimeSes.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.datTimeSes.Location = new System.Drawing.Point(279, 141);
+            this.datTimeSes.MaxDate = new System.DateTime(2050, 1, 1, 0, 0, 0, 0);
+            this.datTimeSes.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
+            this.datTimeSes.Name = "datTimeSes";
+            this.datTimeSes.Size = new System.Drawing.Size(103, 20);
+            this.datTimeSes.TabIndex = 192;
+            this.datTimeSes.Value = new System.DateTime(2022, 11, 6, 0, 0, 0, 0);
+            // 
             // FrmModificarAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -500,7 +505,7 @@
             this.Controls.Add(this.pnlContenedor);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(910, 728);
-            this.MinimumSize = new System.Drawing.Size(910, 728);
+            this.MinimumSize = new System.Drawing.Size(910, 726);
             this.Name = "FrmModificarAlumno";
             this.Text = "Modificar Alumno";
             this.Load += new System.EventHandler(this.FrmModificarAlumno_Load_1);
@@ -537,7 +542,6 @@
         private System.Windows.Forms.TextBox txtcol;
         private System.Windows.Forms.Label lblCod;
         private System.Windows.Forms.ComboBox comboBoxDep;
-        private System.Windows.Forms.TextBox txtfech;
         private System.Windows.Forms.TextBox txtape;
         private System.Windows.Forms.Label lblColegio;
         private System.Windows.Forms.TextBox txtresp;
@@ -557,5 +561,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxEstadoAlum;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker datTimeSes;
     }
 }

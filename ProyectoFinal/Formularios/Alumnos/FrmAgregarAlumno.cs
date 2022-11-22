@@ -90,6 +90,11 @@ namespace ProyectoFinal.Formularios
             }
             return true;
         }
+
+        private void txtcod_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
         #endregion
 
         #region Método Listar Departamentos y Municipios
@@ -163,14 +168,14 @@ namespace ProyectoFinal.Formularios
                 else
                 {
                     //Agregar el comboBoxEstadoAlum con los parametros en CapaDatos,CapaNegocio en agregar y editar. Ademas de cambiarle los proced.Almc. 
-                    objeto.AgregarAlumno(txtcod.Text, txtnom.Text, txtape.Text, txtfech.Text, txtresp.Text, txttelRes.Text, txtcol.Text, txtgra.Text, txtdom.Text, txteva.Text, int.Parse(comboBoxDep.SelectedValue.ToString()), int.Parse(comboBoxMuni.SelectedValue.ToString()), int.Parse(comboBoxEstadoAlum.SelectedValue.ToString()));
+                    objeto.AgregarAlumno(txtcod.Text, txtnom.Text, txtape.Text, datTimeSes.Value, txtresp.Text, txttelRes.Text, txtcol.Text, txtgra.Text, txtdom.Text, txteva.Text, int.Parse(comboBoxDep.SelectedValue.ToString()), int.Parse(comboBoxMuni.SelectedValue.ToString()), int.Parse(comboBoxEstadoAlum.SelectedValue.ToString()));
                     MessageBox.Show("Alumno Agregado");
                     limpiar_Datos();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se puedo agregar por" + ex);
+                MessageBox.Show("No se puedo agregar por" + ex.Message);
             }
         }
         #endregion
@@ -179,5 +184,42 @@ namespace ProyectoFinal.Formularios
         {
 
         }
+
+        private void txtnom_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if((e.KeyChar >= 32 && e.KeyChar <=64) || (e.KeyChar >= 91 && e.KeyChar <=96)  ||(e.KeyChar >= 123 && e.KeyChar <=255))
+            {
+
+                MessageBox.Show("Solo letras", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
+        }
+        private void txtape_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+
+                MessageBox.Show("Solo letras", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtresp_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+
+                MessageBox.Show("Solo letras", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
+
+        }
+
+       
     }
+
+   
 }
