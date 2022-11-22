@@ -9,7 +9,7 @@ using CapaDatos;
 
 namespace CapaDatos
 {
-    public class Facturas
+   public class Facturas
     {
 
         public void Agregarfactura(string cod, int cant, double costo, string fecha, int alumno, int estado, int servicio, int modalidad)
