@@ -58,6 +58,20 @@ namespace ProyectoFinal.Formularios
                 }
             }
         }
+        private bool Validar() // metodo para verificar si hay un textbox vacio(recorre todo los controles ,con el IsNullOrWhiteSpace nos damos cuenta si es nula o esta vacia , si esto pasa retornamos un false)
+        {
+            foreach (Control c in this.pnlContenedor.Controls)
+            {
+                if (c is TextBox)
+                {
+                    if (string.IsNullOrWhiteSpace(((TextBox)c).Text))
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
 
         #endregion
 
@@ -145,9 +159,15 @@ namespace ProyectoFinal.Formularios
         {
             try
             {
-                obj.datosfact(txtcod.Text, txtcant.Text, txtcost.Text, datTimeSes.Value, txtId.Text, comest.SelectedValue.ToString(), comser.SelectedValue.ToString(), commod.SelectedValue.ToString());
-                MessageBox.Show("Factura Realizada.");
-                limpiar_Datos();
+               
+                    obj.datosfact(txtcod.Text, txtcant.Text, txtcost.Text, datTimeSes.Value, txtId.Text, comest.SelectedValue.ToString(), comser.SelectedValue.ToString(), commod.SelectedValue.ToString());
+
+                    MessageBox.Show("Factura Realizada.");
+                    limpiar_Datos();
+               
+
+
+               
             }
             catch (Exception ex)
             {
@@ -168,8 +188,20 @@ namespace ProyectoFinal.Formularios
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var resultado2 = obj.alumnos(Convert.ToInt32(txtId.Text));
-            txtnom.Text = resultado2.Item1;
+            
+           
+            if (string.IsNullOrEmpty(txtId.Text))
+            {
+                MessageBox.Show("Digite el codigo del Alumno");
+
+            }
+            else
+            {
+                var resultado2 = obj.alumnos(Convert.ToInt32(txtId.Text));
+                txtnom.Text = resultado2.Item1;
+
+               
+            } 
         }
         #endregion
 

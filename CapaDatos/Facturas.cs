@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CapaDatos;
+using System.Windows.Forms;
 
 namespace CapaDatos
 {
@@ -109,7 +110,7 @@ namespace CapaDatos
 
             comando.CommandText = "select [nom_Alumno]+' '+[ape_Alumno] as Nombres from Alumnos where Id ='" + id + "'";
 
-            string nombre = "NULL";
+            string nombre = "";
 
             SqlDataReader reader = comando.ExecuteReader();
 
@@ -117,6 +118,10 @@ namespace CapaDatos
             if (reader.Read())
             {
                 nombre = reader["Nombres"].ToString();
+            }
+            else
+            {
+                MessageBox.Show("El alumno no existe");
             }
             conexion.Cerrar();
             return Tuple.Create(nombre);
