@@ -42,6 +42,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.cmbBxBuscar = new System.Windows.Forms.ComboBox();
             this.panelDatos = new System.Windows.Forms.Panel();
+            this.lblSES = new System.Windows.Forms.Label();
             this.txtCodFactur = new System.Windows.Forms.TextBox();
             this.txtCodTrab = new System.Windows.Forms.TextBox();
             this.txtCantHrsSes = new System.Windows.Forms.TextBox();
@@ -149,6 +150,7 @@
             // lblBuscar
             // 
             this.lblBuscar.BackColor = System.Drawing.Color.Gray;
+            this.lblBuscar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBuscar.ForeColor = System.Drawing.SystemColors.Control;
             this.lblBuscar.Location = new System.Drawing.Point(15, 8);
@@ -211,6 +213,7 @@
             // panelDatos
             // 
             this.panelDatos.BackColor = System.Drawing.SystemColors.Control;
+            this.panelDatos.Controls.Add(this.lblSES);
             this.panelDatos.Controls.Add(this.txtCodFactur);
             this.panelDatos.Controls.Add(this.txtCodTrab);
             this.panelDatos.Controls.Add(this.txtCantHrsSes);
@@ -225,6 +228,16 @@
             this.panelDatos.Name = "panelDatos";
             this.panelDatos.Size = new System.Drawing.Size(302, 510);
             this.panelDatos.TabIndex = 1;
+            // 
+            // lblSES
+            // 
+            this.lblSES.AutoSize = true;
+            this.lblSES.Location = new System.Drawing.Point(37, 52);
+            this.lblSES.Name = "lblSES";
+            this.lblSES.Size = new System.Drawing.Size(31, 13);
+            this.lblSES.TabIndex = 10;
+            this.lblSES.Text = "SES-";
+            this.lblSES.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtCodFactur
             // 
@@ -257,11 +270,11 @@
             this.datTimeSes.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.datTimeSes.Location = new System.Drawing.Point(45, 462);
             this.datTimeSes.MaxDate = new System.DateTime(2050, 1, 1, 0, 0, 0, 0);
-            this.datTimeSes.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
+            this.datTimeSes.MinDate = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
             this.datTimeSes.Name = "datTimeSes";
             this.datTimeSes.Size = new System.Drawing.Size(165, 20);
             this.datTimeSes.TabIndex = 6;
-            this.datTimeSes.Value = new System.DateTime(2022, 11, 6, 0, 0, 0, 0);
+            this.datTimeSes.Value = new System.DateTime(2022, 12, 19, 0, 0, 0, 0);
             // 
             // txtCodSes
             // 
@@ -403,5 +416,6 @@
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.ComboBox cmbBxBuscar;
+        private System.Windows.Forms.Label lblSES;
     }
 }

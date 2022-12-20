@@ -78,6 +78,7 @@
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Image = global::ProyectoFinal.Properties.Resources.FondoListSes;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label1.Location = new System.Drawing.Point(366, 9);
             this.label1.Name = "label1";
@@ -117,6 +118,7 @@
             // 
             this.cmbxAño.FormattingEnabled = true;
             this.cmbxAño.Items.AddRange(new object[] {
+            "2022",
             "2023",
             "2024",
             "2025",
@@ -126,6 +128,7 @@
             this.cmbxAño.Name = "cmbxAño";
             this.cmbxAño.Size = new System.Drawing.Size(121, 21);
             this.cmbxAño.TabIndex = 6;
+            this.cmbxAño.SelectedIndexChanged += new System.EventHandler(this.cmbxAño_SelectedIndexChanged);
             // 
             // label4
             // 
