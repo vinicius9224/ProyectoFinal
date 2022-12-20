@@ -21,6 +21,7 @@ namespace ProyectoFinal.Formularios.Sesiones
         public FrmAgregarSesion()
         {
             InitializeComponent();
+            cmbBxBuscar.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         #region Validaciones
@@ -109,6 +110,8 @@ namespace ProyectoFinal.Formularios.Sesiones
             {
                 try
                 {
+                    txtCodSes.Text = string.Concat(lblSES.Text, txtCodSes.Text);
+
                     if (DatSes.AgregarSesiones(txtCodSes.Text.Trim(), datTimeSes.Value, txtCantHrsSes.Text.Trim(), idtrab, idfact).Columns.Count == 0)
                     {
                         MessageBox.Show("Sesión Agregada");
@@ -158,6 +161,7 @@ namespace ProyectoFinal.Formularios.Sesiones
         private void cmbBxBuscar_SelectedIndexChanged(object sender, EventArgs e)
         {
             dataGridView1.DataSource = DatSes.ListarDatosView(cmbBxBuscar.Text);
+            txtBuscar.Clear();
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)

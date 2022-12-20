@@ -23,7 +23,9 @@ namespace ProyectoFinal.Formularios.Alumnos
         public FrmModificarAlumno()
         {
             InitializeComponent();
-            dataGridView1.AllowUserToAddRows = false;
+            comboBoxDep.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxEstadoAlum.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxMuni.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void FrmModificarAlumno_Load_1(object sender, EventArgs e)

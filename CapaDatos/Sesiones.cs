@@ -157,6 +157,7 @@ namespace CapaDatos
                     + "INNER JOIN Trabajadores T ON T.Id = S.TrabajadorId "
                     + "INNER JOIN Facturas F ON F.Id = S.FacturaId "
                     + "INNER JOIN Alumnos A ON F.AlumnoId = A.Id "
+                    + "WHERE DATEPART(yy,S.fecha_Sesion)= "+Año+" "
                     + "ORDER BY S.fecha_Sesion DESC";
                 comando.CommandType = CommandType.Text;
                 //operación para ejecutar cualquier instrucción SQL arbitraria en SQL Server si no desea que se devuelva ningún conjunto de resultados.

@@ -20,9 +20,9 @@ namespace ProyectoFinal.Formularios
         public FrmAgregarAlumno()
         {
             InitializeComponent();
-            
-
-
+            comboBoxDep.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxEstadoAlum.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxMuni.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void FrmAgregarAlumno_Load(object sender, EventArgs e)
@@ -32,10 +32,6 @@ namespace ProyectoFinal.Formularios
             Listar_Estado();
 
             Listar_Departamentos();
-
-
-
-
 
         }
 
@@ -174,6 +170,8 @@ namespace ProyectoFinal.Formularios
 
                     if (txttelRes.Text.Length == 8)
                     {
+                        txtcod.Text = String.Concat(lblAlum.Text, txtcod.Text);
+
                         objeto.AgregarAlumno(txtcod.Text, txtnom.Text, txtape.Text, datTimeSes.Value, txtresp.Text, txttelRes.Text, txtcol.Text, txtgra.Text, txtdom.Text, txteva.Text, int.Parse(comboBoxDep.SelectedValue.ToString()), int.Parse(comboBoxMuni.SelectedValue.ToString()), int.Parse(comboBoxEstadoAlum.SelectedValue.ToString()));
                         MessageBox.Show("Alumno Agregado");
                         limpiar_Datos();

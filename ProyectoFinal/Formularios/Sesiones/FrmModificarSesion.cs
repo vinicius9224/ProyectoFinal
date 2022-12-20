@@ -18,11 +18,13 @@ namespace ProyectoFinal.Formularios.Sesiones
         public FrmModificarSesion()
         {
             InitializeComponent();
+            cmbxAño.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbxMes.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void FrmModificarSesion_Load(object sender, EventArgs e)
         {
-            cmbxAño.Text = "2020";
+           
         }
 
         private void cmbxMes_SelectedIndexChanged(object sender, EventArgs e)
@@ -34,10 +36,7 @@ namespace ProyectoFinal.Formularios.Sesiones
                 dataGridView1.DataSource = DatSes.ListSesiones(mes, cmbxAño.Text.Trim());
                 lblTotal.Text = LlenarTotal().ToString();
             }
-            else
-            {
-                MessageBox.Show("Escoja el mes y el año que desea listar");
-            }
+
             
         }
 
@@ -112,6 +111,18 @@ namespace ProyectoFinal.Formularios.Sesiones
                 cont++;
             }
             return cont;
+        }
+
+        private void cmbxAño_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbxAño.Text != "" && cmbxMes.Text != "")
+            {
+                int mes = 0;
+                SelecMes(ref mes);
+                dataGridView1.DataSource = DatSes.ListSesiones(mes, cmbxAño.Text.Trim());
+                lblTotal.Text = LlenarTotal().ToString();
+            }
+            
         }
     }
 }

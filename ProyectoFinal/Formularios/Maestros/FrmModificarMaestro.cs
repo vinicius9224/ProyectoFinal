@@ -13,7 +13,10 @@ namespace ProyectoFinal.Formularios.Maestros
         public FrmModificarMaestro()
         {
             InitializeComponent();
-            dataGridView1.AllowUserToAddRows = false;
+            comDep.DropDownStyle = ComboBoxStyle.DropDownList;
+            comEst.DropDownStyle = ComboBoxStyle.DropDownList;
+            comMuni.DropDownStyle = ComboBoxStyle.DropDownList;
+            comProf.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void FrmModificarMaestro_Load(object sender, EventArgs e)

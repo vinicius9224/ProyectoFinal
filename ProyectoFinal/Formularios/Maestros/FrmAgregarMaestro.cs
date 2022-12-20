@@ -21,6 +21,10 @@ namespace ProyectoFinal.Formularios
         public FrmAgregarMaestro()
         {
             InitializeComponent();
+            comDep.DropDownStyle = ComboBoxStyle.DropDownList;
+            comEst.DropDownStyle = ComboBoxStyle.DropDownList;
+            comMuni.DropDownStyle = ComboBoxStyle.DropDownList;
+            comProf.DropDownStyle = ComboBoxStyle.DropDownList;
         }
         public void limpiar_Datos()
         {
@@ -242,6 +246,19 @@ namespace ProyectoFinal.Formularios
                 }
             }
             conexion.Close();
+        }
+
+        private void comProf_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comProf.Text == "Psicologo")
+            {
+                lblMstr.Text = "PSIC-";
+            }
+            else
+                if (comProf.Text == "Maestro")
+            {
+                lblMstr.Text = "MSTR-";
+            }
         }
     }
 }
