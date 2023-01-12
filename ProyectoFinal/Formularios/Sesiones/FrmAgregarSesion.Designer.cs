@@ -274,7 +274,7 @@
             this.datTimeSes.Name = "datTimeSes";
             this.datTimeSes.Size = new System.Drawing.Size(165, 20);
             this.datTimeSes.TabIndex = 6;
-            this.datTimeSes.Value = new System.DateTime(2022, 12, 19, 0, 0, 0, 0);
+            this.datTimeSes.Value = new System.DateTime(2023, 1, 12, 0, 0, 0, 0);
             // 
             // txtCodSes
             // 
