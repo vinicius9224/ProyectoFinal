@@ -117,6 +117,11 @@ namespace ProyectoFinal.Formularios.Sesiones
                         MessageBox.Show("Sesión Agregada");
                         limpiar_Datos();
                     }
+                    else if (DatSes.AgregarSesiones(txtCodSes.Text.Trim(), datTimeSes.Value, txtCantHrsSes.Text.Trim(), idtrab, idfact).Columns.Contains("ERROR"))
+                    {
+                        MessageBox.Show("La cantidad de sesiones en esta factura ya ha sido cumplida");
+                        limpiar_Datos();
+                    }
                     else
                     {
                         MessageBox.Show("Ya existe una sesión con ese código, intente otro");

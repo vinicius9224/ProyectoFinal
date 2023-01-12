@@ -21,23 +21,81 @@ namespace CapaDatos
 
         public DataTable AgregarSesiones(string CodSes, DateTime FechSes, int CantHorsSes, int TrabId, int FactId)
         {
-            //Instrucciones que abren la conexion, y meten los parametros mandados del formulario, devuelven una tabla que si tiene datos el codigo dado es repetido. 
-            DataTable tabla = new DataTable();
-            comando.Connection = conexion.Abrir();
-            comando.CommandText = "AgregarSesion";
-            comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@Cod_Ses", CodSes);
-            comando.Parameters.AddWithValue("@fech_Ses", FechSes);
-            comando.Parameters.AddWithValue("@CantHors_Ses", CantHorsSes);
-            comando.Parameters.AddWithValue("@Trab_Id", TrabId);
-            comando.Parameters.AddWithValue("@Factur_Id", FactId);
-            SqlDataReader reader = comando.ExecuteReader();
-            tabla.Load(reader);
-            comando.Parameters.Clear();
-            comando.Connection = conexion.Cerrar();
+            //Instrucciones que abren la conexion, y meten los parametros mandados del formulario, devuelven una tabla que si tiene datos el codigo dado es repetido.
+            int Total = 0;
+            int Cantidad = 0;
+            Verificar(FactId, ref Total, ref Cantidad);
 
+            DataTable tabla = new DataTable();
+            //Significa que esta a una sesion de completarse la factura
+            if (Cantidad - Total == 1)
+            {  
+                comando.Connection = conexion.Abrir();
+                comando.CommandText = "AgregarSesion";
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@Cod_Ses", CodSes);
+                comando.Parameters.AddWithValue("@fech_Ses", FechSes);
+                comando.Parameters.AddWithValue("@CantHors_Ses", CantHorsSes);
+                comando.Parameters.AddWithValue("@Trab_Id", TrabId);
+                comando.Parameters.AddWithValue("@Factur_Id", FactId);
+                comando.Parameters.AddWithValue("@num", 0);
+                SqlDataReader reader = comando.ExecuteReader();
+                tabla.Load(reader);
+                comando.Parameters.Clear();
+                comando.Connection = conexion.Cerrar();
+            }
+            //Significa que aun faltan mas de 1 sesion para completarse
+            else if (Cantidad - Total > 1)
+            {
+                comando.Connection = conexion.Abrir();
+                comando.CommandText = "AgregarSesion";
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@Cod_Ses", CodSes);
+                comando.Parameters.AddWithValue("@fech_Ses", FechSes);
+                comando.Parameters.AddWithValue("@CantHors_Ses", CantHorsSes);
+                comando.Parameters.AddWithValue("@Trab_Id", TrabId);
+                comando.Parameters.AddWithValue("@Factur_Id", FactId);
+                comando.Parameters.AddWithValue("@num", 1);
+                SqlDataReader reader = comando.ExecuteReader();
+                tabla.Load(reader);
+                comando.Parameters.Clear();
+                comando.Connection = conexion.Cerrar();
+            }
+            //Significa que la factura ya esta completada
+            else if (Cantidad - Total == 0 || Cantidad - Total < 0)
+            {
+                tabla.Columns.Add("ERROR", typeof(double));
+                return tabla;
+            }
             return tabla;
         }
+
+        //Metodo que se asegura que las sesiones no se pasen del numero de sesiones ingresado en la factura y obtiene la cantidad de sesiones y el total de sesiones que tiene la factura
+        public void Verificar(int FactId, ref int Total, ref int Cantidad)
+        {
+            try
+            {
+                string Num = null;
+                string Cant = null;
+                comando.Connection = conexion.Abrir();
+                DataSet DS = new DataSet();
+                //Busca mediante el codigo el id del trabajador con dicho codigo
+                SqlDataAdapter DP = new SqlDataAdapter("EXECUTE VerificarFactura " + FactId + "", comando.Connection);
+                DP.Fill(DS);
+                Num = DS.Tables[0].Rows[0]["TOTAL"].ToString();
+                Total = int.Parse(Num);
+                Cant = DS.Tables[0].Rows[0]["Cantidad"].ToString();
+                Cantidad = int.Parse(Cant);
+                DS.Clear();
+                comando.Connection = conexion.Cerrar();
+            }
+            catch (Exception)
+            {
+                Total = 1;
+                Cantidad = 4;
+            }
+            
+        } 
 
         public Boolean ValidarDatos(ref string idfact, ref string idtrab, string codTrab, string CodFactur, DateTime FechSes)
         {
